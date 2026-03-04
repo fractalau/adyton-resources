@@ -13,7 +13,8 @@ interface ProjectTileProps {
 const ProjectTile = ({ name, slug, stage, highlights, location }: ProjectTileProps) => (
   <Link
     to={`/projects/${slug}`}
-    className="group bg-card border border-border rounded-lg overflow-hidden hover:border-primary/30 transition-all"
+    className="group rounded-lg overflow-hidden border hover:border-primary/30 transition-all"
+    style={{ background: "hsl(var(--light-card))", borderColor: "hsl(var(--light-border))" }}
   >
     <div className="aspect-[16/10] bg-muted flex items-center justify-center relative">
       <MapPin className="h-8 w-8 text-muted-foreground/30" />
@@ -22,15 +23,15 @@ const ProjectTile = ({ name, slug, stage, highlights, location }: ProjectTilePro
       </div>
     </div>
     <div className="p-5">
-      <h3 className="font-display font-semibold text-foreground group-hover:text-primary transition-colors mb-1">
+      <h3 className="font-display font-semibold group-hover:text-primary transition-colors mb-1" style={{ color: "hsl(var(--light-foreground))" }}>
         {name}
       </h3>
       {location && (
-        <p className="text-xs text-muted-foreground mb-3">{location}</p>
+        <p className="text-xs mb-3" style={{ color: "hsl(var(--light-muted-foreground))" }}>{location}</p>
       )}
       <ul className="space-y-1.5 mb-4">
         {highlights.map((h, i) => (
-          <li key={i} className="text-xs text-muted-foreground flex items-start gap-1.5">
+          <li key={i} className="text-xs flex items-start gap-1.5" style={{ color: "hsl(var(--light-muted-foreground))" }}>
             <span className="mt-1 h-1 w-1 rounded-full bg-primary/60 shrink-0" />
             {h}
           </li>

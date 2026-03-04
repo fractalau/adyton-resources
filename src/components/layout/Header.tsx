@@ -13,7 +13,7 @@ import logo from "@/assets/logo.png";
 const navItems = [
   { label: "Why Adyton", path: "/why-adyton" },
   { label: "Projects", path: "/projects" },
-  { label: "Investors", path: "/investors" },
+  { label: "Investor Hub", path: "/investors" },
   { label: "News", path: "/news" },
   { label: "Why PNG", path: "/why-png" },
   { label: "About", path: "/about" },
