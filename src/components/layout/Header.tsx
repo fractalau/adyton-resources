@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Download, Mail } from "lucide-react";
+import TickerStrip from "@/components/TickerStrip";
 import {
   Tooltip,
   TooltipContent,
@@ -110,6 +111,7 @@ const Header = () => {
           </div>
         )}
       </header>
+      <TickerStrip />
     </TooltipProvider>
   );
 };

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Linkedin, Twitter, Youtube, Globe } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => (
@@ -38,6 +39,21 @@ const Footer = () => (
           <div className="flex flex-col gap-2">
             <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">Investor Relations</Link>
             <a href="mailto:info@adytonresources.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">info@adytonresources.com</a>
+          </div>
+          <h4 className="text-sm font-display font-semibold text-foreground pt-2">Follow Us</h4>
+          <div className="flex items-center gap-3">
+            <a href="https://www.linkedin.com/company/adyton-resources" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
+              <Linkedin className="h-4 w-4" />
+            </a>
+            <a href="https://twitter.com/AdytonResources" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Twitter / X">
+              <Twitter className="h-4 w-4" />
+            </a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="YouTube">
+              <Youtube className="h-4 w-4" />
+            </a>
+            <a href="https://adytonresources.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Website">
+              <Globe className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </div>

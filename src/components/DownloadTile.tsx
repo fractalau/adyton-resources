@@ -10,15 +10,15 @@ interface DownloadTileProps {
 }
 
 const DownloadTile = ({ title, date, description, fileType = "PDF", fileSize = "2.4 MB" }: DownloadTileProps) => (
-  <div className="bg-card border border-border rounded-lg p-5 flex items-start gap-4">
-    <div className="h-10 w-10 rounded-lg bg-muted flex items-center justify-center shrink-0">
+  <div className="rounded-lg p-5 flex items-start gap-4" style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}>
+    <div className="h-10 w-10 rounded-lg flex items-center justify-center shrink-0" style={{ background: "hsl(var(--light-bg))" }}>
       <FileText className="h-5 w-5 text-primary" />
     </div>
     <div className="flex-1 min-w-0">
-      <h4 className="font-display font-semibold text-foreground text-sm mb-0.5">{title}</h4>
-      <p className="text-xs text-muted-foreground mb-1">{date}</p>
-      <p className="text-xs text-muted-foreground line-clamp-1">{description}</p>
-      <p className="text-[10px] text-muted-foreground mt-1">{fileType} · {fileSize}</p>
+      <h4 className="font-display font-semibold text-sm mb-0.5" style={{ color: "hsl(var(--light-foreground))" }}>{title}</h4>
+      <p className="text-xs mb-1" style={{ color: "hsl(var(--light-muted-foreground))" }}>{date}</p>
+      <p className="text-xs line-clamp-1" style={{ color: "hsl(var(--light-muted-foreground))" }}>{description}</p>
+      <p className="text-[10px] mt-1" style={{ color: "hsl(var(--light-muted-foreground) / 0.6)" }}>{fileType} · {fileSize}</p>
     </div>
     <Button variant="ghost" size="icon" className="shrink-0">
       <Download className="h-4 w-4" />
