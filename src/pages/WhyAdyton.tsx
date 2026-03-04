@@ -47,6 +47,7 @@ const WhyAdyton = () => (
             linkTo="/projects/wapolu"
             linkLabel="View restart pathway project"
             variant="gold"
+            lightMode
           />
           <TwoTrackCard
             title="Scalable exploration upside"
@@ -59,6 +60,7 @@ const WhyAdyton = () => (
             linkTo="/projects/fergusson"
             linkLabel="View flagship exploration projects"
             variant="blue"
+            lightMode
           />
         </div>
 

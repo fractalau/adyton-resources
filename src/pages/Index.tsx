@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Download, ArrowRight, CheckCircle } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import TickerStrip from "@/components/TickerStrip";
 import MetricCard from "@/components/MetricCard";
 import KeyMessages from "@/components/KeyMessages";
 import TwoTrackCard from "@/components/TwoTrackCard";
@@ -50,7 +49,6 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <TickerStrip />
 
       {/* Hero */}
       <section className="relative min-h-[520px] md:min-h-[600px] flex items-center">
