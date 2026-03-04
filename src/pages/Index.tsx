@@ -51,9 +51,9 @@ const Index = () => {
       <Header />
 
       {/* Hero */}
-      <section className="relative min-h-[520px] md:min-h-[600px] flex items-center">
+      <section className="relative min-h-[520px] md:min-h-[600px] flex items-center overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-[-5%] bg-cover bg-center animate-hero-drift"
           style={{ backgroundImage: `url(${heroBg})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
