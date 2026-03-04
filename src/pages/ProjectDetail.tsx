@@ -106,7 +106,7 @@ const ProjectDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen" style={{ background: "hsl(var(--light-bg))" }}>
       <Header />
       <section className="py-16 md:py-20">
         <div className="container">
@@ -114,12 +114,12 @@ const ProjectDetail = () => {
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-4">
               <TagChip label={project.stage} />
-              <span className="text-xs text-muted-foreground flex items-center gap-1">
+              <span className="text-xs flex items-center gap-1" style={{ color: "hsl(var(--light-muted-foreground))" }}>
                 <MapPin className="h-3 w-3" /> {project.location}
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">{project.name}</h1>
-            <p className="text-lg text-muted-foreground max-w-2xl">{project.description}</p>
+            <h1 className="text-4xl md:text-5xl font-display font-bold mb-4" style={{ color: "hsl(var(--light-foreground))" }}>{project.name}</h1>
+            <p className="text-lg max-w-2xl" style={{ color: "hsl(var(--light-muted-foreground))" }}>{project.description}</p>
           </div>
 
           {/* At-a-glance + Map */}
@@ -129,20 +129,20 @@ const ProjectDetail = () => {
                 <MetricCard key={f.label} label={f.label} value={f.value} source="Source: placeholder" />
               ))}
             </div>
-            <div className="bg-muted rounded-lg flex items-center justify-center aspect-[4/3]">
+            <div className="rounded-lg flex items-center justify-center aspect-[4/3]" style={{ background: "hsl(var(--light-border))" }}>
               <MapPin className="h-12 w-12 text-muted-foreground/30" />
             </div>
           </div>
 
           {/* Timeline */}
           <div className="mb-16">
-            <h2 className="text-2xl font-display font-bold text-foreground mb-6">Timeline & Catalysts</h2>
+            <h2 className="text-2xl font-display font-bold mb-6" style={{ color: "hsl(var(--light-foreground))" }}>Timeline & Catalysts</h2>
             <TimelineComponent items={project.timeline} />
           </div>
 
           {/* Reports & Downloads */}
           <div className="mb-16">
-            <h2 className="text-2xl font-display font-bold text-foreground mb-6">Results & Reports</h2>
+            <h2 className="text-2xl font-display font-bold mb-6" style={{ color: "hsl(var(--light-foreground))" }}>Results & Reports</h2>
             <div className="space-y-3">
               <DownloadTile title="NI 43-101 Technical Report" date="March 2024" description="Independent technical report on mineral resource estimate." />
               <DownloadTile title="Exploration Update Presentation" date="January 2025" description="Latest exploration results and upcoming program details." />
@@ -151,7 +151,7 @@ const ProjectDetail = () => {
 
           {/* Related News */}
           <div className="mb-16">
-            <h2 className="text-2xl font-display font-bold text-foreground mb-6">Related News</h2>
+            <h2 className="text-2xl font-display font-bold mb-6" style={{ color: "hsl(var(--light-foreground))" }}>Related News</h2>
             <div className="grid sm:grid-cols-2 gap-5">
               <NewsCard title="Project Update Released" date="January 2025" excerpt="Latest work program details and results available through company disclosures." slug="placeholder-1" tags={[project.name.split(" ")[0]]} />
               <NewsCard title="Exploration Program Summary" date="December 2024" excerpt="Summary of recent exploration activities across the project area." slug="placeholder-2" tags={[project.name.split(" ")[0]]} />
@@ -159,9 +159,9 @@ const ProjectDetail = () => {
           </div>
 
           {/* CTA */}
-          <div className="bg-card border border-border rounded-lg p-8 text-center">
-            <h3 className="text-xl font-display font-bold text-foreground mb-3">Interested in this project?</h3>
-            <p className="text-muted-foreground text-sm mb-6">Contact our Investor Relations team for more information.</p>
+          <div className="rounded-lg p-8 text-center" style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}>
+            <h3 className="text-xl font-display font-bold mb-3" style={{ color: "hsl(var(--light-foreground))" }}>Interested in this project?</h3>
+            <p className="text-sm mb-6" style={{ color: "hsl(var(--light-muted-foreground))" }}>Contact our Investor Relations team for more information.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Button variant="gold" asChild>
                 <Link to="/contact"><Mail className="h-4 w-4" /> Contact IR</Link>

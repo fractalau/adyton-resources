@@ -39,33 +39,34 @@ const NewsDetail = () => {
   const article = newsDetailData[slug || ""] || newsDetailData["fergusson-phase-2"];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen" style={{ background: "hsl(var(--light-bg))" }}>
       <Header />
       <section className="py-16 md:py-20">
         <div className="container max-w-3xl">
           <div className="flex flex-wrap gap-1.5 mb-4">
             {article.tags.map((t) => <TagChip key={t} label={t} />)}
           </div>
-          <p className="text-sm text-muted-foreground mb-3">{article.date}</p>
-          <h1 className="text-3xl md:text-4xl font-display font-bold text-foreground leading-tight mb-4">
+          <p className="text-sm mb-3" style={{ color: "hsl(var(--light-muted-foreground))" }}>{article.date}</p>
+          <h1 className="text-3xl md:text-4xl font-display font-bold leading-tight mb-4" style={{ color: "hsl(var(--light-foreground))" }}>
             {article.title}
           </h1>
-          <p className="text-lg text-muted-foreground mb-8 leading-relaxed">{article.excerpt}</p>
+          <p className="text-lg mb-8 leading-relaxed" style={{ color: "hsl(var(--light-muted-foreground))" }}>{article.excerpt}</p>
 
           {/* Read full release accordion */}
-          <div className="border border-border rounded-lg mb-10">
+          <div className="rounded-lg mb-10" style={{ border: "1px solid hsl(var(--light-border))" }}>
             <button
               onClick={() => setExpanded(!expanded)}
-              className="w-full flex items-center justify-between p-5 text-left hover:bg-muted/50 transition-colors"
+              className="w-full flex items-center justify-between p-5 text-left transition-colors"
+              style={{ color: "hsl(var(--light-foreground))" }}
             >
-              <span className="font-display font-semibold text-foreground">Read full release</span>
-              {expanded ? <ChevronUp className="h-5 w-5 text-muted-foreground" /> : <ChevronDown className="h-5 w-5 text-muted-foreground" />}
+              <span className="font-display font-semibold">Read full release</span>
+              {expanded ? <ChevronUp className="h-5 w-5" style={{ color: "hsl(var(--light-muted-foreground))" }} /> : <ChevronDown className="h-5 w-5" style={{ color: "hsl(var(--light-muted-foreground))" }} />}
             </button>
             {expanded && (
-              <div className="px-5 pb-5 border-t border-border">
-                <div className="prose prose-sm prose-invert max-w-none mt-4">
+              <div className="px-5 pb-5" style={{ borderTop: "1px solid hsl(var(--light-border))" }}>
+                <div className="prose prose-sm max-w-none mt-4">
                   {article.content.split("\n").map((p, i) => (
-                    <p key={i} className="text-sm text-muted-foreground leading-relaxed mb-3">{p}</p>
+                    <p key={i} className="text-sm leading-relaxed mb-3" style={{ color: "hsl(var(--light-muted-foreground))" }}>{p}</p>
                   ))}
                 </div>
               </div>
@@ -73,8 +74,8 @@ const NewsDetail = () => {
           </div>
 
           {/* Attribution */}
-          <div className="bg-card border border-border rounded-lg p-5 mb-10">
-            <p className="text-xs text-muted-foreground mb-2">Originally published via Newsfile</p>
+          <div className="rounded-lg p-5 mb-10" style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}>
+            <p className="text-xs mb-2" style={{ color: "hsl(var(--light-muted-foreground))" }}>Originally published via Newsfile</p>
             <a
               href={article.sourceUrl}
               target="_blank"
@@ -87,17 +88,18 @@ const NewsDetail = () => {
 
           {/* Related */}
           <div>
-            <h3 className="font-display font-semibold text-foreground mb-4">Related Releases</h3>
+            <h3 className="font-display font-semibold mb-4" style={{ color: "hsl(var(--light-foreground))" }}>Related Releases</h3>
             <div className="space-y-2">
               {relatedReleases.map((r) => (
                 <Link
                   key={r.slug}
                   to={`/news/${r.slug}`}
-                  className="flex items-center justify-between p-4 bg-card border border-border rounded-lg hover:border-primary/30 transition-colors"
+                  className="flex items-center justify-between p-4 rounded-lg hover:border-primary/30 transition-colors"
+                  style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}
                 >
                   <div>
-                    <p className="text-sm font-medium text-foreground">{r.title}</p>
-                    <p className="text-xs text-muted-foreground">{r.date}</p>
+                    <p className="text-sm font-medium" style={{ color: "hsl(var(--light-foreground))" }}>{r.title}</p>
+                    <p className="text-xs" style={{ color: "hsl(var(--light-muted-foreground))" }}>{r.date}</p>
                   </div>
                   <ChevronDown className="h-4 w-4 text-muted-foreground -rotate-90" />
                 </Link>

@@ -23,15 +23,15 @@ const Investors = () => {
   const filtered = activeCategory === "All" ? downloads.filter((d) => !d.featured) : downloads.filter((d) => d.category === activeCategory && !d.featured);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen" style={{ background: "hsl(var(--light-bg))" }}>
       <Header />
       <section className="py-16 md:py-24">
         <div className="container">
           <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-4">Investors</p>
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl font-display font-bold leading-tight mb-6" style={{ color: "hsl(var(--light-foreground))" }}>
             Investor Hub
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mb-12">
+          <p className="text-lg max-w-2xl mb-12" style={{ color: "hsl(var(--light-muted-foreground))" }}>
             Access presentations, technical reports, filings, and disclosures.
           </p>
 

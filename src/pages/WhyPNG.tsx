@@ -12,15 +12,15 @@ const facts = [
 ];
 
 const WhyPNG = () => (
-  <div className="min-h-screen bg-background">
+  <div className="min-h-screen" style={{ background: "hsl(var(--light-bg))" }}>
     <Header />
     <section className="py-16 md:py-24">
       <div className="container">
         <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-4">Jurisdiction</p>
-        <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight mb-6 max-w-3xl">
+        <h1 className="text-4xl md:text-5xl font-display font-bold leading-tight mb-6 max-w-3xl" style={{ color: "hsl(var(--light-foreground))" }}>
           Why Papua New Guinea?
         </h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mb-16">
+        <p className="text-lg max-w-2xl mb-16" style={{ color: "hsl(var(--light-muted-foreground))" }}>
           A world-class mineral province with proven geology, established mining operations, and substantial discovery runway.
         </p>
 
@@ -32,11 +32,11 @@ const WhyPNG = () => (
         {/* Facts grid */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {facts.map((f) => (
-            <div key={f.heading} className="bg-card border border-border rounded-lg p-6">
-              <h3 className="font-display font-semibold text-foreground mb-4">{f.heading}</h3>
+            <div key={f.heading} className="rounded-lg p-6" style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}>
+              <h3 className="font-display font-semibold mb-4" style={{ color: "hsl(var(--light-foreground))" }}>{f.heading}</h3>
               <ul className="space-y-3">
                 {f.points.map((p, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                  <li key={i} className="flex items-start gap-2 text-sm" style={{ color: "hsl(var(--light-muted-foreground))" }}>
                     <CheckCircle className="h-4 w-4 text-primary shrink-0 mt-0.5" />
                     {p}
                   </li>
@@ -47,12 +47,12 @@ const WhyPNG = () => (
         </div>
 
         {/* Stakeholder Principles */}
-        <div className="bg-card border border-border rounded-lg p-8 mb-16">
-          <h2 className="text-2xl font-display font-bold text-foreground mb-4">Stakeholder & Operating Principles</h2>
-          <p className="text-muted-foreground text-sm mb-6">
+        <div className="rounded-lg p-8 mb-16" style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}>
+          <h2 className="text-2xl font-display font-bold mb-4" style={{ color: "hsl(var(--light-foreground))" }}>Stakeholder & Operating Principles</h2>
+          <p className="text-sm mb-6" style={{ color: "hsl(var(--light-muted-foreground))" }}>
             Adyton is committed to responsible exploration and development practices that respect local communities, protect the environment, and deliver lasting benefits to all stakeholders. Detailed policies and frameworks will be published as the Company advances its projects.
           </p>
-          <p className="text-xs text-muted-foreground italic">Placeholder — governance and sustainability content to be developed.</p>
+          <p className="text-xs italic" style={{ color: "hsl(var(--light-muted-foreground))" }}>Placeholder — governance and sustainability content to be developed.</p>
         </div>
 
         {/* Links */}

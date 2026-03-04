@@ -13,24 +13,24 @@ const thesisPoints = [
 ];
 
 const WhyAdyton = () => (
-  <div className="min-h-screen bg-background">
+  <div className="min-h-screen" style={{ background: "hsl(var(--light-bg))" }}>
     <Header />
     <section className="py-16 md:py-24">
       <div className="container">
         <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-4">Investment Thesis</p>
-        <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight mb-6 max-w-3xl">
+        <h1 className="text-4xl md:text-5xl font-display font-bold leading-tight mb-6 max-w-3xl" style={{ color: "hsl(var(--light-foreground))" }}>
           Why Adyton Resources
         </h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mb-12">
+        <p className="text-lg max-w-2xl mb-12" style={{ color: "hsl(var(--light-muted-foreground))" }}>
           A portfolio anchored by a near-term restart pathway and scalable exploration upside, supported by compliant technical disclosure and regular market updates.
         </p>
 
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {thesisPoints.map((p) => (
-            <div key={p.title} className="bg-card border border-border rounded-lg p-6">
+            <div key={p.title} className="rounded-lg p-6" style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}>
               <p.icon className="h-8 w-8 text-primary mb-4" />
-              <h3 className="font-display font-semibold text-foreground mb-2">{p.title}</h3>
-              <p className="text-sm text-muted-foreground">{p.desc}</p>
+              <h3 className="font-display font-semibold mb-2" style={{ color: "hsl(var(--light-foreground))" }}>{p.title}</h3>
+              <p className="text-sm" style={{ color: "hsl(var(--light-muted-foreground))" }}>{p.desc}</p>
             </div>
           ))}
         </div>
