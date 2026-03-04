@@ -9,9 +9,9 @@ const BluePanelCallout = () => (
         Investor Hub
       </h2>
       <p className="text-blue-panel-foreground max-w-xl mx-auto mb-10 text-sm md:text-base">
-        Access presentations, technical reports, filings, and disclosures.
+        Current investor materials and key disclosures in one place, built for fast diligence.
       </p>
-      <div className="flex flex-wrap justify-center gap-3">
+      <div className="flex flex-wrap justify-center gap-3 mb-4">
         <Button variant="gold" size="lg">
           <Download className="h-4 w-4" />
           Latest Deck
@@ -24,13 +24,16 @@ const BluePanelCallout = () => (
         </Button>
         <Button variant="gold-outline" size="lg">
           <Shield className="h-4 w-4" />
-          Filings & Disclosures
+          Filings
         </Button>
         <Button variant="gold-outline" size="lg">
           <Bell className="h-4 w-4" />
           Subscribe
         </Button>
       </div>
+      <p className="text-xs text-muted-foreground/60">
+        Looking for something specific? Use search and filters in the Investor Hub.
+      </p>
     </div>
   </section>
 );
