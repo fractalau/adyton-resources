@@ -9,16 +9,16 @@ const items = [
 ];
 
 const KeyMessages = () => (
-  <section className="py-10 md:py-12" style={{ background: "hsl(var(--light-bg))" }}>
+  <section className="blue-panel py-10 md:py-12">
     <div className="container">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {items.map((item) => (
           <div key={item.headline} className="flex flex-col items-start gap-2">
             <item.icon className="h-6 w-6 text-primary shrink-0" />
-            <h3 className="text-sm font-display font-semibold" style={{ color: "hsl(var(--light-foreground))" }}>
+            <h3 className="text-sm font-display font-semibold text-white">
               {item.headline}
             </h3>
-            <p className="text-xs leading-relaxed" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+            <p className="text-xs leading-relaxed text-blue-panel-foreground">
               {item.line}
             </p>
           </div>
