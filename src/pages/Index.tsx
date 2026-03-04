@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Download, ArrowRight, MapPin, CheckCircle } from "lucide-react";
+import { Download, ArrowRight, CheckCircle } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import TickerStrip from "@/components/TickerStrip";
@@ -11,33 +11,32 @@ import NewsCard from "@/components/NewsCard";
 import BluePanelCallout from "@/components/BluePanelCallout";
 
 const metrics = [
-  { label: "Market Cap", value: "$12.4M", source: "Source: TSXV" },
-  { label: "Cash Position", value: "$3.2M", source: "Source: Q3 2024 MD&A" },
-  { label: "Enterprise Value", value: "$9.8M", source: "Source: Calculated" },
-  { label: "EV/oz Au Eq", value: "$8.20", source: "Source: Placeholder" },
-  { label: "Resource (Au Eq)", value: "1.2 Moz", source: "Source: NI 43-101" },
-  { label: "Projects", value: "4", source: "Source: Corporate" },
+  { label: "Market Cap", value: "$12.4M", source: "As shown on TSXV" },
+  { label: "Cash Position", value: "$3.2M", source: "Refer latest MD&A" },
+  { label: "Enterprise Value", value: "$9.8M", source: "Indicative, calculated" },
+  { label: "EV per Au Eq oz", value: "$8.20", source: "Indicative, based on disclosed resources" },
+  { label: "Resource (Au Eq)", value: "1.2 Moz", source: "Refer NI 43-101" },
+  { label: "Projects", value: "4", source: "PNG portfolio" },
 ];
 
 const projects = [
-  { name: "Feni Gold-Copper", slug: "feni", stage: "Restart Pathway", highlights: ["Near-term restart candidate", "Historical production base"], location: "New Ireland Province, PNG" },
-  { name: "Fergusson Island", slug: "fergusson", stage: "Exploration", highlights: ["Flagship discovery target", "Multi-km alteration system"], location: "Milne Bay Province, PNG" },
-  { name: "Wapolu", slug: "wapolu", stage: "Exploration", highlights: ["Gold discovery potential", "Extensive tenement package"], location: "Milne Bay Province, PNG" },
-  { name: "Yandera", slug: "yandera", stage: "Advanced", highlights: ["Large porphyry copper-gold", "Significant resource base"], location: "Madang Province, PNG" },
+  { name: "Feni Gold-Copper", slug: "feni", stage: "Growth", highlights: ["Portfolio growth opportunity with exploration upside", "Key project updates consolidated in News and Investor Hub"], location: "New Ireland Province, PNG" },
+  { name: "Fergusson Island", slug: "fergusson", stage: "Exploration", highlights: ["Flagship exploration focus within the PNG portfolio", "Results, maps, and disclosures available in Investor Hub"], location: "Milne Bay Province, PNG" },
+  { name: "Wapolu", slug: "wapolu", stage: "Near-Term", highlights: ["Near-term pathway focus within the portfolio strategy", "Milestones and updates tracked via News and releases"], location: "Milne Bay Province, PNG" },
+  { name: "Yandera", slug: "yandera", stage: "Advanced", highlights: ["Large-scale copper-gold system within the broader portfolio", "Supporting technical materials available in Investor Hub"], location: "Madang Province, PNG" },
 ];
 
 const news = [
-  { title: "Adyton Completes Phase 2 Drilling at Fergusson Island", date: "January 15, 2025", excerpt: "Results from 12 diamond drill holes confirm high-grade gold mineralization across a 2.4 km strike length.", slug: "fergusson-phase-2", tags: ["Fergusson", "Drilling"], sourceUrl: "#" },
-  { title: "Feni Restart Study Advances to Final Stage", date: "December 8, 2024", excerpt: "Updated economic assessment demonstrates robust project economics at current gold prices.", slug: "feni-restart-study", tags: ["Feni", "Corporate"], sourceUrl: "#" },
-  { title: "Q3 2024 Financial Results Released", date: "November 22, 2024", excerpt: "Company reports strong cash position and provides update on exploration activities across PNG portfolio.", slug: "q3-2024-results", tags: ["Corporate", "Financials"], sourceUrl: "#" },
+  { title: "Adyton Completes Phase 2 Drilling at Fergusson Island", date: "January 15, 2025", excerpt: "Results from 12 diamond drill holes confirm gold mineralization across multiple targets, with full details available through company disclosures.", slug: "fergusson-phase-2", tags: ["Fergusson", "Drilling"], sourceUrl: "#" },
+  { title: "Feni Project Update Released", date: "December 8, 2024", excerpt: "Updated project summary and work program details released through company disclosures.", slug: "feni-restart-study", tags: ["Feni", "Corporate"], sourceUrl: "#" },
+  { title: "Q3 2024 Financial Results Released", date: "November 22, 2024", excerpt: "Company reports cash position and provides update on exploration activities across the PNG portfolio.", slug: "q3-2024-results", tags: ["Corporate", "Financials"], sourceUrl: "#" },
 ];
 
 const pngFacts = [
-  "Papua New Guinea hosts world-class gold and copper deposits with proven geological prospectivity.",
-  "Established mining jurisdiction with major operators including Newmont, Barrick, and Harmony Gold.",
-  "Government supportive of responsible resource development with modernized mining legislation.",
-  "Significant infrastructure investment underway, improving access and logistics for exploration.",
-  "Under-explored relative to geological potential — discovery opportunity remains substantial.",
+  "Proven endowment across major gold and copper belts.",
+  "Established operating environment with existing mining activity.",
+  "Clear focus on responsible development and stakeholder engagement.",
+  "Large areas remain under-explored relative to geological potential.",
 ];
 
 const Index = () => {
@@ -58,10 +57,13 @@ const Index = () => {
               <br />
               <span className="text-primary">Two value drivers.</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 max-w-2xl">
-              Restart pathway plus scalable discovery upside, backed by compliant technical reporting.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-4 max-w-2xl">
+              A portfolio anchored by a near-term restart pathway and scalable exploration upside, supported by compliant technical disclosure and regular market updates.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <p className="text-sm text-muted-foreground/70 mb-10 max-w-2xl">
+              Explore projects, access current investor materials, and track milestones in one place.
+            </p>
+            <div className="flex flex-wrap gap-3 mb-6">
               <Button variant="gold" size="lg">
                 <Download className="h-4 w-4" />
                 Download Deck
@@ -72,6 +74,11 @@ const Index = () => {
               <Button variant="ghost" size="lg" asChild>
                 <Link to="/contact">Contact IR</Link>
               </Button>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <span className="text-[11px] uppercase tracking-wider text-muted-foreground bg-card border border-border rounded-full px-3 py-1">TSXV: ADY</span>
+              <Link to="/investors" className="text-[11px] uppercase tracking-wider text-muted-foreground bg-card border border-border rounded-full px-3 py-1 hover:text-primary transition-colors">Investor Hub</Link>
+              <Link to="/news" className="text-[11px] uppercase tracking-wider text-muted-foreground bg-card border border-border rounded-full px-3 py-1 hover:text-primary transition-colors">Latest News</Link>
             </div>
           </div>
         </div>
@@ -93,35 +100,35 @@ const Index = () => {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">
-              Two-Track Value Story
+              Two value drivers
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Dual catalysts for value creation: near-term execution and long-term discovery.
+              Clear pathways to value creation — near-term execution plus discovery growth.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             <TwoTrackCard
-              title="Near-Term Restart Pathway"
-              subtitle="Track A — Execution"
+              title="Restart pathway and disciplined delivery"
+              subtitle="Track A: Near-term execution"
               highlights={[
-                "Feni gold-copper project with historical production infrastructure",
-                "Updated economic study targeting restart decision in 2025",
-                "Clear de-risking milestones with defined timeline to production",
+                "Focus on advancing defined pathways toward near-term milestones",
+                "Clear disclosure and progress updates for diligence and tracking",
+                "Capital discipline and prioritisation across the portfolio",
               ]}
-              linkTo="/projects/feni"
-              linkLabel="View Feni Project"
+              linkTo="/projects/wapolu"
+              linkLabel="View restart pathway project"
               variant="gold"
             />
             <TwoTrackCard
-              title="Flagship Exploration Upside"
-              subtitle="Track B — Discovery"
+              title="Scalable exploration upside"
+              subtitle="Track B: Discovery growth"
               highlights={[
-                "Fergusson Island — multi-kilometre gold system with high-grade intercepts",
-                "Significant discovery runway across under-explored tenement portfolio",
-                "Systematic exploration approach with NI 43-101 compliant reporting",
+                "Flagship exploration potential across multiple targets in PNG",
+                "Systematic programs supported by compliant technical reporting",
+                "Ongoing results flow designed to build the long-term growth case",
               ]}
               linkTo="/projects/fergusson"
-              linkLabel="View Fergusson Project"
+              linkLabel="View flagship exploration projects"
               variant="blue"
             />
           </div>
@@ -134,9 +141,9 @@ const Index = () => {
           <div className="flex items-end justify-between mb-10">
             <div>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-2">
-                Project Portfolio
+                Project portfolio
               </h2>
-              <p className="text-muted-foreground">PNG-focused gold and copper assets.</p>
+              <p className="text-muted-foreground max-w-xl">PNG-focused gold and copper assets across multiple stages, from near-term pathways to longer-term growth opportunities.</p>
             </div>
             <Button variant="gold-outline" size="sm" asChild className="hidden md:inline-flex">
               <Link to="/projects">
@@ -164,9 +171,9 @@ const Index = () => {
           <div className="flex items-end justify-between mb-10">
             <div>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-2">
-                Latest News
+                Latest news
               </h2>
-              <p className="text-muted-foreground">Recent releases and corporate updates.</p>
+              <p className="text-muted-foreground">Recent releases and corporate updates, formatted for quick review with full source access.</p>
             </div>
             <Button variant="gold-outline" size="sm" asChild className="hidden md:inline-flex">
               <Link to="/news">
@@ -190,9 +197,12 @@ const Index = () => {
       <section className="py-16 md:py-20">
         <div className="container">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-8 text-center">
-              Why Papua New Guinea?
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4 text-center">
+              Why Papua New Guinea
             </h2>
+            <p className="text-muted-foreground text-center mb-8">
+              PNG is a long-established gold and copper jurisdiction with significant geological prospectivity and existing mining operations.
+            </p>
             <ul className="space-y-4 mb-10">
               {pngFacts.map((f, i) => (
                 <li key={i} className="flex items-start gap-3">

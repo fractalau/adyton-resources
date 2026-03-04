@@ -18,7 +18,7 @@ const projectData: Record<string, {
     name: "Feni Gold-Copper Project",
     location: "New Ireland Province, PNG",
     stage: "Restart Pathway",
-    description: "The Feni project represents Adyton's near-term value driver, featuring historical production infrastructure and a clear pathway to restart. Updated economic assessments demonstrate robust project economics at current gold and copper prices.",
+    description: "The Feni project is a portfolio growth opportunity with exploration upside. Key project updates are consolidated in the News section and Investor Hub.",
     facts: [
       { label: "Commodity", value: "Gold-Copper" },
       { label: "Stage", value: "Restart Pathway" },
@@ -36,7 +36,7 @@ const projectData: Record<string, {
     name: "Fergusson Island",
     location: "Milne Bay Province, PNG",
     stage: "Exploration",
-    description: "Fergusson Island is Adyton's flagship exploration project, hosting a multi-kilometre gold system with high-grade intercepts. The project represents significant discovery-scale potential in a highly prospective geological setting.",
+    description: "Fergusson Island is the flagship exploration focus within the PNG portfolio. Results, maps, and disclosures are available in the Investor Hub.",
     facts: [
       { label: "Commodity", value: "Gold" },
       { label: "Stage", value: "Exploration" },
@@ -54,7 +54,7 @@ const projectData: Record<string, {
     name: "Wapolu Gold Project",
     location: "Milne Bay Province, PNG",
     stage: "Exploration",
-    description: "The Wapolu project covers an extensive tenement package with demonstrated gold discovery potential. Early-stage exploration has identified multiple high-priority targets for follow-up work.",
+    description: "Wapolu is the near-term pathway focus within the portfolio strategy. Milestones and updates are tracked via News and company releases.",
     facts: [
       { label: "Commodity", value: "Gold" },
       { label: "Stage", value: "Exploration" },
@@ -71,7 +71,7 @@ const projectData: Record<string, {
     name: "Yandera Copper-Gold",
     location: "Madang Province, PNG",
     stage: "Advanced",
-    description: "Yandera is a large porphyry copper-gold deposit with a significant resource base. The project benefits from prior exploration investment and established technical understanding.",
+    description: "Yandera is a large-scale copper-gold system within the broader portfolio. Supporting technical materials are available in the Investor Hub.",
     facts: [
       { label: "Commodity", value: "Copper-Gold" },
       { label: "Stage", value: "Advanced" },
@@ -153,8 +153,8 @@ const ProjectDetail = () => {
           <div className="mb-16">
             <h2 className="text-2xl font-display font-bold text-foreground mb-6">Related News</h2>
             <div className="grid sm:grid-cols-2 gap-5">
-              <NewsCard title="Drilling Results Confirm High-Grade Zones" date="January 2025" excerpt="Latest drill results demonstrate continuity of mineralization." slug="placeholder-1" tags={[project.name.split(" ")[0]]} />
-              <NewsCard title="Updated Resource Estimate Released" date="December 2024" excerpt="NI 43-101 compliant resource update shows growth in all categories." slug="placeholder-2" tags={[project.name.split(" ")[0]]} />
+              <NewsCard title="Project Update Released" date="January 2025" excerpt="Latest work program details and results available through company disclosures." slug="placeholder-1" tags={[project.name.split(" ")[0]]} />
+              <NewsCard title="Exploration Program Summary" date="December 2024" excerpt="Summary of recent exploration activities across the project area." slug="placeholder-2" tags={[project.name.split(" ")[0]]} />
             </div>
           </div>
 

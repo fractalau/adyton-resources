@@ -1,4 +1,4 @@
-import { CheckCircle, ArrowRight, Download, TrendingUp, Search, Shield } from "lucide-react";
+import { TrendingUp, Search, Shield, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
@@ -7,8 +7,8 @@ import MetricCard from "@/components/MetricCard";
 import TwoTrackCard from "@/components/TwoTrackCard";
 
 const thesisPoints = [
-  { icon: TrendingUp, title: "Near-Term Restart Catalyst", desc: "Feni gold-copper project targets a restart decision with existing infrastructure and clear economic pathway." },
-  { icon: Search, title: "Discovery-Scale Exploration", desc: "Fergusson Island hosts a multi-kilometre gold system with high-grade intercepts and significant upside." },
+  { icon: TrendingUp, title: "Near-Term Execution", desc: "Focus on advancing defined pathways toward near-term milestones, with clear disclosure and progress updates." },
+  { icon: Search, title: "Discovery Growth", desc: "Flagship exploration potential across multiple targets in PNG, supported by compliant technical reporting." },
   { icon: Shield, title: "Technical Credibility", desc: "NI 43-101 compliant reporting, experienced management team, and transparent disclosure practices." },
 ];
 
@@ -22,7 +22,7 @@ const WhyAdyton = () => (
           Why Adyton Resources
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mb-12">
-          PNG gold and copper with two clear value drivers: near-term restart pathway plus scalable discovery upside, backed by technical credibility and execution momentum.
+          A portfolio anchored by a near-term restart pathway and scalable exploration upside, supported by compliant technical disclosure and regular market updates.
         </p>
 
         <div className="grid md:grid-cols-3 gap-6 mb-16">
@@ -37,28 +37,36 @@ const WhyAdyton = () => (
 
         <div className="grid md:grid-cols-2 gap-6 mb-16">
           <TwoTrackCard
-            title="Near-Term Restart Pathway"
-            subtitle="Track A — Execution"
-            highlights={["Historical production infrastructure at Feni", "Updated economic study targeting 2025", "Clear de-risking milestones"]}
-            linkTo="/projects/feni"
-            linkLabel="View Feni Project"
+            title="Restart pathway and disciplined delivery"
+            subtitle="Track A: Near-term execution"
+            highlights={[
+              "Focus on advancing defined pathways toward near-term milestones",
+              "Clear disclosure and progress updates for diligence and tracking",
+              "Capital discipline and prioritisation across the portfolio",
+            ]}
+            linkTo="/projects/wapolu"
+            linkLabel="View restart pathway project"
             variant="gold"
           />
           <TwoTrackCard
-            title="Flagship Exploration Upside"
-            subtitle="Track B — Discovery"
-            highlights={["Multi-km gold system at Fergusson Island", "Significant discovery runway", "NI 43-101 compliant reporting"]}
+            title="Scalable exploration upside"
+            subtitle="Track B: Discovery growth"
+            highlights={[
+              "Flagship exploration potential across multiple targets in PNG",
+              "Systematic programs supported by compliant technical reporting",
+              "Ongoing results flow designed to build the long-term growth case",
+            ]}
             linkTo="/projects/fergusson"
-            linkLabel="View Fergusson Project"
+            linkLabel="View flagship exploration projects"
             variant="blue"
           />
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-          <MetricCard label="Market Cap" value="$12.4M" />
-          <MetricCard label="Cash" value="$3.2M" />
-          <MetricCard label="EV/oz" value="$8.20" />
-          <MetricCard label="Projects" value="4" />
+          <MetricCard label="Market Cap" value="$12.4M" source="As shown on TSXV" />
+          <MetricCard label="Cash Position" value="$3.2M" source="Refer latest MD&A" />
+          <MetricCard label="EV per Au Eq oz" value="$8.20" source="Indicative, based on disclosed resources" />
+          <MetricCard label="Projects" value="4" source="PNG portfolio" />
         </div>
 
         <div className="text-center">

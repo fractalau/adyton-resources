@@ -8,7 +8,7 @@ const Footer = () => (
         <div className="space-y-4">
           <img src={logo} alt="Adyton Resources" className="h-7 invert opacity-70" />
           <p className="text-sm text-muted-foreground leading-relaxed">
-            PNG gold and copper explorer with near-term restart pathway and scalable discovery upside.
+            Adyton Resources is a PNG-focused gold and copper company. Explore the portfolio, access investor materials, and follow company updates.
           </p>
           <p className="text-xs text-muted-foreground">TSXV: ADY</p>
         </div>
