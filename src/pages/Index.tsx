@@ -93,7 +93,7 @@ const Index = () => {
       <KeyMessages />
 
       {/* Key Metrics */}
-      <section className="py-8 border-b" style={{ ...lightBg, ...lightBorder }}>
+      <section className="py-8 border-b" style={{ background: "hsl(var(--gold-light-bg))", ...lightBorder }}>
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {metrics.map((m) => (
