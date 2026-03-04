@@ -5,10 +5,10 @@ interface MetricCardProps {
 }
 
 const MetricCard = ({ label, value, source = "Source: placeholder" }: MetricCardProps) => (
-  <div className="bg-card border border-border rounded-md p-4 text-center metric-glow">
-    <p className="text-[10px] text-muted-foreground uppercase tracking-[0.15em] font-medium mb-1.5">{label}</p>
-    <p className="text-xl md:text-2xl font-display font-bold text-foreground tabular-nums">{value}</p>
-    <p className="text-[9px] text-muted-foreground/60 mt-1.5">{source}</p>
+  <div className="bg-card border border-border rounded-lg p-5 metric-glow text-center">
+    <p className="text-xs text-muted-foreground uppercase tracking-wider font-medium mb-2">{label}</p>
+    <p className="text-2xl md:text-3xl font-display font-bold text-primary">{value}</p>
+    <p className="text-[10px] text-muted-foreground mt-2 italic">{source}</p>
   </div>
 );
 
