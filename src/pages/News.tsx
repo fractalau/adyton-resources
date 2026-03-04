@@ -13,15 +13,15 @@ const allNews = [
 ];
 
 const News = () => (
-  <div className="min-h-screen bg-background">
+  <div className="min-h-screen" style={{ background: "hsl(var(--light-bg))" }}>
     <Header />
     <section className="py-16 md:py-24">
       <div className="container">
         <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-4">Updates</p>
-        <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight mb-6">
+        <h1 className="text-4xl md:text-5xl font-display font-bold leading-tight mb-6" style={{ color: "hsl(var(--light-foreground))" }}>
           News & Releases
         </h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mb-12">
+        <p className="text-lg max-w-2xl mb-12" style={{ color: "hsl(var(--light-muted-foreground))" }}>
           Corporate news, exploration updates, and regulatory filings.
         </p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
