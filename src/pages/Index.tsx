@@ -9,6 +9,7 @@ import TwoTrackCard from "@/components/TwoTrackCard";
 import ProjectTile from "@/components/ProjectTile";
 import NewsCard from "@/components/NewsCard";
 import BluePanelCallout from "@/components/BluePanelCallout";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const metrics = [
   { label: "Market Cap", value: "$12.4M", source: "As shown on TSXV" },
@@ -45,10 +46,15 @@ const Index = () => {
       <Header />
       <TickerStrip />
 
-      {/* Hero */}
-      <section className="py-20 md:py-28">
-        <div className="container">
-          <div className="max-w-3xl">
+      {/* Hero — full-width with background image like GPAC / Collective */}
+      <section className="relative min-h-[520px] md:min-h-[600px] flex items-center">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroBg})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
+        <div className="container relative z-10 py-20 md:py-28">
+          <div className="max-w-2xl">
             <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-4">
               TSXV: ADY
             </p>
@@ -57,10 +63,10 @@ const Index = () => {
               <br />
               <span className="text-primary">Two value drivers.</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-4 max-w-2xl">
+            <p className="text-lg md:text-xl text-foreground/80 leading-relaxed mb-3 max-w-xl">
               A portfolio anchored by a near-term restart pathway and scalable exploration upside, supported by compliant technical disclosure and regular market updates.
             </p>
-            <p className="text-sm text-muted-foreground/70 mb-10 max-w-2xl">
+            <p className="text-sm text-foreground/50 mb-8 max-w-xl">
               Explore projects, access current investor materials, and track milestones in one place.
             </p>
             <div className="flex flex-wrap gap-3 mb-6">
@@ -71,23 +77,18 @@ const Index = () => {
               <Button variant="gold-outline" size="lg" asChild>
                 <Link to="/projects">View Projects</Link>
               </Button>
-              <Button variant="ghost" size="lg" asChild>
+              <Button variant="ghost" size="lg" className="text-foreground/70 hover:text-foreground" asChild>
                 <Link to="/contact">Contact IR</Link>
               </Button>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              <span className="text-[11px] uppercase tracking-wider text-muted-foreground bg-card border border-border rounded-full px-3 py-1">TSXV: ADY</span>
-              <Link to="/investors" className="text-[11px] uppercase tracking-wider text-muted-foreground bg-card border border-border rounded-full px-3 py-1 hover:text-primary transition-colors">Investor Hub</Link>
-              <Link to="/news" className="text-[11px] uppercase tracking-wider text-muted-foreground bg-card border border-border rounded-full px-3 py-1 hover:text-primary transition-colors">Latest News</Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Key Metrics */}
-      <section className="py-12 border-y border-border">
+      {/* Key Metrics — bold stat strip like Collective Mining */}
+      <section className="py-8 border-b border-border bg-card">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {metrics.map((m) => (
               <MetricCard key={m.label} {...m} />
             ))}
@@ -95,8 +96,61 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Two-Track Value Story */}
+      {/* News + Projects side by side — like GPAC layout */}
       <section className="py-16 md:py-20">
+        <div className="container">
+          <div className="grid lg:grid-cols-5 gap-10">
+            {/* Latest News — left column */}
+            <div className="lg:col-span-2">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
+                  Latest News
+                </h2>
+                <Link to="/news" className="text-sm text-primary font-semibold hover:text-primary/80 flex items-center gap-1">
+                  See all <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
+              </div>
+              <div className="space-y-0 divide-y divide-border">
+                {news.map((n) => (
+                  <Link
+                    key={n.slug}
+                    to={`/news/${n.slug}`}
+                    className="block py-4 first:pt-0 last:pb-0 group"
+                  >
+                    <p className="text-xs text-primary font-semibold mb-1">{n.date}</p>
+                    <h3 className="text-sm font-display font-semibold text-foreground group-hover:text-primary transition-colors leading-snug">
+                      {n.title}
+                    </h3>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Projects — right column */}
+            <div className="lg:col-span-3">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
+                  Projects
+                </h2>
+                <Link to="/projects" className="text-sm text-primary font-semibold hover:text-primary/80 flex items-center gap-1">
+                  View all <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
+              </div>
+              <p className="text-muted-foreground text-sm mb-6">
+                PNG-focused gold and copper assets across multiple stages, from near-term pathways to longer-term growth opportunities.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {projects.map((p) => (
+                  <ProjectTile key={p.slug} {...p} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Two-Track Value Story */}
+      <section className="py-16 md:py-20 bg-card/50">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">
@@ -131,61 +185,6 @@ const Index = () => {
               linkLabel="View flagship exploration projects"
               variant="blue"
             />
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Overview */}
-      <section className="py-16 md:py-20 bg-card/50">
-        <div className="container">
-          <div className="flex items-end justify-between mb-10">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-2">
-                Project portfolio
-              </h2>
-              <p className="text-muted-foreground max-w-xl">PNG-focused gold and copper assets across multiple stages, from near-term pathways to longer-term growth opportunities.</p>
-            </div>
-            <Button variant="gold-outline" size="sm" asChild className="hidden md:inline-flex">
-              <Link to="/projects">
-                View all
-                <ArrowRight className="h-3.5 w-3.5" />
-              </Link>
-            </Button>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {projects.map((p) => (
-              <ProjectTile key={p.slug} {...p} />
-            ))}
-          </div>
-          <div className="mt-6 md:hidden text-center">
-            <Button variant="gold-outline" size="sm" asChild>
-              <Link to="/projects">View all projects</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Latest News */}
-      <section className="py-16 md:py-20">
-        <div className="container">
-          <div className="flex items-end justify-between mb-10">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-2">
-                Latest news
-              </h2>
-              <p className="text-muted-foreground">Recent releases and corporate updates, formatted for quick review with full source access.</p>
-            </div>
-            <Button variant="gold-outline" size="sm" asChild className="hidden md:inline-flex">
-              <Link to="/news">
-                All news
-                <ArrowRight className="h-3.5 w-3.5" />
-              </Link>
-            </Button>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {news.map((n) => (
-              <NewsCard key={n.slug} {...n} />
-            ))}
           </div>
         </div>
       </section>
