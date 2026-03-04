@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Download, ArrowRight, MapPin, CheckCircle } from "lucide-react";
+import { Download, ArrowRight, CheckCircle } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import TickerStrip from "@/components/TickerStrip";
@@ -33,11 +33,10 @@ const news = [
 ];
 
 const pngFacts = [
-  "Papua New Guinea hosts world-class gold and copper deposits with proven geological prospectivity.",
-  "Established mining jurisdiction with major operators including Newmont, Barrick, and Harmony Gold.",
-  "Government supportive of responsible resource development with modernized mining legislation.",
-  "Significant infrastructure investment underway, improving access and logistics for exploration.",
-  "Under-explored relative to geological potential — discovery opportunity remains substantial.",
+  "World-class gold and copper deposits with proven geological prospectivity.",
+  "Major operators present: Newmont, Barrick, Harmony Gold.",
+  "Government supportive of responsible resource development.",
+  "Significantly under-explored relative to geological potential.",
 ];
 
 const Index = () => {
@@ -47,30 +46,30 @@ const Index = () => {
       <TickerStrip />
 
       {/* Hero */}
-      <section className="py-20 md:py-28">
-        <div className="container">
-          <div className="max-w-3xl">
-            <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-4">
+      <section className="py-16 md:py-24 topo-texture overflow-hidden">
+        <div className="container relative z-10">
+          <div className="max-w-2xl">
+            <p className="text-[11px] uppercase tracking-[0.3em] text-primary/70 font-semibold mb-5">
               TSXV: ADY
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1] mb-6">
-              PNG Gold and Copper.
+            <h1 className="text-3xl md:text-[44px] lg:text-[52px] font-display font-bold text-foreground leading-[1.08] mb-5">
+              PNG Gold & Copper.
               <br />
-              <span className="text-primary">Two value drivers.</span>
+              Two value drivers.
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 max-w-2xl">
-              Restart pathway plus scalable discovery upside, backed by compliant technical reporting.
+            <p className="text-[15px] md:text-base text-muted-foreground leading-relaxed mb-8 max-w-lg">
+              Near-term restart pathway plus scalable discovery upside, backed by compliant technical reporting.
             </p>
-            <div className="flex flex-wrap gap-3">
-              <Button variant="gold" size="lg">
-                <Download className="h-4 w-4" />
+            <div className="flex flex-wrap items-center gap-2.5">
+              <Button variant="gold" size="default">
+                <Download className="h-3.5 w-3.5" />
                 Download Deck
               </Button>
-              <Button variant="gold-outline" size="lg" asChild>
+              <Button variant="gold-outline" size="default" asChild>
                 <Link to="/projects">View Projects</Link>
               </Button>
-              <Button variant="ghost" size="lg" asChild>
-                <Link to="/contact">Contact IR</Link>
+              <Button variant="ghost" size="default" asChild>
+                <Link to="/contact" className="text-muted-foreground">Contact IR</Link>
               </Button>
             </div>
           </div>
@@ -78,9 +77,9 @@ const Index = () => {
       </section>
 
       {/* Key Metrics */}
-      <section className="py-12 border-y border-border">
+      <section className="py-8 border-y border-border/60">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
             {metrics.map((m) => (
               <MetricCard key={m.label} {...m} />
             ))}
@@ -89,17 +88,18 @@ const Index = () => {
       </section>
 
       {/* Two-Track Value Story */}
-      <section className="py-16 md:py-20">
+      <section className="py-14 md:py-20">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">
+          <div className="mb-10">
+            <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground/60 font-semibold mb-2">Investment Thesis</p>
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-2">
               Two-Track Value Story
             </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Dual catalysts for value creation: near-term execution and long-term discovery.
+            <p className="text-[13px] text-muted-foreground max-w-md">
+              Dual catalysts: near-term execution and long-term discovery.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-4">
             <TwoTrackCard
               title="Near-Term Restart Pathway"
               subtitle="Track A — Execution"
@@ -129,53 +129,42 @@ const Index = () => {
       </section>
 
       {/* Projects Overview */}
-      <section className="py-16 md:py-20 bg-card/50">
-        <div className="container">
-          <div className="flex items-end justify-between mb-10">
+      <section className="py-14 md:py-20 dot-grid overflow-hidden">
+        <div className="container relative z-10">
+          <div className="flex items-end justify-between mb-8">
             <div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-2">
+              <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground/60 font-semibold mb-2">Portfolio</p>
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
                 Project Portfolio
               </h2>
-              <p className="text-muted-foreground">PNG-focused gold and copper assets.</p>
             </div>
-            <Button variant="gold-outline" size="sm" asChild className="hidden md:inline-flex">
-              <Link to="/projects">
-                View all
-                <ArrowRight className="h-3.5 w-3.5" />
-              </Link>
-            </Button>
+            <Link to="/projects" className="hidden md:inline-flex items-center gap-1 text-[13px] text-muted-foreground hover:text-foreground font-medium transition-colors">
+              View all <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {projects.map((p) => (
               <ProjectTile key={p.slug} {...p} />
             ))}
-          </div>
-          <div className="mt-6 md:hidden text-center">
-            <Button variant="gold-outline" size="sm" asChild>
-              <Link to="/projects">View all projects</Link>
-            </Button>
           </div>
         </div>
       </section>
 
       {/* Latest News */}
-      <section className="py-16 md:py-20">
+      <section className="py-14 md:py-20">
         <div className="container">
-          <div className="flex items-end justify-between mb-10">
+          <div className="flex items-end justify-between mb-8">
             <div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-2">
+              <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground/60 font-semibold mb-2">Updates</p>
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
                 Latest News
               </h2>
-              <p className="text-muted-foreground">Recent releases and corporate updates.</p>
             </div>
-            <Button variant="gold-outline" size="sm" asChild className="hidden md:inline-flex">
-              <Link to="/news">
-                All news
-                <ArrowRight className="h-3.5 w-3.5" />
-              </Link>
-            </Button>
+            <Link to="/news" className="hidden md:inline-flex items-center gap-1 text-[13px] text-muted-foreground hover:text-foreground font-medium transition-colors">
+              All news <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {news.map((n) => (
               <NewsCard key={n.slug} {...n} />
             ))}
@@ -187,27 +176,25 @@ const Index = () => {
       <BluePanelCallout />
 
       {/* Why PNG Preview */}
-      <section className="py-16 md:py-20">
+      <section className="py-14 md:py-20">
         <div className="container">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-8 text-center">
+          <div className="max-w-2xl mx-auto">
+            <p className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground/60 font-semibold mb-2 text-center">Jurisdiction</p>
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6 text-center">
               Why Papua New Guinea?
             </h2>
-            <ul className="space-y-4 mb-10">
+            <ul className="space-y-3 mb-8">
               {pngFacts.map((f, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground text-sm">{f}</span>
+                <li key={i} className="flex items-start gap-2.5">
+                  <CheckCircle className="h-4 w-4 text-primary/60 shrink-0 mt-0.5" />
+                  <span className="text-[13px] text-muted-foreground leading-relaxed">{f}</span>
                 </li>
               ))}
             </ul>
             <div className="text-center">
-              <Button variant="gold-outline" asChild>
-                <Link to="/why-png">
-                  Learn more about PNG
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </Button>
+              <Link to="/why-png" className="inline-flex items-center gap-1 text-[13px] text-primary/80 hover:text-primary font-semibold transition-colors">
+                Learn more about PNG <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
             </div>
           </div>
         </div>
