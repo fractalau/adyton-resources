@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import TickerStrip from "@/components/TickerStrip";
 import MetricCard from "@/components/MetricCard";
+import KeyMessages from "@/components/KeyMessages";
 import TwoTrackCard from "@/components/TwoTrackCard";
 import ProjectTile from "@/components/ProjectTile";
 import NewsCard from "@/components/NewsCard";
@@ -22,7 +23,7 @@ const metrics = [
 
 const projects = [
   { name: "Feni Gold-Copper", slug: "feni", stage: "Growth", highlights: ["Portfolio growth opportunity with exploration upside", "Key project updates consolidated in News and Investor Hub"], location: "New Ireland Province, PNG" },
-  { name: "Fergusson Island", slug: "fergusson", stage: "Exploration", highlights: ["Flagship exploration focus within the PNG portfolio", "Results, maps, and disclosures available in Investor Hub"], location: "Milne Bay Province, PNG" },
+  { name: "Fergusson Island", slug: "fergusson", stage: "Exploration", highlights: ["Growth and upside across multiple targets", "Results, maps, and disclosures available in Investor Hub"], location: "Milne Bay Province, PNG" },
   { name: "Wapolu", slug: "wapolu", stage: "Near-Term", highlights: ["Near-term pathway focus within the portfolio strategy", "Milestones and updates tracked via News and releases"], location: "Milne Bay Province, PNG" },
   { name: "Yandera", slug: "yandera", stage: "Advanced", highlights: ["Large-scale copper-gold system within the broader portfolio", "Supporting technical materials available in Investor Hub"], location: "Madang Province, PNG" },
 ];
@@ -40,13 +41,18 @@ const pngFacts = [
   "Large areas remain under-explored relative to geological potential.",
 ];
 
+const lightBg = { background: "hsl(var(--light-bg))" };
+const lightText = { color: "hsl(var(--light-foreground))" };
+const lightMuted = { color: "hsl(var(--light-muted-foreground))" };
+const lightBorder = { borderColor: "hsl(var(--light-border))" };
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <TickerStrip />
 
-      {/* Hero — full-width with background image like GPAC / Collective */}
+      {/* Hero */}
       <section className="relative min-h-[520px] md:min-h-[600px] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -64,10 +70,10 @@ const Index = () => {
               <span className="text-primary">Two value drivers.</span>
             </h1>
             <p className="text-lg md:text-xl text-foreground/80 leading-relaxed mb-3 max-w-xl">
-              A portfolio anchored by a near-term restart pathway and scalable exploration upside, supported by compliant technical disclosure and regular market updates.
+              High-quality gold and copper assets in Papua New Guinea, anchored by a near-term pathway at Wapolu and broader growth and upside across Fergusson Island.
             </p>
             <p className="text-sm text-foreground/50 mb-8 max-w-xl">
-              Explore projects, access current investor materials, and track milestones in one place.
+              Find the investment thesis, key documents, and project updates in one place.
             </p>
             <div className="flex flex-wrap gap-3 mb-6">
               <Button variant="gold" size="lg">
@@ -85,8 +91,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Key Metrics — bold stat strip like Collective Mining */}
-      <section className="py-8 border-b border-border bg-card">
+      {/* Key Messages icon strip */}
+      <KeyMessages />
+
+      {/* Key Metrics */}
+      <section className="py-8 border-b" style={{ ...lightBg, ...lightBorder }}>
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {metrics.map((m) => (
@@ -97,16 +106,19 @@ const Index = () => {
       </section>
 
       {/* Latest News */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20 border-b" style={{ ...lightBg, ...lightBorder }}>
         <div className="container">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-2xl md:text-3xl font-display font-bold" style={lightText}>
               Latest News
             </h2>
             <Link to="/news" className="text-sm text-primary font-semibold hover:text-primary/80 flex items-center gap-1">
               See all <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
+          <p className="text-sm mb-8 max-w-3xl" style={lightMuted}>
+            Recent releases and corporate updates. Summaries for quick scanning, with full release access and the original source linked.
+          </p>
           <div className="grid sm:grid-cols-3 gap-5">
             {news.map((n) => (
               <NewsCard key={n.slug} {...n} />
@@ -116,18 +128,18 @@ const Index = () => {
       </section>
 
       {/* Projects */}
-      <section className="py-16 md:py-20 border-t border-border">
+      <section className="py-16 md:py-20 border-b" style={{ ...lightBg, ...lightBorder }}>
         <div className="container">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
+            <h2 className="text-2xl md:text-3xl font-display font-bold" style={lightText}>
               Projects
             </h2>
             <Link to="/projects" className="text-sm text-primary font-semibold hover:text-primary/80 flex items-center gap-1">
               View all <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
-          <p className="text-muted-foreground text-sm mb-8 max-w-2xl">
-            PNG-focused gold and copper assets across multiple stages, from near-term pathways to longer-term growth opportunities.
+          <p className="text-sm mb-8 max-w-2xl" style={lightMuted}>
+            PNG gold and copper assets across multiple stages, anchored by Wapolu and Fergusson. Start with the two value drivers, then explore the broader portfolio.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {projects.map((p) => (
@@ -137,64 +149,66 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Two-Track Value Story */}
-      <section className="py-16 md:py-20 bg-card/50">
+      {/* Two value drivers */}
+      <section className="py-16 md:py-20" style={lightBg}>
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-3" style={lightText}>
               Two value drivers
             </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Clear pathways to value creation — near-term execution plus discovery growth.
+            <p className="max-w-xl mx-auto" style={lightMuted}>
+              A focused PNG portfolio with a near-term pathway at Wapolu and broader growth and upside across Fergusson Island.
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             <TwoTrackCard
-              title="Restart pathway and disciplined delivery"
-              subtitle="Track A: Near-term execution"
+              title="Wapolu"
+              subtitle="Track A: Near-term pathway"
               highlights={[
-                "Focus on advancing defined pathways toward near-term milestones",
-                "Clear disclosure and progress updates for diligence and tracking",
-                "Capital discipline and prioritisation across the portfolio",
+                "Near-term pathway focus within the portfolio strategy",
+                "Defined milestones tracked through frequent company updates",
+                "Key documents and disclosures available in the Investor Hub",
               ]}
               linkTo="/projects/wapolu"
-              linkLabel="View restart pathway project"
+              linkLabel="Explore Wapolu"
               variant="gold"
+              lightMode
             />
             <TwoTrackCard
-              title="Scalable exploration upside"
-              subtitle="Track B: Discovery growth"
+              title="Fergusson Island"
+              subtitle="Track B: Growth and upside"
               highlights={[
-                "Flagship exploration potential across multiple targets in PNG",
-                "Systematic programs supported by compliant technical reporting",
-                "Ongoing results flow designed to build the long-term growth case",
+                "Growth and upside across multiple targets",
+                "Systematic exploration approach with regular disclosure",
+                "Maps, results, and technical reporting organised for diligence",
               ]}
               linkTo="/projects/fergusson"
-              linkLabel="View flagship exploration projects"
+              linkLabel="Explore Fergusson"
               variant="blue"
+              lightMode
             />
           </div>
         </div>
       </section>
 
-      {/* Investor Hub Callout */}
+      {/* Investor Hub Callout — stays deep blue */}
       <BluePanelCallout />
 
-      {/* Why PNG Preview */}
-      <section className="py-16 md:py-20">
+      {/* Why PNG */}
+      <section className="py-16 md:py-20" style={lightBg}>
         <div className="container">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-center" style={lightText}>
               Why Papua New Guinea
             </h2>
-            <p className="text-muted-foreground text-center mb-8">
+            <p className="text-center mb-8" style={lightMuted}>
               PNG is a long-established gold and copper jurisdiction with significant geological prospectivity and existing mining operations.
             </p>
             <ul className="space-y-4 mb-10">
               {pngFacts.map((f, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground text-sm">{f}</span>
+                  <span className="text-sm" style={lightMuted}>{f}</span>
                 </li>
               ))}
             </ul>
