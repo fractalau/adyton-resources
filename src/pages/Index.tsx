@@ -96,55 +96,43 @@ const Index = () => {
         </div>
       </section>
 
-      {/* News + Projects side by side — like GPAC layout */}
+      {/* Latest News */}
       <section className="py-16 md:py-20">
         <div className="container">
-          <div className="grid lg:grid-cols-5 gap-10">
-            {/* Latest News — left column */}
-            <div className="lg:col-span-2">
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
-                  Latest News
-                </h2>
-                <Link to="/news" className="text-sm text-primary font-semibold hover:text-primary/80 flex items-center gap-1">
-                  See all <ArrowRight className="h-3.5 w-3.5" />
-                </Link>
-              </div>
-              <div className="space-y-0 divide-y divide-border">
-                {news.map((n) => (
-                  <Link
-                    key={n.slug}
-                    to={`/news/${n.slug}`}
-                    className="block py-4 first:pt-0 last:pb-0 group"
-                  >
-                    <p className="text-xs text-primary font-semibold mb-1">{n.date}</p>
-                    <h3 className="text-sm font-display font-semibold text-foreground group-hover:text-primary transition-colors leading-snug">
-                      {n.title}
-                    </h3>
-                  </Link>
-                ))}
-              </div>
-            </div>
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
+              Latest News
+            </h2>
+            <Link to="/news" className="text-sm text-primary font-semibold hover:text-primary/80 flex items-center gap-1">
+              See all <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
+          <div className="grid sm:grid-cols-3 gap-5">
+            {news.map((n) => (
+              <NewsCard key={n.slug} {...n} />
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* Projects — right column */}
-            <div className="lg:col-span-3">
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
-                  Projects
-                </h2>
-                <Link to="/projects" className="text-sm text-primary font-semibold hover:text-primary/80 flex items-center gap-1">
-                  View all <ArrowRight className="h-3.5 w-3.5" />
-                </Link>
-              </div>
-              <p className="text-muted-foreground text-sm mb-6">
-                PNG-focused gold and copper assets across multiple stages, from near-term pathways to longer-term growth opportunities.
-              </p>
-              <div className="grid sm:grid-cols-2 gap-4">
-                {projects.map((p) => (
-                  <ProjectTile key={p.slug} {...p} />
-                ))}
-              </div>
-            </div>
+      {/* Projects */}
+      <section className="py-16 md:py-20 border-t border-border">
+        <div className="container">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">
+              Projects
+            </h2>
+            <Link to="/projects" className="text-sm text-primary font-semibold hover:text-primary/80 flex items-center gap-1">
+              View all <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
+          <p className="text-muted-foreground text-sm mb-8 max-w-2xl">
+            PNG-focused gold and copper assets across multiple stages, from near-term pathways to longer-term growth opportunities.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {projects.map((p) => (
+              <ProjectTile key={p.slug} {...p} />
+            ))}
           </div>
         </div>
       </section>
