@@ -1,0 +1,181 @@
+import { useParams, Link } from "react-router-dom";
+import { MapPin, ArrowRight, Download, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import MetricCard from "@/components/MetricCard";
+import TimelineComponent from "@/components/TimelineComponent";
+import NewsCard from "@/components/NewsCard";
+import TagChip from "@/components/TagChip";
+import DownloadTile from "@/components/DownloadTile";
+
+const projectData: Record<string, {
+  name: string; location: string; stage: string; description: string;
+  facts: { label: string; value: string }[];
+  timeline: { date: string; title: string; description: string; status: "completed" | "upcoming" | "in-progress" }[];
+}> = {
+  feni: {
+    name: "Feni Gold-Copper Project",
+    location: "New Ireland Province, PNG",
+    stage: "Restart Pathway",
+    description: "The Feni project represents Adyton's near-term value driver, featuring historical production infrastructure and a clear pathway to restart. Updated economic assessments demonstrate robust project economics at current gold and copper prices.",
+    facts: [
+      { label: "Commodity", value: "Gold-Copper" },
+      { label: "Stage", value: "Restart Pathway" },
+      { label: "Area", value: "142 km²" },
+      { label: "Resource", value: "Placeholder" },
+    ],
+    timeline: [
+      { date: "2023", title: "Acquisition Completed", description: "Secured 100% ownership of the Feni project tenements.", status: "completed" },
+      { date: "Q1 2024", title: "Updated Resource Estimate", description: "NI 43-101 compliant resource estimate completed.", status: "completed" },
+      { date: "Q3 2024", title: "Restart Study Initiated", description: "Prefeasibility-level economic assessment underway.", status: "in-progress" },
+      { date: "2025", title: "Restart Decision", description: "Target restart decision based on study outcomes.", status: "upcoming" },
+    ],
+  },
+  fergusson: {
+    name: "Fergusson Island",
+    location: "Milne Bay Province, PNG",
+    stage: "Exploration",
+    description: "Fergusson Island is Adyton's flagship exploration project, hosting a multi-kilometre gold system with high-grade intercepts. The project represents significant discovery-scale potential in a highly prospective geological setting.",
+    facts: [
+      { label: "Commodity", value: "Gold" },
+      { label: "Stage", value: "Exploration" },
+      { label: "Area", value: "580 km²" },
+      { label: "Strike Length", value: "2.4+ km" },
+    ],
+    timeline: [
+      { date: "2022", title: "Initial Reconnaissance", description: "Surface sampling and geological mapping completed.", status: "completed" },
+      { date: "2023", title: "Phase 1 Drilling", description: "Initial drill program confirming gold mineralization.", status: "completed" },
+      { date: "2024", title: "Phase 2 Drilling", description: "Expanded drill program across multiple targets.", status: "in-progress" },
+      { date: "2025", title: "Resource Delineation", description: "Target maiden resource estimate.", status: "upcoming" },
+    ],
+  },
+  wapolu: {
+    name: "Wapolu Gold Project",
+    location: "Milne Bay Province, PNG",
+    stage: "Exploration",
+    description: "The Wapolu project covers an extensive tenement package with demonstrated gold discovery potential. Early-stage exploration has identified multiple high-priority targets for follow-up work.",
+    facts: [
+      { label: "Commodity", value: "Gold" },
+      { label: "Stage", value: "Exploration" },
+      { label: "Area", value: "320 km²" },
+      { label: "Targets", value: "Multiple" },
+    ],
+    timeline: [
+      { date: "2023", title: "Tenement Acquired", description: "Exploration license secured.", status: "completed" },
+      { date: "2024", title: "Reconnaissance Program", description: "Stream sediment and soil sampling program.", status: "in-progress" },
+      { date: "2025", title: "Drill Testing", description: "First-pass drill testing of priority targets.", status: "upcoming" },
+    ],
+  },
+  yandera: {
+    name: "Yandera Copper-Gold",
+    location: "Madang Province, PNG",
+    stage: "Advanced",
+    description: "Yandera is a large porphyry copper-gold deposit with a significant resource base. The project benefits from prior exploration investment and established technical understanding.",
+    facts: [
+      { label: "Commodity", value: "Copper-Gold" },
+      { label: "Stage", value: "Advanced" },
+      { label: "Area", value: "210 km²" },
+      { label: "Resource", value: "Large-scale" },
+    ],
+    timeline: [
+      { date: "Historical", title: "Extensive Exploration", description: "Significant prior drilling and resource estimation.", status: "completed" },
+      { date: "2024", title: "Technical Review", description: "Evaluation of existing data and potential optimization.", status: "in-progress" },
+      { date: "2025", title: "Strategic Assessment", description: "Determine optimal development or partnership pathway.", status: "upcoming" },
+    ],
+  },
+};
+
+const ProjectDetail = () => {
+  const { slug } = useParams<{ slug: string }>();
+  const project = projectData[slug || "feni"];
+
+  if (!project) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header />
+        <div className="container py-20 text-center">
+          <h1 className="text-2xl font-display font-bold text-foreground">Project not found</h1>
+          <Button variant="gold-outline" asChild className="mt-4">
+            <Link to="/projects">View all projects</Link>
+          </Button>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      <section className="py-16 md:py-20">
+        <div className="container">
+          {/* Header */}
+          <div className="mb-10">
+            <div className="flex items-center gap-3 mb-4">
+              <TagChip label={project.stage} />
+              <span className="text-xs text-muted-foreground flex items-center gap-1">
+                <MapPin className="h-3 w-3" /> {project.location}
+              </span>
+            </div>
+            <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">{project.name}</h1>
+            <p className="text-lg text-muted-foreground max-w-2xl">{project.description}</p>
+          </div>
+
+          {/* At-a-glance + Map */}
+          <div className="grid md:grid-cols-2 gap-6 mb-16">
+            <div className="grid grid-cols-2 gap-4">
+              {project.facts.map((f) => (
+                <MetricCard key={f.label} label={f.label} value={f.value} source="Source: placeholder" />
+              ))}
+            </div>
+            <div className="bg-muted rounded-lg flex items-center justify-center aspect-[4/3]">
+              <MapPin className="h-12 w-12 text-muted-foreground/30" />
+            </div>
+          </div>
+
+          {/* Timeline */}
+          <div className="mb-16">
+            <h2 className="text-2xl font-display font-bold text-foreground mb-6">Timeline & Catalysts</h2>
+            <TimelineComponent items={project.timeline} />
+          </div>
+
+          {/* Reports & Downloads */}
+          <div className="mb-16">
+            <h2 className="text-2xl font-display font-bold text-foreground mb-6">Results & Reports</h2>
+            <div className="space-y-3">
+              <DownloadTile title="NI 43-101 Technical Report" date="March 2024" description="Independent technical report on mineral resource estimate." />
+              <DownloadTile title="Exploration Update Presentation" date="January 2025" description="Latest exploration results and upcoming program details." />
+            </div>
+          </div>
+
+          {/* Related News */}
+          <div className="mb-16">
+            <h2 className="text-2xl font-display font-bold text-foreground mb-6">Related News</h2>
+            <div className="grid sm:grid-cols-2 gap-5">
+              <NewsCard title="Drilling Results Confirm High-Grade Zones" date="January 2025" excerpt="Latest drill results demonstrate continuity of mineralization." slug="placeholder-1" tags={[project.name.split(" ")[0]]} />
+              <NewsCard title="Updated Resource Estimate Released" date="December 2024" excerpt="NI 43-101 compliant resource update shows growth in all categories." slug="placeholder-2" tags={[project.name.split(" ")[0]]} />
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="bg-card border border-border rounded-lg p-8 text-center">
+            <h3 className="text-xl font-display font-bold text-foreground mb-3">Interested in this project?</h3>
+            <p className="text-muted-foreground text-sm mb-6">Contact our Investor Relations team for more information.</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Button variant="gold" asChild>
+                <Link to="/contact"><Mail className="h-4 w-4" /> Contact IR</Link>
+              </Button>
+              <Button variant="gold-outline">
+                <Download className="h-4 w-4" /> Download Deck
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </div>
+  );
+};
+
+export default ProjectDetail;
