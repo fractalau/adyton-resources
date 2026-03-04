@@ -150,7 +150,7 @@ const Index = () => {
       </section>
 
       {/* Two value drivers */}
-      <section className="py-16 md:py-20" style={lightBg}>
+      <section className="py-16 md:py-20" style={{ background: "hsl(var(--gold-light-bg))" }}>
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-3" style={lightText}>
