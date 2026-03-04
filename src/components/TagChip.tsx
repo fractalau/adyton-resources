@@ -7,12 +7,12 @@ interface TagChipProps {
 const TagChip = ({ label, active = false, onClick }: TagChipProps) => (
   <span
     onClick={onClick}
-    className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider transition-colors ${
+    className={`inline-flex items-center px-2 py-px rounded text-[9px] font-semibold uppercase tracking-[0.12em] transition-colors ${
       onClick ? "cursor-pointer" : ""
     } ${
       active
-        ? "bg-primary/20 text-primary border border-primary/30"
-        : "bg-muted text-muted-foreground border border-border"
+        ? "bg-primary/15 text-primary border border-primary/25"
+        : "bg-muted/80 text-muted-foreground/70 border border-border/60"
     }`}
   >
     {label}

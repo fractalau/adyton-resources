@@ -13,30 +13,30 @@ interface ProjectTileProps {
 const ProjectTile = ({ name, slug, stage, highlights, location }: ProjectTileProps) => (
   <Link
     to={`/projects/${slug}`}
-    className="group bg-card border border-border rounded-lg overflow-hidden hover:border-primary/30 transition-all"
+    className="group bg-card border border-border rounded-md overflow-hidden hover:border-primary/20 transition-all flex flex-col"
   >
-    <div className="aspect-[16/10] bg-muted flex items-center justify-center relative">
-      <MapPin className="h-8 w-8 text-muted-foreground/30" />
-      <div className="absolute top-3 left-3">
+    <div className="aspect-[16/10] bg-muted/50 dot-grid flex items-center justify-center relative">
+      <MapPin className="h-6 w-6 text-muted-foreground/20 relative z-10" />
+      <div className="absolute top-2.5 left-2.5 z-10">
         <TagChip label={stage} />
       </div>
     </div>
-    <div className="p-5">
-      <h3 className="font-display font-semibold text-foreground group-hover:text-primary transition-colors mb-1">
+    <div className="p-4 flex-1 flex flex-col">
+      <h3 className="font-display font-semibold text-sm text-foreground group-hover:text-primary transition-colors mb-0.5">
         {name}
       </h3>
       {location && (
-        <p className="text-xs text-muted-foreground mb-3">{location}</p>
+        <p className="text-[11px] text-muted-foreground/70 mb-2.5">{location}</p>
       )}
-      <ul className="space-y-1.5 mb-4">
+      <ul className="space-y-1 mb-3 flex-1">
         {highlights.map((h, i) => (
-          <li key={i} className="text-xs text-muted-foreground flex items-start gap-1.5">
-            <span className="mt-1 h-1 w-1 rounded-full bg-primary/60 shrink-0" />
+          <li key={i} className="text-[11px] text-muted-foreground flex items-start gap-1.5">
+            <span className="mt-[5px] h-0.5 w-0.5 rounded-full bg-primary/50 shrink-0" />
             {h}
           </li>
         ))}
       </ul>
-      <span className="text-xs font-semibold text-primary flex items-center gap-1 group-hover:gap-2 transition-all">
+      <span className="text-[11px] font-semibold text-primary/80 flex items-center gap-1 group-hover:gap-1.5 transition-all">
         View project <ArrowRight className="h-3 w-3" />
       </span>
     </div>

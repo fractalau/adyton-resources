@@ -13,15 +13,15 @@ interface NewsCardProps {
 }
 
 const NewsCard = ({ title, date, excerpt, slug, tags = [], sourceUrl }: NewsCardProps) => (
-  <div className="bg-card border border-border rounded-lg p-5 flex flex-col">
-    <div className="flex flex-wrap gap-1.5 mb-3">
+  <div className="bg-card border border-border rounded-md p-5 flex flex-col h-full">
+    <div className="flex flex-wrap gap-1.5 mb-2.5">
       {tags.map((t) => (
         <TagChip key={t} label={t} />
       ))}
     </div>
-    <p className="text-xs text-muted-foreground mb-2">{date}</p>
-    <h3 className="font-display font-semibold text-foreground mb-2 line-clamp-2">{title}</h3>
-    <p className="text-sm text-muted-foreground line-clamp-2 mb-4 flex-1">{excerpt}</p>
+    <p className="text-[11px] text-muted-foreground/60 mb-1.5">{date}</p>
+    <h3 className="font-display font-semibold text-sm text-foreground mb-1.5 line-clamp-2 leading-snug">{title}</h3>
+    <p className="text-[13px] text-muted-foreground line-clamp-2 mb-4 flex-1 leading-relaxed">{excerpt}</p>
     <div className="flex gap-2">
       <Button variant="gold-outline" size="sm" asChild className="flex-1">
         <Link to={`/news/${slug}`}>Read</Link>
