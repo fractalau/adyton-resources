@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Download, ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import internalHeaderBg from "@/assets/internal-header-bg.jpg";
 
 const stats = [
   { value: "1.46 Moz Au", label: "Inferred (Kabang)" },
@@ -43,8 +44,10 @@ const FeniIsland = () => (
     <Header />
 
     {/* Hero */}
-    <section className="bg-background py-16 md:py-20 border-b border-border">
-      <div className="container">
+    <section className="relative bg-background py-16 md:py-20 border-b border-border overflow-hidden">
+      <div className="absolute inset-0 bg-cover bg-center opacity-15" style={{ backgroundImage: `url(${internalHeaderBg})` }} />
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80" />
+      <div className="container relative z-10">
         <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">FLAGSHIP GROWTH ASSET</p>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
           Feni Island<br />Gold-Copper Project
@@ -245,20 +248,20 @@ const FeniIsland = () => (
     </section>
 
     {/* Logistics */}
-    <section className="py-16 md:py-20 bg-background">
+    <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
       <div className="container max-w-4xl">
         <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">DIRECT SHIP ORE OPPORTUNITY</p>
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
+        <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
           5 km Pit-to-Ship Distance
         </h2>
-        <p className="text-sm leading-relaxed font-body text-foreground/70">
+        <p className="text-sm leading-relaxed font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
           Feni Island's direct tidewater access means the pit-to-ship distance for any future operation is approximately 5 km — compared to 1,350 km for the Ok Tedi operation in PNG's highlands. Coastal access reduces logistical complexity, supports lower capital intensity, and simplifies permitting and construction compared with remote inland projects.
         </p>
       </div>
     </section>
 
     {/* CTAs */}
-    <section className="py-12 border-t border-border bg-background">
+    <section className="py-12" style={{ background: "hsl(var(--off-white))", borderTop: "1px solid hsl(var(--light-border))" }}>
       <div className="container max-w-4xl flex flex-wrap gap-3">
         <Button variant="gold" size="lg">
           <Download className="h-4 w-4" />

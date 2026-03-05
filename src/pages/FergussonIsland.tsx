@@ -2,6 +2,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Download, ExternalLink } from "lucide-react";
+import internalHeaderBg from "@/assets/internal-header-bg.jpg";
 
 const stats = [
   { value: "939 Koz Au", label: "Indicated + Inferred" },
@@ -36,8 +37,10 @@ const FergussonIsland = () => (
     <Header />
 
     {/* Hero */}
-    <section className="py-16 md:py-20 border-b border-border" style={{ background: "hsl(var(--off-white))" }}>
-      <div className="container">
+    <section className="relative py-16 md:py-20 border-b border-border overflow-hidden" style={{ background: "hsl(var(--off-white))" }}>
+      <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{ backgroundImage: `url(${internalHeaderBg})` }} />
+      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--off-white))] via-[hsl(var(--off-white))]/95 to-[hsl(var(--off-white))]/80" />
+      <div className="container relative z-10">
         <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">NEAR-TERM CASH FLOW</p>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
           Fergusson Island<br />Gold Project
@@ -257,30 +260,30 @@ const FergussonIsland = () => (
     </section>
 
     {/* Development Timeline */}
-    <section className="py-16 md:py-20 bg-background">
+    <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
       <div className="container max-w-4xl">
         <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">PATH TO PRODUCTION</p>
-        <h2 className="text-2xl font-display font-bold text-foreground mb-8">Development Pathway</h2>
+        <h2 className="text-2xl font-display font-bold mb-8" style={{ color: "hsl(var(--text-dark))" }}>Development Pathway</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {timeline.map((t, i) => (
-            <div key={i} className="relative p-4 rounded-lg border border-border bg-card">
+            <div key={i} className="relative p-4 rounded-lg border" style={{ background: "hsl(var(--light-card))", borderColor: "hsl(var(--light-border))" }}>
               <p className="text-xs font-mono font-bold text-primary mb-2">{t.period}</p>
-              <h4 className="text-sm font-display font-semibold text-foreground mb-1">{t.title}</h4>
-              <p className="text-xs text-foreground/50 font-body">{t.desc}</p>
+              <h4 className="text-sm font-display font-semibold mb-1" style={{ color: "hsl(var(--text-dark))" }}>{t.title}</h4>
+              <p className="text-xs font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>{t.desc}</p>
               {i < timeline.length - 1 && (
                 <div className="hidden md:block absolute top-1/2 -right-2 w-4 h-px bg-primary/40" />
               )}
             </div>
           ))}
         </div>
-        <p className="text-[10px] italic font-body text-foreground/40 mt-4">
+        <p className="text-[10px] italic font-body mt-4" style={{ color: "hsl(var(--light-muted-foreground) / 0.6)" }}>
           Timeline represents management targets based on current plans. Actual timing subject to permitting, regulatory approvals, and other factors outside Adyton's control.
         </p>
       </div>
     </section>
 
     {/* CTAs */}
-    <section className="py-12 border-t border-border bg-background">
+    <section className="py-12" style={{ background: "hsl(var(--off-white))", borderTop: "1px solid hsl(var(--light-border))" }}>
       <div className="container max-w-4xl flex flex-wrap gap-3">
         <Button variant="gold" size="lg">
           <Download className="h-4 w-4" />
