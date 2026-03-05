@@ -9,7 +9,7 @@ const items = [
 ];
 
 const KeyMessages = () => (
-  <section className="blue-panel py-10 md:py-12">
+  <section className="teal-panel py-10 md:py-12">
     <div className="container">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {items.map((item) => (
@@ -18,7 +18,7 @@ const KeyMessages = () => (
             <h3 className="text-sm font-display font-semibold text-white">
               {item.headline}
             </h3>
-            <p className="text-xs leading-relaxed text-blue-panel-foreground">
+            <p className="text-xs leading-relaxed text-foreground/70">
               {item.line}
             </p>
           </div>
