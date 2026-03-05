@@ -3,12 +3,12 @@ import { Download, FileText, Shield, Bell } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const BluePanelCallout = () => (
-  <section className="blue-panel py-16 md:py-20">
+  <section className="teal-panel py-16 md:py-20">
     <div className="container text-center">
       <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">
         Investor Hub
       </h2>
-      <p className="text-blue-panel-foreground max-w-xl mx-auto mb-10 text-sm md:text-base">
+      <p className="text-foreground/70 max-w-xl mx-auto mb-10 text-sm md:text-base">
         Current investor materials and key disclosures in one place, built for fast diligence.
       </p>
       <div className="flex flex-wrap justify-center gap-3 mb-4">

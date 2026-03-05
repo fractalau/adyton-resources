@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["Space Grotesk", "system-ui", "sans-serif"],
+        body: ["DM Sans", "system-ui", "sans-serif"],
+        display: ["Playfair Display", "Georgia", "serif"],
+        mono: ["JetBrains Mono", "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -53,12 +54,14 @@ export default {
         },
         gold: {
           DEFAULT: "hsl(var(--gold))",
+          light: "hsl(var(--gold-light))",
           muted: "hsl(var(--gold-muted))",
         },
-        "blue-panel": {
-          DEFAULT: "hsl(var(--blue-panel))",
-          foreground: "hsl(var(--blue-panel-foreground))",
+        teal: {
+          DEFAULT: "hsl(var(--teal-primary))",
+          mid: "hsl(var(--teal-mid))",
         },
+        "off-white": "hsl(var(--off-white))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
