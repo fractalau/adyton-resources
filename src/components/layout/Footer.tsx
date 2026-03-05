@@ -1,71 +1,92 @@
 import { Link } from "react-router-dom";
-import { Linkedin, Twitter, Youtube, Globe } from "lucide-react";
+import { Linkedin, Youtube, Globe } from "lucide-react";
 import logo from "@/assets/logo.png";
 
+const XIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
+
 const Footer = () => (
-  <footer className="border-t border-border bg-card">
+  <footer className="border-t border-border bg-background">
     <div className="container py-12">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div className="space-y-4">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div className="col-span-2 md:col-span-1 space-y-4">
           <img src={logo} alt="Adyton Resources" className="h-7 invert opacity-70" />
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            Adyton Resources is a PNG-focused gold and copper company. Explore the portfolio, access investor materials, and follow company updates.
-          </p>
-          <p className="text-xs text-muted-foreground">TSXV: ADY</p>
+          <p className="text-xs text-foreground/50 font-body">TSXV: ADY | OTC: ADYRF | FSE: 701GR</p>
         </div>
 
         <div className="space-y-3">
-          <h4 className="text-sm font-display font-semibold text-foreground">Company</h4>
+          <h4 className="text-sm font-display font-semibold text-foreground">Projects</h4>
           <div className="flex flex-col gap-2">
-            <Link to="/why-adyton" className="text-sm text-muted-foreground hover:text-primary transition-colors">Why Adyton</Link>
-            <Link to="/projects" className="text-sm text-muted-foreground hover:text-primary transition-colors">Projects</Link>
-            <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">About</Link>
-            <Link to="/why-png" className="text-sm text-muted-foreground hover:text-primary transition-colors">Why PNG</Link>
+            <Link to="/projects/feni" className="text-sm text-foreground/60 hover:text-primary transition-colors font-body">Feni Island</Link>
+            <Link to="/projects/fergusson" className="text-sm text-foreground/60 hover:text-primary transition-colors font-body">Fergusson Island</Link>
           </div>
         </div>
 
         <div className="space-y-3">
           <h4 className="text-sm font-display font-semibold text-foreground">Investors</h4>
           <div className="flex flex-col gap-2">
-            <Link to="/investors" className="text-sm text-muted-foreground hover:text-primary transition-colors">Investor Hub</Link>
-            <Link to="/news" className="text-sm text-muted-foreground hover:text-primary transition-colors">News</Link>
-            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Filings</a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Reports</a>
+            <Link to="/investors" className="text-sm text-foreground/60 hover:text-primary transition-colors font-body">Investor Hub</Link>
+            <Link to="/investors" className="text-sm text-foreground/60 hover:text-primary transition-colors font-body">Capital Structure</Link>
+            <Link to="/investors" className="text-sm text-foreground/60 hover:text-primary transition-colors font-body">Technical Reports</Link>
+            <a href="https://www.sedarplus.ca" target="_blank" rel="noopener noreferrer" className="text-sm text-foreground/60 hover:text-primary transition-colors font-body">Filings (SEDAR+)</a>
+            <a href="https://www.newsfilecorp.com/alert/login" target="_blank" rel="noopener noreferrer" className="text-sm text-foreground/60 hover:text-primary transition-colors font-body">Subscribe</a>
+          </div>
+        </div>
+
+        <div className="space-y-3">
+          <h4 className="text-sm font-display font-semibold text-foreground">Company</h4>
+          <div className="flex flex-col gap-2">
+            <Link to="/about" className="text-sm text-foreground/60 hover:text-primary transition-colors font-body">About Adyton</Link>
+            <Link to="/about#management" className="text-sm text-foreground/60 hover:text-primary transition-colors font-body">Management & Board</Link>
+            <Link to="/about#community" className="text-sm text-foreground/60 hover:text-primary transition-colors font-body">PNG & Community</Link>
+          </div>
+          <h4 className="text-sm font-display font-semibold text-foreground pt-2">News</h4>
+          <div className="flex flex-col gap-2">
+            <Link to="/news" className="text-sm text-foreground/60 hover:text-primary transition-colors font-body">Latest Releases</Link>
           </div>
         </div>
 
         <div className="space-y-3">
           <h4 className="text-sm font-display font-semibold text-foreground">Contact</h4>
-          <div className="flex flex-col gap-2">
-            <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">Investor Relations</Link>
-            <a href="mailto:info@adytonresources.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">info@adytonresources.com</a>
+          <div className="flex flex-col gap-2 text-sm text-foreground/60 font-body">
+            <a href="mailto:info@adytonresources.com.au" className="hover:text-primary transition-colors">info@adytonresources.com.au</a>
+            <span>+61 2 3854 2389</span>
+            <span>Level 7, 300 Adelaide Street<br />Brisbane QLD 4000 Australia</span>
           </div>
           <h4 className="text-sm font-display font-semibold text-foreground pt-2">Follow Us</h4>
           <div className="flex items-center gap-3">
-            <a href="https://www.linkedin.com/company/adyton-resources" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/company/adyton-resources" target="_blank" rel="noopener noreferrer" className="text-foreground/50 hover:text-primary transition-colors" aria-label="LinkedIn">
               <Linkedin className="h-4 w-4" />
             </a>
-            <a href="https://twitter.com/AdytonResources" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Twitter / X">
-              <Twitter className="h-4 w-4" />
+            <a href="https://x.com/AdytonResources" target="_blank" rel="noopener noreferrer" className="text-foreground/50 hover:text-primary transition-colors" aria-label="X">
+              <XIcon className="h-4 w-4" />
             </a>
-            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="YouTube">
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="text-foreground/50 hover:text-primary transition-colors" aria-label="YouTube">
               <Youtube className="h-4 w-4" />
             </a>
-            <a href="https://adytonresources.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Website">
+            <a href="https://adytonresources.com" target="_blank" rel="noopener noreferrer" className="text-foreground/50 hover:text-primary transition-colors" aria-label="Website">
               <Globe className="h-4 w-4" />
             </a>
           </div>
         </div>
       </div>
 
-      <div className="mt-10 pt-6 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-        <p className="text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Adyton Resources Corp. All rights reserved.
-        </p>
-        <div className="flex gap-4">
-          <a href="#" className="text-xs text-muted-foreground hover:text-primary transition-colors">Forward-Looking Statements</a>
-          <a href="#" className="text-xs text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a>
-          <a href="#" className="text-xs text-muted-foreground hover:text-primary transition-colors">Terms of Use</a>
+      <div className="mt-10 pt-6 border-t border-border">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
+          <p className="text-xs text-foreground/40 font-body">
+            © {new Date().getFullYear()} Adyton Resources Corp. | Privacy Policy | Disclaimer
+          </p>
+        </div>
+        <div className="text-[10px] text-foreground/30 font-body leading-relaxed space-y-3 border-t border-border pt-4">
+          <p>
+            DISCLAIMER: Mineral resources are not mineral reserves and have not demonstrated economic viability. This website contains forward-looking statements. Actual results may differ materially from those anticipated. Readers are cautioned not to place undue reliance on forward-looking information.
+          </p>
+          <p>
+            NI 43-101 Technical Reports: Feni Island Project (Oct 14, 2021); Fergusson Gold Property (Oct 14, 2021); Wapolu Gold Project (Jan 7, 2026 — filed SEDAR+ Feb 25, 2026). Qualified Person: Dr. Chris Bowden PhD, GCMEE, FAusIMM(CP), FSEG, COO & Chief Geologist, Adyton Resources Corp.
+          </p>
         </div>
       </div>
     </div>
