@@ -45,7 +45,7 @@ const FeniIsland = () => (
 
     {/* Hero */}
     <section className="relative bg-background py-16 md:py-20 border-b border-border overflow-hidden">
-      <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{ backgroundImage: `url(${projectHeaderBg})` }} />
+      <div className="absolute inset-0 bg-cover bg-center opacity-25" style={{ backgroundImage: `url(${projectHeaderBg})` }} />
       <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80" />
       <div className="container relative z-10">
         <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">FLAGSHIP GROWTH ASSET</p>
