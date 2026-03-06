@@ -9,7 +9,7 @@ const metrics = [
 ];
 
 const MetricsStrip = () => (
-  <section className="teal-panel border-b border-border py-10 md:py-12">
+  <section className="border-b border-border py-10 md:py-12" style={{ background: 'hsl(201 65% 18%)' }}>
     <div className="container">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
         {metrics.map((m) => (
