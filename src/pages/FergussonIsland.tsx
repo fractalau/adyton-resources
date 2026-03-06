@@ -37,19 +37,19 @@ const FergussonIsland = () => (
     <Header />
 
     {/* Hero */}
-    <section className="relative py-16 md:py-20 border-b border-border overflow-hidden" style={{ background: "hsl(var(--off-white))" }}>
-      <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{ backgroundImage: `url(${internalHeaderBg})` }} />
-      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--off-white))] via-[hsl(var(--off-white))]/95 to-[hsl(var(--off-white))]/80" />
+    <section className="relative bg-background py-16 md:py-20 border-b border-border overflow-hidden">
+      <div className="absolute inset-0 bg-cover bg-center opacity-15" style={{ backgroundImage: `url(${internalHeaderBg})` }} />
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80" />
       <div className="container relative z-10">
         <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">NEAR-TERM CASH FLOW</p>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
           Fergusson Island<br />Gold Project
         </h1>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
           {stats.map((s) => (
-            <div key={s.label} className="text-center p-4 rounded-lg border" style={{ background: "hsl(var(--light-card))", borderColor: "hsl(var(--light-border))" }}>
+            <div key={s.label} className="text-center p-4 rounded-lg border border-border bg-card">
               <p className="text-xl md:text-2xl font-mono font-bold text-primary">{s.value}</p>
-              <p className="text-xs mt-1 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>{s.label}</p>
+              <p className="text-xs text-foreground/50 mt-1 font-body">{s.label}</p>
             </div>
           ))}
         </div>
