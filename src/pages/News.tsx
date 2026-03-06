@@ -138,6 +138,7 @@ const News = () => {
                 onClick={() => goTo(page - 1)}
                 disabled={page === 1}
                 className="h-9 w-9"
+                style={{ color: "hsl(var(--text-dark))" }}
               >
                 <ChevronLeft className="h-4 w-4" />
               </Button>
@@ -149,6 +150,7 @@ const News = () => {
                   size="sm"
                   onClick={() => goTo(p)}
                   className="h-9 w-9 p-0 font-mono text-xs"
+                  style={p !== page ? { color: "hsl(var(--text-dark))" } : undefined}
                 >
                   {p}
                 </Button>
@@ -160,6 +162,7 @@ const News = () => {
                 onClick={() => goTo(page + 1)}
                 disabled={page === totalPages}
                 className="h-9 w-9"
+                style={{ color: "hsl(var(--text-dark))" }}
               >
                 <ChevronRight className="h-4 w-4" />
               </Button>
