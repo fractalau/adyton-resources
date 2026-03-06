@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Download, ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
-import internalHeaderBg from "@/assets/internal-header-bg.jpg";
+import projectHeaderBg from "@/assets/project-header-bg.jpg";
 
 const stats = [
   { value: "1.46 Moz Au", label: "Inferred (Kabang)" },
@@ -45,7 +45,7 @@ const FeniIsland = () => (
 
     {/* Hero */}
     <section className="relative bg-background py-16 md:py-20 border-b border-border overflow-hidden">
-      <div className="absolute inset-0 bg-cover bg-center opacity-15" style={{ backgroundImage: `url(${internalHeaderBg})` }} />
+      <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{ backgroundImage: `url(${projectHeaderBg})` }} />
       <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80" />
       <div className="container relative z-10">
         <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">FLAGSHIP GROWTH ASSET</p>
