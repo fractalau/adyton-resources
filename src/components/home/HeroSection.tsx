@@ -9,7 +9,7 @@ const HeroSection = () => (
       className="absolute inset-[-5%] bg-cover bg-center animate-hero-drift opacity-90"
       style={{ backgroundImage: `url(${heroBg})` }}
     />
-    <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/40 to-background/10" />
+    <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-background/10" />
     <div className="container relative z-10 py-20 md:py-28">
       <div className="max-w-2xl">
         <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-4 font-body">
