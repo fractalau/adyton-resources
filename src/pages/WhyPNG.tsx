@@ -1,4 +1,4 @@
-import { CheckCircle, MapPin, ArrowRight, Mountain, Pickaxe, Ship, Search } from "lucide-react";
+import { CheckCircle, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
@@ -6,10 +6,10 @@ import Footer from "@/components/layout/Footer";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
 
 const keyStats = [
-  { icon: Mountain, value: "100+ Moz", label: "Historical gold production" },
-  { icon: Pickaxe, value: "5+", label: "Major miners operating" },
-  { icon: Ship, value: "Tidewater", label: "Island-based logistics" },
-  { icon: Search, value: "Under-explored", label: "vs. peer jurisdictions" },
+  { value: "100+ Moz", label: "Historical gold production" },
+  { value: "5+", label: "Major miners operating" },
+  { value: "Tidewater", label: "Island-based logistics" },
+  { value: "Under-explored", label: "vs. peer jurisdictions" },
 ];
 
 const facts = [
@@ -42,18 +42,11 @@ const WhyPNG = () => (
         <p className="text-lg text-foreground/70 max-w-2xl font-body">
           A world-class mineral province with proven geology, established mining operations, and substantial discovery runway.
         </p>
-      </div>
-    </section>
-
-    {/* Key Stats */}
-    <section className="teal-panel py-10 md:py-12">
-      <div className="container">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
           {keyStats.map((s) => (
-            <div key={s.label} className="text-center flex flex-col items-center gap-2">
-              <s.icon className="h-5 w-5 text-primary" />
-              <p className="text-2xl md:text-3xl font-mono font-bold text-foreground">{s.value}</p>
-              <p className="text-xs text-foreground/60 font-body">{s.label}</p>
+            <div key={s.label} className="text-center p-4 rounded-lg border border-border bg-card">
+              <p className="text-xl md:text-2xl font-mono font-bold text-primary">{s.value}</p>
+              <p className="text-xs text-foreground/50 mt-1 font-body">{s.label}</p>
             </div>
           ))}
         </div>
