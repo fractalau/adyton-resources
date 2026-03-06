@@ -13,7 +13,7 @@ const contactRoutes = [
 ];
 
 const offices = [
-  { city: "Sydney", country: "Australia", address: "Level XX, XX Street\nSydney NSW 2000", type: "Registered Office" },
+  { city: "Brisbane", country: "Australia", address: "Level XX, XX Street\nBrisbane QLD 4000", type: "Registered Office" },
   { city: "Port Moresby", country: "Papua New Guinea", address: "XX Floor, XX Building\nPort Moresby, NCD", type: "PNG Operations" },
 ];
 
