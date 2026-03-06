@@ -80,7 +80,7 @@ const Footer = () => (
             © {new Date().getFullYear()} Adyton Resources Corp. | Privacy Policy | Disclaimer
           </p>
         </div>
-        <div className="text-[10px] text-foreground/30 font-body leading-relaxed space-y-3 border-t border-border pt-4">
+        <div className="text-[10px] font-body leading-relaxed space-y-3 border-t border-border pt-4 px-4 py-4 rounded-md text-foreground/50" style={{ background: "hsl(201 65% 18%)" }}>
           <p>
             DISCLAIMER: Mineral resources are not mineral reserves and have not demonstrated economic viability. This website contains forward-looking statements. Actual results may differ materially from those anticipated. Readers are cautioned not to place undue reliance on forward-looking information.
           </p>
