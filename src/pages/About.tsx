@@ -8,36 +8,36 @@ import projectHeaderBg from "@/assets/project-header-bg.jpg";
 const leadership = [
   {
     name: "Tim Crossley",
-    role: "Managing Director & CEO",
-    bio: "Experienced mining executive with extensive PNG operational background. Previously held senior leadership roles across exploration and development-stage gold companies in the Asia-Pacific region.",
+    role: "Managing Director",
+    bio: "Extensive experience as a director and mining executive, including Deputy CEO of ASX-listed Gloucester Coal, and President & COO at BHP Billiton's West Australian Iron Ore business. Currently Executive Director at Mayur Resources (ASX). Former President of the Northern Territory Minerals Council.",
   },
   {
-    name: "Dr. Erin Johns",
-    role: "Senior Geologist",
-    bio: "PhD research focused specifically on the Lihir Gold Deposit. Brings world-class epithermal and porphyry system expertise directly relevant to the Feni Island project.",
+    name: "Dr Chris Bowden",
+    role: "Chief Operating Officer",
+    bio: "Geologist with almost 30 years global experience discovering and commercialising mineral assets. PhD in Economic Geology, postgraduate finance and economics qualifications. FAusIMM(CP) and FSEG. Unique blend of technical and commercial experience across the mining life cycle.",
   },
   {
-    name: "Placeholder Name",
-    role: "Chief Financial Officer",
-    bio: "CPA with deep expertise in public market mining finance, corporate governance, and capital markets strategy for junior resource companies.",
-  },
-  {
-    name: "Placeholder Name",
-    role: "Non-Executive Director",
-    bio: "Board member with significant institutional investment and mining board experience across multiple jurisdictions.",
+    name: "Chirag Patel",
+    role: "Chief Financial Officer & Company Secretary",
+    bio: "Chartered Professional Accountant (CPA) with extensive experience in financial management, tax reporting, and corporate strategy for public and multinational firms, including multiple years specialising in the mining sector. Previous roles with PwC and Starcore International Mines.",
   },
 ];
 
 const boardMembers = [
   {
-    name: "Placeholder Name",
-    role: "Non-Executive Chairman",
-    bio: "Seasoned mining industry leader with decades of experience in resource company governance and strategic oversight.",
+    name: "Sinton Spence",
+    role: "Chairman",
+    bio: "Chartered Accountant based in Port Moresby, PNG. Principal of Sinton Spence Chartered Accountants, PNG's largest independent accounting firm. Awarded MBE for services to Papua New Guinea commerce and community. Former director of Sierra Mining and Shell Oil Exploration PNG.",
   },
   {
-    name: "Placeholder Name",
-    role: "Independent Director",
-    bio: "Capital markets and corporate governance specialist with extensive experience advising junior mining companies.",
+    name: "David Irvine",
+    role: "Director",
+    bio: "Experienced company director and corporate strategy expert with more than two decades providing solutions to large, complex organisations. Has worked with BHP Billiton, Rio Tinto, Aurizon, Santos, Origin, and others.",
+  },
+  {
+    name: "Michael Gray",
+    role: "Non-Executive Director",
+    bio: "One of the industry's most respected independent research analysts. Geologist (MSc) and top-ranked mining equity analyst for 20+ years. Co-founded Agentis Capital Mining Partners. Former Managing Director at Macquarie Capital Markets, Mining Equity Research, Canada. Past President of the Association for Mineral Exploration.",
   },
 ];
 
@@ -96,7 +96,7 @@ const About = () => (
           Management Team
         </h2>
         <p className="text-sm text-foreground/50 mb-10 font-body">70+ years combined experience in exploration, development, and PNG operations.</p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {leadership.map((l) => (
             <div key={l.role} className="rounded-lg overflow-hidden bg-card border border-border">
               <div className="aspect-[4/3] flex items-center justify-center bg-muted/30">
@@ -113,7 +113,7 @@ const About = () => (
 
         {/* Board */}
         <h3 className="text-xl font-display font-bold text-foreground mt-14 mb-6">Board of Directors</h3>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {boardMembers.map((b) => (
             <div key={b.role} className="rounded-lg overflow-hidden bg-card border border-border">
               <div className="aspect-[4/3] flex items-center justify-center bg-muted/30">
