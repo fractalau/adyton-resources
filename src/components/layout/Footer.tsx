@@ -90,6 +90,16 @@ const Footer = () => (
         </div>
       </div>
     </div>
+    <div className="text-[10px] font-body leading-relaxed space-y-3 px-4 py-4 text-foreground/50" style={{ background: "hsl(201 65% 18%)" }}>
+      <div className="container">
+        <p>
+          DISCLAIMER: Mineral resources are not mineral reserves and have not demonstrated economic viability. This website contains forward-looking statements. Actual results may differ materially from those anticipated. Readers are cautioned not to place undue reliance on forward-looking information.
+        </p>
+        <p className="mt-3">
+          NI 43-101 Technical Reports: Feni Island Project (Oct 14, 2021); Fergusson Gold Property (Oct 14, 2021); Wapolu Gold Project (Jan 7, 2026 — filed SEDAR+ Feb 25, 2026). Qualified Person: Dr. Chris Bowden PhD, GCMEE, FAusIMM(CP), FSEG, COO & Chief Geologist, Adyton Resources Corp.
+        </p>
+      </div>
+    </div>
   </footer>
 );
 
