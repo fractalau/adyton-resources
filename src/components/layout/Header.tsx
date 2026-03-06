@@ -13,7 +13,6 @@ const projectsDropdown = [
 const companyDropdown = [
   { label: "About Adyton", path: "/about" },
   { label: "Why PNG", path: "/why-png" },
-  { label: "Contact", path: "/contact" },
 ];
 
 interface DropdownProps {
@@ -68,7 +67,7 @@ const Header = () => {
   const location = useLocation();
 
   const isProjectsActive = location.pathname.startsWith("/projects");
-  const isCompanyActive = ["/about", "/why-png", "/contact"].some(p => location.pathname.startsWith(p));
+  const isCompanyActive = ["/about", "/why-png"].some(p => location.pathname.startsWith(p));
 
   return (
     <>
@@ -105,6 +104,14 @@ const Header = () => {
               }`}
             >
               News
+            </Link>
+            <Link
+              to="/contact"
+              className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${
+                location.pathname === "/contact" ? "text-primary" : "text-foreground/70"
+              }`}
+            >
+              Contact
             </Link>
           </nav>
 
@@ -149,6 +156,9 @@ const Header = () => {
               ))}
               <Link to="/news" onClick={() => setMobileOpen(false)} className="px-3 py-2.5 text-sm font-medium text-foreground/70 hover:text-primary">
                 News
+              </Link>
+              <Link to="/contact" onClick={() => setMobileOpen(false)} className="px-3 py-2.5 text-sm font-medium text-foreground/70 hover:text-primary">
+                Contact
               </Link>
               <div className="mt-3 pt-3 border-t border-border">
                 <Button variant="gold" size="sm" className="w-full">
