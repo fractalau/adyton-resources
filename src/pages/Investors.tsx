@@ -48,15 +48,15 @@ const Investors = () => {
       <Header />
 
       {/* ─── Hero ─── */}
-      <section className="relative bg-background py-16 md:py-20 border-b border-border overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center opacity-25" style={{ backgroundImage: `url(${projectHeaderBg})` }} />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80" />
+      <section className="relative py-16 md:py-20 border-b overflow-hidden" style={{ background: "hsl(var(--off-white))", borderColor: "hsl(var(--light-border))" }}>
+        <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{ backgroundImage: `url(${projectHeaderBg})` }} />
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--off-white))] via-[hsl(var(--off-white))]/95 to-[hsl(var(--off-white))]/80" />
         <div className="container relative z-10">
           <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">INVESTOR RELATIONS</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4" style={{ color: "hsl(var(--text-dark))" }}>
             Investor Hub
           </h1>
-          <p className="text-lg text-foreground/70 max-w-2xl font-body">
+          <p className="text-lg max-w-2xl font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
             Capital structure, ownership data, presentations, and regulatory filings — everything for diligence in one place.
           </p>
         </div>
