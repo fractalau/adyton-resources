@@ -153,8 +153,8 @@ const ProjectDetail = () => {
           <div className="mb-16">
             <h2 className="text-2xl font-display font-bold mb-6" style={{ color: "hsl(var(--light-foreground))" }}>Related News</h2>
             <div className="grid sm:grid-cols-2 gap-5">
-              <NewsCard title="Project Update Released" date="January 2025" excerpt="Latest work program details and results available through company disclosures." slug="placeholder-1" tags={[project.name.split(" ")[0]]} />
-              <NewsCard title="Exploration Program Summary" date="December 2024" excerpt="Summary of recent exploration activities across the project area." slug="placeholder-2" tags={[project.name.split(" ")[0]]} />
+               <NewsCard title="Project Update Released" date="January 2025" excerpt="Latest work program details and results available through company disclosures." tags={[project.name.split(" ")[0]]} sourceUrl="https://adytonresources.com/press-releases/" />
+               <NewsCard title="Exploration Program Summary" date="December 2024" excerpt="Summary of recent exploration activities across the project area." tags={[project.name.split(" ")[0]]} sourceUrl="https://adytonresources.com/press-releases/" />
             </div>
           </div>
 
