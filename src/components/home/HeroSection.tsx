@@ -6,7 +6,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 const HeroSection = () => (
   <section className="relative min-h-[520px] md:min-h-[620px] flex items-center overflow-hidden">
     <div
-      className="absolute inset-[-5%] bg-cover bg-center animate-hero-drift opacity-90"
+      className="absolute inset-[-5%] bg-cover bg-center lg:bg-[length:110%_auto] xl:bg-[length:100%_auto] bg-[center_40%] animate-hero-drift opacity-90"
       style={{ backgroundImage: `url(${heroBg})` }}
     />
     <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-background/10" />
