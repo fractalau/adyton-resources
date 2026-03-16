@@ -6,10 +6,10 @@ import { useState } from "react";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
 
 const contactRoutes = [
-  { icon: Mail, title: "Investor Relations", description: "General investor inquiries, presentations, and subscription requests.", email: "ir@adytonresources.com.au" },
-  { icon: Briefcase, title: "Brokers & Analysts", description: "Broker introductions, analyst coverage requests, and institutional meetings.", email: "ir@adytonresources.com.au" },
-  { icon: Phone, title: "Strategic Partners", description: "Joint venture, technical partnerships, and corporate development discussions.", email: "corporate@adytonresources.com.au" },
-  { icon: Newspaper, title: "Media", description: "Press inquiries, interview requests, and media accreditation.", email: "media@adytonresources.com.au" },
+  { icon: Mail, title: "Investor Relations", description: "General investor inquiries, presentations, and subscription requests.", email: "ir@adytonresources.com" },
+  { icon: Briefcase, title: "Brokers & Analysts", description: "Broker introductions, analyst coverage requests, and institutional meetings.", email: "ir@adytonresources.com" },
+  { icon: Phone, title: "Strategic Partners", description: "Joint venture, technical partnerships, and corporate development discussions.", email: "corporate@adytonresources.com" },
+  { icon: Newspaper, title: "Media", description: "Press inquiries, interview requests, and media accreditation.", email: "media@adytonresources.com" },
 ];
 
 const offices = [
@@ -141,7 +141,7 @@ const Contact = () => {
         <div className="container text-center">
           <p className="text-sm text-foreground/50 font-body">
             <Building2 className="inline h-4 w-4 mr-1" />
-            Investor Relations: <a href="mailto:ir@adytonresources.com.au" className="text-primary hover:text-primary/80">ir@adytonresources.com.au</a> | +61 2 3854 2389
+            Investor Relations: <a href="mailto:ir@adytonresources.com" className="text-primary hover:text-primary/80">ir@adytonresources.com</a> | +61 2 3854 2389
           </p>
         </div>
       </section>

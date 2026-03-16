@@ -169,7 +169,7 @@ const Investors = () => {
             </a>
           </Button>
           <Button variant="gold-outline" size="lg" asChild>
-            <a href="mailto:ir@adytonresources.com.au">
+            <a href="mailto:ir@adytonresources.com">
               <Building2 className="h-4 w-4" />
               Contact IR
             </a>
