@@ -2,6 +2,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Download, ExternalLink } from "lucide-react";
+import SEO from "@/components/SEO";
+import { seoConfig } from "@/config/seo";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
 
 const stats = [
