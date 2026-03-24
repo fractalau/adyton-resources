@@ -5,6 +5,9 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import TagChip from "@/components/TagChip";
+import SEO from "@/components/SEO";
+import ArticleSchema from "@/components/schema/ArticleSchema";
+import { seoConfig } from "@/config/seo";
 
 const newsDetailData: Record<string, {
   title: string; date: string; excerpt: string; tags: string[]; sourceUrl: string; content: string;
