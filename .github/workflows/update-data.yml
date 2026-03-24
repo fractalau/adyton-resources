@@ -1,0 +1,50 @@
+name: Update Market Data & Press Releases
+
+on:
+  # Run every 4 hours during market hours (Mon-Fri)
+  schedule:
+    - cron: '0 */4 * * 1-5'
+
+  # Manual trigger
+  workflow_dispatch:
+
+  # Webhook trigger — call POST to GitHub API to trigger this
+  # URL: https://api.github.com/repos/{owner}/{repo}/dispatches
+  # Body: { "event_type": "new-press-release" }
+  repository_dispatch:
+    types: [new-press-release]
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch press releases
+        run: node scripts/fetch-articles.mjs
+
+      - name: Fetch market prices
+        run: node scripts/fetch-prices.mjs
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet src/data/ && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/
+          git commit -m "chore: update market data and press releases [skip ci]"
+          git push
