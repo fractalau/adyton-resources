@@ -309,6 +309,7 @@ const FergussonIsland = () => (
       </div>
     </section>
 
+    </main>
     <Footer />
   </div>
 );

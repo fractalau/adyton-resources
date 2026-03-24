@@ -121,7 +121,8 @@ const NewsDetail = () => {
             </div>
           </div>
         </div>
-      </section>
+      </article>
+      </main>
       <Footer />
     </div>
   );

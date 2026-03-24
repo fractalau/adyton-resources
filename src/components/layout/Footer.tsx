@@ -106,6 +106,7 @@ const Footer = () => (
               Brisbane QLD 4000 Australia
             </span>
           </div>
+          </address>
           <h4 className="text-sm font-display font-semibold text-foreground pt-2">Follow Us</h4>
           <div className="flex items-center gap-3">
             <a

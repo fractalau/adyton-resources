@@ -283,6 +283,7 @@ const FeniIsland = () => (
       </div>
     </section>
 
+    </main>
     <Footer />
   </div>
 );
