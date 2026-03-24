@@ -36,15 +36,18 @@ async function fetchPage(url) {
 
 function extractArticleLinks(html) {
   const articles = [];
-  // Match release links: /release/{id}/{slug}
-  const linkRegex = /href="(https:\/\/www\.newsfilecorp\.com\/release\/(\d+)\/([^"]+))"/g;
+  // Match relative release links: /release/{id}/{slug}
+  const linkRegex = /href="\/release\/(\d+)\/([^"]+)"/g;
   const seen = new Set();
   let match;
   while ((match = linkRegex.exec(html)) !== null) {
-    const [, url, id] = match;
-    if (!seen.has(id) && url.includes('Adyton')) {
+    const [, id, slug] = match;
+    if (!seen.has(id)) {
       seen.add(id);
-      articles.push({ newsfileId: id, newsfileUrl: url });
+      articles.push({
+        newsfileId: id,
+        newsfileUrl: `https://www.newsfilecorp.com/release/${id}/${slug}`,
+      });
     }
   }
   return articles;
