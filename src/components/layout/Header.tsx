@@ -78,7 +78,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-1">
             <Link
               to="/"
               className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${
