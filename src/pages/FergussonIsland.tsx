@@ -2,6 +2,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Download, ExternalLink } from "lucide-react";
+import SEO from "@/components/SEO";
+import { seoConfig } from "@/config/seo";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
 
 const stats = [
@@ -34,7 +36,13 @@ const timeline = [
 
 const FergussonIsland = () => (
   <div className="min-h-screen bg-background">
+    <SEO
+      title="Fergusson Island Gold Project"
+      description="Fergusson Island holds 939 koz Au across Wapolu and Gameta deposits. 50/50 JV with EVIH committing US$9.5M. Near-term path to production in PNG."
+      canonical={`${seoConfig.siteUrl}/projects/fergusson`}
+    />
     <Header />
+    <main>
 
     {/* Hero */}
     <section className="relative bg-background py-16 md:py-20 border-b border-border overflow-hidden">
@@ -301,6 +309,7 @@ const FergussonIsland = () => (
       </div>
     </section>
 
+    </main>
     <Footer />
   </div>
 );

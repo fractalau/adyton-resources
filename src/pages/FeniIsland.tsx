@@ -3,6 +3,8 @@ import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Download, ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
+import { seoConfig } from "@/config/seo";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
 
 const stats = [
@@ -41,7 +43,13 @@ const cuIntercepts = [
 
 const FeniIsland = () => (
   <div className="min-h-screen bg-background">
+    <SEO
+      title="Feni Island Gold-Copper Project"
+      description="Feni Island hosts 1.46 Moz Au inferred at Kabang on the +120 Moz Lihir gold corridor. 100% Adyton-owned with significant copper upside. Active drilling program."
+      canonical={`${seoConfig.siteUrl}/projects/feni`}
+    />
     <Header />
+    <main>
 
     {/* Hero */}
     <section className="relative bg-background py-16 md:py-20 border-b border-border overflow-hidden">
@@ -275,6 +283,7 @@ const FeniIsland = () => (
       </div>
     </section>
 
+    </main>
     <Footer />
   </div>
 );

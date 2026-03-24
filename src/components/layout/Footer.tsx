@@ -95,7 +95,7 @@ const Footer = () => (
 
         <div className="space-y-3">
           <h4 className="text-sm font-display font-semibold text-foreground">Contact</h4>
-          <div className="flex flex-col gap-2 text-sm text-foreground/60 font-body">
+          <address className="flex flex-col gap-2 text-sm text-foreground/60 font-body not-italic">
             <a href="mailto:info@adytonresources.com" className="hover:text-primary transition-colors">
               info@adytonresources.com
             </a>
@@ -105,7 +105,7 @@ const Footer = () => (
               <br />
               Brisbane QLD 4000 Australia
             </span>
-          </div>
+          </address>
           <h4 className="text-sm font-display font-semibold text-foreground pt-2">Follow Us</h4>
           <div className="flex items-center gap-3">
             <a

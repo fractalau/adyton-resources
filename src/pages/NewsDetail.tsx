@@ -5,6 +5,9 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import TagChip from "@/components/TagChip";
+import SEO from "@/components/SEO";
+import ArticleSchema from "@/components/schema/ArticleSchema";
+import { seoConfig } from "@/config/seo";
 
 const newsDetailData: Record<string, {
   title: string; date: string; excerpt: string; tags: string[]; sourceUrl: string; content: string;
@@ -40,8 +43,19 @@ const NewsDetail = () => {
 
   return (
     <div className="min-h-screen" style={{ background: "hsl(var(--light-bg))" }}>
+      <SEO
+        title={article.title}
+        description={article.excerpt}
+        canonical={`${seoConfig.siteUrl}/news/${slug}`}
+      />
+      <ArticleSchema
+        headline={article.title}
+        datePublished={article.date}
+        description={article.excerpt}
+      />
       <Header />
-      <section className="py-16 md:py-20">
+      <main>
+      <article className="py-16 md:py-20">
         <div className="container max-w-3xl">
           <div className="flex flex-wrap gap-1.5 mb-4">
             {article.tags.map((t) => <TagChip key={t} label={t} />)}
@@ -107,7 +121,8 @@ const NewsDetail = () => {
             </div>
           </div>
         </div>
-      </section>
+      </article>
+      </main>
       <Footer />
     </div>
   );
