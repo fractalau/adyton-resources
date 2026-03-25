@@ -172,7 +172,8 @@ const PressRelease = () => {
                     </figure>
                   ))}
                 </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Source attribution */}
