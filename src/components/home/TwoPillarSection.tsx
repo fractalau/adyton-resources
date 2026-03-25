@@ -11,7 +11,7 @@ const TwoPillarSection = () => (
         Two Island Assets. Two Value Drivers.
       </h2>
       <p className="text-center max-w-2xl mx-auto mb-12 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
-        Adyton operates a dual-track strategy: near-term cash flow from Fergusson Island, funded through a joint venture at zero capital cost to Adyton — and district-scale exploration growth at Feni Island, on the world's most prolific gold discovery trend.
+        Adyton operates a dual-track strategy: near-term cash flow from Fergusson Island, funded through a joint venture at zero capital cost to Adyton — and district-scale exploration growth at Feni Island. This structure is designed to weather market cycles while pursuing discovery, providing resilience and structural durability that sets the company apart.
       </p>
       <div className="grid md:grid-cols-2 gap-6">
         {/* Feni Card — dark */}
