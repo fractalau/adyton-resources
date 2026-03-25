@@ -74,14 +74,14 @@ const FeniIsland = () => (
     {/* Geological Setting */}
     <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
       <div className="container max-w-4xl">
-        <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">LIHIR ISLAND DISCOVERY TREND</p>
+        <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">TIER 1 GOLD-COPPER DISCOVERY</p>
         <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
-          Located on the World's Most Prolific Gold Discovery Corridor
+          Tier 1 Gold-Copper Discovery Potential
         </h2>
         <div className="text-sm leading-relaxed space-y-4 mb-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
-          <p>Feni Island sits within the +120 Moz Lihir Island Chain — the same gold-prolific geological arc as Lihir (Newmont), Simberi (St Barbara), and Panguna (formerly Rio Tinto).</p>
-          <p>The Feni project shares key geological characteristics with the Lihir deposit: similar host rock geology, comparable age (~0.5 Ma), and analogous mineralisation styles. The system is hosted within a large alkalic-type epithermal-porphyry setting, supporting both high-grade gold mineralisation and significant copper potential.</p>
-          <p>Whole-of-island tenure enables systematic testing of multiple targets within the same mineral system, beyond the defined Kabang resource area.</p>
+          <p>Feni Island sits within the +120 Moz gold-prolific geological arc of the Pacific Ring of Fire — the same trend as Simberi (St Barbara) and Panguna (formerly Rio Tinto).</p>
+          <p>The project is hosted within a large alkalic-type epithermal-porphyry setting, supporting both high-grade gold mineralisation and significant copper potential. Similar host rock geology, comparable age (~0.5 Ma), and analogous mineralisation styles to neighbouring world-class deposits.</p>
+          <p>Whole-of-island tenure enables systematic testing of multiple targets within the same mineral system, beyond the defined Kabang resource area — a key source of exploration upside.</p>
         </div>
 
         {/* Similarity table */}
