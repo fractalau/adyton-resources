@@ -118,7 +118,7 @@ const Footer = () => (
               <Linkedin className="h-4 w-4" />
             </a>
             <a
-              href="https://x.com/AdytonResources"
+              href="https://x.com/Adyton_TSXADY"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground/50 hover:text-primary transition-colors"
