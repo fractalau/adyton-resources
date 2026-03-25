@@ -237,21 +237,13 @@ const FeniIsland = () => (
       </div>
     </section>
 
-    {/* Global Ore + Dr Erin Johns */}
+    {/* Global Ore Discovery */}
     <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
-      <div className="container max-w-4xl space-y-10">
-        <div>
-          <h3 className="text-xl font-display font-bold mb-3" style={{ color: "hsl(var(--text-dark))" }}>Global Ore Discovery Collaboration</h3>
-          <p className="text-sm leading-relaxed font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
-            In December 2025, Adyton engaged world-class geological consulting group Global Ore Discovery to provide expert oversight and targeting strategies for the Feni exploration program, leveraging their deep expertise in epithermal and porphyry systems. Adyton also appointed Dr. Erin Johns — whose PhD research focused specifically on the Lihir Gold Deposit — to its technical team to drive Feni project development.
-          </p>
-        </div>
-        <div>
-          <h3 className="text-xl font-display font-bold mb-3" style={{ color: "hsl(var(--text-dark))" }}>Dr. Erin Johns — World-Class Lihir Deposit Expertise</h3>
-          <p className="text-sm leading-relaxed font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
-            In December 2025, Adyton appointed Dr. Erin Johns to its technical team. Dr. Johns completed her PhD research specifically on the Lihir Gold Deposit — a neighbouring world-class alkalic-type epithermal gold deposit operated by Newmont. Her appointment directly strengthens Adyton's geological capability at Feni.
-          </p>
-        </div>
+      <div className="container max-w-4xl">
+        <h3 className="text-xl font-display font-bold mb-3" style={{ color: "hsl(var(--text-dark))" }}>Global Ore Discovery Collaboration</h3>
+        <p className="text-sm leading-relaxed font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+          In December 2025, Adyton engaged world-class geological consulting group Global Ore Discovery to provide expert oversight and targeting strategies for the Feni exploration program, leveraging their deep expertise in epithermal and porphyry systems.
+        </p>
       </div>
     </section>
 

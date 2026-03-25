@@ -48,7 +48,7 @@ const pillars = [
   { icon: Shield, title: "Governance", desc: "Committed to transparent disclosure, compliant NI 43-101 reporting, and strong corporate governance practices." },
   { icon: Leaf, title: "Sustainability", desc: "Responsible exploration practices that respect local communities, protect the environment, and deliver lasting benefits." },
   { icon: Globe, title: "PNG Expertise", desc: "Deep in-country knowledge, established relationships with landowners, and proven ability to operate effectively in PNG." },
-  { icon: Award, title: "Technical Excellence", desc: "World-class geological team supported by Global Ore Discovery and domain experts with direct Lihir deposit experience." },
+  { icon: Award, title: "Technical Excellence", desc: "World-class geological team supported by Global Ore Discovery with deep expertise in epithermal and porphyry systems." },
   { icon: Users, title: "Aligned Interests", desc: "~12% management and director ownership ensures alignment between leadership and shareholders." },
 ];
 

@@ -16,13 +16,13 @@ const HeroSection = () => (
           PNG · GOLD + COPPER
         </p>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1] mb-6">
-          High-Quality Gold-Copper Assets
+          Built for Discovery.
           <br />
-          in Papua New Guinea
+          Structured for Growth.
         </h1>
         <p className="text-lg md:text-xl text-foreground/80 leading-relaxed mb-3 max-w-xl font-body">
-          Positioned for near-term cash flow.{" "}
-          <span className="font-mono font-semibold text-primary">2,401,000 oz Au</span>{" "}
+          High-quality gold-copper assets in Papua New Guinea.{" "}
+          <span className="font-mono font-semibold text-primary">2.4 Moz Au</span>{" "}
           across two island-based projects on the Pacific Ring of Fire.
         </p>
         <div className="flex flex-wrap gap-3 mt-8">
