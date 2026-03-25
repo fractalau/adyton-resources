@@ -33,7 +33,7 @@ const boardMembers = [
   },
   {
     name: "David Irvine",
-    role: "Director",
+    role: "Non-Executive Director",
     bio: "Experienced company director and corporate strategy expert with more than two decades providing solutions to large, complex organisations. Has worked with BHP Billiton, Rio Tinto, Aurizon, Santos, Origin, and others.",
   },
   {
