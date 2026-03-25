@@ -177,10 +177,17 @@ const Contact = () => {
                 className="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
                 style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))", color: "hsl(var(--text-dark))" }}
               />
-              <Button variant="gold" size="lg" type="submit">
-                <Mail className="h-4 w-4" />
-                Send Message
-              </Button>
+              {submitted ? (
+                <div className="flex items-center gap-2 text-sm text-green-600 font-body">
+                  <CheckCircle className="h-5 w-5" />
+                  Thank you — we'll be in touch shortly.
+                </div>
+              ) : (
+                <Button variant="gold" size="lg" type="submit" disabled={submitting}>
+                  {submitting ? <Loader2 className="h-4 w-4 animate-spin" /> : <Mail className="h-4 w-4" />}
+                  {submitting ? "Sending…" : "Send Message"}
+                </Button>
+              )}
             </form>
           </div>
         </section>
