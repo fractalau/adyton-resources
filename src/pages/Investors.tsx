@@ -154,7 +154,7 @@ const Investors = () => {
 
         {/* Document Library */}
         <section aria-label="Document library" className="py-14 md:py-18" style={{ background: "hsl(var(--off-white))" }}>
-          <div className="container max-w-4xl">
+          <div className="container max-w-5xl">
             <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">DOCUMENT LIBRARY</p>
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-8" style={{ color: "hsl(var(--text-dark))" }}>
               Reports, Filings & Presentations
@@ -166,7 +166,7 @@ const Investors = () => {
               ))}
             </div>
 
-            <div className="space-y-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               {filtered.map((d) => (
                 <DownloadTile key={d.title} {...d} />
               ))}
