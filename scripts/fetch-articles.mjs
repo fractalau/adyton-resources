@@ -72,53 +72,82 @@ function decodeEntities(str) {
   };
 
   return str
-    // Named entities
     .replace(/&[a-zA-Z]+;/g, m => named[m] || m)
-    // Hex numeric entities: &#x2010; &#X2010;
     .replace(/&#x([0-9a-fA-F]+);/gi, (_, hex) => String.fromCodePoint(parseInt(hex, 16)))
-    // Decimal numeric entities: &#8208;
     .replace(/&#(\d+);/g, (_, dec) => String.fromCodePoint(parseInt(dec, 10)));
 }
 
 /**
- * Extract images from article HTML. Returns array of { url, caption, position }
- * position = character index in the cleaned text where the image appeared
+ * Split HTML into top-level segments (roughly by <p>, <table>, <div> etc.)
+ * so we can process each block independently.
  */
-function extractImages(articleHtml) {
-  const images = [];
-  // Match <img> tags with newsfilecorp image URLs
-  const imgRegex = /<(?:a[^>]*href="(https:\/\/images\.newsfilecorp\.com\/[^"]+)"[^>]*>)?\s*<img[^>]*src="(https:\/\/images\.newsfilecorp\.com\/[^"]+)"[^>]*>(?:\s*<\/a>)?/gi;
-  let match;
-  while ((match = imgRegex.exec(articleHtml)) !== null) {
-    const fullUrl = match[1] || match[2]; // Prefer the link href (full-size) over thumbnail src
-    const thumbUrl = match[2];
-    
-    // Skip tracking pixels
-    if (thumbUrl.includes('/newsinfo/')) continue;
-
-    // Extract alt text
-    const altMatch = match[0].match(/alt="([^"]*)"/);
-    const alt = altMatch ? decodeEntities(altMatch[1]).replace(/^Cannot view this image\? Visit:\s*/i, '') : '';
-
-    // Look for caption text after the image (often in the same <p> or next element)
-    let caption = '';
-    const afterImg = articleHtml.slice(match.index + match[0].length, match.index + match[0].length + 500);
-    // Caption patterns: <br>...<br> or plain text before next tag
-    const captionMatch = afterImg.match(/(?:<br\s*\/?>[\s\n]*){1,2}([^<]+?)(?:<br|<\/p|<p[ >])/si);
-    if (captionMatch) {
-      const c = decodeEntities(captionMatch[1].trim());
-      // Filter out "To view an enhanced version..." links
-      if (c && !c.startsWith('To view an enhanced') && !c.startsWith('https://images.newsfile')) {
-        caption = c;
-      }
+function splitIntoBlocks(html) {
+  // Split on </p>, </table>, </div> boundaries while keeping delimiters
+  const blocks = [];
+  // Use a simple approach: split on closing paragraph/block tags
+  const parts = html.split(/(<\/p>|<\/table>|<\/div>)/gi);
+  let current = '';
+  for (const part of parts) {
+    current += part;
+    if (/^<\/(p|table|div)>$/i.test(part)) {
+      blocks.push(current);
+      current = '';
     }
-
-    // Use full-size URL, removing _550 suffix if present
-    const url = fullUrl.replace(/_\d+(\.\w+)$/, '$1');
-
-    images.push({ url, thumb: thumbUrl, alt, caption });
   }
-  return images;
+  if (current.trim()) blocks.push(current);
+  return blocks;
+}
+
+/**
+ * Check if a block is primarily an image block (contains newsfilecorp image)
+ */
+function isImageBlock(block) {
+  return /<img[^>]*src="https:\/\/images\.newsfilecorp\.com/i.test(block);
+}
+
+/**
+ * Check if a block is a "To view enhanced version" caption block
+ */
+function isViewEnhancedBlock(block) {
+  const text = block.replace(/<[^>]+>/g, '').trim();
+  return /^To view an enhanced version/i.test(text) || 
+         /^https:\/\/images\.newsfilecorp\.com/i.test(text);
+}
+
+/**
+ * Extract image info from an image block
+ */
+function extractImageFromBlock(block) {
+  // Get the full-size URL (from <a href>) and thumbnail (from <img src>)
+  const linkMatch = block.match(/href="(https:\/\/images\.newsfilecorp\.com\/[^"]+)"/i);
+  const srcMatch = block.match(/src="(https:\/\/images\.newsfilecorp\.com\/[^"]+)"/i);
+  
+  if (!srcMatch) return null;
+  
+  // Skip tracking pixels
+  if (srcMatch[1].includes('/newsinfo/')) return null;
+  
+  const fullUrl = linkMatch ? linkMatch[1] : srcMatch[1];
+  const thumb = srcMatch[1];
+  
+  // Get alt text
+  const altMatch = block.match(/alt="([^"]*)"/i);
+  let alt = altMatch ? decodeEntities(altMatch[1]) : '';
+  if (alt.startsWith('Cannot view this image')) alt = '';
+  
+  // Get caption - text content of the block excluding the image/link parts
+  // Look for figure captions like "Figure 1: ..." 
+  let caption = '';
+  const captionMatch = block.match(/<b>(Figure \d+[^<]*)<\/b>:\s*([^<]+)/i)
+    || block.match(/<b>(Figure \d+[^<]*)<\/b>/i);
+  if (captionMatch) {
+    caption = decodeEntities((captionMatch[1] + (captionMatch[2] ? ': ' + captionMatch[2] : '')).trim());
+  }
+
+  // Use full-size URL, removing _550 suffix
+  const url = fullUrl.replace(/_\d+(\.\w+)$/, '$1');
+  
+  return { url, thumb, alt, caption };
 }
 
 /**
@@ -141,34 +170,47 @@ function extractArticleContent(html) {
 
   let articleHtml = articleMatch[1];
 
-  // Extract images before cleaning
-  const images = extractImages(articleHtml);
-
-  // Remove script tags and their content
+  // Remove script tags, style tags, noscript, tracking pixels
   articleHtml = articleHtml.replace(/<script[\s\S]*?<\/script>/gi, '');
-  // Remove style tags
   articleHtml = articleHtml.replace(/<style[\s\S]*?<\/style>/gi, '');
-  // Remove tracking pixels
-  articleHtml = articleHtml.replace(/<img[^>]*class="tracker"[^>]*>/gi, '');
-  // Remove inline event handlers
-  articleHtml = articleHtml.replace(/\s+on\w+="[^"]*"/gi, '');
-  // Remove noscript
   articleHtml = articleHtml.replace(/<noscript[\s\S]*?<\/noscript>/gi, '');
-  // Remove the source attribution at the bottom (Source: Adyton...)
+  articleHtml = articleHtml.replace(/<img[^>]*class="tracker"[^>]*>/gi, '');
+  articleHtml = articleHtml.replace(/\s+on\w+="[^"]*"/gi, '');
+  // Remove source attribution
   articleHtml = articleHtml.replace(/<p>\s*Source:\s*<a[^>]*>.*?<\/a>\s*<\/p>/gi, '');
   // Remove corporateLinkBack
   articleHtml = articleHtml.replace(/<p[^>]*id="corporateLinkBack"[^>]*>[\s\S]*?<\/p>/gi, '');
 
-  // Remove image blocks (we handle them separately via the images array)
-  // Remove <p> blocks that contain newsfilecorp images and their captions
-  articleHtml = articleHtml.replace(/<p[^>]*>[\s\S]*?<img[^>]*src="https:\/\/images\.newsfilecorp\.com[^"]*"[^>]*>[\s\S]*?<\/p>/gi, '');
+  // Process block by block to extract images and text separately
+  const blocks = splitIntoBlocks(articleHtml);
+  const images = [];
+  const textBlocks = [];
+  // Track paragraph index where each image should be inserted
+  const imageInsertions = []; // { paragraphIndex, imageIndex }
 
-  // Insert image placeholders at roughly the right position
-  // We'll use a marker format: {{IMAGE:index}}
-  // For now, images go at the end of the main content, before forward-looking statements
+  for (const block of blocks) {
+    if (isImageBlock(block)) {
+      const img = extractImageFromBlock(block);
+      if (img) {
+        const imgIndex = images.length;
+        images.push(img);
+        // Insert after the current paragraph count
+        imageInsertions.push({ paragraphIndex: textBlocks.length, imageIndex: imgIndex });
+      }
+      // Don't add image blocks to text
+      continue;
+    }
+    
+    if (isViewEnhancedBlock(block)) {
+      // Skip "To view enhanced version..." blocks
+      continue;
+    }
+    
+    textBlocks.push(block);
+  }
 
-  // Convert HTML to clean text with paragraph breaks
-  let cleanBody = articleHtml
+  // Convert remaining HTML blocks to clean text
+  let cleanBody = textBlocks.join('')
     .replace(/<br\s*\/?>/gi, '\n')
     .replace(/<\/p>/gi, '\n\n')
     .replace(/<\/tr>/gi, '\n')
@@ -176,26 +218,24 @@ function extractArticleContent(html) {
     .replace(/<\/th>/gi, ' | ')
     .replace(/<\/li>/gi, '\n')
     .replace(/<li[^>]*>/gi, '• ')
-    .replace(/<\/?(strong|b)[^>]*>/gi, '')
-    .replace(/<\/?(em|i)[^>]*>/gi, '')
-    .replace(/<\/?(u|span|a|div|table|tr|td|th|thead|tbody|img|figure|figcaption|ul|ol|h[1-6]|p|section|article|blockquote|cite|sup|sub|small|big|center|font|abbr|acronym|address|code|pre|samp|var|kbd|tt|mark|del|ins|s|strike|caption|col|colgroup|tfoot|dd|dt|dl|fieldset|legend|label|select|option|optgroup|button|input|textarea|form|details|summary|dialog|nav|header|footer|aside|main|time|wbr|nobr|map|area|source|track|video|audio|picture|canvas|svg|path|g|defs|use|symbol|clipPath|mask|pattern|linearGradient|radialGradient|stop|rect|circle|ellipse|line|polyline|polygon|text|tspan)[^>]*>/gi, '')
     .replace(/<[^>]+>/g, '');
 
-  // Decode all HTML entities
+  // Decode entities
   cleanBody = decodeEntities(cleanBody);
 
   // Clean up whitespace
   cleanBody = cleanBody
-    .replace(/[ \t]+/g, ' ')       // collapse horizontal whitespace
-    .replace(/ *\n */g, '\n')      // trim lines
-    .replace(/\n{3,}/g, '\n\n')    // max 2 newlines
+    .replace(/[ \t]+/g, ' ')
+    .replace(/ *\n */g, '\n')
+    .replace(/\n{3,}/g, '\n\n')
     .trim();
 
-  // Remove "To view an enhanced version..." lines
+  // Remove leftover "To view enhanced version" lines
   cleanBody = cleanBody.replace(/To view an enhanced version of this graphic.*?\n?/gi, '');
   cleanBody = cleanBody.replace(/https:\/\/images\.newsfilecorp\.com\/[^\s\n]+\n?/g, '');
+  cleanBody = cleanBody.replace(/\n{3,}/g, '\n\n').trim();
 
-  // Extract first meaningful paragraph as excerpt (skip location/dateline)
+  // Extract first meaningful paragraph as excerpt
   const paragraphs = cleanBody.split('\n\n').filter(p => p.trim().length > 50);
   const excerpt = paragraphs[0]?.slice(0, 300)?.trim() || '';
 
@@ -233,7 +273,7 @@ async function main() {
         fetchedAt: new Date().toISOString(),
       });
 
-      console.log(`  ✓ ${content.title.slice(0, 60)}... (${content.images.length} images)`);
+      console.log(`  ✓ ${content.title.slice(0, 60)}... (${content.images.length} imgs, ${content.body.length} chars)`);
       await delay(500);
     } catch (err) {
       console.error(`  ❌ Failed to fetch ${link.newsfileId}: ${err.message}`);
