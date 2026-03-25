@@ -1,4 +1,4 @@
-import { Users, Shield, Leaf, Globe, Award, Target } from "lucide-react";
+import { Shield, Leaf, Globe, Award, Target, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
@@ -6,21 +6,30 @@ import Footer from "@/components/layout/Footer";
 import SEO from "@/components/SEO";
 import { seoConfig } from "@/config/seo";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
+import timCrossleyImg from "@/assets/team/tim-crossley.png";
+import chrisBowdenImg from "@/assets/team/chris-bowden.jpg";
+import chiragPatelImg from "@/assets/team/chirag-patel.jpg";
+import sintonSpenceImg from "@/assets/team/sinton-spence.jpg";
+import davidIrvineImg from "@/assets/team/david-irvine.png";
+import michaelGrayImg from "@/assets/team/michael-gray.png";
 
 const leadership = [
   {
     name: "Tim Crossley",
     role: "Managing Director",
+    photo: timCrossleyImg,
     bio: "Extensive experience as a director and mining executive, including Deputy CEO of ASX-listed Gloucester Coal, and President & COO at BHP Billiton's West Australian Iron Ore business. Currently Executive Director at Mayur Resources (ASX). Former President of the Northern Territory Minerals Council.",
   },
   {
     name: "Dr Chris Bowden",
     role: "Chief Operating Officer",
+    photo: chrisBowdenImg,
     bio: "Geologist with almost 30 years global experience discovering and commercialising mineral assets. PhD in Economic Geology, postgraduate finance and economics qualifications. FAusIMM(CP) and FSEG. Unique blend of technical and commercial experience across the mining life cycle.",
   },
   {
     name: "Chirag Patel",
     role: "Chief Financial Officer & Company Secretary",
+    photo: chiragPatelImg,
     bio: "Chartered Professional Accountant (CPA) with extensive experience in financial management, tax reporting, and corporate strategy for public and multinational firms, including multiple years specialising in the mining sector. Previous roles with PwC and Starcore International Mines.",
   },
 ];
@@ -29,16 +38,19 @@ const boardMembers = [
   {
     name: "Sinton Spence",
     role: "Chairman",
+    photo: sintonSpenceImg,
     bio: "Chartered Accountant based in Port Moresby, PNG. Principal of Sinton Spence Chartered Accountants, PNG's largest independent accounting firm. Awarded MBE for services to Papua New Guinea commerce and community. Former director of Sierra Mining and Shell Oil Exploration PNG.",
   },
   {
     name: "David Irvine",
     role: "Non-Executive Director",
+    photo: davidIrvineImg,
     bio: "Experienced company director and corporate strategy expert with more than two decades providing solutions to large, complex organisations. Has worked with BHP Billiton, Rio Tinto, Aurizon, Santos, Origin, and others.",
   },
   {
     name: "Michael Gray",
     role: "Non-Executive Director",
+    photo: michaelGrayImg,
     bio: "One of the industry's most respected independent research analysts. Geologist (MSc) and top-ranked mining equity analyst for 20+ years. Co-founded Agentis Capital Mining Partners. Former Managing Director at Macquarie Capital Markets, Mining Equity Research, Canada. Past President of the Association for Mineral Exploration.",
   },
 ];
