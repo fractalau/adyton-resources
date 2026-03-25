@@ -26,13 +26,32 @@ const ownership = [
 const categories = ["All", "Presentations", "Technical Reports", "Corporate Documents", "Filings"];
 
 const downloads = [
-  { title: "Investor Deck — March 2026", date: "March 2026", description: "Latest corporate overview and investment thesis.", fileType: "PDF", fileSize: "4.8 MB", category: "Presentations", featured: true },
+  { title: "Investor Deck — March 2026 (PDAC)", date: "March 2026", description: "Latest corporate overview and investment thesis.", fileType: "PDF", fileSize: "5.1 MB", category: "Presentations", featured: true, href: "/Adyton-Investor-Deck.pdf" },
+  // 2025 Presentations
+  { title: "Precious Metals Summit Zurich 2025", date: "November 2025", description: "Presentation at Precious Metals Summit, Zurich.", fileType: "PDF", fileSize: "6.2 MB", category: "Presentations", featured: false, href: "https://adytonresources.com/wp/wp-content/uploads/2026/01/ADY_January-2026.pdf" },
+  { title: "Precious Metals Summit Beaver Creek 2025", date: "September 2025", description: "Presentation at Precious Metals Summit, Beaver Creek.", fileType: "PDF", fileSize: "6.7 MB", category: "Presentations", featured: false, href: "https://adytonresources.com/wp/wp-content/uploads/2025/09/ADY_090925__FINAL_Beaver-Ck_WEBSITE__FINAL.pdf" },
+  { title: "PDAC 2025 Conference Presentation", date: "March 2025", description: "Presentation at PDAC 2025 conference.", fileType: "PDF", fileSize: "4.1 MB", category: "Presentations", featured: false, href: "https://adytonresources.com/wp/wp-content/uploads/2025/05/ADY_09052025.pdf" },
+  // 2024 Presentations
+  { title: "World Class Gold & Copper — October 2024", date: "October 2024", description: "Corporate presentation.", fileType: "PDF", fileSize: "6.9 MB", category: "Presentations", featured: false, href: "https://adytonresources.com/wp/wp-content/uploads/2024/10/Adyton-Resources__Oct_2024_NEW_CDB_v10.pdf" },
+  { title: "Québec Conference Presentation", date: "June 2024", description: "Presentation at the Québec Mining Conference.", fileType: "PDF", fileSize: "3.1 MB", category: "Presentations", featured: false, href: "https://adytonresources.com/wp/wp-content/uploads/2024/06/Adyton-Resources__June-2024_Quebec-conf.pdf" },
+  // 2022 Presentations
+  { title: "World Class Gold & Copper — December 2022", date: "December 2022", description: "Corporate presentation.", fileType: "PDF", fileSize: "3.1 MB", category: "Presentations", featured: false, href: "https://adytonresources.com/wp/wp-content/uploads/2022/12/Adyton_Presentation_Dec2022.pdf" },
+  { title: "World Class Gold & Copper — April 2022", date: "April 2022", description: "Corporate presentation.", fileType: "PDF", fileSize: "4.5 MB", category: "Presentations", featured: false, href: "https://adytonresources.com/wp/wp-content/uploads/2022/04/AdytonResources_Presentation_Apr2022.pdf" },
+  { title: "World Class Gold & Copper — February 2022", date: "February 2022", description: "Corporate presentation.", fileType: "PDF", fileSize: "4.4 MB", category: "Presentations", featured: false, href: "https://adytonresources.com/wp/wp-content/uploads/2022/02/Adyton-Resources_January-2022-Final.pdf" },
+  // 2021 Presentations
+  { title: "World Class Gold & Copper — October 2021", date: "October 2021", description: "Corporate presentation post resource estimate.", fileType: "PDF", fileSize: "3.5 MB", category: "Presentations", featured: false, href: "https://adytonresources.com/wp/wp-content/uploads/2021/10/Adyton-Resources_new-presentation_v7_post_resource_compressed.pdf" },
+  { title: "Unlocking Gold & Copper Value — September 2021", date: "September 2021", description: "Updated investor presentation.", fileType: "PDF", fileSize: "2.9 MB", category: "Presentations", featured: false, href: "https://adytonresources.com/wp/wp-content/uploads/2021/09/Sept-2021-Updated.pdf" },
+  { title: "Gold & Copper Industry Overview", date: "August 2021", description: "Industry overview and peer analysis.", fileType: "PDF", fileSize: "0.5 MB", category: "Presentations", featured: false, href: "https://adytonresources.com/wp/wp-content/uploads/2021/08/Gold-and-Copper-Industry-Overview-Adyton-Peer-Analysis.pdf" },
+  { title: "Gold and Copper in World Class Jurisdictions — July 2021", date: "July 2021", description: "Investor presentation.", fileType: "PDF", fileSize: "5.4 MB", category: "Presentations", featured: false, href: "https://adytonresources.com/wp/wp-content/uploads/2021/07/ADY-21-July-2021-Presentation.pdf" },
+  { title: "Gold and Copper in World Class Jurisdictions — June 2021", date: "June 2021", description: "Investor presentation.", fileType: "PDF", fileSize: "3.7 MB", category: "Presentations", featured: false, href: "https://adytonresources.com/wp/wp-content/uploads/2021/06/ADY-17-June-Presentation_compressed.pdf" },
+  { title: "Gold and Copper in World Class Jurisdictions — May 2021", date: "May 2021", description: "Investor presentation.", fileType: "PDF", fileSize: "3.3 MB", category: "Presentations", featured: false, href: "https://adytonresources.com/wp/wp-content/uploads/2021/05/ADY_Investor_Presentation_7May2021.pdf" },
+  // Technical Reports & Corporate
   { title: "NI 43-101 Feni Technical Report", date: "October 2021", description: "Independent technical report on Feni mineral resource estimate.", fileType: "PDF", fileSize: "12.3 MB", category: "Technical Reports", featured: false },
   { title: "NI 43-101 Wapolu Technical Report", date: "February 2026", description: "Updated mineral resource estimate for Wapolu deposit.", fileType: "PDF", fileSize: "9.7 MB", category: "Technical Reports", featured: false },
   { title: "NI 43-101 Gameta Technical Report", date: "March 2024", description: "Independent technical report on Gameta mineral resource.", fileType: "PDF", fileSize: "8.2 MB", category: "Technical Reports", featured: false },
   { title: "Annual Information Form 2024", date: "April 2024", description: "Annual disclosure document filed with securities regulators.", fileType: "PDF", fileSize: "2.4 MB", category: "Corporate Documents", featured: false },
   { title: "Q3 2024 MD&A", date: "November 2024", description: "Management discussion and analysis for Q3 fiscal 2024.", fileType: "PDF", fileSize: "1.8 MB", category: "Corporate Documents", featured: false },
-  { title: "SEDAR+ Filings", date: "Ongoing", description: "View all regulatory filings on SEDAR+.", fileType: "External", fileSize: "—", category: "Filings", featured: false },
+  { title: "SEDAR+ Filings", date: "Ongoing", description: "View all regulatory filings on SEDAR+.", fileType: "External", fileSize: "—", category: "Filings", featured: false, href: "https://www.sedarplus.ca" },
 ];
 
 const Investors = () => {
