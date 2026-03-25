@@ -166,8 +166,10 @@ const ProjectDetail = () => {
               <Button variant="gold" asChild>
                 <Link to="/contact"><Mail className="h-4 w-4" /> Contact IR</Link>
               </Button>
-              <Button variant="gold-outline">
-                <Download className="h-4 w-4" /> Download Deck
+              <Button variant="gold-outline" asChild>
+                <a href="/Adyton-Investor-Deck.pdf" download>
+                  <Download className="h-4 w-4" /> Download Deck
+                </a>
               </Button>
             </div>
           </div>

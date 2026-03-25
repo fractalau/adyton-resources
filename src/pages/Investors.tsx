@@ -26,7 +26,7 @@ const ownership = [
 const categories = ["All", "Presentations", "Technical Reports", "Corporate Documents", "Filings"];
 
 const downloads = [
-  { title: "Investor Deck — Q1 2025", date: "January 2025", description: "Latest corporate overview and investment thesis.", fileType: "PDF", fileSize: "4.8 MB", category: "Presentations", featured: true },
+  { title: "Investor Deck — March 2026", date: "March 2026", description: "Latest corporate overview and investment thesis.", fileType: "PDF", fileSize: "4.8 MB", category: "Presentations", featured: true },
   { title: "NI 43-101 Feni Technical Report", date: "October 2021", description: "Independent technical report on Feni mineral resource estimate.", fileType: "PDF", fileSize: "12.3 MB", category: "Technical Reports", featured: false },
   { title: "NI 43-101 Wapolu Technical Report", date: "February 2026", description: "Updated mineral resource estimate for Wapolu deposit.", fileType: "PDF", fileSize: "9.7 MB", category: "Technical Reports", featured: false },
   { title: "NI 43-101 Gameta Technical Report", date: "March 2024", description: "Independent technical report on Gameta mineral resource.", fileType: "PDF", fileSize: "8.2 MB", category: "Technical Reports", featured: false },
@@ -126,9 +126,11 @@ const Investors = () => {
                   <p className="text-sm text-foreground/60 font-body">{featured.description}</p>
                   <p className="text-xs text-foreground/40 mt-1 font-body">{featured.date} · {featured.fileType} · {featured.fileSize}</p>
                 </div>
-                <Button variant="gold" size="lg">
-                  <Download className="h-4 w-4" />
-                  Download Deck
+                <Button variant="gold" size="lg" asChild>
+                  <a href="/Adyton-Investor-Deck.pdf" download>
+                    <Download className="h-4 w-4" />
+                    Download Deck
+                  </a>
                 </Button>
               </div>
             )}

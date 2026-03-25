@@ -26,9 +26,11 @@ const HeroSection = () => (
           across two island-based projects on the Pacific Ring of Fire.
         </p>
         <div className="flex flex-wrap gap-3 mt-8">
-          <Button variant="gold" size="lg">
-            <Download className="h-4 w-4" />
-            Download Investor Deck
+          <Button variant="gold" size="lg" asChild>
+            <a href="/Adyton-Investor-Deck.pdf" download>
+              <Download className="h-4 w-4" />
+              Download Investor Deck
+            </a>
           </Button>
           <Button variant="gold-outline" size="lg" asChild>
             <Link to="/projects/feni">Explore Our Projects</Link>
