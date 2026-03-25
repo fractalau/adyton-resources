@@ -13,6 +13,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import WhyPNG from "./pages/WhyPNG";
 import PressRelease from "./pages/PressRelease";
+import PressReleaseIndex from "./pages/PressReleaseIndex";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
