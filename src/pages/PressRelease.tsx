@@ -98,14 +98,50 @@ const PressRelease = () => {
 
             {/* Article body with inline images */}
             <div className="prose prose-sm max-w-none mb-10">
-              {paragraphs.map((paragraph: string, i: number) => (
+              {paragraphs.map((paragraph: string, i: number) => {
+                // Detect pipe-delimited table blocks
+                const lines = paragraph.split("\n").filter((l: string) => l.trim().length > 0);
+                const isTable = lines.length >= 2 && lines.every((l: string) => l.includes("|"));
+
+                return (
                 <div key={i}>
+                  {isTable ? (
+                    <div className="overflow-x-auto mb-4 rounded-lg" style={{ border: "1px solid hsl(var(--light-border))" }}>
+                      <table className="w-full text-xs">
+                        {lines.map((row: string, ri: number) => {
+                          const cells = row.split("|").map((c: string) => c.trim()).filter((c: string) => c.length > 0);
+                          const Tag = ri === 0 ? "th" : "td";
+                          return (
+                            <tr
+                              key={ri}
+                              className={ri === 0 ? "" : "border-t"}
+                              style={{ borderColor: "hsl(var(--light-border))" }}
+                            >
+                              {cells.map((cell: string, ci: number) => (
+                                <Tag
+                                  key={ci}
+                                  className={`px-3 py-2 text-left whitespace-nowrap ${ri === 0 ? "font-semibold" : ""}`}
+                                  style={{
+                                    color: ri === 0 ? "hsl(var(--light-foreground))" : "hsl(var(--light-muted-foreground))",
+                                    background: ri === 0 ? "hsl(var(--light-card))" : "transparent",
+                                  }}
+                                >
+                                  {cell}
+                                </Tag>
+                              ))}
+                            </tr>
+                          );
+                        })}
+                      </table>
+                    </div>
+                  ) : (
                   <p
                     className="text-sm leading-relaxed mb-4"
                     style={{ color: "hsl(var(--light-muted-foreground))" }}
                   >
                     {paragraph}
                   </p>
+                  )}
                   {imagePositions.has(i) && imagePositions.get(i)!.map((img, imgIdx) => (
                     <figure key={imgIdx} className="my-6">
                       <a
@@ -136,7 +172,8 @@ const PressRelease = () => {
                     </figure>
                   ))}
                 </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Source attribution */}
