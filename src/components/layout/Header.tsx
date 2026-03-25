@@ -117,9 +117,11 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center">
-            <Button variant="gold" size="sm">
-              <Download className="h-3.5 w-3.5" />
-              Download Investor Deck
+            <Button variant="gold" size="sm" asChild>
+              <a href="/Adyton-Investor-Deck.pdf" download>
+                <Download className="h-3.5 w-3.5" />
+                Download Investor Deck
+              </a>
             </Button>
           </div>
 
