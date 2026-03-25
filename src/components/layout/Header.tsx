@@ -163,9 +163,11 @@ const Header = () => {
                 Contact
               </Link>
               <div className="mt-3 pt-3 border-t border-border">
-                <Button variant="gold" size="sm" className="w-full">
-                  <Download className="h-3.5 w-3.5" />
-                  Download Investor Deck
+                <Button variant="gold" size="sm" className="w-full" asChild>
+                  <a href="/Adyton-Investor-Deck.pdf" download>
+                    <Download className="h-3.5 w-3.5" />
+                    Download Investor Deck
+                  </a>
                 </Button>
               </div>
             </nav>

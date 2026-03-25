@@ -126,9 +126,11 @@ const Investors = () => {
                   <p className="text-sm text-foreground/60 font-body">{featured.description}</p>
                   <p className="text-xs text-foreground/40 mt-1 font-body">{featured.date} · {featured.fileType} · {featured.fileSize}</p>
                 </div>
-                <Button variant="gold" size="lg">
-                  <Download className="h-4 w-4" />
-                  Download Deck
+                <Button variant="gold" size="lg" asChild>
+                  <a href="/Adyton-Investor-Deck.pdf" download>
+                    <Download className="h-4 w-4" />
+                    Download Deck
+                  </a>
                 </Button>
               </div>
             )}

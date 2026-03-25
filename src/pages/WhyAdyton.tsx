@@ -72,9 +72,11 @@ const WhyAdyton = () => (
         </div>
 
         <div className="text-center">
-          <Button variant="gold" size="lg">
-            <Download className="h-4 w-4" />
-            Download Investor Deck
+          <Button variant="gold" size="lg" asChild>
+            <a href="/Adyton-Investor-Deck.pdf" download>
+              <Download className="h-4 w-4" />
+              Download Investor Deck
+            </a>
           </Button>
         </div>
       </div>

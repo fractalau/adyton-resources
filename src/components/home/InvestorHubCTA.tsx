@@ -12,9 +12,11 @@ const InvestorHubCTA = () => (
         Fast access to materials for diligence and research.
       </p>
       <div className="flex flex-wrap justify-center gap-3 mb-6">
-        <Button variant="gold" size="lg">
-          <Download className="h-4 w-4" />
-          Download Investor Deck
+        <Button variant="gold" size="lg" asChild>
+          <a href="/Adyton-Investor-Deck.pdf" download>
+            <Download className="h-4 w-4" />
+            Download Investor Deck
+          </a>
         </Button>
         <Button variant="gold-outline" size="lg" asChild>
           <Link to="/investors">
