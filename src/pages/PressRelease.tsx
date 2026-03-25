@@ -100,7 +100,19 @@ const PressRelease = () => {
             <div className="prose prose-sm max-w-none mb-10">
               {paragraphs.map((paragraph: string, i: number) => {
                 // Detect pipe-delimited table blocks
-                const lines = paragraph.split("\n").filter((l: string) => l.trim().length > 0);
+                // Some tables have headers split across lines; rejoin lines without "|" to the previous line
+                const rawLines = paragraph.split("\n").filter((l: string) => l.trim().length > 0);
+                const joinedLines: string[] = [];
+                for (const line of rawLines) {
+                  if (line.includes("|")) {
+                    joinedLines.push(line);
+                  } else if (joinedLines.length > 0) {
+                    joinedLines[joinedLines.length - 1] += " " + line.trim();
+                  } else {
+                    joinedLines.push(line);
+                  }
+                }
+                const lines = joinedLines;
                 const isTable = lines.length >= 2 && lines.every((l: string) => l.includes("|"));
 
                 return (
