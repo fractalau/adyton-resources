@@ -1,4 +1,4 @@
-import { FileText, Download } from "lucide-react";
+import { FileText, Download, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface DownloadTileProps {
@@ -7,9 +7,10 @@ interface DownloadTileProps {
   description: string;
   fileType?: string;
   fileSize?: string;
+  href?: string;
 }
 
-const DownloadTile = ({ title, date, description, fileType = "PDF", fileSize = "2.4 MB" }: DownloadTileProps) => (
+const DownloadTile = ({ title, date, description, fileType = "PDF", fileSize = "2.4 MB", href }: DownloadTileProps) => (
   <div className="rounded-lg p-5 flex items-start gap-4" style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}>
     <div className="h-10 w-10 rounded-lg flex items-center justify-center shrink-0" style={{ background: "hsl(var(--light-bg))" }}>
       <FileText className="h-5 w-5 text-primary" />
@@ -20,9 +21,17 @@ const DownloadTile = ({ title, date, description, fileType = "PDF", fileSize = "
       <p className="text-xs line-clamp-1" style={{ color: "hsl(var(--light-muted-foreground))" }}>{description}</p>
       <p className="text-[10px] mt-1" style={{ color: "hsl(var(--light-muted-foreground) / 0.6)" }}>{fileType} · {fileSize}</p>
     </div>
-    <Button variant="ghost" size="icon" className="shrink-0">
-      <Download className="h-4 w-4" />
-    </Button>
+    {href ? (
+      <Button variant="ghost" size="icon" className="shrink-0" asChild>
+        <a href={href} target="_blank" rel="noopener noreferrer" download>
+          <Download className="h-4 w-4" />
+        </a>
+      </Button>
+    ) : (
+      <Button variant="ghost" size="icon" className="shrink-0">
+        <Download className="h-4 w-4" />
+      </Button>
+    )}
   </div>
 );
 
