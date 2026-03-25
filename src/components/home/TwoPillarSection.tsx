@@ -11,7 +11,7 @@ const TwoPillarSection = () => (
         Two Island Assets. Two Value Drivers.
       </h2>
       <p className="text-center max-w-2xl mx-auto mb-12 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
-        Adyton operates a dual-track strategy: near-term cash flow from Fergusson Island, funded through a joint venture at zero capital cost to Adyton — and district-scale exploration growth at Feni Island, on the world's most prolific gold discovery trend.
+        Adyton operates a dual-track strategy: near-term cash flow from Fergusson Island, funded through a joint venture at zero capital cost to Adyton — and district-scale exploration growth at Feni Island. This structure is designed to weather market cycles while pursuing discovery, providing resilience and structural durability that sets the company apart.
       </p>
       <div className="grid md:grid-cols-2 gap-6">
         {/* Feni Card — dark */}
@@ -24,7 +24,7 @@ const TwoPillarSection = () => (
           <p className="text-3xl font-mono font-bold text-primary mb-1">1.46 Moz Au</p>
           <p className="text-xs text-foreground/50 mb-5 font-body">Inferred Mineral Resource (Kabang Deposit, NI 43-101, Oct 2021)</p>
           <p className="text-sm text-foreground/70 mb-6 font-body leading-relaxed">
-            Whole-of-island tenure on the +120 Moz Lihir Island discovery trend. Multiple Lihir-style gold-copper epithermal targets. Significant copper upside not yet captured in the current MRE.
+            Tier 1 gold-copper discovery potential with whole-of-island tenure across multiple epithermal targets. Significant copper upside not yet captured in the current MRE.
           </p>
           <Link to="/projects/feni" className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary/80 transition-colors font-body">
             Explore Feni Island <ArrowRight className="h-4 w-4" />

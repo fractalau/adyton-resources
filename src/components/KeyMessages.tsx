@@ -1,7 +1,7 @@
 import { Gem, Layers, MapPin, Milestone, Handshake } from "lucide-react";
 
 const items = [
-  { icon: Gem, headline: "High-Quality Gold-Copper Assets", line: "PNG-focused portfolio with a clear, investor-ready narrative" },
+  { icon: Gem, headline: "Built for Discovery", line: "Tier 1 gold-copper assets with clear discovery and growth pathways" },
   { icon: Layers, headline: "Two-Pillar Value Model", line: "Feni plus Fergusson, clear roles, clear focus" },
   { icon: MapPin, headline: "Tier-One Location", line: "Papua New Guinea gold and copper jurisdiction" },
   { icon: Milestone, headline: "Near-Term Pathway", line: "Defined milestones and regular market updates" },
