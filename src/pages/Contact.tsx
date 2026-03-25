@@ -1,10 +1,12 @@
-import { Mail, Phone, Briefcase, Newspaper, MapPin, Building2 } from "lucide-react";
+import { Mail, Phone, Briefcase, Newspaper, MapPin, Building2, Loader2, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SEO from "@/components/SEO";
 import { seoConfig } from "@/config/seo";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
 
 const contactRoutes = [
@@ -21,9 +23,41 @@ const offices = [
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!formData.name || !formData.email || !formData.message) {
+      toast.error("Please fill in all required fields.");
+      return;
+    }
+    setSubmitting(true);
+    try {
+      const id = crypto.randomUUID();
+      const { error } = await supabase.from("contact_submissions").insert({
+        id,
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject || null,
+        message: formData.message,
+      });
+      if (error) throw error;
+
+      // Send notification email
+      await supabase.functions.invoke("send-contact-notification", {
+        body: { name: formData.name, email: formData.email, subject: formData.subject, message: formData.message },
+      });
+
+      setSubmitted(true);
+      setFormData({ name: "", email: "", subject: "", message: "" });
+      toast.success("Message sent successfully.");
+    } catch (err) {
+      console.error("Contact form error:", err);
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -143,10 +177,17 @@ const Contact = () => {
                 className="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
                 style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))", color: "hsl(var(--text-dark))" }}
               />
-              <Button variant="gold" size="lg" type="submit">
-                <Mail className="h-4 w-4" />
-                Send Message
-              </Button>
+              {submitted ? (
+                <div className="flex items-center gap-2 text-sm text-green-600 font-body">
+                  <CheckCircle className="h-5 w-5" />
+                  Thank you — we'll be in touch shortly.
+                </div>
+              ) : (
+                <Button variant="gold" size="lg" type="submit" disabled={submitting}>
+                  {submitting ? <Loader2 className="h-4 w-4 animate-spin" /> : <Mail className="h-4 w-4" />}
+                  {submitting ? "Sending…" : "Send Message"}
+                </Button>
+              )}
             </form>
           </div>
         </section>
@@ -156,7 +197,7 @@ const Contact = () => {
           <div className="container text-center">
             <address className="not-italic text-sm text-foreground/50 font-body">
               <Building2 className="inline h-4 w-4 mr-1" aria-hidden="true" />
-              Investor Relations: <a href="mailto:ir@adytonresources.com" className="text-primary hover:text-primary/80">ir@adytonresources.com</a> | +61 2 3854 2389
+              Investor Relations: <a href="mailto:ir@adytonresources.com" className="text-primary hover:text-primary/80">ir@adytonresources.com</a> | +61 7 3854 2389
             </address>
           </div>
         </section>
