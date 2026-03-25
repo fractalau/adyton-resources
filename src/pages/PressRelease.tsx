@@ -8,6 +8,13 @@ import ArticleSchema from "@/components/schema/ArticleSchema";
 import { seoConfig } from "@/config/seo";
 import articles from "@/data/articles.json";
 
+interface ArticleImage {
+  url: string;
+  thumb: string;
+  alt: string;
+  caption: string;
+}
+
 const PressRelease = () => {
   const { slug } = useParams<{ slug: string }>();
   const article = articles.find((a: any) => a.slug === slug);
@@ -34,6 +41,23 @@ const PressRelease = () => {
     );
   }
 
+  const images: ArticleImage[] = (article as any).images || [];
+
+  // Split body into paragraphs and insert images at natural break points
+  const paragraphs = article.body.split("\n\n").filter((p: string) => p.trim().length > 0);
+
+  // Place images after roughly 1/3 of the content, then evenly spaced
+  const imagePositions: Map<number, ArticleImage[]> = new Map();
+  if (images.length > 0) {
+    const interval = Math.max(3, Math.floor(paragraphs.length / (images.length + 1)));
+    images.forEach((img, i) => {
+      const pos = Math.min((i + 1) * interval, paragraphs.length - 1);
+      const existing = imagePositions.get(pos) || [];
+      existing.push(img);
+      imagePositions.set(pos, existing);
+    });
+  }
+
   return (
     <div className="min-h-screen" style={{ background: "hsl(var(--light-bg))" }}>
       <SEO
@@ -52,7 +76,6 @@ const PressRelease = () => {
       <main>
         <article className="py-16 md:py-20">
           <div className="container max-w-3xl">
-            {/* Back link - subtle, not prominent */}
             <Link
               to="/news"
               className="inline-flex items-center gap-1.5 text-sm mb-6 hover:text-primary transition-colors"
@@ -73,16 +96,45 @@ const PressRelease = () => {
               {article.title}
             </h1>
 
-            {/* Article body */}
+            {/* Article body with inline images */}
             <div className="prose prose-sm max-w-none mb-10">
-              {article.body.split("\n\n").map((paragraph: string, i: number) => (
-                <p
-                  key={i}
-                  className="text-sm leading-relaxed mb-4"
-                  style={{ color: "hsl(var(--light-muted-foreground))" }}
-                >
-                  {paragraph}
-                </p>
+              {paragraphs.map((paragraph: string, i: number) => (
+                <div key={i}>
+                  <p
+                    className="text-sm leading-relaxed mb-4"
+                    style={{ color: "hsl(var(--light-muted-foreground))" }}
+                  >
+                    {paragraph}
+                  </p>
+                  {imagePositions.has(i) && imagePositions.get(i)!.map((img, imgIdx) => (
+                    <figure key={imgIdx} className="my-6">
+                      <a
+                        href={img.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block"
+                      >
+                        <img
+                          src={img.url}
+                          alt={img.alt || img.caption || "Press release image"}
+                          className="w-full rounded-lg"
+                          style={{
+                            border: "1px solid hsl(var(--light-border))",
+                          }}
+                          loading="lazy"
+                        />
+                      </a>
+                      {img.caption && (
+                        <figcaption
+                          className="text-xs mt-2 text-center italic"
+                          style={{ color: "hsl(var(--light-muted-foreground))" }}
+                        >
+                          {img.caption}
+                        </figcaption>
+                      )}
+                    </figure>
+                  ))}
+                </div>
               ))}
             </div>
 
