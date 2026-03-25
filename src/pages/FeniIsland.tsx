@@ -45,7 +45,7 @@ const FeniIsland = () => (
   <div className="min-h-screen bg-background">
     <SEO
       title="Feni Island Gold-Copper Project"
-      description="Feni Island hosts 1.46 Moz Au inferred at Kabang on the +120 Moz Lihir gold corridor. 100% Adyton-owned with significant copper upside. Active drilling program."
+      description="Feni Island: Tier 1 gold-copper discovery potential. 1.46 Moz Au inferred at Kabang. 100% Adyton-owned with whole-of-island targets and significant copper upside."
       canonical={`${seoConfig.siteUrl}/projects/feni`}
     />
     <Header />
