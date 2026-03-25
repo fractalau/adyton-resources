@@ -99,9 +99,9 @@ const Footer = () => (
             <a href="mailto:info@adytonresources.com" className="hover:text-primary transition-colors">
               info@adytonresources.com
             </a>
-            <span>+61 2 3854 2389</span>
+            <span>+61 7 3854 2389</span>
             <span>
-              Level 7, 300 Adelaide Street
+              PO Box 5807
               <br />
               Brisbane QLD 4000 Australia
             </span>

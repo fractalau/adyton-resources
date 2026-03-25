@@ -197,7 +197,7 @@ const Contact = () => {
           <div className="container text-center">
             <address className="not-italic text-sm text-foreground/50 font-body">
               <Building2 className="inline h-4 w-4 mr-1" aria-hidden="true" />
-              Investor Relations: <a href="mailto:ir@adytonresources.com" className="text-primary hover:text-primary/80">ir@adytonresources.com</a> | +61 2 3854 2389
+              Investor Relations: <a href="mailto:ir@adytonresources.com" className="text-primary hover:text-primary/80">ir@adytonresources.com</a> | +61 7 3854 2389
             </address>
           </div>
         </section>

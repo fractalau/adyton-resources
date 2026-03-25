@@ -9,7 +9,7 @@ export const seoConfig = {
   business: {
     name: "Adyton Resources Corp.",
     legalName: "Adyton Resources Corporation",
-    phone: "+61 2 3854 2389",
+    phone: "+61 7 3854 2389",
     email: "info@adytonresources.com",
     address: {
       streetAddress: "Level 7, 300 Adelaide Street",
