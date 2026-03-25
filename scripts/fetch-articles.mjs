@@ -124,8 +124,9 @@ function extractImageFromBlock(block) {
   
   if (!srcMatch) return null;
   
-  // Skip tracking pixels
+  // Skip tracking pixels and logo images
   if (srcMatch[1].includes('/newsinfo/')) return null;
+  if (srcMatch[1].includes('_logo.')) return null;
   
   const fullUrl = linkMatch ? linkMatch[1] : srcMatch[1];
   const thumb = srcMatch[1];

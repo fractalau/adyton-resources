@@ -118,6 +118,7 @@ const PressRelease = () => {
                           src={img.url}
                           alt={img.alt || img.caption || "Press release image"}
                           className="w-full rounded-lg"
+                          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                           style={{
                             border: "1px solid hsl(var(--light-border))",
                           }}
