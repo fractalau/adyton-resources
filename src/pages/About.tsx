@@ -136,8 +136,8 @@ const About = () => (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {boardMembers.map((b) => (
               <article key={b.role} className="rounded-lg overflow-hidden bg-card border border-border">
-                <div className="aspect-[4/3] flex items-center justify-center bg-muted/30">
-                  <Users className="h-10 w-10 text-foreground/10" role="presentation" />
+                <div className="aspect-[4/3] overflow-hidden bg-muted/30">
+                  <img src={b.photo} alt={b.name} className="w-full h-full object-cover object-top" />
                 </div>
                 <div className="p-5">
                   <h3 className="font-display font-semibold text-sm text-foreground">{b.name}</h3>
