@@ -13,6 +13,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import WhyPNG from "./pages/WhyPNG";
 import PressRelease from "./pages/PressRelease";
+import PressReleaseIndex from "./pages/PressReleaseIndex";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/investors" element={<Investors />} />
           <Route path="/news" element={<News />} />
           <Route path="/news/:slug" element={<NewsDetail />} />
+          <Route path="/pr" element={<PressReleaseIndex />} />
           <Route path="/pr/:slug" element={<PressRelease />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
