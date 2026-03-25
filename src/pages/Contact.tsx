@@ -1,10 +1,12 @@
-import { Mail, Phone, Briefcase, Newspaper, MapPin, Building2 } from "lucide-react";
+import { Mail, Phone, Briefcase, Newspaper, MapPin, Building2, Loader2, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SEO from "@/components/SEO";
 import { seoConfig } from "@/config/seo";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
 
 const contactRoutes = [
