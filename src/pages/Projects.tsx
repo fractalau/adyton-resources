@@ -23,6 +23,11 @@ const Projects = () => {
 
   return (
     <div className="min-h-screen" style={{ background: "hsl(var(--light-bg))" }}>
+      <SEO
+        title="Project Portfolio"
+        description="Adyton Resources' PNG-focused gold and copper assets spanning near-term restart to discovery-scale exploration."
+        canonical={`${seoConfig.siteUrl}/projects`}
+      />
       <Header />
       <section className="py-16 md:py-24">
         <div className="container">

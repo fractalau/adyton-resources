@@ -16,6 +16,11 @@ const thesisPoints = [
 
 const WhyAdyton = () => (
   <div className="min-h-screen" style={{ background: "hsl(var(--light-bg))" }}>
+    <SEO
+      title="Why Adyton Resources"
+      description="Investment thesis — near-term execution, discovery growth, and technical credibility across Adyton's PNG gold-copper portfolio."
+      canonical={`${seoConfig.siteUrl}/why-adyton`}
+    />
     <Header />
     <section className="py-16 md:py-24">
       <div className="container">
