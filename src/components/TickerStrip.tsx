@@ -20,7 +20,7 @@ const LiveTicker = () => {
             title: "Gold",
           },
           {
-            proName: "TVC:COPPER",
+            proName: "CAPITALCOM:COPPER",
             title: "Copper",
           },
           {
