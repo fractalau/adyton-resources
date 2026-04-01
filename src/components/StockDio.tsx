@@ -5,7 +5,7 @@ const StockdioTicker = () => {
   // 2. Define your symbols separated by semicolons (;)
   // Stockdio uses standard commodity codes (GC = Gold, HG = Copper)
   // You can prefix exchanges with a colon (e.g., TSXV:ADY)
-  const symbols = "GC;HG;TSXV:ADY;OTC:ADYRF";
+  const symbols = "OANDA:XAUUSD;CAPITALCOM:COPPER;TSXV:ADY;OTC:ADYRF";
 
   // 3. Pick your favorite layout from the page you linked (1 through 14)
   const layoutType = 12; // Change this number to match the layout you liked best!
