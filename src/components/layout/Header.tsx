@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Download, ChevronDown } from "lucide-react";
 import TickerStrip from "@/components/TickerStrip";
+import StockDio from "@/components/StockDio";
 import logo from "@/assets/logo.png";
 
 const projectsDropdown = [
@@ -175,6 +176,7 @@ const Header = () => {
         )}
       </header>
       <TickerStrip />
+      <StockDio />
     </>
   );
 };
