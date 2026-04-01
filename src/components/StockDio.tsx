@@ -8,7 +8,7 @@ const StockDio = () => {
       const script = document.createElement("script");
       script.src = "https://www.stockdio.com/ticker/widget.js";
       script.async = true;
-      script.setAttribute("data-ticker", "ADY.V;ADYRF");
+      script.setAttribute("data-ticker", "XAUUSD;HG;ADY.V;ADYRF");
       script.setAttribute("data-api-key", "2FB2EC30D32C4B3390E328CE8F25C1BC");
       script.setAttribute("data-display", "ticker");
       script.setAttribute("data-culture", "English-US");
