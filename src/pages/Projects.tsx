@@ -4,6 +4,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ProjectTile from "@/components/ProjectTile";
 import TagChip from "@/components/TagChip";
+import SEO from "@/components/SEO";
+import { seoConfig } from "@/config/seo";
 
 const allProjects = [
   { name: "Feni Gold-Copper", slug: "feni", stage: "Restart Pathway", type: "Gold-Copper", highlights: ["Near-term restart candidate", "Historical production base"], location: "New Ireland Province, PNG" },
