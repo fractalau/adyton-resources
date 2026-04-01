@@ -5,6 +5,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MetricCard from "@/components/MetricCard";
 import TwoTrackCard from "@/components/TwoTrackCard";
+import SEO from "@/components/SEO";
+import { seoConfig } from "@/config/seo";
 
 const thesisPoints = [
   { icon: TrendingUp, title: "Near-Term Execution", desc: "Focus on advancing defined pathways toward near-term milestones, with clear disclosure and progress updates." },
