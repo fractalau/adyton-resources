@@ -176,7 +176,7 @@ const Header = () => {
         )}
       </header>
       <TickerStrip />
-      <StockDio />
+      
     </>
   );
 };
