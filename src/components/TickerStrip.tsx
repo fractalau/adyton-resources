@@ -16,11 +16,11 @@ const LiveTicker = () => {
       script.innerHTML = JSON.stringify({
         symbols: [
           {
-            proName: "COMEX:GC1!",
+            proName: "OANDA:XAUUSD",
             title: "Gold",
           },
           {
-            proName: "COMEX:HG1!",
+            proName: "TVC:COPPER",
             title: "Copper",
           },
           {
