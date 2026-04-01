@@ -32,7 +32,7 @@ const LiveTicker = () => {
             proName: "OTC:ADYRF",
           },
         ],
-        showSymbolLogo: false,
+        showSymbolLogo: true,
         colorTheme: "dark", // Matches your dark mode perfectly
         isTransparent: true, // Allows your navy background to show through
         displayMode: "adaptive",
