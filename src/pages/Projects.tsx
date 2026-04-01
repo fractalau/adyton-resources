@@ -4,6 +4,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ProjectTile from "@/components/ProjectTile";
 import TagChip from "@/components/TagChip";
+import SEO from "@/components/SEO";
+import { seoConfig } from "@/config/seo";
 
 const allProjects = [
   { name: "Feni Gold-Copper", slug: "feni", stage: "Restart Pathway", type: "Gold-Copper", highlights: ["Near-term restart candidate", "Historical production base"], location: "New Ireland Province, PNG" },
@@ -21,6 +23,11 @@ const Projects = () => {
 
   return (
     <div className="min-h-screen" style={{ background: "hsl(var(--light-bg))" }}>
+      <SEO
+        title="Project Portfolio"
+        description="Adyton Resources' PNG-focused gold and copper assets spanning near-term restart to discovery-scale exploration."
+        canonical={`${seoConfig.siteUrl}/projects`}
+      />
       <Header />
       <section className="py-16 md:py-24">
         <div className="container">

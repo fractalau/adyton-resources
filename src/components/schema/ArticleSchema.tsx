@@ -1,4 +1,4 @@
-import { useHead } from "@unhead/react";
+import { Helmet } from "react-helmet-async";
 import { seoConfig } from "@/config/seo";
 
 interface ArticleSchemaProps {
@@ -40,16 +40,11 @@ const ArticleSchema = ({
     },
   };
 
-  useHead({
-    script: [
-      {
-        type: "application/ld+json",
-        innerHTML: JSON.stringify(schema),
-      },
-    ],
-  });
-
-  return null;
+  return (
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(schema)}</script>
+    </Helmet>
+  );
 };
 
 export default ArticleSchema;

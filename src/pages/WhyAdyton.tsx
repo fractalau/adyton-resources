@@ -5,6 +5,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MetricCard from "@/components/MetricCard";
 import TwoTrackCard from "@/components/TwoTrackCard";
+import SEO from "@/components/SEO";
+import { seoConfig } from "@/config/seo";
 
 const thesisPoints = [
   { icon: TrendingUp, title: "Near-Term Execution", desc: "Focus on advancing defined pathways toward near-term milestones, with clear disclosure and progress updates." },
@@ -14,6 +16,11 @@ const thesisPoints = [
 
 const WhyAdyton = () => (
   <div className="min-h-screen" style={{ background: "hsl(var(--light-bg))" }}>
+    <SEO
+      title="Why Adyton Resources"
+      description="Investment thesis — near-term execution, discovery growth, and technical credibility across Adyton's PNG gold-copper portfolio."
+      canonical={`${seoConfig.siteUrl}/why-adyton`}
+    />
     <Header />
     <section className="py-16 md:py-24">
       <div className="container">
