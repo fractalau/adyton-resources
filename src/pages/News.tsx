@@ -128,10 +128,10 @@ const News = () => {
   });
 
   // Merge RSS items with static archive, deduplicating by normalized title
-  const rssAsNews = rssItems.map((item) => ({
+  const rssAsNews = rssItems.map((item: any) => ({
     title: item.title,
     date: formatRssDate(item.pubDate),
-    excerpt: "",
+    excerpt: item.excerpt || "",
     tags: [] as string[],
     sourceUrl: item.link,
   }));
