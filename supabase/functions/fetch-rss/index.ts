@@ -6,10 +6,17 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
-const COMPANY_URL = "https://www.newsfilecorp.com/company/7416/Adyton-Resources-Corporation";
+const BASE_URL = "https://www.newsfilecorp.com/company/7416/Adyton-Resources-Corporation";
 
-function extractItems(html: string) {
-  const items: { title: string; link: string; pubDate: string }[] = [];
+interface NewsItem {
+  title: string;
+  link: string;
+  pubDate: string;
+  excerpt: string;
+}
+
+function extractItems(html: string): NewsItem[] {
+  const items: NewsItem[] = [];
   const figureRegex = /<figure class="nf-tile-wide"[^>]*>([\s\S]*?)<\/figure>/g;
   let match;
   while ((match = figureRegex.exec(html)) !== null) {
@@ -18,12 +25,26 @@ function extractItems(html: string) {
     if (!linkMatch) continue;
     const link = "https://www.newsfilecorp.com" + linkMatch[1];
     const title = linkMatch[2].trim();
-    // Date is in the <p> tag, format: "City--(Newsfile Corp. - March 25, 2026)"
     const dateMatch = block.match(/Newsfile Corp\.\s*-\s*(\w+ \d{1,2}, \d{4})/);
     const pubDate = dateMatch ? dateMatch[1] : "";
-    items.push({ title, link, pubDate });
+    // Extract excerpt from the <p lang="en"> tag
+    const excerptMatch = block.match(/<p lang="en">([\s\S]*?)<\/p>/);
+    const excerpt = excerptMatch
+      ? excerptMatch[1].replace(/<[^>]*>/g, "").trim().substring(0, 200)
+      : "";
+    items.push({ title, link, pubDate, excerpt });
   }
   return items;
+}
+
+function hasNextPage(html: string): string | null {
+  const nextMatch = html.match(/<a[^>]*href="([^"]*\?pg=\d+)"[^>]*class="btn-outline next"/);
+  if (nextMatch) {
+    return nextMatch[1].startsWith("http")
+      ? nextMatch[1]
+      : "https://www.newsfilecorp.com" + nextMatch[1];
+  }
+  return null;
 }
 
 serve(async (req) => {
@@ -32,21 +53,32 @@ serve(async (req) => {
   }
 
   try {
-    const res = await fetch(COMPANY_URL, {
-      headers: {
-        "User-Agent": "Mozilla/5.0 (compatible; AdytonBot/1.0)",
-        Accept: "text/html",
-      },
-    });
+    const allItems: NewsItem[] = [];
+    let url: string | null = BASE_URL;
+    const MAX_PAGES = 10; // Safety limit
+    let page = 0;
 
-    if (!res.ok) {
-      throw new Error(`Fetch failed: ${res.status}`);
+    while (url && page < MAX_PAGES) {
+      const res = await fetch(url, {
+        headers: {
+          "User-Agent": "Mozilla/5.0 (compatible; AdytonBot/1.0)",
+          Accept: "text/html",
+        },
+      });
+
+      if (!res.ok) {
+        throw new Error(`Fetch failed: ${res.status} on page ${page + 1}`);
+      }
+
+      const html = await res.text();
+      const items = extractItems(html);
+      allItems.push(...items);
+
+      url = hasNextPage(html);
+      page++;
     }
 
-    const html = await res.text();
-    const items = extractItems(html);
-
-    return new Response(JSON.stringify({ items }), {
+    return new Response(JSON.stringify({ items: allItems }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (error) {
