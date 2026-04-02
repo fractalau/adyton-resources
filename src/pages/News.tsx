@@ -29,6 +29,18 @@ const fetchRss = async () => {
   }));
 };
 
+const fetchAnnouncements = async () => {
+  const { data, error } = await supabase.functions.invoke("fetch-announcements");
+  if (error) throw error;
+  return (data.items ?? []).map((item: any) => ({
+    title: item.title,
+    date: item.date,
+    excerpt: "",
+    tags: [] as string[],
+    sourceUrl: item.link,
+  }));
+};
+
 const News = () => {
   const [page, setPage] = useState(1);
 
