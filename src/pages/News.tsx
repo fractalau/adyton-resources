@@ -180,11 +180,17 @@ const News = () => {
         {/* News Grid */}
         <section aria-label="News articles" className="py-14 md:py-18" style={{ background: "hsl(var(--off-white))" }}>
           <div className="container">
+          {isLoading ? (
+            <div className="flex justify-center py-12">
+              <Loader2 className="h-6 w-6 animate-spin text-primary" />
+            </div>
+          ) : (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {paged.map((n, i) => (
                 <NewsCard key={`${page}-${i}`} {...n} />
               ))}
             </div>
+          )}
 
             {/* Pagination */}
             {totalPages > 1 && (
