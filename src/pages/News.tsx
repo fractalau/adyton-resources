@@ -50,12 +50,26 @@ const News = () => {
     staleTime: 1000 * 60 * 15,
   });
 
+  const { data: announcements = [], isLoading: isLoadingAnnouncements } = useQuery({
+    queryKey: ["announcements-all"],
+    queryFn: fetchAnnouncements,
+    staleTime: 1000 * 60 * 15,
+  });
+
   const totalPages = Math.ceil(newsItems.length / PER_PAGE);
   const paged = newsItems.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+
+  const announcementsTotalPages = Math.ceil(announcements.length / PER_PAGE);
+  const pagedAnnouncements = announcements.slice((announcementsPage - 1) * PER_PAGE, announcementsPage * PER_PAGE);
 
   const goTo = (p: number) => {
     setPage(p);
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const goToAnnouncements = (p: number) => {
+    setAnnouncementsPage(p);
+    document.getElementById("news-section")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
