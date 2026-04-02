@@ -43,7 +43,7 @@ const fetchAnnouncements = async () => {
 
 const News = () => {
   const [page, setPage] = useState(1);
-
+  const [announcementsPage, setAnnouncementsPage] = useState(1);
   const { data: newsItems = [], isLoading } = useQuery({
     queryKey: ["rss-news-all"],
     queryFn: fetchRss,
