@@ -183,6 +183,81 @@ const News = () => {
             </p>
           </div>
         </section>
+
+        {/* News from adytonresources.com */}
+        <section id="news-section" aria-label="News" className="py-14 md:py-18 bg-background">
+          <div className="container">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-8" style={{ color: "#3e6174" }}>
+              News
+            </h2>
+            {isLoadingAnnouncements ? (
+              <div className="flex justify-center py-12">
+                <Loader2 className="h-6 w-6 animate-spin text-primary" />
+              </div>
+            ) : (
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {pagedAnnouncements.map((n, i) => (
+                  <NewsCard key={`ann-${announcementsPage}-${i}`} {...n} />
+                ))}
+              </div>
+            )}
+
+            {announcementsTotalPages > 1 && (
+              <nav aria-label="News pagination" className="flex items-center justify-center gap-2 mt-12">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => goToAnnouncements(announcementsPage - 1)}
+                  disabled={announcementsPage === 1}
+                  className="h-9 w-9"
+                  style={{ color: "hsl(var(--text-dark))" }}
+                  aria-label="Previous page"
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                </Button>
+
+                {Array.from({ length: announcementsTotalPages }, (_, i) => i + 1).map((p) => (
+                  <Button
+                    key={p}
+                    variant={p === announcementsPage ? "gold" : "ghost"}
+                    size="sm"
+                    onClick={() => goToAnnouncements(p)}
+                    className="h-9 w-9 p-0 font-mono text-xs"
+                    style={p !== announcementsPage ? { color: "hsl(var(--text-dark))" } : undefined}
+                    aria-label={`Page ${p}`}
+                    aria-current={p === announcementsPage ? "page" : undefined}
+                  >
+                    {p}
+                  </Button>
+                ))}
+
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => goToAnnouncements(announcementsPage + 1)}
+                  disabled={announcementsPage === announcementsTotalPages}
+                  className="h-9 w-9"
+                  style={{ color: "hsl(var(--text-dark))" }}
+                  aria-label="Next page"
+                >
+                  <ChevronRight className="h-4 w-4" />
+                </Button>
+              </nav>
+            )}
+
+            <p className="text-center text-xs mt-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+              News sourced from{" "}
+              <a
+                href="https://adytonresources.com/announcements/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                adytonresources.com
+              </a>
+            </p>
+          </div>
+        </section>
       </main>
 
       <Footer />
