@@ -31,14 +31,14 @@ const fetchRss = async () => {
 const News = () => {
   const [page, setPage] = useState(1);
 
-  const { data: allNews = [], isLoading } = useQuery({
+  const { data: newsItems = [], isLoading } = useQuery({
     queryKey: ["rss-news-all"],
     queryFn: fetchRss,
     staleTime: 1000 * 60 * 15,
   });
 
-  const totalPages = Math.ceil(mergedNews.length / PER_PAGE);
-  const paged = mergedNews.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+  const totalPages = Math.ceil(newsItems.length / PER_PAGE);
+  const paged = newsItems.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
   const goTo = (p: number) => {
     setPage(p);
