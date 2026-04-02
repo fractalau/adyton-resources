@@ -29,21 +29,47 @@ const fetchRss = async () => {
   }));
 };
 
+const fetchAnnouncements = async () => {
+  const { data, error } = await supabase.functions.invoke("fetch-announcements");
+  if (error) throw error;
+  return (data.items ?? []).map((item: any) => ({
+    title: item.title,
+    date: item.date,
+    excerpt: "",
+    tags: [] as string[],
+    sourceUrl: item.link,
+  }));
+};
+
 const News = () => {
   const [page, setPage] = useState(1);
-
+  const [announcementsPage, setAnnouncementsPage] = useState(1);
   const { data: newsItems = [], isLoading } = useQuery({
     queryKey: ["rss-news-all"],
     queryFn: fetchRss,
     staleTime: 1000 * 60 * 15,
   });
 
+  const { data: announcements = [], isLoading: isLoadingAnnouncements } = useQuery({
+    queryKey: ["announcements-all"],
+    queryFn: fetchAnnouncements,
+    staleTime: 1000 * 60 * 15,
+  });
+
   const totalPages = Math.ceil(newsItems.length / PER_PAGE);
   const paged = newsItems.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+
+  const announcementsTotalPages = Math.ceil(announcements.length / PER_PAGE);
+  const pagedAnnouncements = announcements.slice((announcementsPage - 1) * PER_PAGE, announcementsPage * PER_PAGE);
 
   const goTo = (p: number) => {
     setPage(p);
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const goToAnnouncements = (p: number) => {
+    setAnnouncementsPage(p);
+    document.getElementById("news-section")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -153,6 +179,81 @@ const News = () => {
                 className="text-primary hover:underline"
               >
                 TMX Newsfile
+              </a>
+            </p>
+          </div>
+        </section>
+
+        {/* News from adytonresources.com */}
+        <section id="news-section" aria-label="News" className="py-14 md:py-18 bg-background">
+          <div className="container">
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-8" style={{ color: "#3e6174" }}>
+              News
+            </h2>
+            {isLoadingAnnouncements ? (
+              <div className="flex justify-center py-12">
+                <Loader2 className="h-6 w-6 animate-spin text-primary" />
+              </div>
+            ) : (
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {pagedAnnouncements.map((n, i) => (
+                  <NewsCard key={`ann-${announcementsPage}-${i}`} {...n} />
+                ))}
+              </div>
+            )}
+
+            {announcementsTotalPages > 1 && (
+              <nav aria-label="News pagination" className="flex items-center justify-center gap-2 mt-12">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => goToAnnouncements(announcementsPage - 1)}
+                  disabled={announcementsPage === 1}
+                  className="h-9 w-9"
+                  style={{ color: "hsl(var(--text-dark))" }}
+                  aria-label="Previous page"
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                </Button>
+
+                {Array.from({ length: announcementsTotalPages }, (_, i) => i + 1).map((p) => (
+                  <Button
+                    key={p}
+                    variant={p === announcementsPage ? "gold" : "ghost"}
+                    size="sm"
+                    onClick={() => goToAnnouncements(p)}
+                    className="h-9 w-9 p-0 font-mono text-xs"
+                    style={p !== announcementsPage ? { color: "hsl(var(--text-dark))" } : undefined}
+                    aria-label={`Page ${p}`}
+                    aria-current={p === announcementsPage ? "page" : undefined}
+                  >
+                    {p}
+                  </Button>
+                ))}
+
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => goToAnnouncements(announcementsPage + 1)}
+                  disabled={announcementsPage === announcementsTotalPages}
+                  className="h-9 w-9"
+                  style={{ color: "hsl(var(--text-dark))" }}
+                  aria-label="Next page"
+                >
+                  <ChevronRight className="h-4 w-4" />
+                </Button>
+              </nav>
+            )}
+
+            <p className="text-center text-xs mt-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+              News sourced from{" "}
+              <a
+                href="https://adytonresources.com/announcements/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                adytonresources.com
               </a>
             </p>
           </div>
