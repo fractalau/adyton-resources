@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { useHead } from "@unhead/react";
 import { seoConfig } from "@/config/seo";
 
 interface SEOProps {
@@ -27,47 +27,47 @@ const SEO = ({
   const image = ogImage || seoConfig.defaultOgImage;
   const url = canonical || seoConfig.siteUrl;
 
-  const schemas = schema
-    ? Array.isArray(schema)
-      ? schema
-      : [schema]
-    : [];
+  const meta: any[] = [
+    { name: "description", content: desc },
+    {
+      name: "robots",
+      content: noIndex ? "noindex, nofollow" : "index, follow",
+    },
+    { property: "og:title", content: fullTitle },
+    { property: "og:description", content: desc },
+    { property: "og:image", content: image },
+    { property: "og:url", content: url },
+    { property: "og:type", content: ogType },
+    { property: "og:site_name", content: seoConfig.siteName },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: fullTitle },
+    { name: "twitter:description", content: desc },
+    { name: "twitter:image", content: image },
+  ];
 
-  return (
-    <Helmet>
-      <title>{fullTitle}</title>
-      <meta name="description" content={desc} />
-      <meta
-        name="robots"
-        content={noIndex ? "noindex, nofollow" : "index, follow"}
-      />
-      <link rel="canonical" href={url} />
+  if (seoConfig.twitterHandle) {
+    meta.push({ name: "twitter:site", content: seoConfig.twitterHandle });
+  }
 
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={desc} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:site_name" content={seoConfig.siteName} />
+  const script: any[] = [];
+  if (schema) {
+    const schemas = Array.isArray(schema) ? schema : [schema];
+    schemas.forEach((s) => {
+      script.push({
+        type: "application/ld+json",
+        innerHTML: JSON.stringify(s),
+      });
+    });
+  }
 
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={desc} />
-      <meta name="twitter:image" content={image} />
-      {seoConfig.twitterHandle && (
-        <meta name="twitter:site" content={seoConfig.twitterHandle} />
-      )}
+  useHead({
+    title: fullTitle,
+    link: [{ rel: "canonical", href: url }],
+    meta,
+    script,
+  });
 
-      {/* JSON-LD */}
-      {schemas.map((s, i) => (
-        <script key={i} type="application/ld+json">
-          {JSON.stringify(s)}
-        </script>
-      ))}
-    </Helmet>
-  );
+  return null;
 };
 
 export default SEO;

@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { useHead } from "@unhead/react";
 
 interface FAQItem {
   question: string;
@@ -23,11 +23,16 @@ const FAQSchema = ({ items }: FAQSchemaProps) => {
     })),
   };
 
-  return (
-    <Helmet>
-      <script type="application/ld+json">{JSON.stringify(schema)}</script>
-    </Helmet>
-  );
+  useHead({
+    script: [
+      {
+        type: "application/ld+json",
+        innerHTML: JSON.stringify(schema),
+      },
+    ],
+  });
+
+  return null;
 };
 
 export default FAQSchema;
