@@ -17,11 +17,12 @@ const fetchRss = async () => {
   if (error) throw error;
   return (data.items ?? []).map((item: any) => ({
     title: item.title,
-    date: new Date(item.pubDate).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    }) || item.pubDate,
+    date:
+      new Date(item.pubDate).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      }) || item.pubDate,
     excerpt: item.excerpt || "",
     tags: [] as string[],
     sourceUrl: item.link,
@@ -57,15 +58,25 @@ const News = () => {
       <main>
         {/* Hero */}
         <section className="relative bg-background py-16 md:py-20 border-b border-border overflow-hidden">
-          <div className="absolute inset-0 bg-cover bg-center opacity-25" style={{ backgroundImage: `url(${projectHeaderBg})` }} aria-hidden="true" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80" aria-hidden="true" />
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-25"
+            style={{ backgroundImage: `url(${projectHeaderBg})` }}
+            aria-hidden="true"
+          />
+          <div
+            className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80"
+            aria-hidden="true"
+          />
           <div className="container relative z-10">
-            <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">PRESS RELEASES</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
+              PRESS RELEASES
+            </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4">
               News & Announcements
             </h1>
             <p className="text-lg text-foreground/70 max-w-2xl font-body">
-              Corporate news, exploration updates, and regulatory filings. All releases link directly to the authoritative source.
+              Corporate news, exploration updates, and regulatory filings. All releases link directly to the
+              authoritative source.
             </p>
             <p className="text-sm text-foreground/40 mt-2 font-mono">{newsItems.length} announcements</p>
           </div>
@@ -74,18 +85,20 @@ const News = () => {
         {/* News Grid */}
         <section aria-label="News articles" className="py-14 md:py-18" style={{ background: "hsl(var(--off-white))" }}>
           <div className="container">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-8" style={{ color: "#3e6174" }}>Press Releases</h2>
-          {isLoading ? (
-            <div className="flex justify-center py-12">
-              <Loader2 className="h-6 w-6 animate-spin text-primary" />
-            </div>
-          ) : (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {paged.map((n, i) => (
-                <NewsCard key={`${page}-${i}`} {...n} />
-              ))}
-            </div>
-          )}
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-8" style={{ color: "#3e6174" }}>
+              Press Releases
+            </h2>
+            {isLoading ? (
+              <div className="flex justify-center py-12">
+                <Loader2 className="h-6 w-6 animate-spin text-primary" />
+              </div>
+            ) : (
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {paged.map((n, i) => (
+                  <NewsCard key={`${page}-${i}`} {...n} />
+                ))}
+              </div>
+            )}
 
             {/* Pagination */}
             {totalPages > 1 && (
@@ -133,8 +146,13 @@ const News = () => {
 
             <p className="text-center text-xs mt-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
               All press releases sourced from{" "}
-              <a href="https://adytonresources.com/announcements/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                adytonresources.com
+              <a
+                href="https://www.newsfilecorp.com/company/7416/Adyton-Resources-Corporation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                TMX Newsfile
               </a>
             </p>
           </div>
