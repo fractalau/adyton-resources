@@ -94,10 +94,57 @@ const allNews = [
 
 const PER_PAGE = 9;
 
+interface RssItem {
+  title: string;
+  link: string;
+  pubDate: string;
+}
+
+const fetchRss = async (): Promise<RssItem[]> => {
+  const { data, error } = await supabase.functions.invoke("fetch-rss");
+  if (error) throw error;
+  return data.items ?? [];
+};
+
+const formatRssDate = (dateStr: string) => {
+  try {
+    return new Date(dateStr).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  } catch {
+    return dateStr;
+  }
+};
+
 const News = () => {
   const [page, setPage] = useState(1);
-  const totalPages = Math.ceil(allNews.length / PER_PAGE);
-  const paged = allNews.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+
+  const { data: rssItems = [], isLoading } = useQuery({
+    queryKey: ["rss-news-all"],
+    queryFn: fetchRss,
+    staleTime: 1000 * 60 * 15,
+  });
+
+  // Merge RSS items with static archive, deduplicating by normalized title
+  const rssAsNews = rssItems.map((item) => ({
+    title: item.title,
+    date: formatRssDate(item.pubDate),
+    excerpt: "",
+    tags: [] as string[],
+    sourceUrl: item.link,
+  }));
+
+  const staticTitles = new Set(allNews.map((n) => n.title.toLowerCase().trim()));
+  const uniqueRss = rssAsNews.filter(
+    (r) => !staticTitles.has(r.title.toLowerCase().trim())
+  );
+
+  const mergedNews = [...uniqueRss, ...allNews];
+
+  const totalPages = Math.ceil(mergedNews.length / PER_PAGE);
+  const paged = mergedNews.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
   const goTo = (p: number) => {
     setPage(p);
