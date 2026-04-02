@@ -14,22 +14,40 @@ const NewsSection = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // 1. The direct RSS URL for Adyton Resources on Newsfile Corp
-    // (If this link ever changes, just right-click the "RSS" button on their Newsfile page and copy the new link)
+    // 1. The direct RSS URL for Adyton
     const adytonRssUrl = "https://www.newsfilecorp.com/company/7416/rss";
 
-    // 2. Wrap it in the free rss2json proxy to bypass CORS and convert XML to JSON
-    const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(adytonRssUrl)}`;
+    // 2. Use AllOrigins as a raw CORS bypass (it doesn't try to parse the feed, it just hands us the XML)
+    const apiUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(adytonRssUrl)}`;
 
     const fetchNews = async () => {
       try {
         const response = await fetch(apiUrl);
         const data = await response.json();
 
-        if (data.status === "ok") {
-          // Grab the 3 most recent press releases
-          setNewsItems(data.items.slice(0, 3));
+        // 3. We use the browser's native XML parser to read the raw feed
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(data.contents, "text/xml");
+
+        // 4. Grab all the <item> tags (which represent individual press releases)
+        const items = xmlDoc.querySelectorAll("item");
+
+        const parsedNews: NewsItem[] = [];
+
+        // 5. Loop through the first 3 items and extract the data we need
+        for (let i = 0; i < Math.min(3, items.length); i++) {
+          const item = items[i];
+          parsedNews.push({
+            title: item.querySelector("title")?.textContent || "Adyton Resources News Update",
+            pubDate: item.querySelector("pubDate")?.textContent || new Date().toISOString(),
+            link:
+              item.querySelector("link")?.textContent ||
+              "https://www.newsfilecorp.com/company/7416/Adyton-Resources-Corporation",
+            description: item.querySelector("description")?.textContent || "",
+          });
         }
+
+        setNewsItems(parsedNews);
       } catch (error) {
         console.error("Failed to fetch Adyton news:", error);
       } finally {
