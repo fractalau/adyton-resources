@@ -67,7 +67,7 @@ const News = () => {
             <p className="text-lg text-foreground/70 max-w-2xl font-body">
               Corporate news, exploration updates, and regulatory filings. All releases link directly to the authoritative source.
             </p>
-            <p className="text-sm text-foreground/40 mt-2 font-mono">{mergedNews.length} announcements</p>
+            <p className="text-sm text-foreground/40 mt-2 font-mono">{newsItems.length} announcements</p>
           </div>
         </section>
 
