@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import NewsCard from "@/components/NewsCard";
@@ -92,10 +94,57 @@ const allNews = [
 
 const PER_PAGE = 9;
 
+interface RssItem {
+  title: string;
+  link: string;
+  pubDate: string;
+}
+
+const fetchRss = async (): Promise<RssItem[]> => {
+  const { data, error } = await supabase.functions.invoke("fetch-rss");
+  if (error) throw error;
+  return data.items ?? [];
+};
+
+const formatRssDate = (dateStr: string) => {
+  try {
+    return new Date(dateStr).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  } catch {
+    return dateStr;
+  }
+};
+
 const News = () => {
   const [page, setPage] = useState(1);
-  const totalPages = Math.ceil(allNews.length / PER_PAGE);
-  const paged = allNews.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+
+  const { data: rssItems = [], isLoading } = useQuery({
+    queryKey: ["rss-news-all"],
+    queryFn: fetchRss,
+    staleTime: 1000 * 60 * 15,
+  });
+
+  // Merge RSS items with static archive, deduplicating by normalized title
+  const rssAsNews = rssItems.map((item) => ({
+    title: item.title,
+    date: formatRssDate(item.pubDate),
+    excerpt: "",
+    tags: [] as string[],
+    sourceUrl: item.link,
+  }));
+
+  const staticTitles = new Set(allNews.map((n) => n.title.toLowerCase().trim()));
+  const uniqueRss = rssAsNews.filter(
+    (r) => !staticTitles.has(r.title.toLowerCase().trim())
+  );
+
+  const mergedNews = [...uniqueRss, ...allNews];
+
+  const totalPages = Math.ceil(mergedNews.length / PER_PAGE);
+  const paged = mergedNews.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
   const goTo = (p: number) => {
     setPage(p);
@@ -124,18 +173,24 @@ const News = () => {
             <p className="text-lg text-foreground/70 max-w-2xl font-body">
               Corporate news, exploration updates, and regulatory filings. All releases link directly to the authoritative source.
             </p>
-            <p className="text-sm text-foreground/40 mt-2 font-mono">{allNews.length} announcements</p>
+            <p className="text-sm text-foreground/40 mt-2 font-mono">{mergedNews.length} announcements</p>
           </div>
         </section>
 
         {/* News Grid */}
         <section aria-label="News articles" className="py-14 md:py-18" style={{ background: "hsl(var(--off-white))" }}>
           <div className="container">
+          {isLoading ? (
+            <div className="flex justify-center py-12">
+              <Loader2 className="h-6 w-6 animate-spin text-primary" />
+            </div>
+          ) : (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {paged.map((n, i) => (
                 <NewsCard key={`${page}-${i}`} {...n} />
               ))}
             </div>
+          )}
 
             {/* Pagination */}
             {totalPages > 1 && (
