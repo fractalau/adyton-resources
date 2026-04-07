@@ -17,11 +17,7 @@ const SLUG = "adyton-reports-200-increase-to-wapolu-updated-inferred-mineral-res
 
 const WapoluMineralResourcesEstimate = () => (
   <div className="min-h-screen bg-background">
-    <SEO
-      title={ARTICLE.title}
-      description={ARTICLE.excerpt}
-      canonical={`${seoConfig.siteUrl}/news/${SLUG}`}
-    />
+    <SEO title={ARTICLE.title} description={ARTICLE.excerpt} canonical={`${seoConfig.siteUrl}/news/${SLUG}`} />
     <ArticleSchema headline={ARTICLE.title} datePublished={ARTICLE.date} description={ARTICLE.excerpt} />
     <Header />
 
@@ -52,8 +48,8 @@ const WapoluMineralResourcesEstimate = () => (
                 1.0 million tonnes grading 1.00 g/t Au for an indicated resource of 33 koz Au and 12.7 million tonnes
                 grading 0.97 g/t Au for an inferred resource of 393 koz Au.
               </strong>{" "}
-              The estimate was prepared by Mining One under the authorship of Louis Cohalan (MAIG), an independent mining
-              consultant and "qualified person" as defined in NI 43-101.
+              The estimate was prepared by Mining One under the authorship of Louis Cohalan (MAIG), an independent
+              mining consultant and "qualified person" as defined in NI 43-101.
             </p>
 
             <p className="mb-3">
@@ -64,7 +60,7 @@ const WapoluMineralResourcesEstimate = () => (
               Korean trading group Hyosung TNC Corporation to purchase its Wapolu concentrate.
             </p>
 
-            <h2>Key Highlights</h2>
+            <h2 className="text-2xl font-display font-bold text-foreground mb-1">Key Highlights</h2>
 
             <ul>
               <li>
@@ -92,7 +88,7 @@ const WapoluMineralResourcesEstimate = () => (
               </p>
             </blockquote>
 
-            <h2>Resource Estimate</h2>
+            <h2 className="text-2xl font-display font-bold text-foreground mb-1">Resource Estimate</h2>
 
             <p className="mb-3">
               The existing Gameta and updated Wapolu Mineral Resource Estimates are highlighted in Table 1. The current
@@ -101,7 +97,7 @@ const WapoluMineralResourcesEstimate = () => (
               progress to establish reserve estimates and Mining License (ML) applications.
             </p>
 
-            <h2>Project Update and Key Next Steps</h2>
+            <h2 className="text-2xl font-display font-bold text-foreground mb-1">Project Update and Key Next Steps</h2>
 
             <p className="mb-3">
               Adyton's JV partner, EVIH, has completed the current phase of drilling at both Wapolu and Gameta. Key
@@ -109,7 +105,9 @@ const WapoluMineralResourcesEstimate = () => (
             </p>
 
             <ul>
-              <li>Finalizing work streams, reports and compensation agreements for the Mining Lease (ML) application.</li>
+              <li>
+                Finalizing work streams, reports and compensation agreements for the Mining Lease (ML) application.
+              </li>
               <li>Submission of the Wapolu ML application.</li>
               <li>Responding to information requests from government departments.</li>
               <li>Finalizing equipment selection for long-lead items.</li>
@@ -118,7 +116,7 @@ const WapoluMineralResourcesEstimate = () => (
               </li>
             </ul>
 
-            <h2>The Wapolu Restart Advantage</h2>
+            <h2 className="text-2xl font-display font-bold text-foreground mb-1">The Wapolu Restart Advantage</h2>
 
             <p className="mb-3">
               The Wapolu gold project is a proposed restart of the past-producing Wapolu mine which operated in the mid
@@ -128,7 +126,7 @@ const WapoluMineralResourcesEstimate = () => (
               impoundments.
             </p>
 
-            <h2>EVIH Joint Venture</h2>
+            <h2 className="text-2xl font-display font-bold text-foreground mb-1">EVIH Joint Venture</h2>
 
             <p className="mb-3">
               The Fergusson projects are under an earn-in Joint Venture Agreement with EVIH, granting EVIH the right to
@@ -141,18 +139,6 @@ const WapoluMineralResourcesEstimate = () => (
               funding solution that advances the Fergusson projects through development and into production, preserving
               capital and minimizing risk for Adyton shareholders.
             </p>
-          </div>
-
-          {/* Source link */}
-          <div className="mt-10 pt-6" style={{ borderTop: "1px solid hsl(var(--light-border))" }}>
-            <a
-              href={ARTICLE.sourceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline text-sm font-body"
-            >
-              Read the full release on adytonresources.com →
-            </a>
           </div>
         </div>
       </section>
