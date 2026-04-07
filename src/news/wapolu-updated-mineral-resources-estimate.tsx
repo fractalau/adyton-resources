@@ -79,7 +79,7 @@ const WapoluMineralResourcesEstimate = () => (
             </ul>
 
             <blockquote>
-              <p>
+              <p className="mb-3">
                 "The updated Wapolu Mineral Resource materially strengthens the foundation of our Fergusson Island
                 development strategy and exceeds our internal expectations," said Tim Crossley, Chief Executive Officer
                 of Adyton. "The combination of a near-1.0 g/t gold grade and a more than doubled resource base enhances
