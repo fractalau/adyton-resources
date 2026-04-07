@@ -60,7 +60,7 @@ const WapoluMineralResourcesEstimate = () => (
               Korean trading group Hyosung TNC Corporation to purchase its Wapolu concentrate.
             </p>
 
-            <h2 className="text-2xl font-display font-bold text-foreground mb-1">Key Highlights</h2>
+            <h2 className="text-2xl font-display font-bold mb-1">Key Highlights</h2>
 
             <ul>
               <li>
@@ -88,7 +88,7 @@ const WapoluMineralResourcesEstimate = () => (
               </p>
             </blockquote>
 
-            <h2 className="text-2xl font-display font-bold text-foreground mb-1">Resource Estimate</h2>
+            <h2 className="text-2xl font-display font-bold mb-1">Resource Estimate</h2>
 
             <p className="mb-3">
               The existing Gameta and updated Wapolu Mineral Resource Estimates are highlighted in Table 1. The current
@@ -97,7 +97,7 @@ const WapoluMineralResourcesEstimate = () => (
               progress to establish reserve estimates and Mining License (ML) applications.
             </p>
 
-            <h2 className="text-2xl font-display font-bold text-foreground mb-1">Project Update and Key Next Steps</h2>
+            <h2 className="text-2xl font-display font-bold mb-1">Project Update and Key Next Steps</h2>
 
             <p className="mb-3">
               Adyton's JV partner, EVIH, has completed the current phase of drilling at both Wapolu and Gameta. Key
@@ -116,7 +116,7 @@ const WapoluMineralResourcesEstimate = () => (
               </li>
             </ul>
 
-            <h2 className="text-2xl font-display font-bold text-foreground mb-1">The Wapolu Restart Advantage</h2>
+            <h2 className="text-2xl font-display font-bold mb-1">The Wapolu Restart Advantage</h2>
 
             <p className="mb-3">
               The Wapolu gold project is a proposed restart of the past-producing Wapolu mine which operated in the mid
@@ -126,7 +126,7 @@ const WapoluMineralResourcesEstimate = () => (
               impoundments.
             </p>
 
-            <h2 className="text-2xl font-display font-bold text-foreground mb-1">EVIH Joint Venture</h2>
+            <h2 className="text-2xl font-display font-bold mb-1">EVIH Joint Venture</h2>
 
             <p className="mb-3">
               The Fergusson projects are under an earn-in Joint Venture Agreement with EVIH, granting EVIH the right to
