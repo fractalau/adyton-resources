@@ -195,6 +195,15 @@ const News = () => {
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-8" style={{ color: "#ffffff" }}>
               News
             </h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              <NewsCard
+                title="Adyton Resources Outlines Dual-Track Growth Strategy in Crux Investor Interview"
+                date="June 19, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/dual-track-growth-strategy"
+              />
+            </div>
 
             <p className="text-center text-xs mt-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
               News sourced from{" "}
