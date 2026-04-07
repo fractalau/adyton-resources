@@ -62,19 +62,22 @@ const WapoluMineralResourcesEstimate = () => (
 
             <h2 className="text-2xl font-display font-bold mb-1">Key Highlights</h2>
 
-            <ul>
-              <li>
-                <strong>Inferred Resource increases 197%</strong> — Wapolu MRE increases Indicated Resources to 33 koz
+            <ul className="space-y-3 list-none pl-0">
+              <li className="flex items-start gap-3">
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
+                <span><strong>Inferred Resource increases 197%</strong> — Wapolu MRE increases Indicated Resources to 33 koz
                 and Inferred Resources to 393 koz, adding 226 koz versus the prior estimate, confirming strong growth
-                potential at Fergusson Island.
+                potential at Fergusson Island.</span>
               </li>
-              <li>
-                <strong>Attractive grade profile</strong> — Near-surface, open pit resource grading ~1.0 g/t Au (1.00
-                g/t Indicated; 0.97 g/t Inferred), supportive of simple, low-cost open-pit mining development scenarios.
+              <li className="flex items-start gap-3">
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
+                <span><strong>Attractive grade profile</strong> — Near-surface, open pit resource grading ~1.0 g/t Au (1.00
+                g/t Indicated; 0.97 g/t Inferred), supportive of simple, low-cost open-pit mining development scenarios.</span>
               </li>
-              <li>
-                <strong>Advances project toward permitting</strong> — Updated MRE represents a key milestone for the
-                Mining Lease Application, materially de-risking the pathway to development.
+              <li className="flex items-start gap-3">
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
+                <span><strong>Advances project toward permitting</strong> — Updated MRE represents a key milestone for the
+                Mining Lease Application, materially de-risking the pathway to development.</span>
               </li>
             </ul>
 
@@ -104,15 +107,26 @@ const WapoluMineralResourcesEstimate = () => (
               activities currently underway include:
             </p>
 
-            <ul>
-              <li>
-                Finalizing work streams, reports and compensation agreements for the Mining Lease (ML) application.
+            <ul className="space-y-3 list-none pl-0">
+              <li className="flex items-start gap-3">
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
+                <span>Finalizing work streams, reports and compensation agreements for the Mining Lease (ML) application.</span>
               </li>
-              <li>Submission of the Wapolu ML application.</li>
-              <li>Responding to information requests from government departments.</li>
-              <li>Finalizing equipment selection for long-lead items.</li>
-              <li>
-                Gameta, located only 30km away, is being fast-tracked to leverage the Wapolu production infrastructure.
+              <li className="flex items-start gap-3">
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
+                <span>Submission of the Wapolu ML application.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
+                <span>Responding to information requests from government departments.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
+                <span>Finalizing equipment selection for long-lead items.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
+                <span>Gameta, located only 30km away, is being fast-tracked to leverage the Wapolu production infrastructure.</span>
               </li>
             </ul>
 
