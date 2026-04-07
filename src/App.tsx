@@ -17,6 +17,7 @@ import PressReleaseIndex from "./pages/PressReleaseIndex";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import DualTrackGrowthStrategy from "./news/dual-track-growth-strategy";
+import WapoluMineralResourcesEstimate from "./news/wapolu-updated-mineral-resources-estimate";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/investors" element={<Investors />} />
           <Route path="/news" element={<News />} />
           <Route path="/news/adyton-resources-outlines-dual-track-growth-strategy-in-crux-investor-interview" element={<DualTrackGrowthStrategy />} />
+          <Route path="/news/adyton-reports-200-increase-to-wapolu-updated-inferred-mineral-resources-estimate" element={<WapoluMineralResourcesEstimate />} />
           <Route path="/news/:slug" element={<NewsDetail />} />
           <Route path="/pr" element={<PressReleaseIndex />} />
           <Route path="/pr/:slug" element={<PressRelease />} />
