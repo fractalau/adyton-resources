@@ -15,7 +15,7 @@ const PER_PAGE = 9;
 const fetchRss = async () => {
   const { data, error } = await supabase.functions.invoke("fetch-rss");
   if (error) throw error;
-  return (data.items ?? []).map((item: any, i: number) => ({
+  return (data.items ?? []).map((item: any) => ({
     title: item.title,
     date:
       new Date(item.pubDate).toLocaleDateString("en-US", {
@@ -26,20 +26,18 @@ const fetchRss = async () => {
     excerpt: item.excerpt || "",
     tags: [] as string[],
     sourceUrl: item.link,
-    slug: `rss-${i}`,
   }));
 };
 
 const fetchAnnouncements = async () => {
   const { data, error } = await supabase.functions.invoke("fetch-announcements");
   if (error) throw error;
-  return (data.items ?? []).map((item: any, i: number) => ({
+  return (data.items ?? []).map((item: any) => ({
     title: item.title,
     date: item.date,
     excerpt: "",
     tags: [] as string[],
     sourceUrl: item.link,
-    slug: `ann-${i}`,
   }));
 };
 
