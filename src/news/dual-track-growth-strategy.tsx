@@ -54,7 +54,7 @@ const DualTrackGrowthStrategy = () => (
               substantial long-term growth optionality.
             </p>
 
-            <p>
+            <p className="mb-3">
               The near-term production pathway centres on Fergusson Island, where Adyton has established an asset-level
               joint venture with East Vision Investment Holdings, a Singaporean-Chinese group with recent PNG delivery
               experience, including a 50-megawatt hydropower project. Under this structure, East Vision funds
@@ -68,7 +68,7 @@ const DualTrackGrowthStrategy = () => (
               flow, but to do so without further dilution, creating the potential to internally fund future growth.
             </p>
 
-            <p>
+            <p className="mb-3">
               At the same time, Adyton is advancing its flagship Feni Island project, located in what Tim describes as a
               120-million-ounce discovery belt between Lihir and Bougainville. Following our CAD$20 million capital
               raise in August 2025, the Company has deployed more than 8,000 metres of drilling since March, testing
@@ -94,24 +94,6 @@ const DualTrackGrowthStrategy = () => (
                 allowFullScreen
               />
             </div>
-          </div>
-
-          {/* Source attribution */}
-          <div
-            className="mt-10 rounded-lg p-5"
-            style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}
-          >
-            <p className="text-xs mb-2" style={{ color: "hsl(var(--light-muted-foreground))" }}>
-              Originally published on adytonresources.com
-            </p>
-            <a
-              href={ARTICLE.sourceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-primary hover:text-primary/80 inline-flex items-center gap-1.5 font-medium"
-            >
-              View original source
-            </a>
           </div>
         </div>
       </section>
