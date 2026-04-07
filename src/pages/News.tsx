@@ -108,7 +108,7 @@ const News = () => {
           </div>
         </section>
 
-        {/* News Grid */}
+        {/* Press Release Grid */}
         <section aria-label="News articles" className="py-14 md:py-18" style={{ background: "hsl(var(--off-white))" }}>
           <div className="container">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-8" style={{ color: "#3e6174" }}>
