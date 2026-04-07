@@ -16,6 +16,7 @@ import PressRelease from "./pages/PressRelease";
 import PressReleaseIndex from "./pages/PressReleaseIndex";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import DualTrackGrowthStrategy from "./news/dual-track-growth-strategy";
 
 const queryClient = new QueryClient();
 
