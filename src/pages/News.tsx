@@ -201,7 +201,7 @@ const News = () => {
                 date="June 19, 2025"
                 excerpt=""
                 tags={[]}
-                sourceUrl="/news/dual-track-growth-strategy"
+                sourceUrl="/news/adyton-resources-outlines-dual-track-growth-strategy-in-crux-investor-interview"
               />
             </div>
 
