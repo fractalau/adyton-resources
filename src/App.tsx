@@ -16,6 +16,7 @@ import PressRelease from "./pages/PressRelease";
 import PressReleaseIndex from "./pages/PressReleaseIndex";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import DualTrackGrowthStrategy from "./news/dual-track-growth-strategy";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/projects/fergusson" element={<FergussonIsland />} />
           <Route path="/investors" element={<Investors />} />
           <Route path="/news" element={<News />} />
+          <Route path="/news/dual-track-growth-strategy" element={<DualTrackGrowthStrategy />} />
           <Route path="/news/:slug" element={<NewsDetail />} />
           <Route path="/pr" element={<PressReleaseIndex />} />
           <Route path="/pr/:slug" element={<PressRelease />} />
