@@ -211,6 +211,13 @@ const News = () => {
                 sourceUrl="/news/adyton-expands-discovery-capability-at-feni-gold-copper-project-with-global-ore-discovery-consultants"
               />
               <NewsCard
+                title="Adyton Resources Receives Non-Binding Letter of Intent (LOI) for the Purchase of Gold Concentrate From Its Wapolu Project"
+                date="December 11, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-resources-receives-non-binding-letter-of-intent-loi-for-the-purchase-of-gold-concentrate-from-its-wapolu-project"
+              />
+              <NewsCard
                 title="Adyton Resources Outlines Dual-Track Growth Strategy in Crux Investor Interview"
                 date="June 19, 2025"
                 excerpt=""
