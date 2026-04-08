@@ -1,5 +1,5 @@
 const AboutAdyton = () => (
-  <section className="py-14 md:py-18" style={{ background: "hsl(var(--off-white))", borderTop: "1px solid hsl(var(--light-border))" }}>
+  <section className="py-14 md:py-18" style={{ background: "#f0f0f0", borderTop: "1px solid hsl(var(--light-border))" }}>
     <div className="container max-w-3xl">
       <h2 className="text-2xl font-display font-bold mb-4" style={{ color: "hsl(var(--text-dark))" }}>
         ABOUT ADYTON RESOURCES CORPORATION
