@@ -19,6 +19,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import DualTrackGrowthStrategy from "./announcements/dual-track-growth-strategy";
 import WapoluMineralResourcesEstimate from "./announcements/wapolu-updated-mineral-resources-estimate";
 import FeniGlobalOreDiscovery from "./announcements/feni-global-ore-discovery";
+import WapoluLoiGoldConcentrate from "./announcements/wapolu-loi-gold-concentrate";
 
 const queryClient = new QueryClient();
 
