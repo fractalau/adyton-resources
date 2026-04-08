@@ -16,8 +16,8 @@ import PressRelease from "./pages/PressRelease";
 import PressReleaseIndex from "./pages/PressReleaseIndex";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
-import DualTrackGrowthStrategy from "./news/dual-track-growth-strategy";
-import WapoluMineralResourcesEstimate from "./news/wapolu-updated-mineral-resources-estimate";
+import DualTrackGrowthStrategy from "./announcements/dual-track-growth-strategy";
+import WapoluMineralResourcesEstimate from "./announcements/wapolu-updated-mineral-resources-estimate";
 
 const queryClient = new QueryClient();
 
