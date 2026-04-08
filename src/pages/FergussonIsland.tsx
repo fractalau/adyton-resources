@@ -85,7 +85,7 @@ const FergussonIsland = () => (
         <div className="text-sm leading-relaxed space-y-4 mb-6 font-body text-foreground/70">
           <p>EVIH is committing up to US$9.5M to fund feasibility, metallurgical work, permitting, and bulk sample activities to earn a 50% interest in Fergusson Mining Pte. Ltd.</p>
           <p>Progress to date:</p>
-          <ul className="list-disc pl-5 space-y-1">
+          <ul>
             <li>~8,000 m of drilling completed</li>
             <li>Metallurgical testwork completed</li>
             <li>Mining and environmental permit applications lodged</li>
