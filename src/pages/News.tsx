@@ -223,6 +223,7 @@ const News = () => {
                 excerpt=""
                 tags={[]}
                 sourceUrl="/news/adyton-resources-welcomes-lihir-deposit-expert-dr-erin-johns-to-the-team-to-drive-feni-gold-copper-project-development"
+              />
               <NewsCard
                 title="Adyton Resources Outlines Dual-Track Growth Strategy in Crux Investor Interview"
                 date="June 19, 2025"
