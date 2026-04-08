@@ -180,6 +180,41 @@ const DrErinJohnsFeni = () => (
               available under the Company’s profile on SEDAR+ at www.sedarplus.ca. Mineral resources are not mineral
               reserves and have not demonstrated economic viability.
             </p>
+
+            <p className="mb-4">
+              <strong>Forward looking statements</strong>
+            </p>
+
+            <p className="mb-4">
+              This press release contains certain forward-looking statements as well as historical information. Readers
+              should not rely on information in this summary for any purpose other than for gaining general knowledge of
+              the Company. Forward-looking statements include, but are not limited to, the completion and the closing of
+              the Offering and use of proceeds raised in the Offering and Non-Brokered Offering. The words “expected”,
+              “will” and similar expressions are intended to be among the statements that identify forward-looking
+              statements. Although the Company believes that its expectations as reflected in any forward-looking
+              statements, are reasonable, such statements involve risks and uncertainties and no assurance can be given
+              that actual results will be consistent with these forward- looking statements. Except as required by law,
+              the Company undertakes no obligation to update these forward-looking statements in the event that
+              management’s beliefs, estimates, opinions or other factors should change.
+            </p>
+
+            <p className="mb-4">
+              This press release does not constitute an offer to buy or sell securities in the United States. The
+              distribution of Adyton securities in connection with the Offerings and Non-Brokered Offering described
+              herein will not be registered under the United States Securities Act of 1933 (the “U.S. Securities Act”)
+              and Adyton securities may not be offered or sold in the United States absent registration or an applicable
+              exemption from the registration requirements of the U.S. Securities Act and applicable state securities
+              laws. This press release shall not constitute an offer to sell or the solicitation of an offer to buy
+              Adyton securities, nor shall there be any offer or sale of Adyton securities in any jurisdiction in which
+              such offer, solicitation or sale would be unlawful.
+            </p>
+
+            <p className="mb-4">
+              <i>
+                Neither TSX Venture Exchange nor its Regulation Services Provider (as that term is defined in policies
+                of the TSX Venture Exchange) accepts responsibility for the adequacy or accuracy of this release.
+              </i>
+            </p>
           </div>
         </div>
       </section>
