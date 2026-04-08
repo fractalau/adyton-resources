@@ -133,6 +133,7 @@ const WapoluMineralResourcesEstimate = () => (
           </div>
         </div>
       </section>
+      <AboutAdyton />
     </main>
 
     <Footer />

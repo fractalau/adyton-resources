@@ -219,6 +219,7 @@ const DrErinJohnsFeni = () => (
           </div>
         </div>
       </section>
+      <AboutAdyton />
     </main>
 
     <Footer />

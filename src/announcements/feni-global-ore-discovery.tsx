@@ -120,6 +120,7 @@ const FeniGlobalOreDiscovery = () => (
           </div>
         </div>
       </section>
+      <AboutAdyton />
     </main>
 
     <Footer />

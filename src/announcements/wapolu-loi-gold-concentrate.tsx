@@ -122,6 +122,7 @@ const WapoluLoiGoldConcentrate = () => (
           </div>
         </div>
       </section>
+      <AboutAdyton />
     </main>
 
     <Footer />

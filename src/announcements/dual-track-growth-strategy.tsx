@@ -98,6 +98,7 @@ const DualTrackGrowthStrategy = () => (
           </div>
         </div>
       </section>
+      <AboutAdyton />
     </main>
 
     <Footer />
