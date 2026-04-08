@@ -22,10 +22,9 @@ const WhyPNGSection = () => (
       <p className="text-sm leading-relaxed mb-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
         Papua New Guinea sits on the Pacific Ring of Fire, home to some of the world's largest gold and copper deposits. Adyton's projects are located in the same geological arc as Lihir (Newmont) and Panguna (formerly Rio Tinto) — two of the most significant deposits in the Asia-Pacific. Island-based access means natural coastal logistics, shorter pit-to-ship distances, and lower capital intensity compared with highland projects.
       </p>
-      <ul className="space-y-3 mb-8">
+      <ul className="mb-8 text-sm font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
         {bullets.map((b, i) => (
-          <li key={i} className="flex items-start gap-3 text-sm font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
-            <span className="mt-1.5 h-2 w-2 rounded-full bg-primary shrink-0" />
+          <li key={i}>
             {b}
           </li>
         ))}
