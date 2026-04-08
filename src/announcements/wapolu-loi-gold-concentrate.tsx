@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import SEO from "@/components/SEO";
 import ArticleSchema from "@/components/schema/ArticleSchema";
 import { seoConfig } from "@/config/seo";
+import AboutAdyton from "@/components/AboutAdyton";
 
 const ARTICLE = {
   title: "Adyton Resources Receives Non-Binding Letter of Intent (LOI) for the Purchase of Gold Concentrate From Its Wapolu Project",
