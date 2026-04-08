@@ -204,6 +204,20 @@ const News = () => {
                 sourceUrl="/news/adyton-reports-200-increase-to-wapolu-updated-inferred-mineral-resources-estimate"
               />
               <NewsCard
+                title="Adyton Expands Discovery Capability at Feni Gold-Copper Project With Global Ore Discovery Consultants"
+                date="December 18, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-expands-discovery-capability-at-feni-gold-copper-project-with-global-ore-discovery-consultants"
+              />
+              <NewsCard
+                title="Adyton Resources Outlines Dual-Track Growth Strategy in Crux Investor Interview"
+                date="January 14, 2026"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-reports-200-increase-to-wapolu-updated-inferred-mineral-resources-estimate"
+              />
+              <NewsCard
                 title="Adyton Resources Outlines Dual-Track Growth Strategy in Crux Investor Interview"
                 date="June 19, 2025"
                 excerpt=""
