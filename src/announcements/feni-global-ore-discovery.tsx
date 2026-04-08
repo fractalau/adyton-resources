@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import SEO from "@/components/SEO";
 import ArticleSchema from "@/components/schema/ArticleSchema";
 import { seoConfig } from "@/config/seo";
+import AboutAdyton from "@/components/AboutAdyton";
 
 const ARTICLE = {
   title: "Adyton Expands Discovery Capability at Feni Gold-Copper Project With Global Ore Discovery Consultants",
@@ -119,6 +120,7 @@ const FeniGlobalOreDiscovery = () => (
           </div>
         </div>
       </section>
+      <AboutAdyton />
     </main>
 
     <Footer />
