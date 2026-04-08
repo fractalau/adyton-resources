@@ -39,6 +39,7 @@ const App = () => (
           <Route path="/news/adyton-resources-outlines-dual-track-growth-strategy-in-crux-investor-interview" element={<DualTrackGrowthStrategy />} />
           <Route path="/news/adyton-reports-200-increase-to-wapolu-updated-inferred-mineral-resources-estimate" element={<WapoluMineralResourcesEstimate />} />
           <Route path="/news/adyton-expands-discovery-capability-at-feni-gold-copper-project-with-global-ore-discovery-consultants" element={<FeniGlobalOreDiscovery />} />
+          <Route path="/news/adyton-resources-receives-non-binding-letter-of-intent-loi-for-the-purchase-of-gold-concentrate-from-its-wapolu-project" element={<WapoluLoiGoldConcentrate />} />
           <Route path="/news/:slug" element={<NewsDetail />} />
           <Route path="/pr" element={<PressReleaseIndex />} />
           <Route path="/pr/:slug" element={<PressRelease />} />
