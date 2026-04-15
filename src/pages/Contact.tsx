@@ -4,7 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { useSEO } from "@/hooks/useSEO";
 import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
+
 import { toast } from "sonner";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
 
