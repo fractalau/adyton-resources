@@ -1,17 +1,14 @@
 import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import SEO from "@/components/SEO";
+import { useSEO } from "@/hooks/useSEO";
 import articles from "@/data/articles.json";
 
-const PressReleaseIndex = () => (
+const PressReleaseIndex = () => {
+  useSEO("Press Releases", "Adyton Resources press release archive.");
+
+  return (
   <div className="min-h-screen bg-background">
-    <SEO
-      title="Press Releases"
-      description="Adyton Resources press release archive."
-      canonical="https://adytonresources.com/pr"
-      noIndex
-    />
     <Header />
     <main className="container py-16 max-w-3xl">
       <h1 className="text-3xl font-display font-bold text-foreground mb-8">Press Releases</h1>
@@ -30,6 +27,7 @@ const PressReleaseIndex = () => (
     </main>
     <Footer />
   </div>
-);
+  );
+};
 
 export default PressReleaseIndex;

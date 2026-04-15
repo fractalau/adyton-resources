@@ -3,9 +3,8 @@ import { ExternalLink, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import SEO from "@/components/SEO";
+import { useSEO } from "@/hooks/useSEO";
 import ArticleSchema from "@/components/schema/ArticleSchema";
-import { seoConfig } from "@/config/seo";
 import articles from "@/data/articles.json";
 
 interface ArticleImage {
@@ -18,6 +17,7 @@ interface ArticleImage {
 const PressRelease = () => {
   const { slug } = useParams<{ slug: string }>();
   const article = articles.find((a: any) => a.slug === slug);
+  useSEO(article?.title || "Press Release", article?.excerpt || "Adyton Resources press release.");
 
   if (!article) {
     return (
@@ -60,13 +60,6 @@ const PressRelease = () => {
 
   return (
     <div className="min-h-screen" style={{ background: "hsl(var(--light-bg))" }}>
-      <SEO
-        title={article.title}
-        description={article.excerpt}
-        canonical={`${seoConfig.siteUrl}/pr/${article.slug}`}
-        ogType="article"
-        noIndex={true}
-      />
       <ArticleSchema
         headline={article.title}
         datePublished={article.date}

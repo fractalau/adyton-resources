@@ -3,8 +3,7 @@ import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Download, ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
-import SEO from "@/components/SEO";
-import { seoConfig } from "@/config/seo";
+import { useSEO } from "@/hooks/useSEO";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
 
 const stats = [
@@ -41,13 +40,14 @@ const cuIntercepts = [
   { hole: "AMD002", from: 0.0, to: null, interval: 250.0, au: 0.77, cu: 0.17, aueq: 0.93, uplift: "+21.0%" },
 ];
 
-const FeniIsland = () => (
+const FeniIsland = () => {
+  useSEO(
+    "Feni Island Gold-Copper Project",
+    "Feni Island: Tier 1 gold-copper discovery potential. 1.46 Moz Au inferred at Kabang. 100% Adyton-owned with whole-of-island targets and significant copper upside."
+  );
+
+  return (
   <div className="min-h-screen bg-background">
-    <SEO
-      title="Feni Island Gold-Copper Project"
-      description="Feni Island: Tier 1 gold-copper discovery potential. 1.46 Moz Au inferred at Kabang. 100% Adyton-owned with whole-of-island targets and significant copper upside."
-      canonical={`${seoConfig.siteUrl}/projects/feni`}
-    />
     <Header />
     <main>
 
@@ -278,6 +278,7 @@ const FeniIsland = () => (
     </main>
     <Footer />
   </div>
-);
+  );
+};
 
 export default FeniIsland;

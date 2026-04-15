@@ -5,8 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import DownloadTile from "@/components/DownloadTile";
 import TagChip from "@/components/TagChip";
-import SEO from "@/components/SEO";
-import { seoConfig } from "@/config/seo";
+import { useSEO } from "@/hooks/useSEO";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
 
 /* ─── Capital Structure ─── */
@@ -58,13 +57,10 @@ const Investors = () => {
       ? downloads.filter((d) => !d.featured)
       : downloads.filter((d) => d.category === activeCategory && !d.featured);
 
+  useSEO("Investor Hub", "Adyton Resources investor relations — capital structure, ownership data, NI 43-101 technical reports, presentations, and SEDAR+ regulatory filings.");
+
   return (
     <div className="min-h-screen bg-background">
-      <SEO
-        title="Investor Hub"
-        description="Adyton Resources investor relations — capital structure, ownership data, NI 43-101 technical reports, presentations, and SEDAR+ regulatory filings."
-        canonical={`${seoConfig.siteUrl}/investors`}
-      />
       <Header />
 
       <main>

@@ -3,9 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import SEO from "@/components/SEO";
+import { useSEO } from "@/hooks/useSEO";
 import FAQSchema from "@/components/schema/FAQSchema";
-import { seoConfig } from "@/config/seo";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
 
 const keyStats = [
@@ -35,13 +34,14 @@ const pngFaqs = [
   { question: "Is PNG a safe jurisdiction for mining investment?", answer: "PNG has a long history of successful mining operations and a modernised Mining Act. The government actively supports responsible resource development. While infrastructure challenges exist, island-based projects like those held by Adyton benefit from tidewater access and simplified logistics." },
 ];
 
-const WhyPNG = () => (
+const WhyPNG = () => {
+  useSEO(
+    "Why Papua New Guinea for Gold Mining",
+    "Papua New Guinea is a world-class mineral province with 100+ Moz historical gold production, established miners, and substantial under-explored discovery runway."
+  );
+
+  return (
   <div className="min-h-screen bg-background">
-    <SEO
-      title="Why Papua New Guinea for Gold Mining"
-      description="Papua New Guinea is a world-class mineral province with 100+ Moz historical gold production, established miners, and substantial under-explored discovery runway."
-      canonical={`${seoConfig.siteUrl}/why-png`}
-    />
     <FAQSchema items={pngFaqs} />
     <Header />
 
@@ -192,6 +192,7 @@ const WhyPNG = () => (
 
     <Footer />
   </div>
-);
+  );
+};
 
 export default WhyPNG;

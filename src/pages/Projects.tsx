@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ProjectTile from "@/components/ProjectTile";
 import TagChip from "@/components/TagChip";
+import { useSEO } from "@/hooks/useSEO";
 
 const allProjects = [
   { name: "Feni Gold-Copper", slug: "feni", stage: "Restart Pathway", type: "Gold-Copper", highlights: ["Near-term restart candidate", "Historical production base"], location: "New Ireland Province, PNG" },
@@ -15,6 +16,7 @@ const allProjects = [
 const stages = ["All", "Restart Pathway", "Exploration", "Advanced"];
 
 const Projects = () => {
+  useSEO("Project Portfolio", "PNG-focused gold and copper assets spanning near-term restart to discovery-scale exploration.");
   const [activeStage, setActiveStage] = useState("All");
 
   const filtered = activeStage === "All" ? allProjects : allProjects.filter((p) => p.stage === activeStage);

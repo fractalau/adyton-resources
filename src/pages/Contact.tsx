@@ -2,8 +2,7 @@ import { Mail, Phone, Briefcase, Newspaper, MapPin, Building2, Loader2, CheckCir
 import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import SEO from "@/components/SEO";
-import { seoConfig } from "@/config/seo";
+import { useSEO } from "@/hooks/useSEO";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
@@ -25,6 +24,8 @@ const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+
+  useSEO("Contact Adyton Resources", "Get in touch with Adyton Resources — investor relations, media inquiries, corporate partnerships, and general contact for PNG gold-copper projects.");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -62,11 +63,6 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO
-        title="Contact Adyton Resources"
-        description="Get in touch with Adyton Resources — investor relations, media inquiries, corporate partnerships, and general contact for PNG gold-copper projects."
-        canonical={`${seoConfig.siteUrl}/contact`}
-      />
       <Header />
 
       <main>
