@@ -312,6 +312,7 @@ const FergussonIsland = () => {
     </main>
     <Footer />
   </div>
-);
+  );
+};
 
 export default FergussonIsland;

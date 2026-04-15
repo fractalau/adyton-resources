@@ -1,10 +1,9 @@
-import { useLocation, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { useSEO } from "@/hooks/useSEO";
 
 const NotFound = () => {
-  const location = useLocation();
   useSEO("Page Not Found", "The page you are looking for could not be found.");
 
   return (

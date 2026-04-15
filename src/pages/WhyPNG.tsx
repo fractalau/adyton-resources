@@ -192,6 +192,7 @@ const WhyPNG = () => {
 
     <Footer />
   </div>
-);
+  );
+};
 
 export default WhyPNG;

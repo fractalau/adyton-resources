@@ -17,6 +17,7 @@ interface ArticleImage {
 const PressRelease = () => {
   const { slug } = useParams<{ slug: string }>();
   const article = articles.find((a: any) => a.slug === slug);
+  useSEO(article?.title || "Press Release", article?.excerpt || "Adyton Resources press release.");
 
   if (!article) {
     return (

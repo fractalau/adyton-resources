@@ -57,6 +57,8 @@ const Investors = () => {
       ? downloads.filter((d) => !d.featured)
       : downloads.filter((d) => d.category === activeCategory && !d.featured);
 
+  useSEO("Investor Hub", "Adyton Resources investor relations — capital structure, ownership data, NI 43-101 technical reports, presentations, and SEDAR+ regulatory filings.");
+
   return (
     <div className="min-h-screen bg-background">
       <Header />

@@ -39,6 +39,7 @@ const NewsDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const [expanded, setExpanded] = useState(false);
   const article = newsDetailData[slug || ""] || newsDetailData["fergusson-phase-2"];
+  useSEO(article.title, article.excerpt);
 
   return (
     <div className="min-h-screen" style={{ background: "hsl(var(--light-bg))" }}>

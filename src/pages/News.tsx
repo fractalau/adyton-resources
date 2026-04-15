@@ -41,6 +41,7 @@ const fetchAnnouncements = async () => {
 };
 
 const News = () => {
+  useSEO("News & Announcements", "Latest press releases and corporate announcements from Adyton Resources — exploration updates, drilling results, and regulatory filings.");
   const [page, setPage] = useState(1);
   const [announcementsPage, setAnnouncementsPage] = useState(1);
   const { data: newsItems = [], isLoading } = useQuery({

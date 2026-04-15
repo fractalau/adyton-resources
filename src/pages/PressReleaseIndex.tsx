@@ -27,6 +27,7 @@ const PressReleaseIndex = () => {
     </main>
     <Footer />
   </div>
-);
+  );
+};
 
 export default PressReleaseIndex;

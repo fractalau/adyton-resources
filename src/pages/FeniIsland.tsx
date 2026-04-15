@@ -278,6 +278,7 @@ const FeniIsland = () => {
     </main>
     <Footer />
   </div>
-);
+  );
+};
 
 export default FeniIsland;
