@@ -42,7 +42,7 @@ const NewsSection = () => {
       <div className="container">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-2xl md:text-3xl font-display font-bold" style={{ color: "hsl(var(--text-dark))" }}>
-            Latest News &amp; Announcements
+            Latest News &amp; Press Releases
           </h2>
           <Link to="/news" className="text-sm text-primary font-semibold hover:text-primary/80 flex items-center gap-1 font-body">
             View All Releases <ArrowRight className="h-3.5 w-3.5" />
