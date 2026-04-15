@@ -27,7 +27,7 @@ const Contact = () => {
 
   useSEO("Contact Adyton Resources", "Get in touch with Adyton Resources — investor relations, media inquiries, corporate partnerships, and general contact for PNG gold-copper projects.");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) {
       toast.error("Please fill in all required fields.");
@@ -35,24 +35,24 @@ const Contact = () => {
     }
     setSubmitting(true);
     try {
-      const id = crypto.randomUUID();
-      const { error } = await supabase.from("contact_submissions").insert({
-        id,
+      const body = new URLSearchParams({
+        "form-name": "contact",
         name: formData.name,
         email: formData.email,
-        subject: formData.subject || null,
+        subject: formData.subject,
         message: formData.message,
       });
-      if (error) throw error;
 
-      // Send notification email
-      await supabase.functions.invoke("send-contact-notification", {
-        body: { name: formData.name, email: formData.email, subject: formData.subject, message: formData.message },
+      const res = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body.toString(),
       });
+
+      if (!res.ok) throw new Error("Network response was not ok");
 
       setSubmitted(true);
       setFormData({ name: "", email: "", subject: "", message: "" });
-      toast.success("Message sent successfully.");
     } catch (err) {
       console.error("Contact form error:", err);
       toast.error("Something went wrong. Please try again.");
