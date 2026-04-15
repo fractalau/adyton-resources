@@ -6,8 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import NewsCard from "@/components/NewsCard";
-import SEO from "@/components/SEO";
-import { seoConfig } from "@/config/seo";
+import { useSEO } from "@/hooks/useSEO";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
 
 const PER_PAGE = 9;
@@ -74,11 +73,6 @@ const News = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO
-        title="News &amp; Announcements"
-        description="Latest press releases and corporate announcements from Adyton Resources — exploration updates, drilling results, and regulatory filings."
-        canonical={`${seoConfig.siteUrl}/news`}
-      />
       <Header />
 
       <main>

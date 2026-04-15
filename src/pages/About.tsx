@@ -3,8 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import SEO from "@/components/SEO";
-import { seoConfig } from "@/config/seo";
+import { useSEO } from "@/hooks/useSEO";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
 import timCrossleyImg from "@/assets/team/tim-crossley.png";
 import chrisBowdenImg from "@/assets/team/chris-bowden.jpg";
@@ -64,13 +63,14 @@ const pillars = [
   { icon: Users, title: "Aligned Interests", desc: "~12% management and director ownership ensures alignment between leadership and shareholders." },
 ];
 
-const About = () => (
+const About = () => {
+  useSEO(
+    "About Adyton Resources",
+    "Meet the leadership team behind Adyton Resources — 70+ years combined experience in gold-copper exploration, development, and PNG operations."
+  );
+
+  return (
   <div className="min-h-screen bg-background">
-    <SEO
-      title="About Adyton Resources"
-      description="Meet the leadership team behind Adyton Resources — 70+ years combined experience in gold-copper exploration, development, and PNG operations."
-      canonical={`${seoConfig.siteUrl}/about`}
-    />
     <Header />
 
     <main>

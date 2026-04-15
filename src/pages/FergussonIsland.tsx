@@ -2,8 +2,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Download, ExternalLink } from "lucide-react";
-import SEO from "@/components/SEO";
-import { seoConfig } from "@/config/seo";
+import { useSEO } from "@/hooks/useSEO";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
 
 const stats = [
@@ -34,13 +33,14 @@ const timeline = [
   { period: "Future", title: "Portfolio Growth (Feni)", desc: "Reinvest cash flow into Feni exploration" },
 ];
 
-const FergussonIsland = () => (
+const FergussonIsland = () => {
+  useSEO(
+    "Fergusson Island Gold Project",
+    "Fergusson Island holds 939 koz Au across Wapolu and Gameta deposits. 50/50 JV with EVIH committing US$9.5M. Near-term path to production in PNG."
+  );
+
+  return (
   <div className="min-h-screen bg-background">
-    <SEO
-      title="Fergusson Island Gold Project"
-      description="Fergusson Island holds 939 koz Au across Wapolu and Gameta deposits. 50/50 JV with EVIH committing US$9.5M. Near-term path to production in PNG."
-      canonical={`${seoConfig.siteUrl}/projects/fergusson`}
-    />
     <Header />
     <main>
 

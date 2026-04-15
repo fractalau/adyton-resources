@@ -9,16 +9,16 @@ import WhyPNGSection from "@/components/home/WhyPNGSection";
 import ManagementStrip from "@/components/home/ManagementStrip";
 import NewsSection from "@/components/home/NewsSection";
 import InvestorHubCTA from "@/components/home/InvestorHubCTA";
-import SEO from "@/components/SEO";
-import { seoConfig } from "@/config/seo";
+import { useSEO } from "@/hooks/useSEO";
 
-const Index = () => (
+const Index = () => {
+  useSEO(
+    "Gold & Copper Exploration in Papua New Guinea",
+    "Adyton Resources (TSXV: ADY) holds 2.4 Moz Au across two PNG island projects. Near-term cash flow via Fergusson Island JV, discovery growth at Feni."
+  );
+
+  return (
   <div className="min-h-screen bg-background">
-    <SEO
-      title="Gold &amp; Copper Exploration in Papua New Guinea"
-      description="Adyton Resources (TSXV: ADY) holds 2.4 Moz Au across two PNG island projects. Near-term cash flow via Fergusson Island JV, discovery growth at Feni."
-      canonical={seoConfig.siteUrl}
-    />
     <Header />
     <main>
       <HeroSection />
@@ -30,9 +30,10 @@ const Index = () => (
       <ManagementStrip />
       <NewsSection />
       <InvestorHubCTA />
-    </main>
+  </main>
     <Footer />
   </div>
-);
+  );
+};
 
 export default Index;

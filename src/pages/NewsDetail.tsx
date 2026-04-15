@@ -5,9 +5,8 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import TagChip from "@/components/TagChip";
-import SEO from "@/components/SEO";
+import { useSEO } from "@/hooks/useSEO";
 import ArticleSchema from "@/components/schema/ArticleSchema";
-import { seoConfig } from "@/config/seo";
 
 const newsDetailData: Record<string, {
   title: string; date: string; excerpt: string; tags: string[]; sourceUrl: string; content: string;
@@ -43,11 +42,6 @@ const NewsDetail = () => {
 
   return (
     <div className="min-h-screen" style={{ background: "hsl(var(--light-bg))" }}>
-      <SEO
-        title={article.title}
-        description={article.excerpt}
-        canonical={`${seoConfig.siteUrl}/news/${slug}`}
-      />
       <ArticleSchema
         headline={article.title}
         datePublished={article.date}
