@@ -130,61 +130,69 @@ const Contact = () => {
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-8" style={{ color: "hsl(var(--text-dark))" }}>
               General Inquiry
             </h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid sm:grid-cols-2 gap-4">
-                <label className="sr-only" htmlFor="contact-name">Your name</label>
-                <input
-                  id="contact-name"
-                  type="text"
-                  placeholder="Your name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))", color: "hsl(var(--text-dark))" }}
-                />
-                <label className="sr-only" htmlFor="contact-email">Email address</label>
-                <input
-                  id="contact-email"
-                  type="email"
-                  placeholder="Email address"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))", color: "hsl(var(--text-dark))" }}
-                />
+            {submitted ? (
+              <div className="rounded-lg p-8 text-center" style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}>
+                <CheckCircle className="h-10 w-10 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-display font-semibold mb-2" style={{ color: "hsl(var(--text-dark))" }}>Thank You for Your Inquiry</h3>
+                <p className="text-sm leading-relaxed" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+                  Your message has been received. A member of our team will respond within one business day.
+                </p>
               </div>
-              <label className="sr-only" htmlFor="contact-subject">Subject</label>
-              <input
-                id="contact-subject"
-                type="text"
-                placeholder="Subject"
-                value={formData.subject}
-                onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                className="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
-                style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))", color: "hsl(var(--text-dark))" }}
-              />
-              <label className="sr-only" htmlFor="contact-message">Your message</label>
-              <textarea
-                id="contact-message"
-                placeholder="Your message"
-                rows={5}
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
-                style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))", color: "hsl(var(--text-dark))" }}
-              />
-              {submitted ? (
-                <div className="flex items-center gap-2 text-sm text-green-600 font-body">
-                  <CheckCircle className="h-5 w-5" />
-                  Thank you — we'll be in touch shortly.
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <input type="hidden" name="form-name" value="contact" />
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <label className="sr-only" htmlFor="contact-name">Your name</label>
+                  <input
+                    id="contact-name"
+                    type="text"
+                    name="name"
+                    placeholder="Your name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))", color: "hsl(var(--text-dark))" }}
+                  />
+                  <label className="sr-only" htmlFor="contact-email">Email address</label>
+                  <input
+                    id="contact-email"
+                    type="email"
+                    name="email"
+                    placeholder="Email address"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))", color: "hsl(var(--text-dark))" }}
+                  />
                 </div>
-              ) : (
+                <label className="sr-only" htmlFor="contact-subject">Subject</label>
+                <input
+                  id="contact-subject"
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  value={formData.subject}
+                  onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                  className="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))", color: "hsl(var(--text-dark))" }}
+                />
+                <label className="sr-only" htmlFor="contact-message">Your message</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  placeholder="Your message"
+                  rows={5}
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  className="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
+                  style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))", color: "hsl(var(--text-dark))" }}
+                />
                 <Button variant="gold" size="lg" type="submit" disabled={submitting}>
                   {submitting ? <Loader2 className="h-4 w-4 animate-spin" /> : <Mail className="h-4 w-4" />}
                   {submitting ? "Sending…" : "Send Message"}
                 </Button>
-              )}
-            </form>
+              </form>
+            )}
           </div>
         </section>
 
