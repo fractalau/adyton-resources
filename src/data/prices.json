@@ -2,8 +2,8 @@
   "tickers": [
     {
       "label": "Gold",
-      "value": "$4,833.50",
-      "change": "+0.2%",
+      "value": "$4,829.20",
+      "change": "+0.1%",
       "up": true,
       "icon": "🟡"
     },
@@ -17,7 +17,7 @@
     {
       "label": "TSXV: ADY",
       "value": "C$0.355",
-      "change": "+1.4%",
+      "change": "+4.4%",
       "up": true
     },
     {
@@ -33,6 +33,6 @@
       "up": true
     }
   ],
-  "fetchedAt": "2026-04-15T12:53:12.544Z",
+  "fetchedAt": "2026-04-15T16:50:28.199Z",
   "date": "Apr 15, 2026"
 }
