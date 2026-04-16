@@ -35,18 +35,18 @@ const Contact = () => {
     }
     setSubmitting(true);
     try {
-      const body = new URLSearchParams({
-        "form-name": "contact",
-        name: formData.name,
-        email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-      });
-
-      const res = await fetch("/", {
+      const res = await fetch("https://formspree.io/f/xbdqdwoz", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: body.toString(),
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
       });
 
       if (!res.ok) throw new Error("Network response was not ok");
@@ -140,7 +140,6 @@ const Contact = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
-                <input type="hidden" name="form-name" value="contact" />
                 <div className="grid sm:grid-cols-2 gap-4">
                   <label className="sr-only" htmlFor="contact-name">Your name</label>
                   <input
