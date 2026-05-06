@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Download } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-mine-track.jpg";
 
 const HeroSection = () => (
   <section className="relative min-h-[520px] md:min-h-[620px] flex items-center overflow-hidden">
