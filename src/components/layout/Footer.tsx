@@ -157,7 +157,7 @@ const Footer = () => (
       </div>
     </div>
     <div
-      className="text-[10px] font-body leading-relaxed space-y-3 px-4 py-4 text-foreground/50"
+      className="text-sm font-body leading-relaxed space-y-3 px-4 py-4 text-foreground/50"
       style={{ background: "hsl(201 65% 18%)" }}
     >
       <div className="container">

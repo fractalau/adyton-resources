@@ -7,7 +7,7 @@ interface TagChipProps {
 const TagChip = ({ label, active = false, onClick }: TagChipProps) => (
   <span
     onClick={onClick}
-    className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider transition-colors ${
+    className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-sm font-semibold uppercase tracking-wider transition-colors ${
       onClick ? "cursor-pointer" : ""
     } ${
       active

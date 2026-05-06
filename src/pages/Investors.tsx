@@ -89,11 +89,11 @@ const Investors = () => {
                   <s.icon className="h-5 w-5 text-primary" aria-hidden="true" />
                   <p className="text-2xl md:text-3xl font-mono font-bold text-foreground">{s.value}</p>
                   <p className="text-sm text-foreground/60 font-body">{s.label}</p>
-                  <p className="text-[10px] text-foreground/30 font-body italic">Source: {s.source}</p>
+                  <p className="text-sm text-foreground/30 font-body italic">Source: {s.source}</p>
                 </div>
               ))}
             </div>
-            <p className="text-[10px] text-foreground/30 text-center mt-6 font-body italic">
+            <p className="text-sm text-foreground/30 text-center mt-6 font-body italic">
               Figures are approximate and sourced from latest available public disclosures. Consult SEDAR+ for official filings.
             </p>
           </div>
@@ -117,7 +117,7 @@ const Investors = () => {
                 </div>
               ))}
             </div>
-            <p className="text-[10px] text-center mt-4 italic" style={{ color: "hsl(var(--light-muted-foreground) / 0.6)" }}>
+            <p className="text-sm text-center mt-4 italic" style={{ color: "hsl(var(--light-muted-foreground) / 0.6)" }}>
               Ownership data is approximate based on latest public insider filings and SEDI reports.
             </p>
           </div>

@@ -28,7 +28,7 @@ const TimelineComponent = ({ items }: TimelineComponentProps) => (
           )}
         </div>
         <div className="pb-6">
-          <p className="text-[10px] text-muted-foreground uppercase tracking-wider">{item.date}</p>
+          <p className="text-sm text-muted-foreground uppercase tracking-wider">{item.date}</p>
           <h4 className="text-sm font-display font-semibold text-foreground">{item.title}</h4>
           <p className="text-sm text-muted-foreground mt-0.5">{item.description}</p>
         </div>
