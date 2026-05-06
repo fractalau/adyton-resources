@@ -43,241 +43,348 @@ const cuIntercepts = [
 const FeniIsland = () => {
   useSEO(
     "Feni Island Gold-Copper Project",
-    "Feni Island: Tier 1 gold-copper discovery potential. 1.46 Moz Au inferred at Kabang. 100% Adyton-owned with whole-of-island targets and significant copper upside."
+    "Feni Island: Tier 1 gold-copper discovery potential. 1.46 Moz Au inferred at Kabang. 100% Adyton-owned with whole-of-island targets and significant copper upside.",
   );
 
   return (
-  <div className="min-h-screen bg-background">
-    <Header />
-    <main>
-
-    {/* Hero */}
-    <section className="relative bg-background py-16 md:py-20 border-b border-border overflow-hidden">
-      <div className="absolute inset-0 bg-cover bg-center opacity-25" style={{ backgroundImage: `url(${projectHeaderBg})` }} />
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80" />
-      <div className="container relative z-10">
-        <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">FLAGSHIP GROWTH ASSET</p>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
-          Feni Island<br />Gold-Copper Project
-        </h1>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-          {stats.map((s) => (
-            <div key={s.label} className="text-center p-4 rounded-lg border border-border bg-card">
-              <p className="text-xl md:text-2xl font-mono font-bold text-primary">{s.value}</p>
-              <p className="text-sm text-foreground/50 mt-1 font-body">{s.label}</p>
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        {/* Hero */}
+        <section className="relative bg-background py-16 md:py-20 border-b border-border overflow-hidden">
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-25"
+            style={{ backgroundImage: `url(${projectHeaderBg})` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80" />
+          <div className="container relative z-10">
+            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
+              FLAGSHIP GROWTH ASSET
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
+              Feni Island
+              <br />
+              Gold-Copper Project
+            </h1>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+              {stats.map((s) => (
+                <div key={s.label} className="text-center p-4 rounded-lg border border-border bg-card">
+                  <p className="text-2xl md:text-3xl font-mono font-bold text-primary">{s.value}</p>
+                  <p className="text-foreground/50 mt-1 font-body">{s.label}</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
+          </div>
+        </section>
 
-    {/* Geological Setting */}
-    <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
-      <div className="container max-w-4xl">
-        <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">TIER 1 GOLD-COPPER DISCOVERY</p>
-        <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
-          Tier 1 Gold-Copper Discovery Potential
-        </h2>
-        <div className="text-sm leading-relaxed space-y-4 mb-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
-          <p>Feni Island sits within the +120 Moz gold-prolific geological arc of the Pacific Ring of Fire — the same trend as Simberi (St Barbara) and Panguna (formerly Rio Tinto).</p>
-          <p>The project is hosted within a large alkalic-type epithermal-porphyry setting, supporting both high-grade gold mineralisation and significant copper potential. Similar host rock geology, comparable age (~0.5 Ma), and analogous mineralisation styles to neighbouring world-class deposits.</p>
-          <p>Whole-of-island tenure enables systematic testing of multiple targets within the same mineral system, beyond the defined Kabang resource area — a key source of exploration upside.</p>
-        </div>
+        {/* Geological Setting */}
+        <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
+          <div className="container max-w-4xl">
+            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
+              TIER 1 GOLD-COPPER DISCOVERY
+            </p>
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
+              Tier 1 Gold-Copper Discovery Potential
+            </h2>
+            <div
+              className="text-sm leading-relaxed space-y-4 mb-8 font-body"
+              style={{ color: "hsl(var(--light-muted-foreground))" }}
+            >
+              <p>
+                Feni Island sits within the +120 Moz gold-prolific geological arc of the Pacific Ring of Fire — the same
+                trend as Simberi (St Barbara) and Panguna (formerly Rio Tinto).
+              </p>
+              <p>
+                The project is hosted within a large alkalic-type epithermal-porphyry setting, supporting both
+                high-grade gold mineralisation and significant copper potential. Similar host rock geology, comparable
+                age (~0.5 Ma), and analogous mineralisation styles to neighbouring world-class deposits.
+              </p>
+              <p>
+                Whole-of-island tenure enables systematic testing of multiple targets within the same mineral system,
+                beyond the defined Kabang resource area — a key source of exploration upside.
+              </p>
+            </div>
 
-        {/* Similarity table */}
-        <div className="overflow-x-auto rounded-lg border" style={{ borderColor: "hsl(var(--light-border))" }}>
-          <table className="w-full text-sm font-body">
-            <thead>
-              <tr style={{ background: "hsl(var(--light-card))" }}>
-                <th className="text-left px-4 py-3 font-semibold" style={{ color: "hsl(var(--text-dark))" }}></th>
-                <th className="text-left px-4 py-3 font-semibold" style={{ color: "hsl(var(--text-dark))" }}>Lihir</th>
-                <th className="text-left px-4 py-3 font-semibold text-primary">Feni Island</th>
-              </tr>
-            </thead>
-            <tbody>
-              {similarityData.slice(1).map((row, i) => (
-                <tr key={i} className="border-t" style={{ borderColor: "hsl(var(--light-border))", background: i % 2 ? "hsl(var(--light-card))" : "transparent" }}>
-                  <td className="px-4 py-2 font-medium" style={{ color: "hsl(var(--text-dark))" }}>{row.header}</td>
-                  <td className="px-4 py-2 font-mono text-sm" style={{ color: "hsl(var(--light-muted-foreground))" }}>{row.lihir}</td>
-                  <td className="px-4 py-2 font-mono text-sm text-primary">{row.feni}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+            {/* Similarity table */}
+            <div className="overflow-x-auto rounded-lg border" style={{ borderColor: "hsl(var(--light-border))" }}>
+              <table className="w-full text-sm font-body">
+                <thead>
+                  <tr style={{ background: "hsl(var(--light-card))" }}>
+                    <th className="text-left px-4 py-3 font-semibold" style={{ color: "hsl(var(--text-dark))" }}></th>
+                    <th className="text-left px-4 py-3 font-semibold" style={{ color: "hsl(var(--text-dark))" }}>
+                      Lihir
+                    </th>
+                    <th className="text-left px-4 py-3 font-semibold text-primary">Feni Island</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {similarityData.slice(1).map((row, i) => (
+                    <tr
+                      key={i}
+                      className="border-t"
+                      style={{
+                        borderColor: "hsl(var(--light-border))",
+                        background: i % 2 ? "hsl(var(--light-card))" : "transparent",
+                      }}
+                    >
+                      <td className="px-4 py-2 font-medium" style={{ color: "hsl(var(--text-dark))" }}>
+                        {row.header}
+                      </td>
+                      <td
+                        className="px-4 py-2 font-mono text-sm"
+                        style={{ color: "hsl(var(--light-muted-foreground))" }}
+                      >
+                        {row.lihir}
+                      </td>
+                      <td className="px-4 py-2 font-mono text-sm text-primary">{row.feni}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
 
-    {/* Kabang MRE */}
-    <section className="py-16 md:py-20 bg-background">
-      <div className="container max-w-4xl">
-        <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">NI 43-101 COMPLIANT RESOURCE</p>
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
-          1.46 Moz Au Foundational Resource
-        </h2>
-        <div className="overflow-x-auto rounded-lg border border-border mb-6">
-          <table className="w-full text-sm font-body">
-            <thead className="bg-card">
-              <tr>
-                <th className="text-left px-4 py-3 text-foreground font-semibold">Classification</th>
-                <th className="text-right px-4 py-3 text-foreground font-semibold">Tonnes (Mt)</th>
-                <th className="text-right px-4 py-3 text-foreground font-semibold">Grade (g/t Au)</th>
-                <th className="text-right px-4 py-3 text-foreground font-semibold">Contained Au (Moz)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="border-t border-border">
-                <td className="px-4 py-2 text-foreground/80">Inferred</td>
-                <td className="px-4 py-2 text-right font-mono text-primary">—</td>
-                <td className="px-4 py-2 text-right font-mono text-primary">—</td>
-                <td className="px-4 py-2 text-right font-mono text-primary font-bold">1.46</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p className="text-sm italic text-foreground/40 mb-6 font-body">
-          NI 43-101 Technical Report on the Feni Gold-Copper Property, New Ireland Province, Papua New Guinea, dated October 14, 2021. Qualified Person: Dr. Chris Bowden PhD, GCMEE, FAusIMM(CP), FSEG. Mineral resources are not mineral reserves and have not demonstrated economic viability.
-        </p>
-        <p className="text-sm text-foreground/70 font-body leading-relaxed">
-          The Kabang deposit represents a foundational resource with significant upside potential. Mineralisation remains open along strike and at depth. Multiple priority targets across Feni Island — including Dome, Saddle, Caldera, and Danmagal — have not yet been systematically drill-tested, and over 7 km² of proximal and extensional geophysical targets have been identified.
-        </p>
-      </div>
-    </section>
+        {/* Kabang MRE */}
+        <section className="py-16 md:py-20 bg-background">
+          <div className="container max-w-4xl">
+            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
+              NI 43-101 COMPLIANT RESOURCE
+            </p>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
+              1.46 Moz Au Foundational Resource
+            </h2>
+            <div className="overflow-x-auto rounded-lg border border-border mb-6">
+              <table className="w-full text-sm font-body">
+                <thead className="bg-card">
+                  <tr>
+                    <th className="text-left px-4 py-3 text-foreground font-semibold">Classification</th>
+                    <th className="text-right px-4 py-3 text-foreground font-semibold">Tonnes (Mt)</th>
+                    <th className="text-right px-4 py-3 text-foreground font-semibold">Grade (g/t Au)</th>
+                    <th className="text-right px-4 py-3 text-foreground font-semibold">Contained Au (Moz)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-t border-border">
+                    <td className="px-4 py-2 text-foreground/80">Inferred</td>
+                    <td className="px-4 py-2 text-right font-mono text-primary">—</td>
+                    <td className="px-4 py-2 text-right font-mono text-primary">—</td>
+                    <td className="px-4 py-2 text-right font-mono text-primary font-bold">1.46</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm italic text-foreground/40 mb-6 font-body">
+              NI 43-101 Technical Report on the Feni Gold-Copper Property, New Ireland Province, Papua New Guinea, dated
+              October 14, 2021. Qualified Person: Dr. Chris Bowden PhD, GCMEE, FAusIMM(CP), FSEG. Mineral resources are
+              not mineral reserves and have not demonstrated economic viability.
+            </p>
+            <p className="text-sm text-foreground/70 font-body leading-relaxed">
+              The Kabang deposit represents a foundational resource with significant upside potential. Mineralisation
+              remains open along strike and at depth. Multiple priority targets across Feni Island — including Dome,
+              Saddle, Caldera, and Danmagal — have not yet been systematically drill-tested, and over 7 km² of proximal
+              and extensional geophysical targets have been identified.
+            </p>
+          </div>
+        </section>
 
-    {/* Drill Program */}
-    <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
-      <div className="container max-w-4xl">
-        <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">ACTIVE EXPLORATION — ONGOING RESULTS</p>
-        <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
-          Confirming Scale and New Discoveries
-        </h2>
-        <p className="text-sm leading-relaxed mb-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
-          Adyton has completed 10,663 m of its ongoing drill program at Feni Island, successfully confirming high-grade extensions to the north and documenting resource continuity across the Kabang system. New gold-copper mineralised zones have been identified in the February 2026 program.
-        </p>
+        {/* Drill Program */}
+        <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
+          <div className="container max-w-4xl">
+            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
+              ACTIVE EXPLORATION — ONGOING RESULTS
+            </p>
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
+              Confirming Scale and New Discoveries
+            </h2>
+            <p
+              className="text-sm leading-relaxed mb-8 font-body"
+              style={{ color: "hsl(var(--light-muted-foreground))" }}
+            >
+              Adyton has completed 10,663 m of its ongoing drill program at Feni Island, successfully confirming
+              high-grade extensions to the north and documenting resource continuity across the Kabang system. New
+              gold-copper mineralised zones have been identified in the February 2026 program.
+            </p>
 
-        <div className="overflow-x-auto rounded-lg border mb-4" style={{ borderColor: "hsl(var(--light-border))" }}>
-          <table className="w-full text-sm font-mono">
-            <thead>
-              <tr style={{ background: "hsl(var(--light-card))" }}>
-                <th className="text-left px-3 py-2" style={{ color: "hsl(var(--text-dark))" }}>Hole</th>
-                <th className="text-right px-3 py-2" style={{ color: "hsl(var(--text-dark))" }}>From(m)</th>
-                <th className="text-right px-3 py-2" style={{ color: "hsl(var(--text-dark))" }}>Interval(m)</th>
-                <th className="text-right px-3 py-2" style={{ color: "hsl(var(--text-dark))" }}>Au(g/t)</th>
-                <th className="text-right px-3 py-2" style={{ color: "hsl(var(--text-dark))" }}>Cu(%)</th>
-                <th className="text-right px-3 py-2" style={{ color: "hsl(var(--text-dark))" }}>Au.eq(g/t)</th>
-                <th className="text-right px-3 py-2" style={{ color: "hsl(var(--text-dark))" }}>gXm</th>
-              </tr>
-            </thead>
-            <tbody>
-              {drillResults.map((r, i) => (
-                <tr key={i} className="border-t" style={{ borderColor: "hsl(var(--light-border))" }}>
-                  <td className="px-3 py-1.5" style={{ color: r.hole.startsWith("  ") ? "hsl(var(--light-muted-foreground))" : "hsl(var(--text-dark))" }}>{r.hole}</td>
-                  <td className="text-right px-3 py-1.5" style={{ color: "hsl(var(--light-muted-foreground))" }}>{r.from}</td>
-                  <td className="text-right px-3 py-1.5" style={{ color: "hsl(var(--light-muted-foreground))" }}>{r.interval}</td>
-                  <td className="text-right px-3 py-1.5 text-primary font-semibold">{r.au}</td>
-                  <td className="text-right px-3 py-1.5" style={{ color: "hsl(var(--light-muted-foreground))" }}>{r.cu ?? "—"}</td>
-                  <td className="text-right px-3 py-1.5" style={{ color: "hsl(var(--light-muted-foreground))" }}>{r.aueq ?? "—"}</td>
-                  <td className="text-right px-3 py-1.5" style={{ color: "hsl(var(--light-muted-foreground))" }}>{r.gxm}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p className="text-sm italic font-body" style={{ color: "hsl(var(--light-muted-foreground) / 0.6)" }}>
-          All intercepts are downhole lengths. True widths not yet determined. Cu assays pending for some holes. See individual press releases on Newsfile for full details.
-        </p>
-      </div>
-    </section>
+            <div className="overflow-x-auto rounded-lg border mb-4" style={{ borderColor: "hsl(var(--light-border))" }}>
+              <table className="w-full text-sm font-mono">
+                <thead>
+                  <tr style={{ background: "hsl(var(--light-card))" }}>
+                    <th className="text-left px-3 py-2" style={{ color: "hsl(var(--text-dark))" }}>
+                      Hole
+                    </th>
+                    <th className="text-right px-3 py-2" style={{ color: "hsl(var(--text-dark))" }}>
+                      From(m)
+                    </th>
+                    <th className="text-right px-3 py-2" style={{ color: "hsl(var(--text-dark))" }}>
+                      Interval(m)
+                    </th>
+                    <th className="text-right px-3 py-2" style={{ color: "hsl(var(--text-dark))" }}>
+                      Au(g/t)
+                    </th>
+                    <th className="text-right px-3 py-2" style={{ color: "hsl(var(--text-dark))" }}>
+                      Cu(%)
+                    </th>
+                    <th className="text-right px-3 py-2" style={{ color: "hsl(var(--text-dark))" }}>
+                      Au.eq(g/t)
+                    </th>
+                    <th className="text-right px-3 py-2" style={{ color: "hsl(var(--text-dark))" }}>
+                      gXm
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {drillResults.map((r, i) => (
+                    <tr key={i} className="border-t" style={{ borderColor: "hsl(var(--light-border))" }}>
+                      <td
+                        className="px-3 py-1.5"
+                        style={{
+                          color: r.hole.startsWith("  ")
+                            ? "hsl(var(--light-muted-foreground))"
+                            : "hsl(var(--text-dark))",
+                        }}
+                      >
+                        {r.hole}
+                      </td>
+                      <td className="text-right px-3 py-1.5" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+                        {r.from}
+                      </td>
+                      <td className="text-right px-3 py-1.5" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+                        {r.interval}
+                      </td>
+                      <td className="text-right px-3 py-1.5 text-primary font-semibold">{r.au}</td>
+                      <td className="text-right px-3 py-1.5" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+                        {r.cu ?? "—"}
+                      </td>
+                      <td className="text-right px-3 py-1.5" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+                        {r.aueq ?? "—"}
+                      </td>
+                      <td className="text-right px-3 py-1.5" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+                        {r.gxm}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm italic font-body" style={{ color: "hsl(var(--light-muted-foreground) / 0.6)" }}>
+              All intercepts are downhole lengths. True widths not yet determined. Cu assays pending for some holes. See
+              individual press releases on Newsfile for full details.
+            </p>
+          </div>
+        </section>
 
-    {/* Copper Upside */}
-    <section className="py-16 md:py-20 bg-background">
-      <div className="container max-w-4xl">
-        <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">NOT YET IN THE MRE</p>
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
-          Copper Adds Material Upside to the Kabang Resource
-        </h2>
-        <div className="text-sm leading-relaxed space-y-4 mb-8 font-body text-foreground/70">
-          <p>Copper mineralisation at Feni was confirmed through assaying of Adyton's ADK-series and FDD-series drill holes. Copper is not included in the current 1.46 Moz Kabang MRE — most historical holes through mineralised intervals were not assayed for copper.</p>
-          <p>Where both Au and Cu have been assayed, Au-equivalent grades are up to approximately 56% higher than the gold-only figure. Adyton's geological model identifies the Danmagal porphyry system at depth as the likely source of copper mineralisation, linked to the Kabang epithermal system.</p>
-        </div>
+        {/* Copper Upside */}
+        <section className="py-16 md:py-20 bg-background">
+          <div className="container max-w-4xl">
+            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
+              NOT YET IN THE MRE
+            </p>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
+              Copper Adds Material Upside to the Kabang Resource
+            </h2>
+            <div className="text-sm leading-relaxed space-y-4 mb-8 font-body text-foreground/70">
+              <p>
+                Copper mineralisation at Feni was confirmed through assaying of Adyton's ADK-series and FDD-series drill
+                holes. Copper is not included in the current 1.46 Moz Kabang MRE — most historical holes through
+                mineralised intervals were not assayed for copper.
+              </p>
+              <p>
+                Where both Au and Cu have been assayed, Au-equivalent grades are up to approximately 56% higher than the
+                gold-only figure. Adyton's geological model identifies the Danmagal porphyry system at depth as the
+                likely source of copper mineralisation, linked to the Kabang epithermal system.
+              </p>
+            </div>
 
-        <div className="overflow-x-auto rounded-lg border border-border mb-4">
-          <table className="w-full text-sm font-mono">
-            <thead className="bg-card">
-              <tr>
-                <th className="text-left px-3 py-2 text-foreground">Hole</th>
-                <th className="text-right px-3 py-2 text-foreground">From(m)</th>
-                <th className="text-right px-3 py-2 text-foreground">To(m)</th>
-                <th className="text-right px-3 py-2 text-foreground">Int(m)</th>
-                <th className="text-right px-3 py-2 text-foreground">Au(g/t)</th>
-                <th className="text-right px-3 py-2 text-foreground">Cu(%)</th>
-                <th className="text-right px-3 py-2 text-foreground">Au.eq</th>
-                <th className="text-right px-3 py-2 text-primary">% uplift</th>
-              </tr>
-            </thead>
-            <tbody>
-              {cuIntercepts.map((r, i) => (
-                <tr key={i} className="border-t border-border">
-                  <td className="px-3 py-1.5 text-foreground/80">{r.hole}</td>
-                  <td className="text-right px-3 py-1.5 text-foreground/60">{r.from}</td>
-                  <td className="text-right px-3 py-1.5 text-foreground/60">{r.to ?? "EOH"}</td>
-                  <td className="text-right px-3 py-1.5 text-foreground/60">{r.interval}</td>
-                  <td className="text-right px-3 py-1.5 text-foreground/60">{r.au}</td>
-                  <td className="text-right px-3 py-1.5 text-foreground/60">{r.cu}</td>
-                  <td className="text-right px-3 py-1.5 text-foreground/60">{r.aueq}</td>
-                  <td className="text-right px-3 py-1.5 text-primary font-bold">{r.uplift}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p className="text-sm italic font-body text-foreground/40">
-          Copper upside is exploration potential only and is not included in any current NI 43-101 Mineral Resource Estimate.
-        </p>
-      </div>
-    </section>
+            <div className="overflow-x-auto rounded-lg border border-border mb-4">
+              <table className="w-full text-sm font-mono">
+                <thead className="bg-card">
+                  <tr>
+                    <th className="text-left px-3 py-2 text-foreground">Hole</th>
+                    <th className="text-right px-3 py-2 text-foreground">From(m)</th>
+                    <th className="text-right px-3 py-2 text-foreground">To(m)</th>
+                    <th className="text-right px-3 py-2 text-foreground">Int(m)</th>
+                    <th className="text-right px-3 py-2 text-foreground">Au(g/t)</th>
+                    <th className="text-right px-3 py-2 text-foreground">Cu(%)</th>
+                    <th className="text-right px-3 py-2 text-foreground">Au.eq</th>
+                    <th className="text-right px-3 py-2 text-primary">% uplift</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {cuIntercepts.map((r, i) => (
+                    <tr key={i} className="border-t border-border">
+                      <td className="px-3 py-1.5 text-foreground/80">{r.hole}</td>
+                      <td className="text-right px-3 py-1.5 text-foreground/60">{r.from}</td>
+                      <td className="text-right px-3 py-1.5 text-foreground/60">{r.to ?? "EOH"}</td>
+                      <td className="text-right px-3 py-1.5 text-foreground/60">{r.interval}</td>
+                      <td className="text-right px-3 py-1.5 text-foreground/60">{r.au}</td>
+                      <td className="text-right px-3 py-1.5 text-foreground/60">{r.cu}</td>
+                      <td className="text-right px-3 py-1.5 text-foreground/60">{r.aueq}</td>
+                      <td className="text-right px-3 py-1.5 text-primary font-bold">{r.uplift}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm italic font-body text-foreground/40">
+              Copper upside is exploration potential only and is not included in any current NI 43-101 Mineral Resource
+              Estimate.
+            </p>
+          </div>
+        </section>
 
-    {/* Global Ore Discovery */}
-    <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
-      <div className="container max-w-4xl">
-        <h3 className="text-xl font-display font-bold mb-3" style={{ color: "hsl(var(--text-dark))" }}>Global Ore Discovery Collaboration</h3>
-        <p className="text-sm leading-relaxed font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
-          In December 2025, Adyton engaged world-class geological consulting group Global Ore Discovery to provide expert oversight and targeting strategies for the Feni exploration program, leveraging their deep expertise in epithermal and porphyry systems.
-        </p>
-      </div>
-    </section>
+        {/* Global Ore Discovery */}
+        <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
+          <div className="container max-w-4xl">
+            <h3 className="text-xl font-display font-bold mb-3" style={{ color: "hsl(var(--text-dark))" }}>
+              Global Ore Discovery Collaboration
+            </h3>
+            <p className="text-sm leading-relaxed font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+              In December 2025, Adyton engaged world-class geological consulting group Global Ore Discovery to provide
+              expert oversight and targeting strategies for the Feni exploration program, leveraging their deep
+              expertise in epithermal and porphyry systems.
+            </p>
+          </div>
+        </section>
 
-    {/* Logistics */}
-    <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
-      <div className="container max-w-4xl">
-        <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">DIRECT SHIP ORE OPPORTUNITY</p>
-        <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
-          5 km Pit-to-Ship Distance
-        </h2>
-        <p className="text-sm leading-relaxed font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
-          Feni Island's direct tidewater access means the pit-to-ship distance for any future operation is approximately 5 km — compared to 1,350 km for the Ok Tedi operation in PNG's highlands. Coastal access reduces logistical complexity, supports lower capital intensity, and simplifies permitting and construction compared with remote inland projects.
-        </p>
-      </div>
-    </section>
+        {/* Logistics */}
+        <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
+          <div className="container max-w-4xl">
+            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
+              DIRECT SHIP ORE OPPORTUNITY
+            </p>
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
+              5 km Pit-to-Ship Distance
+            </h2>
+            <p className="text-sm leading-relaxed font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+              Feni Island's direct tidewater access means the pit-to-ship distance for any future operation is
+              approximately 5 km — compared to 1,350 km for the Ok Tedi operation in PNG's highlands. Coastal access
+              reduces logistical complexity, supports lower capital intensity, and simplifies permitting and
+              construction compared with remote inland projects.
+            </p>
+          </div>
+        </section>
 
-    {/* CTAs */}
-    <section className="py-12" style={{ background: "hsl(var(--off-white))", borderTop: "1px solid hsl(var(--light-border))" }}>
-      <div className="container max-w-4xl flex flex-wrap gap-3">
-        <Button variant="gold" size="lg">
-          <Download className="h-4 w-4" />
-          NI 43-101 Technical Report — Feni Island (Oct 2021)
-        </Button>
-        <Button variant="gold-outline" size="lg" asChild>
-          <a href="https://www.newsfilecorp.com/company/7416" target="_blank" rel="noopener noreferrer">
-            View All Feni Releases on Newsfile <ExternalLink className="h-4 w-4" />
-          </a>
-        </Button>
-      </div>
-    </section>
-
-    </main>
-    <Footer />
-  </div>
+        {/* CTAs */}
+        <section
+          className="py-12"
+          style={{ background: "hsl(var(--off-white))", borderTop: "1px solid hsl(var(--light-border))" }}
+        >
+          <div className="container max-w-4xl flex flex-wrap gap-3">
+            <Button variant="gold" size="lg">
+              <Download className="h-4 w-4" />
+              NI 43-101 Technical Report — Feni Island (Oct 2021)
+            </Button>
+            <Button variant="gold-outline" size="lg" asChild>
+              <a href="https://www.newsfilecorp.com/company/7416" target="_blank" rel="noopener noreferrer">
+                View All Feni Releases on Newsfile <ExternalLink className="h-4 w-4" />
+              </a>
+            </Button>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 };
 
