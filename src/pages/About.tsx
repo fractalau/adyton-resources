@@ -143,7 +143,7 @@ const About = () => {
                   style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}
                 >
                   <p.icon className="h-7 w-7 text-primary mb-4" aria-hidden="true" />
-                  <h3 className="font-display font-semibold mb-2" style={{ color: "hsl(var(--text-dark))" }}>
+                  <h3 className="text-xl font-display font-semibold mb-2" style={{ color: "hsl(var(--text-dark))" }}>
                     {p.title}
                   </h3>
                   <p className="leading-relaxed" style={{ color: "hsl(var(--light-muted-foreground))" }}>
