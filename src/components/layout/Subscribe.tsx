@@ -1,7 +1,7 @@
 const Subscribe = () => (
   <section className="bg-gold py-12 md:py-16">
     <div className="container grid md:grid-cols-2 gap-10 items-center">
-      <div className="text-left space-y-6" style={{ color: "#1b4e6a" }}>
+      <div className="text-left space-y-6 text-white">
         <div>
           <h3 className="text-2xl md:text-3xl font-display font-bold mb-3">Stay Informed</h3>
           <p className="font-body">
@@ -44,31 +44,31 @@ const Subscribe = () => (
           <h2 className="sr-only">Subscribe for News Updates</h2>
 
           <div className="flex flex-col">
-            <label htmlFor="mce-FNAME" className="font-semibold mb-1" style={{ color: "#1b4e6a" }}>
+            <label htmlFor="mce-FNAME" className="font-semibold mb-1 text-white">
               First Name
             </label>
             <input
               type="text"
               name="FNAME"
               id="mce-FNAME"
-              className="px-3 py-2 border border-input rounded-md text-base bg-background text-foreground"
+              className="px-3 py-2 border border-input rounded-md text-base bg-white text-foreground"
             />
           </div>
 
           <div className="flex flex-col">
-            <label htmlFor="mce-LNAME" className="font-semibold mb-1" style={{ color: "#1b4e6a" }}>
+            <label htmlFor="mce-LNAME" className="font-semibold mb-1 text-white">
               Last Name
             </label>
             <input
               type="text"
               name="LNAME"
               id="mce-LNAME"
-              className="px-3 py-2 border border-input rounded-md text-base bg-background text-foreground"
+              className="px-3 py-2 border border-input rounded-md text-base bg-white text-foreground"
             />
           </div>
 
           <div className="flex flex-col">
-            <label htmlFor="mce-EMAIL" className="font-semibold mb-1" style={{ color: "#1b4e6a" }}>
+            <label htmlFor="mce-EMAIL" className="font-semibold mb-1 text-white">
               Email Address <span className="text-destructive">*</span>
             </label>
             <input
@@ -76,7 +76,7 @@ const Subscribe = () => (
               name="EMAIL"
               id="mce-EMAIL"
               required
-              className="px-3 py-2 border border-input rounded-md text-base bg-background text-foreground"
+              className="px-3 py-2 border border-input rounded-md text-base bg-white text-foreground"
             />
           </div>
 
@@ -90,7 +90,7 @@ const Subscribe = () => (
               value="Subscribe"
               name="subscribe"
               id="mc-embedded-subscribe"
-              className="cursor-pointer px-6 py-3 rounded-md text-base font-semibold text-gold"
+              className="cursor-pointer px-6 py-3 rounded-md text-base font-semibold text-white"
               style={{ backgroundColor: "#1b4e6a" }}
             />
           </div>
