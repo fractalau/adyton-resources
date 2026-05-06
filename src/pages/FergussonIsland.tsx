@@ -419,9 +419,6 @@ const FergussonIsland = () => {
                   <p className="font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
                     {t.desc}
                   </p>
-                  {i < timeline.length - 1 && (
-                    <div className="hidden md:block absolute top-1/2 -right-2 w-4 h-px bg-primary/40" />
-                  )}
                 </div>
               ))}
             </div>
