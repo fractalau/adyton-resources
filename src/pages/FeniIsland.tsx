@@ -56,7 +56,7 @@ const FeniIsland = () => {
       <div className="absolute inset-0 bg-cover bg-center opacity-25" style={{ backgroundImage: `url(${projectHeaderBg})` }} />
       <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80" />
       <div className="container relative z-10">
-        <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">FLAGSHIP GROWTH ASSET</p>
+        <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">FLAGSHIP GROWTH ASSET</p>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
           Feni Island<br />Gold-Copper Project
         </h1>
@@ -64,7 +64,7 @@ const FeniIsland = () => {
           {stats.map((s) => (
             <div key={s.label} className="text-center p-4 rounded-lg border border-border bg-card">
               <p className="text-xl md:text-2xl font-mono font-bold text-primary">{s.value}</p>
-              <p className="text-xs text-foreground/50 mt-1 font-body">{s.label}</p>
+              <p className="text-sm text-foreground/50 mt-1 font-body">{s.label}</p>
             </div>
           ))}
         </div>
@@ -74,7 +74,7 @@ const FeniIsland = () => {
     {/* Geological Setting */}
     <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
       <div className="container max-w-4xl">
-        <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">TIER 1 GOLD-COPPER DISCOVERY</p>
+        <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">TIER 1 GOLD-COPPER DISCOVERY</p>
         <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
           Tier 1 Gold-Copper Discovery Potential
         </h2>
@@ -98,8 +98,8 @@ const FeniIsland = () => {
               {similarityData.slice(1).map((row, i) => (
                 <tr key={i} className="border-t" style={{ borderColor: "hsl(var(--light-border))", background: i % 2 ? "hsl(var(--light-card))" : "transparent" }}>
                   <td className="px-4 py-2 font-medium" style={{ color: "hsl(var(--text-dark))" }}>{row.header}</td>
-                  <td className="px-4 py-2 font-mono text-xs" style={{ color: "hsl(var(--light-muted-foreground))" }}>{row.lihir}</td>
-                  <td className="px-4 py-2 font-mono text-xs text-primary">{row.feni}</td>
+                  <td className="px-4 py-2 font-mono text-sm" style={{ color: "hsl(var(--light-muted-foreground))" }}>{row.lihir}</td>
+                  <td className="px-4 py-2 font-mono text-sm text-primary">{row.feni}</td>
                 </tr>
               ))}
             </tbody>
@@ -111,7 +111,7 @@ const FeniIsland = () => {
     {/* Kabang MRE */}
     <section className="py-16 md:py-20 bg-background">
       <div className="container max-w-4xl">
-        <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">NI 43-101 COMPLIANT RESOURCE</p>
+        <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">NI 43-101 COMPLIANT RESOURCE</p>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
           1.46 Moz Au Foundational Resource
         </h2>
@@ -147,7 +147,7 @@ const FeniIsland = () => {
     {/* Drill Program */}
     <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
       <div className="container max-w-4xl">
-        <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">ACTIVE EXPLORATION — ONGOING RESULTS</p>
+        <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">ACTIVE EXPLORATION — ONGOING RESULTS</p>
         <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
           Confirming Scale and New Discoveries
         </h2>
@@ -156,7 +156,7 @@ const FeniIsland = () => {
         </p>
 
         <div className="overflow-x-auto rounded-lg border mb-4" style={{ borderColor: "hsl(var(--light-border))" }}>
-          <table className="w-full text-xs font-mono">
+          <table className="w-full text-sm font-mono">
             <thead>
               <tr style={{ background: "hsl(var(--light-card))" }}>
                 <th className="text-left px-3 py-2" style={{ color: "hsl(var(--text-dark))" }}>Hole</th>
@@ -192,7 +192,7 @@ const FeniIsland = () => {
     {/* Copper Upside */}
     <section className="py-16 md:py-20 bg-background">
       <div className="container max-w-4xl">
-        <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">NOT YET IN THE MRE</p>
+        <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">NOT YET IN THE MRE</p>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
           Copper Adds Material Upside to the Kabang Resource
         </h2>
@@ -202,7 +202,7 @@ const FeniIsland = () => {
         </div>
 
         <div className="overflow-x-auto rounded-lg border border-border mb-4">
-          <table className="w-full text-xs font-mono">
+          <table className="w-full text-sm font-mono">
             <thead className="bg-card">
               <tr>
                 <th className="text-left px-3 py-2 text-foreground">Hole</th>
@@ -250,7 +250,7 @@ const FeniIsland = () => {
     {/* Logistics */}
     <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
       <div className="container max-w-4xl">
-        <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">DIRECT SHIP ORE OPPORTUNITY</p>
+        <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">DIRECT SHIP ORE OPPORTUNITY</p>
         <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
           5 km Pit-to-Ship Distance
         </h2>

@@ -57,7 +57,7 @@ const NewsSection = () => {
           <div className="grid sm:grid-cols-3 gap-5">
             {latest.map((n, i) => (
               <div key={i} className="border rounded-lg p-5 flex flex-col" style={{ background: "hsl(var(--light-card))", borderColor: "hsl(var(--light-border))" }}>
-                <p className="text-xs mb-2 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>{formatDate(n.pubDate)}</p>
+                <p className="text-sm mb-2 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>{formatDate(n.pubDate)}</p>
                 <h3 className="font-display font-semibold mb-2 line-clamp-2" style={{ color: "hsl(var(--text-dark))" }}>{n.title}</h3>
                 <div className="mt-auto pt-4">
                   <Button variant="gold-outline" size="sm" asChild>

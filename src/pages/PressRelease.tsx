@@ -112,7 +112,7 @@ const PressRelease = () => {
                 <div key={i}>
                   {isTable ? (
                     <div className="overflow-x-auto mb-4 rounded-lg" style={{ border: "1px solid hsl(var(--light-border))" }}>
-                      <table className="w-full text-xs">
+                      <table className="w-full text-sm">
                         {lines.map((row: string, ri: number) => {
                           const cells = row.split("|").map((c: string) => c.trim()).filter((c: string) => c.length > 0);
                           const Tag = ri === 0 ? "th" : "td";
@@ -168,7 +168,7 @@ const PressRelease = () => {
                       </a>
                       {img.caption && (
                         <figcaption
-                          className="text-xs mt-2 text-center italic"
+                          className="text-sm mt-2 text-center italic"
                           style={{ color: "hsl(var(--light-muted-foreground))" }}
                         >
                           {img.caption}
@@ -189,7 +189,7 @@ const PressRelease = () => {
                 border: "1px solid hsl(var(--light-border))",
               }}
             >
-              <p className="text-xs mb-2" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+              <p className="text-sm mb-2" style={{ color: "hsl(var(--light-muted-foreground))" }}>
                 Originally published via Newsfile Corp.
               </p>
               <Button variant="gold-outline" size="sm" asChild>

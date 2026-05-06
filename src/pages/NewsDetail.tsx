@@ -84,7 +84,7 @@ const NewsDetail = () => {
 
           {/* Attribution */}
           <div className="rounded-lg p-5 mb-10" style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}>
-            <p className="text-xs mb-2" style={{ color: "hsl(var(--light-muted-foreground))" }}>Originally published via Newsfile</p>
+            <p className="text-sm mb-2" style={{ color: "hsl(var(--light-muted-foreground))" }}>Originally published via Newsfile</p>
             <a
               href={article.sourceUrl}
               target="_blank"
@@ -108,7 +108,7 @@ const NewsDetail = () => {
                 >
                   <div>
                     <p className="text-sm font-medium" style={{ color: "hsl(var(--light-foreground))" }}>{r.title}</p>
-                    <p className="text-xs" style={{ color: "hsl(var(--light-muted-foreground))" }}>{r.date}</p>
+                    <p className="text-sm" style={{ color: "hsl(var(--light-muted-foreground))" }}>{r.date}</p>
                   </div>
                   <ChevronDown className="h-4 w-4 text-muted-foreground -rotate-90" />
                 </Link>

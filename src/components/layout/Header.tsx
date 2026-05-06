@@ -143,7 +143,7 @@ const Header = () => {
               >
                 Home
               </Link>
-              <p className="px-3 pt-3 pb-1 text-xs font-semibold text-primary uppercase tracking-wider">Projects</p>
+              <p className="px-3 pt-3 pb-1 text-sm font-semibold text-primary uppercase tracking-wider">Projects</p>
               {projectsDropdown.map((item) => (
                 <Link
                   key={item.path}
@@ -161,7 +161,7 @@ const Header = () => {
               >
                 Investors
               </Link>
-              <p className="px-3 pt-3 pb-1 text-xs font-semibold text-primary uppercase tracking-wider">Company</p>
+              <p className="px-3 pt-3 pb-1 text-sm font-semibold text-primary uppercase tracking-wider">Company</p>
               {companyDropdown.map((item) => (
                 <Link
                   key={item.path}

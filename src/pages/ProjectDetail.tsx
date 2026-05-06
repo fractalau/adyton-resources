@@ -114,7 +114,7 @@ const ProjectDetail = () => {
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-4">
               <TagChip label={project.stage} />
-              <span className="text-xs flex items-center gap-1" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+              <span className="text-sm flex items-center gap-1" style={{ color: "hsl(var(--light-muted-foreground))" }}>
                 <MapPin className="h-3 w-3" /> {project.location}
               </span>
             </div>

@@ -7,7 +7,7 @@ const stats = [
 const EVIHSection = () => (
   <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
     <div className="container max-w-4xl">
-      <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
+      <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
         FULLY FUNDED PATH TO PRODUCTION
       </p>
       <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
@@ -23,13 +23,13 @@ const EVIHSection = () => (
       </div>
       <blockquote className="border-l-2 border-primary pl-4 mb-8 italic font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
         "EVIH is currently focused on supporting Adyton to restart operations at the Wapolu Mine."
-        <span className="block mt-1 not-italic text-xs text-primary">— Gary Wang, CEO, East Vision Investment Holdings</span>
+        <span className="block mt-1 not-italic text-sm text-primary">— Gary Wang, CEO, East Vision Investment Holdings</span>
       </blockquote>
       <div className="grid grid-cols-3 gap-4">
         {stats.map((s) => (
           <div key={s.label} className="text-center p-4 rounded-lg border" style={{ background: "hsl(var(--light-card))", borderColor: "hsl(var(--light-border))" }}>
             <p className="text-2xl md:text-3xl font-mono font-bold text-primary mb-1">{s.value}</p>
-            <p className="text-xs font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>{s.label}</p>
+            <p className="text-sm font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>{s.label}</p>
           </div>
         ))}
       </div>

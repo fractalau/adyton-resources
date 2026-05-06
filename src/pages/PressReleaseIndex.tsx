@@ -20,7 +20,7 @@ const PressReleaseIndex = () => {
             className="block rounded-lg border border-border p-4 hover:border-primary/50 transition-colors"
           >
             <p className="text-sm font-display font-semibold text-foreground">{a.title}</p>
-            <p className="text-xs text-foreground/50 mt-1 font-body">{a.date}</p>
+            <p className="text-sm text-foreground/50 mt-1 font-body">{a.date}</p>
           </Link>
         ))}
       </div>

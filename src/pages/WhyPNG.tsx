@@ -51,7 +51,7 @@ const WhyPNG = () => {
         <div className="absolute inset-0 bg-cover bg-center opacity-25" style={{ backgroundImage: `url(${projectHeaderBg})` }} aria-hidden="true" />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80" aria-hidden="true" />
         <div className="container relative z-10">
-          <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">JURISDICTION</p>
+          <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">JURISDICTION</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4">
             Why Papua New Guinea?
           </h1>
@@ -62,7 +62,7 @@ const WhyPNG = () => {
             {keyStats.map((s) => (
               <div key={s.label} className="text-center p-4 rounded-lg border border-border bg-card">
                 <p className="text-xl md:text-2xl font-mono font-bold text-primary">{s.value}</p>
-                <p className="text-xs text-foreground/50 mt-1 font-body">{s.label}</p>
+                <p className="text-sm text-foreground/50 mt-1 font-body">{s.label}</p>
               </div>
             ))}
           </div>
@@ -75,7 +75,7 @@ const WhyPNG = () => {
           <div className="rounded-lg aspect-[21/9] flex items-center justify-center" style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}>
             <div className="text-center">
               <MapPin className="h-12 w-12 text-primary/30 mx-auto mb-2" aria-hidden="true" />
-              <p className="text-xs font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>Interactive map — placeholder</p>
+              <p className="text-sm font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>Interactive map — placeholder</p>
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@ const WhyPNG = () => {
       {/* Facts Grid */}
       <section aria-label="Why PNG stands out" className="py-14 md:py-18" style={{ background: "hsl(var(--off-white))" }}>
         <div className="container">
-          <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">THE OPPORTUNITY</p>
+          <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">THE OPPORTUNITY</p>
           <h2 className="text-2xl md:text-3xl font-display font-bold mb-10" style={{ color: "hsl(var(--text-dark))" }}>
             Why PNG Stands Out
           </h2>
@@ -109,7 +109,7 @@ const WhyPNG = () => {
       {/* Peer Comparison */}
       <section aria-label="Jurisdiction comparison" className="py-14 md:py-18 bg-background">
         <div className="container max-w-3xl">
-          <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">PEER COMPARISON</p>
+          <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">PEER COMPARISON</p>
           <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-8">
             How PNG Compares
           </h2>
@@ -131,7 +131,7 @@ const WhyPNG = () => {
                     </td>
                     <td className="text-right px-4 py-2.5 font-mono text-foreground/60">{r.goldProd}</td>
                     <td className="text-right px-4 py-2.5 font-mono text-foreground/60">{r.explorationSpend}</td>
-                    <td className={`px-4 py-2.5 text-xs ${r.jurisdiction === "Papua New Guinea" ? "text-primary font-semibold" : "text-foreground/50"}`}>
+                    <td className={`px-4 py-2.5 text-sm ${r.jurisdiction === "Papua New Guinea" ? "text-primary font-semibold" : "text-foreground/50"}`}>
                       {r.comment}
                     </td>
                   </tr>
@@ -145,7 +145,7 @@ const WhyPNG = () => {
       {/* Stakeholder Principles */}
       <section aria-label="Stakeholder principles" className="py-14 md:py-18" style={{ background: "hsl(var(--off-white))" }}>
         <div className="container max-w-3xl">
-          <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">COMMUNITY & STAKEHOLDERS</p>
+          <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">COMMUNITY & STAKEHOLDERS</p>
           <h2 className="text-2xl md:text-3xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
             Stakeholder & Operating Principles
           </h2>

@@ -69,7 +69,7 @@ const Investors = () => {
           <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{ backgroundImage: `url(${projectHeaderBg})` }} aria-hidden="true" />
           <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--off-white))] via-[hsl(var(--off-white))]/95 to-[hsl(var(--off-white))]/80" aria-hidden="true" />
           <div className="container relative z-10">
-            <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">INVESTOR RELATIONS</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">INVESTOR RELATIONS</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4" style={{ color: "hsl(var(--text-dark))" }}>
               Investor Hub
             </h1>
@@ -82,13 +82,13 @@ const Investors = () => {
         {/* Capital Structure */}
         <section aria-label="Capital structure" className="teal-panel py-12 md:py-14">
           <div className="container">
-            <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-6 font-body">CAPITAL STRUCTURE</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-6 font-body">CAPITAL STRUCTURE</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {capitalStats.map((s) => (
                 <div key={s.label} className="text-center flex flex-col items-center gap-2">
                   <s.icon className="h-5 w-5 text-primary" aria-hidden="true" />
                   <p className="text-2xl md:text-3xl font-mono font-bold text-foreground">{s.value}</p>
-                  <p className="text-xs text-foreground/60 font-body">{s.label}</p>
+                  <p className="text-sm text-foreground/60 font-body">{s.label}</p>
                   <p className="text-[10px] text-foreground/30 font-body italic">Source: {s.source}</p>
                 </div>
               ))}
@@ -102,7 +102,7 @@ const Investors = () => {
         {/* Ownership Breakdown */}
         <section aria-label="Ownership breakdown" className="py-14 md:py-18" style={{ background: "hsl(var(--off-white))" }}>
           <div className="container max-w-3xl">
-            <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">OWNERSHIP</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">OWNERSHIP</p>
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-8" style={{ color: "hsl(var(--text-dark))" }}>
               Shareholder Breakdown
             </h2>
@@ -111,7 +111,7 @@ const Investors = () => {
                 <div key={o.holder} className="flex items-center gap-4 p-4 rounded-lg border" style={{ background: "hsl(var(--light-card))", borderColor: "hsl(var(--light-border))" }}>
                   <div className="flex-1">
                     <p className="font-display font-semibold text-sm" style={{ color: "hsl(var(--text-dark))" }}>{o.holder}</p>
-                    <p className="text-xs" style={{ color: "hsl(var(--light-muted-foreground))" }}>{o.note}</p>
+                    <p className="text-sm" style={{ color: "hsl(var(--light-muted-foreground))" }}>{o.note}</p>
                   </div>
                   <p className="text-2xl font-mono font-bold text-primary">{o.pct}</p>
                 </div>
@@ -132,10 +132,10 @@ const Investors = () => {
                   <Star className="h-8 w-8 text-primary-foreground" />
                 </div>
                 <div className="flex-1">
-                  <p className="text-xs uppercase tracking-wider text-primary font-semibold mb-1 font-body">LATEST INVESTOR DECK</p>
+                  <p className="text-sm uppercase tracking-wider text-primary font-semibold mb-1 font-body">LATEST INVESTOR DECK</p>
                   <h2 className="text-xl font-display font-bold text-foreground mb-1">{featured.title}</h2>
                   <p className="text-sm text-foreground/60 font-body">{featured.description}</p>
-                  <p className="text-xs text-foreground/40 mt-1 font-body">{featured.date} · {featured.fileType} · {featured.fileSize}</p>
+                  <p className="text-sm text-foreground/40 mt-1 font-body">{featured.date} · {featured.fileType} · {featured.fileSize}</p>
                 </div>
                 <Button variant="gold" size="lg" asChild>
                   <a href="/Adyton-Investor-Deck.pdf" download>
@@ -151,7 +151,7 @@ const Investors = () => {
         {/* Document Library */}
         <section aria-label="Document library" className="py-14 md:py-18" style={{ background: "hsl(var(--off-white))" }}>
           <div className="container max-w-5xl">
-            <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">DOCUMENT LIBRARY</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">DOCUMENT LIBRARY</p>
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-8" style={{ color: "hsl(var(--text-dark))" }}>
               Reports, Filings & Presentations
             </h2>

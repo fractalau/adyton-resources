@@ -29,7 +29,7 @@ const WapoluLoiGoldConcentrate = () => (
       {/* Header */}
       <section className="py-16 md:py-20" style={{ background: "#10374c" }}>
         <div className="container max-w-3xl">
-          <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">ANNOUNCEMENT</p>
+          <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">ANNOUNCEMENT</p>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white leading-tight mb-4">
             {ARTICLE.title}
           </h1>
@@ -104,7 +104,7 @@ const WapoluLoiGoldConcentrate = () => (
               The existing Gameta and Wapolu Mineral Resource Estimate is highlighted below, with resources open at depth and along strike. The current drill programs at both Wapolu and Gameta are in part designed to test depth and strike extensions but also importantly to increase resource confidence to enable progression to establish reserve estimates and the Mining License (ML) application.
             </p>
 
-            <p className="text-xs italic mb-6" style={{ opacity: 0.7 }}>
+            <p className="text-sm italic mb-6" style={{ opacity: 0.7 }}>
               See the technical report entitled "NI 43-101 Technical Report on the Fergusson Gold Property, Milne Bay Province, Papua New Guinea" dated October 14, 2022 and prepared for the Company in accordance with National Instrument 43-101. Mineral resources are not mineral reserves and have not demonstrated economic viability.
             </p>
 

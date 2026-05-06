@@ -14,7 +14,7 @@ const Footer = () => (
       <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
         <div className="col-span-2 md:col-span-1 space-y-4">
           <img src={logo} alt="Adyton Resources" className="h-7 invert opacity-70" />
-          <p className="text-xs text-foreground/50 font-body">TSXV: ADY | OTC: ADYRF | FSE: 701GR</p>
+          <p className="text-sm text-foreground/50 font-body">TSXV: ADY | OTC: ADYRF | FSE: 701GR</p>
         </div>
 
         <div className="space-y-3">
@@ -150,7 +150,7 @@ const Footer = () => (
 
       <div className="mt-10 pt-6 border-t border-border">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-foreground/40 font-body">
+          <p className="text-sm text-foreground/40 font-body">
             © {new Date().getFullYear()} Adyton Resources Corp. | Privacy Policy | Disclaimer
           </p>
         </div>
