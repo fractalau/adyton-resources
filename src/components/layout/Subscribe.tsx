@@ -1,13 +1,34 @@
 const Subscribe = () => (
   <section className="bg-gold py-12 md:py-16">
     <div className="container grid md:grid-cols-2 gap-10 items-center">
-      <div className="text-left">
-        <h2 className="text-2xl md:text-3xl font-display font-bold mb-3" style={{ color: "#1b4e6a" }}>
-          Stay Informed
-        </h2>
-        <p className="font-body" style={{ color: "#1b4e6a" }}>
-          Subscribe to receive Adyton Resources news releases and investor updates direct to your inbox.
-        </p>
+      <div className="text-left space-y-6" style={{ color: "#1b4e6a" }}>
+        <div>
+          <h3 className="text-2xl md:text-3xl font-display font-bold mb-3">Stay Informed</h3>
+          <p className="font-body">
+            Subscribe to receive Adyton Resources news releases and investor updates direct to your inbox.
+          </p>
+        </div>
+        <div className="font-body space-y-3">
+          <h3 className="text-xl md:text-2xl font-display font-bold">Contact us</h3>
+          <p className="font-semibold">Adyton Resources Corporation</p>
+          <address className="not-italic space-y-3">
+            <p>
+              Level 7, 300 Adelaide Street
+              <br />
+              Brisbane QLD 4000
+              <br />
+              Australia
+            </p>
+            <p>
+              PO Box 5807
+              <br />
+              Brisbane QLD 4000
+            </p>
+            <a href="mailto:info@adytonresources.com" className="underline hover:opacity-80">
+              info@adytonresources.com
+            </a>
+          </address>
+        </div>
       </div>
 
       <div id="mc_embed_signup" className="w-full">
