@@ -68,21 +68,21 @@ const Header = () => {
   const location = useLocation();
 
   const isProjectsActive = location.pathname.startsWith("/projects");
-  const isCompanyActive = ["/about", "/why-png"].some(p => location.pathname.startsWith(p));
+  const isCompanyActive = ["/about", "/why-png"].some((p) => location.pathname.startsWith(p));
 
   return (
     <>
       <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background">
         <div className="container flex h-16 items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="Adyton Resources" className="h-8 invert" />
+            <img src={logo} alt="Adyton Resources" className="h-32 invert" />
           </Link>
 
           {/* Desktop nav */}
           <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-1">
             <Link
               to="/"
-              className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${
+              className={`px-3 py-2 transition-colors hover:text-primary ${
                 location.pathname === "/" ? "text-primary" : "text-foreground/70"
               }`}
             >
@@ -91,7 +91,7 @@ const Header = () => {
             <NavDropdown label="Projects" items={projectsDropdown} isActive={isProjectsActive} />
             <Link
               to="/investors"
-              className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${
+              className={`px-3 py-2 transition-colors hover:text-primary ${
                 location.pathname === "/investors" ? "text-primary" : "text-foreground/70"
               }`}
             >
@@ -100,7 +100,7 @@ const Header = () => {
             <NavDropdown label="Company" items={companyDropdown} isActive={isCompanyActive} />
             <Link
               to="/news"
-              className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${
+              className={`px-3 py-2 transition-colors hover:text-primary ${
                 location.pathname === "/news" ? "text-primary" : "text-foreground/70"
               }`}
             >
@@ -108,7 +108,7 @@ const Header = () => {
             </Link>
             <Link
               to="/contact"
-              className={`px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${
+              className={`px-3 py-2 transition-colors hover:text-primary ${
                 location.pathname === "/contact" ? "text-primary" : "text-foreground/70"
               }`}
             >
@@ -127,10 +127,7 @@ const Header = () => {
           </div>
 
           {/* Mobile toggle */}
-          <button
-            className="lg:hidden p-2 text-foreground"
-            onClick={() => setMobileOpen(!mobileOpen)}
-          >
+          <button className="lg:hidden p-2 text-foreground" onClick={() => setMobileOpen(!mobileOpen)}>
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
@@ -139,28 +136,54 @@ const Header = () => {
         {mobileOpen && (
           <div className="lg:hidden border-t border-border bg-background">
             <nav aria-label="Mobile navigation" className="container py-4 flex flex-col gap-1">
-              <Link to="/" onClick={() => setMobileOpen(false)} className="px-3 py-2.5 text-sm font-medium text-foreground/70 hover:text-primary">
+              <Link
+                to="/"
+                onClick={() => setMobileOpen(false)}
+                className="px-3 py-2.5 text-sm font-medium text-foreground/70 hover:text-primary"
+              >
                 Home
               </Link>
               <p className="px-3 pt-3 pb-1 text-xs font-semibold text-primary uppercase tracking-wider">Projects</p>
               {projectsDropdown.map((item) => (
-                <Link key={item.path} to={item.path} onClick={() => setMobileOpen(false)} className="px-6 py-2 text-sm text-foreground/70 hover:text-primary">
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setMobileOpen(false)}
+                  className="px-6 py-2 text-sm text-foreground/70 hover:text-primary"
+                >
                   {item.label}
                 </Link>
               ))}
-              <Link to="/investors" onClick={() => setMobileOpen(false)} className="px-3 py-2.5 text-sm font-medium text-foreground/70 hover:text-primary">
+              <Link
+                to="/investors"
+                onClick={() => setMobileOpen(false)}
+                className="px-3 py-2.5 text-sm font-medium text-foreground/70 hover:text-primary"
+              >
                 Investors
               </Link>
               <p className="px-3 pt-3 pb-1 text-xs font-semibold text-primary uppercase tracking-wider">Company</p>
               {companyDropdown.map((item) => (
-                <Link key={item.path} to={item.path} onClick={() => setMobileOpen(false)} className="px-6 py-2 text-sm text-foreground/70 hover:text-primary">
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setMobileOpen(false)}
+                  className="px-6 py-2 text-sm text-foreground/70 hover:text-primary"
+                >
                   {item.label}
                 </Link>
               ))}
-              <Link to="/news" onClick={() => setMobileOpen(false)} className="px-3 py-2.5 text-sm font-medium text-foreground/70 hover:text-primary">
+              <Link
+                to="/news"
+                onClick={() => setMobileOpen(false)}
+                className="px-3 py-2.5 text-sm font-medium text-foreground/70 hover:text-primary"
+              >
                 News
               </Link>
-              <Link to="/contact" onClick={() => setMobileOpen(false)} className="px-3 py-2.5 text-sm font-medium text-foreground/70 hover:text-primary">
+              <Link
+                to="/contact"
+                onClick={() => setMobileOpen(false)}
+                className="px-3 py-2.5 text-sm font-medium text-foreground/70 hover:text-primary"
+              >
                 Contact
               </Link>
               <div className="mt-3 pt-3 border-t border-border">
@@ -176,7 +199,6 @@ const Header = () => {
         )}
       </header>
       <TickerStrip />
-      
     </>
   );
 };
