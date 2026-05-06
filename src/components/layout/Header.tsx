@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Download, ChevronDown } from "lucide-react";
+import { Menu, X, Download, ChevronDown, Linkedin, Youtube, Globe } from "lucide-react";
 import TickerStrip from "@/components/TickerStrip";
 
 import logo from "@/assets/logo.png";
