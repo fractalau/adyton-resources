@@ -56,7 +56,7 @@ const NewsDetail = () => {
             {article.tags.map((t) => <TagChip key={t} label={t} />)}
           </div>
           <p className="text-sm mb-3" style={{ color: "hsl(var(--light-muted-foreground))" }}>{article.date}</p>
-          <h1 className="text-3xl md:text-4xl font-display font-bold leading-tight mb-4" style={{ color: "hsl(var(--light-foreground))" }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-4" style={{ color: "hsl(var(--light-foreground))" }}>
             {article.title}
           </h1>
           <p className="text-lg mb-8 leading-relaxed" style={{ color: "hsl(var(--light-muted-foreground))" }}>{article.excerpt}</p>
