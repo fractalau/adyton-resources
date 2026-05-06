@@ -22,7 +22,7 @@ const WhyPNGSection = () => (
         two of the most significant deposits in the Asia-Pacific. Island-based access means natural coastal logistics,
         shorter pit-to-ship distances, and lower capital intensity compared with highland projects.
       </p>
-      <ul className="mb-8 text-sm font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+      <ul className="mb-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
         {bullets.map((b, i) => (
           <li key={i}>{b}</li>
         ))}
