@@ -403,10 +403,8 @@ const Investors = () => {
           style={{ background: "hsl(var(--off-white))" }}
         >
           <div className="container max-w-5xl">
-            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
-              DOCUMENT LIBRARY
-            </p>
-            <h2 className="text-2xl md:text-3xl font-display font-bold mb-8" style={{ color: "hsl(var(--text-dark))" }}>
+            <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">DOCUMENT LIBRARY</p>
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-8" style={{ color: "hsl(var(--text-dark))" }}>
               Reports, Filings & Presentations
             </h2>
 
