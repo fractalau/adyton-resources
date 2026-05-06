@@ -32,9 +32,8 @@ const DownloadTile = ({ title, date, description, fileType = "PDF", fileSize = "
     return (
       <a
         href={href}
-        target={isExternal ? "_blank" : "_self"}
-        rel={isExternal ? "noopener noreferrer" : undefined}
-        download={!isExternal || undefined}
+        target="_blank"
+        rel="noopener noreferrer"
         className="rounded-lg p-3 flex items-center gap-3 transition-colors hover:opacity-90 cursor-pointer no-underline"
         style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}
       >
