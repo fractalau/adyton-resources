@@ -47,7 +47,7 @@ const LiveTicker = () => {
     // The outer wrapper uses your custom Tailwind colors for the background and border
     <div
       className="w-full border-b border-white/10 flex items-center overflow-hidden"
-      style={{ backgroundColor: "#000042" }}
+      style="background-color: #1b4e6a;"
     >
       <div className="tradingview-widget-container w-full" ref={containerRef}>
         {/* The script will automatically build the iframe inside this div */}
