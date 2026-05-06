@@ -22,7 +22,7 @@ const team = [
 const ManagementStrip = () => (
   <section className="py-16 md:py-20 bg-background">
     <div className="container">
-      <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 text-center font-body">
+      <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 text-center font-body">
         PROVEN TRACK RECORD
       </p>
       <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground text-center mb-10">
@@ -32,7 +32,7 @@ const ManagementStrip = () => (
         {team.map((t) => (
           <div key={t.name} className="rounded-lg p-6 border" style={{ background: "hsl(var(--light-card))", borderColor: "hsl(var(--light-border))" }}>
             <h3 className="font-display font-bold text-lg mb-1" style={{ color: "hsl(var(--text-dark))" }}>{t.name}</h3>
-            <p className="text-xs text-primary font-semibold mb-3 font-body">{t.role}</p>
+            <p className="text-sm text-primary font-semibold mb-3 font-body">{t.role}</p>
             <p className="text-sm leading-relaxed font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>{t.bio}</p>
           </div>
         ))}

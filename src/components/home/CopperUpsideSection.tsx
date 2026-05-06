@@ -1,7 +1,7 @@
 const CopperUpsideSection = () => (
   <section className="py-16 md:py-20 bg-background">
     <div className="container max-w-4xl">
-      <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
+      <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
         HIDDEN VALUE — NOT YET IN THE MRE
       </p>
       <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">

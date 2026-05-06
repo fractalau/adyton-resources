@@ -89,7 +89,7 @@ const News = () => {
             aria-hidden="true"
           />
           <div className="container relative z-10">
-            <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
+            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
               PRESS RELEASES
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4">
@@ -147,7 +147,7 @@ const News = () => {
                     variant={p === page ? "gold" : "ghost"}
                     size="sm"
                     onClick={() => goTo(p)}
-                    className="h-9 w-9 p-0 font-mono text-xs"
+                    className="h-9 w-9 p-0 font-mono text-sm"
                     style={p !== page ? { color: "hsl(var(--text-dark))" } : undefined}
                     aria-label={`Page ${p}`}
                     aria-current={p === page ? "page" : undefined}
@@ -170,7 +170,7 @@ const News = () => {
               </nav>
             )}
 
-            <p className="text-center text-xs mt-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+            <p className="text-center text-sm mt-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
               All press releases sourced from{" "}
               <a
                 href="https://www.newsfilecorp.com/company/7416/Adyton-Resources-Corporation"
@@ -228,7 +228,7 @@ const News = () => {
               />
             </div>
 
-            <p className="text-center text-xs mt-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+            <p className="text-center text-sm mt-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
               News sourced from{" "}
               <a
                 href="https://adytonresources.com/announcements/"

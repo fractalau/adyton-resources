@@ -26,7 +26,7 @@ const Projects = () => {
       <Header />
       <section className="py-16 md:py-24">
         <div className="container">
-          <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-4">Portfolio</p>
+          <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4">Portfolio</p>
           <h1 className="text-4xl md:text-5xl font-display font-bold leading-tight mb-6" style={{ color: "hsl(var(--light-foreground))" }}>
             Project Portfolio
           </h1>

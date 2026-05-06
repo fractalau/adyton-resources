@@ -31,7 +31,7 @@ const BluePanelCallout = () => (
           Subscribe
         </Button>
       </div>
-      <p className="text-xs text-muted-foreground/60">
+      <p className="text-sm text-muted-foreground/60">
         Looking for something specific? Use search and filters in the Investor Hub.
       </p>
     </div>

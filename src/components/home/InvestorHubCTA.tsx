@@ -37,7 +37,7 @@ const InvestorHubCTA = () => (
           </a>
         </Button>
       </div>
-      <p className="text-xs text-foreground/40 font-body">
+      <p className="text-sm text-foreground/40 font-body">
         Investor Relations: ir@adytonresources.com | +61 7 3854 2389
       </p>
     </div>

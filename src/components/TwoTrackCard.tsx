@@ -28,7 +28,7 @@ const TwoTrackCard = ({ title, subtitle, highlights, linkTo, linkLabel, variant,
       style={lightMode ? { background: "hsl(var(--light-card))" } : undefined}
     >
       <div
-        className={`text-xs uppercase tracking-widest font-semibold mb-3 ${
+        className={`text-sm uppercase tracking-widest font-semibold mb-3 ${
           isGold ? "text-primary" : lightMode ? "" : "text-secondary-foreground"
         }`}
         style={!isGold && lightMode ? { color: "hsl(215 55% 40%)" } : undefined}

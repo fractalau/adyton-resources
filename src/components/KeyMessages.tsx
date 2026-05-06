@@ -18,7 +18,7 @@ const KeyMessages = () => (
             <h3 className="text-sm font-display font-semibold text-white">
               {item.headline}
             </h3>
-            <p className="text-xs leading-relaxed text-foreground/70">
+            <p className="text-sm leading-relaxed text-foreground/70">
               {item.line}
             </p>
           </div>

@@ -27,17 +27,17 @@ const ProjectTile = ({ name, slug, stage, highlights, location }: ProjectTilePro
         {name}
       </h3>
       {location && (
-        <p className="text-xs mb-3" style={{ color: "hsl(var(--light-muted-foreground))" }}>{location}</p>
+        <p className="text-sm mb-3" style={{ color: "hsl(var(--light-muted-foreground))" }}>{location}</p>
       )}
       <ul className="space-y-1.5 mb-4">
         {highlights.map((h, i) => (
-          <li key={i} className="text-xs flex items-start gap-1.5" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+          <li key={i} className="text-sm flex items-start gap-1.5" style={{ color: "hsl(var(--light-muted-foreground))" }}>
             <span className="mt-1 h-1 w-1 rounded-full bg-primary/60 shrink-0" />
             {h}
           </li>
         ))}
       </ul>
-      <span className="text-xs font-semibold text-primary flex items-center gap-1 group-hover:gap-2 transition-all">
+      <span className="text-sm font-semibold text-primary flex items-center gap-1 group-hover:gap-2 transition-all">
         View project <ArrowRight className="h-3 w-3" />
       </span>
     </div>

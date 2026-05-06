@@ -49,7 +49,7 @@ const FergussonIsland = () => {
       <div className="absolute inset-0 bg-cover bg-center opacity-25" style={{ backgroundImage: `url(${projectHeaderBg})` }} />
       <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80" />
       <div className="container relative z-10">
-        <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">NEAR-TERM CASH FLOW</p>
+        <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">NEAR-TERM CASH FLOW</p>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
           Fergusson Island<br />Gold Project
         </h1>
@@ -57,7 +57,7 @@ const FergussonIsland = () => {
           {stats.map((s) => (
             <div key={s.label} className="text-center p-4 rounded-lg border border-border bg-card">
               <p className="text-xl md:text-2xl font-mono font-bold text-primary">{s.value}</p>
-              <p className="text-xs text-foreground/50 mt-1 font-body">{s.label}</p>
+              <p className="text-sm text-foreground/50 mt-1 font-body">{s.label}</p>
             </div>
           ))}
         </div>
@@ -78,7 +78,7 @@ const FergussonIsland = () => {
     {/* EVIH JV */}
     <section className="py-16 md:py-20 bg-background">
       <div className="container max-w-4xl">
-        <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">DEVELOPMENT PARTNER</p>
+        <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">DEVELOPMENT PARTNER</p>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
           East Vision Investment Holdings (EVIH)
         </h2>
@@ -103,7 +103,7 @@ const FergussonIsland = () => {
     {/* Wapolu */}
     <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
       <div className="container max-w-4xl">
-        <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">WAPOLU GOLD PROJECT</p>
+        <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">WAPOLU GOLD PROJECT</p>
         <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
           Near-Surface, High-Grade Gold Ready for Restart
         </h2>
@@ -149,13 +149,13 @@ const FergussonIsland = () => {
 
         <blockquote className="border-l-2 border-primary pl-4 mb-8 italic text-sm font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
           "The updated Wapolu Mineral Resource materially strengthens the foundation of our Fergusson Island development strategy and exceeds our internal expectations. Development work is fully funded to production through our joint venture with EVIH. Adyton is entering a clear growth and execution phase."
-          <span className="block mt-1 not-italic text-xs text-primary">— Tim Crossley, Managing Director, Adyton Resources</span>
+          <span className="block mt-1 not-italic text-sm text-primary">— Tim Crossley, Managing Director, Adyton Resources</span>
         </blockquote>
 
         {/* Drill intercepts */}
         <h3 className="text-lg font-display font-bold mb-4" style={{ color: "hsl(var(--text-dark))" }}>Selected 2025 Drill Intercepts</h3>
         <div className="overflow-x-auto rounded-lg border mb-4" style={{ borderColor: "hsl(var(--light-border))" }}>
-          <table className="w-full text-xs font-mono">
+          <table className="w-full text-sm font-mono">
             <thead>
               <tr style={{ background: "hsl(var(--light-card))" }}>
                 <th className="text-left px-3 py-2" style={{ color: "hsl(var(--text-dark))" }}>Hole</th>
@@ -184,7 +184,7 @@ const FergussonIsland = () => {
     {/* Gameta */}
     <section className="py-16 md:py-20 bg-background">
       <div className="container max-w-4xl">
-        <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">GAMETA GOLD DEPOSIT</p>
+        <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">GAMETA GOLD DEPOSIT</p>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
           513 Koz Au Resource Open in All Directions
         </h2>
@@ -237,7 +237,7 @@ const FergussonIsland = () => {
           Combined Fergusson Resource Summary
         </h2>
         <div className="overflow-x-auto rounded-lg border" style={{ borderColor: "hsl(var(--light-border))" }}>
-          <table className="w-full text-xs font-mono">
+          <table className="w-full text-sm font-mono">
             <thead>
               <tr style={{ background: "hsl(var(--light-card))" }}>
                 <th className="text-left px-3 py-2" style={{ color: "hsl(var(--text-dark))" }}>Project</th>
@@ -270,14 +270,14 @@ const FergussonIsland = () => {
     {/* Development Timeline */}
     <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
       <div className="container max-w-4xl">
-        <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">PATH TO PRODUCTION</p>
+        <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">PATH TO PRODUCTION</p>
         <h2 className="text-2xl font-display font-bold mb-8" style={{ color: "hsl(var(--text-dark))" }}>Development Pathway</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {timeline.map((t, i) => (
             <div key={i} className="relative p-4 rounded-lg border" style={{ background: "hsl(var(--light-card))", borderColor: "hsl(var(--light-border))" }}>
-              <p className="text-xs font-mono font-bold text-primary mb-2">{t.period}</p>
+              <p className="text-sm font-mono font-bold text-primary mb-2">{t.period}</p>
               <h4 className="text-sm font-display font-semibold mb-1" style={{ color: "hsl(var(--text-dark))" }}>{t.title}</h4>
-              <p className="text-xs font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>{t.desc}</p>
+              <p className="text-sm font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>{t.desc}</p>
               {i < timeline.length - 1 && (
                 <div className="hidden md:block absolute top-1/2 -right-2 w-4 h-px bg-primary/40" />
               )}
