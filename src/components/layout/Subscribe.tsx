@@ -51,7 +51,7 @@ const Subscribe = () => (
               type="text"
               name="FNAME"
               id="mce-FNAME"
-              className="px-3 py-2 border border-input rounded-md text-base bg-white text-foreground"
+              className="px-3 py-2 border border-input rounded-md text-base bg-white text-[#1b4e6a]"
             />
           </div>
 
@@ -63,7 +63,7 @@ const Subscribe = () => (
               type="text"
               name="LNAME"
               id="mce-LNAME"
-              className="px-3 py-2 border border-input rounded-md text-base bg-white text-foreground"
+              className="px-3 py-2 border border-input rounded-md text-base bg-white text-[#1b4e6a]"
             />
           </div>
 
@@ -76,7 +76,7 @@ const Subscribe = () => (
               name="EMAIL"
               id="mce-EMAIL"
               required
-              className="px-3 py-2 border border-input rounded-md text-base bg-white text-foreground"
+              className="px-3 py-2 border border-input rounded-md text-base bg-white text-[#1b4e6a]"
             />
           </div>
 
