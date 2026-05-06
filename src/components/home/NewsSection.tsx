@@ -41,10 +41,13 @@ const NewsSection = () => {
     <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
       <div className="container">
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-2xl md:text-3xl font-display font-bold" style={{ color: "hsl(var(--text-dark))" }}>
+          <h2 className="text-3xl md:text-4xl font-display font-bold" style={{ color: "hsl(var(--text-dark))" }}>
             Latest News &amp; Press Releases
           </h2>
-          <Link to="/news" className="text-sm text-primary font-semibold hover:text-primary/80 flex items-center gap-1 font-body">
+          <Link
+            to="/news"
+            className="text-sm text-primary font-semibold hover:text-primary/80 flex items-center gap-1 font-body"
+          >
             View All Releases <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         </div>
@@ -56,9 +59,20 @@ const NewsSection = () => {
         ) : (
           <div className="grid sm:grid-cols-3 gap-5">
             {latest.map((n, i) => (
-              <div key={i} className="border rounded-lg p-5 flex flex-col" style={{ background: "hsl(var(--light-card))", borderColor: "hsl(var(--light-border))" }}>
-                <p className="text-sm mb-2 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>{formatDate(n.pubDate)}</p>
-                <h3 className="font-display font-semibold mb-2 line-clamp-2" style={{ color: "hsl(var(--text-dark))" }}>{n.title}</h3>
+              <div
+                key={i}
+                className="border rounded-lg p-5 flex flex-col"
+                style={{ background: "hsl(var(--light-card))", borderColor: "hsl(var(--light-border))" }}
+              >
+                <p className="text-sm mb-2 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+                  {formatDate(n.pubDate)}
+                </p>
+                <h3
+                  className="text-xl font-display font-semibold mb-2 line-clamp-2"
+                  style={{ color: "hsl(var(--text-dark))" }}
+                >
+                  {n.title}
+                </h3>
                 <div className="mt-auto pt-4">
                   <Button variant="gold-outline" size="sm" asChild>
                     <a href={n.link} target="_blank" rel="noopener noreferrer">
