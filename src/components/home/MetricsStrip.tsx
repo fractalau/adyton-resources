@@ -9,7 +9,7 @@ const metrics = [
 ];
 
 const MetricsStrip = () => (
-  <section className="border-b border-border py-10 md:py-12" style={{ background: 'hsl(201 65% 18%)' }}>
+  <section className="border-b border-border py-10 md:py-12" style={{ background: "hsl(201 65% 18%)" }}>
     <div className="container">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
         {metrics.map((m) => (
@@ -20,8 +20,9 @@ const MetricsStrip = () => (
           </div>
         ))}
       </div>
-      <p className="text-[10px] text-foreground/40 text-center mt-6 font-body italic">
-        Resource figures prepared in accordance with NI 43-101. Mineral resources are not mineral reserves and have not demonstrated economic viability.
+      <p className="text-sm text-foreground/40 text-center mt-6 font-body italic">
+        Resource figures prepared in accordance with NI 43-101. Mineral resources are not mineral reserves and have not
+        demonstrated economic viability.
       </p>
     </div>
   </section>
