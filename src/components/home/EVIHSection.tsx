@@ -13,7 +13,7 @@ const EVIHSection = () => (
       <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
         The EVIH Joint Venture
       </h2>
-      <div className="text-sm leading-relaxed space-y-4 mb-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+      <div className="leading-relaxed space-y-4 mb-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
         <p>
           East Vision Investment Holdings (EVIH) is Adyton's joint venture partner at Fergusson Island, committing up to US$9.5M to advance the project from current status to shovel-ready. EVIH will fund feasibility studies, metallurgical work, permitting, and bulk sample activities to earn a 50% interest in Fergusson Mining Pte. Ltd.
         </p>
@@ -21,7 +21,7 @@ const EVIHSection = () => (
           Adyton retains 50% of free cash flow — with zero capital outlay required for construction. Adyton's treasury is preserved for Feni exploration and corporate activities.
         </p>
       </div>
-      <blockquote className="border-l-2 border-primary pl-4 mb-8 italic text-sm font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+      <blockquote className="border-l-2 border-primary pl-4 mb-8 italic font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
         "EVIH is currently focused on supporting Adyton to restart operations at the Wapolu Mine."
         <span className="block mt-1 not-italic text-xs text-primary">— Gary Wang, CEO, East Vision Investment Holdings</span>
       </blockquote>
