@@ -74,7 +74,7 @@ const Header = () => {
     <>
       <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background">
         <div className="container flex h-16 items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2 py-4">
             <img src={logo} alt="Adyton Resources" className="h-16 invert" />
           </Link>
 
