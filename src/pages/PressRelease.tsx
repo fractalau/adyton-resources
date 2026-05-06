@@ -25,7 +25,7 @@ const PressRelease = () => {
         <Header />
         <main className="py-20">
           <div className="container max-w-3xl text-center">
-            <h1 className="text-3xl font-display font-bold mb-4" style={{ color: "hsl(var(--light-foreground))" }}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4" style={{ color: "hsl(var(--light-foreground))" }}>
               Press Release Not Found
             </h1>
             <p className="mb-6" style={{ color: "hsl(var(--light-muted-foreground))" }}>
@@ -83,7 +83,7 @@ const PressRelease = () => {
             </p>
 
             <h1
-              className="text-3xl md:text-4xl font-display font-bold leading-tight mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6"
               style={{ color: "hsl(var(--light-foreground))" }}
             >
               {article.title}

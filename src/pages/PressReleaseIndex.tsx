@@ -11,7 +11,7 @@ const PressReleaseIndex = () => {
   <div className="min-h-screen bg-background">
     <Header />
     <main className="container py-16 max-w-3xl">
-      <h1 className="text-3xl font-display font-bold text-foreground mb-8">Press Releases</h1>
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-8">Press Releases</h1>
       <div className="space-y-4">
         {articles.map((a: { slug: string; title: string; date: string }) => (
           <Link

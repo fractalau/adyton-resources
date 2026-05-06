@@ -95,7 +95,7 @@ const ProjectDetail = () => {
       <div className="min-h-screen bg-background">
         <Header />
         <div className="container py-20 text-center">
-          <h1 className="text-2xl font-display font-bold text-foreground">Project not found</h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground">Project not found</h1>
           <Button variant="gold-outline" asChild className="mt-4">
             <Link to="/projects">View all projects</Link>
           </Button>
@@ -118,7 +118,7 @@ const ProjectDetail = () => {
                 <MapPin className="h-3 w-3" /> {project.location}
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-display font-bold mb-4" style={{ color: "hsl(var(--light-foreground))" }}>{project.name}</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4" style={{ color: "hsl(var(--light-foreground))" }}>{project.name}</h1>
             <p className="text-lg max-w-2xl" style={{ color: "hsl(var(--light-muted-foreground))" }}>{project.description}</p>
           </div>
 

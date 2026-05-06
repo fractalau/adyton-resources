@@ -30,7 +30,7 @@ const DualTrackGrowthStrategy = () => (
       <section className="py-16 md:py-20" style={{ background: "#10374c" }}>
         <div className="container max-w-3xl">
           <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">ANNOUNCEMENT</p>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white leading-tight mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight mb-4">
             {ARTICLE.title}
           </h1>
           <p className="text-sm text-white/60 font-body">{ARTICLE.date}</p>
