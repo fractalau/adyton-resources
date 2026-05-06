@@ -15,8 +15,8 @@ const MetricsStrip = () => (
         {metrics.map((m) => (
           <div key={m.label} className="text-center flex flex-col items-center gap-2">
             <m.icon className="h-6 w-6 text-primary" />
-            <p className="text-2xl md:text-3xl font-mono font-bold text-foreground">{m.stat}</p>
-            <p className="text-xs text-foreground/60 font-body">{m.label}</p>
+            <p className="text-2xl md:text-4xl font-mono font-bold text-foreground">{m.stat}</p>
+            <p className="text-sm text-foreground/60 font-body">{m.label}</p>
           </div>
         ))}
       </div>
