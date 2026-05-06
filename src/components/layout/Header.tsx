@@ -72,6 +72,7 @@ const Header = () => {
 
   return (
     <>
+      <div className="w-full bg-gold py-3" />
       <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background">
         <div className="container flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 py-4">
