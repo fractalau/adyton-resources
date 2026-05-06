@@ -15,21 +15,36 @@ const EVIHSection = () => (
       </h2>
       <div className="leading-relaxed space-y-4 mb-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
         <p>
-          East Vision Investment Holdings (EVIH) is Adyton's joint venture partner at Fergusson Island, committing up to US$9.5M to advance the project from current status to shovel-ready. EVIH will fund feasibility studies, metallurgical work, permitting, and bulk sample activities to earn a 50% interest in Fergusson Mining Pte. Ltd.
+          East Vision Investment Holdings (EVIH) is Adyton's joint venture partner at Fergusson Island, committing up to
+          US$9.5M to advance the project from current status to shovel-ready. EVIH will fund feasibility studies,
+          metallurgical work, permitting, and bulk sample activities to earn a 50% interest in Fergusson Mining Pte.
+          Ltd.
         </p>
         <p>
-          Adyton retains 50% of free cash flow — with zero capital outlay required for construction. Adyton's treasury is preserved for Feni exploration and corporate activities.
+          Adyton retains 50% of free cash flow — with zero capital outlay required for construction. Adyton's treasury
+          is preserved for Feni exploration and corporate activities.
         </p>
       </div>
-      <blockquote className="border-l-2 border-primary pl-4 mb-8 italic font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+      <blockquote
+        className="border-l-2 border-primary pl-4 mb-8 italic font-body"
+        style={{ color: "hsl(var(--light-muted-foreground))" }}
+      >
         "EVIH is currently focused on supporting Adyton to restart operations at the Wapolu Mine."
-        <span className="block mt-1 not-italic text-sm text-primary">— Gary Wang, CEO, East Vision Investment Holdings</span>
+        <span className="block mt-1 not-italic text-sm text-primary">
+          — Gary Wang, CEO, East Vision Investment Holdings
+        </span>
       </blockquote>
       <div className="grid grid-cols-3 gap-4">
         {stats.map((s) => (
-          <div key={s.label} className="text-center p-4 rounded-lg border" style={{ background: "hsl(var(--light-card))", borderColor: "hsl(var(--light-border))" }}>
+          <div
+            key={s.label}
+            className="text-center p-4 rounded-lg border"
+            style={{ background: "hsl(var(--light-card))", borderColor: "hsl(var(--light-border))" }}
+          >
             <p className="text-2xl md:text-3xl font-mono font-bold text-primary mb-1">{s.value}</p>
-            <p className="text-sm font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>{s.label}</p>
+            <p className="font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+              {s.label}
+            </p>
           </div>
         ))}
       </div>
