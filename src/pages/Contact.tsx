@@ -9,15 +9,45 @@ import { toast } from "sonner";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
 
 const contactRoutes = [
-  { icon: Mail, title: "Investor Relations", description: "General investor inquiries, presentations, and subscription requests.", email: "ir@adytonresources.com" },
-  { icon: Briefcase, title: "Brokers & Analysts", description: "Broker introductions, analyst coverage requests, and institutional meetings.", email: "ir@adytonresources.com" },
-  { icon: Phone, title: "Strategic Partners", description: "Joint venture, technical partnerships, and corporate development discussions.", email: "corporate@adytonresources.com" },
-  { icon: Newspaper, title: "Media", description: "Press inquiries, interview requests, and media accreditation.", email: "media@adytonresources.com" },
+  {
+    icon: Mail,
+    title: "Investor Relations",
+    description: "General investor inquiries, presentations, and subscription requests.",
+    email: "ir@adytonresources.com",
+  },
+  {
+    icon: Briefcase,
+    title: "Brokers & Analysts",
+    description: "Broker introductions, analyst coverage requests, and institutional meetings.",
+    email: "ir@adytonresources.com",
+  },
+  {
+    icon: Phone,
+    title: "Strategic Partners",
+    description: "Joint venture, technical partnerships, and corporate development discussions.",
+    email: "corporate@adytonresources.com",
+  },
+  {
+    icon: Newspaper,
+    title: "Media",
+    description: "Press inquiries, interview requests, and media accreditation.",
+    email: "media@adytonresources.com",
+  },
 ];
 
 const offices = [
-  { city: "Brisbane", country: "Australia", address: "Level XX, XX Street\nBrisbane QLD 4000", type: "Registered Office" },
-  { city: "Port Moresby", country: "Papua New Guinea", address: "XX Floor, XX Building\nPort Moresby, NCD", type: "PNG Operations" },
+  {
+    city: "Brisbane",
+    country: "Australia",
+    address: "Level XX, XX Street\nBrisbane QLD 4000",
+    type: "Registered Office",
+  },
+  {
+    city: "Port Moresby",
+    country: "Papua New Guinea",
+    address: "XX Floor, XX Building\nPort Moresby, NCD",
+    type: "PNG Operations",
+  },
 ];
 
 const Contact = () => {
@@ -25,7 +55,10 @@ const Contact = () => {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  useSEO("Contact Adyton Resources", "Get in touch with Adyton Resources — investor relations, media inquiries, corporate partnerships, and general contact for PNG gold-copper projects.");
+  useSEO(
+    "Contact Adyton Resources",
+    "Get in touch with Adyton Resources — investor relations, media inquiries, corporate partnerships, and general contact for PNG gold-copper projects.",
+  );
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -38,7 +71,7 @@ const Contact = () => {
       const res = await fetch("https://formspree.io/f/xbdqdwoz", {
         method: "POST",
         headers: {
-          "Accept": "application/json",
+          Accept: "application/json",
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
@@ -68,13 +101,18 @@ const Contact = () => {
       <main>
         {/* Hero */}
         <section className="relative bg-background py-16 md:py-20 border-b border-border overflow-hidden">
-          <div className="absolute inset-0 bg-cover bg-center opacity-25" style={{ backgroundImage: `url(${projectHeaderBg})` }} aria-hidden="true" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80" aria-hidden="true" />
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-25"
+            style={{ backgroundImage: `url(${projectHeaderBg})` }}
+            aria-hidden="true"
+          />
+          <div
+            className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80"
+            aria-hidden="true"
+          />
           <div className="container relative z-10">
             <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">GET IN TOUCH</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4">
-              Contact
-            </h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4">Contact</h1>
             <p className="text-lg text-foreground/70 max-w-2xl font-body">
               Reach the right team directly. Select the contact appropriate for your inquiry.
             </p>
@@ -82,15 +120,30 @@ const Contact = () => {
         </section>
 
         {/* Contact Routes */}
-        <section aria-label="Contact departments" className="py-14 md:py-18" style={{ background: "hsl(var(--off-white))" }}>
+        <section
+          aria-label="Contact departments"
+          className="py-14 md:py-18"
+          style={{ background: "hsl(var(--off-white))" }}
+        >
           <div className="container">
             <div className="grid sm:grid-cols-2 gap-5">
               {contactRoutes.map((r) => (
-                <div key={r.title} className="rounded-lg p-6" style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}>
+                <div
+                  key={r.title}
+                  className="rounded-lg p-6"
+                  style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}
+                >
                   <r.icon className="h-7 w-7 text-primary mb-3" aria-hidden="true" />
-                  <h2 className="text-2xl md:text-3xl font-display font-semibold mb-1" style={{ color: "hsl(var(--text-dark))" }}>{r.title}</h2>
-                  <p className="text-sm mb-4 leading-relaxed" style={{ color: "hsl(var(--light-muted-foreground))" }}>{r.description}</p>
-                  <a href={`mailto:${r.email}`} className="text-sm text-primary hover:text-primary/80 font-medium font-body">
+                  <h2
+                    className="text-2xl md:text-3xl font-display font-semibold mb-1"
+                    style={{ color: "hsl(var(--text-dark))" }}
+                  >
+                    {r.title}
+                  </h2>
+                  <p className="mb-4 leading-relaxed" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+                    {r.description}
+                  </p>
+                  <a href={`mailto:${r.email}`} className="text-primary hover:text-primary/80 font-medium font-body">
                     {r.email}
                   </a>
                 </div>
@@ -103,20 +156,20 @@ const Contact = () => {
         <section aria-label="Office locations" className="teal-panel py-14 md:py-18">
           <div className="container">
             <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">OFFICES</p>
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-8">
-              Our Locations
-            </h2>
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-8">Our Locations</h2>
             <div className="grid sm:grid-cols-2 gap-5 max-w-2xl">
               {offices.map((o) => (
                 <address key={o.city} className="rounded-lg p-6 bg-card border border-border not-italic">
                   <div className="flex items-start gap-3 mb-3">
                     <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" aria-hidden="true" />
                     <div>
-                      <h3 className="font-display font-semibold text-foreground">{o.city}, {o.country}</h3>
-                      <p className="text-sm text-primary font-body">{o.type}</p>
+                      <h3 className="font-display font-semibold text-foreground">
+                        {o.city}, {o.country}
+                      </h3>
+                      <p className="text-primary font-body">{o.type}</p>
                     </div>
                   </div>
-                  <p className="text-sm text-foreground/50 font-body whitespace-pre-line">{o.address}</p>
+                  <p className="text-foreground/50 font-body whitespace-pre-line">{o.address}</p>
                 </address>
               ))}
             </div>
@@ -131,9 +184,14 @@ const Contact = () => {
               General Inquiry
             </h2>
             {submitted ? (
-              <div className="rounded-lg p-8 text-center" style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}>
+              <div
+                className="rounded-lg p-8 text-center"
+                style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}
+              >
                 <CheckCircle className="h-10 w-10 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-display font-semibold mb-2" style={{ color: "hsl(var(--text-dark))" }}>Thank You for Your Inquiry</h3>
+                <h3 className="text-xl font-display font-semibold mb-2" style={{ color: "hsl(var(--text-dark))" }}>
+                  Thank You for Your Inquiry
+                </h3>
                 <p className="text-sm leading-relaxed" style={{ color: "hsl(var(--light-muted-foreground))" }}>
                   Your message has been received. A member of our team will respond within one business day.
                 </p>
@@ -141,7 +199,9 @@ const Contact = () => {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <label className="sr-only" htmlFor="contact-name">Your name</label>
+                  <label className="sr-only" htmlFor="contact-name">
+                    Your name
+                  </label>
                   <input
                     id="contact-name"
                     type="text"
@@ -150,9 +210,15 @@ const Contact = () => {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
-                    style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))", color: "hsl(var(--text-dark))" }}
+                    style={{
+                      background: "hsl(var(--light-card))",
+                      border: "1px solid hsl(var(--light-border))",
+                      color: "hsl(var(--text-dark))",
+                    }}
                   />
-                  <label className="sr-only" htmlFor="contact-email">Email address</label>
+                  <label className="sr-only" htmlFor="contact-email">
+                    Email address
+                  </label>
                   <input
                     id="contact-email"
                     type="email"
@@ -161,10 +227,16 @@ const Contact = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
-                    style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))", color: "hsl(var(--text-dark))" }}
+                    style={{
+                      background: "hsl(var(--light-card))",
+                      border: "1px solid hsl(var(--light-border))",
+                      color: "hsl(var(--text-dark))",
+                    }}
                   />
                 </div>
-                <label className="sr-only" htmlFor="contact-subject">Subject</label>
+                <label className="sr-only" htmlFor="contact-subject">
+                  Subject
+                </label>
                 <input
                   id="contact-subject"
                   type="text"
@@ -173,9 +245,15 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   className="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))", color: "hsl(var(--text-dark))" }}
+                  style={{
+                    background: "hsl(var(--light-card))",
+                    border: "1px solid hsl(var(--light-border))",
+                    color: "hsl(var(--text-dark))",
+                  }}
                 />
-                <label className="sr-only" htmlFor="contact-message">Your message</label>
+                <label className="sr-only" htmlFor="contact-message">
+                  Your message
+                </label>
                 <textarea
                   id="contact-message"
                   name="message"
@@ -184,7 +262,11 @@ const Contact = () => {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
-                  style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))", color: "hsl(var(--text-dark))" }}
+                  style={{
+                    background: "hsl(var(--light-card))",
+                    border: "1px solid hsl(var(--light-border))",
+                    color: "hsl(var(--text-dark))",
+                  }}
                 />
                 <Button variant="gold" size="lg" type="submit" disabled={submitting}>
                   {submitting ? <Loader2 className="h-4 w-4 animate-spin" /> : <Mail className="h-4 w-4" />}
@@ -200,7 +282,11 @@ const Contact = () => {
           <div className="container text-center">
             <address className="not-italic text-sm text-foreground/50 font-body">
               <Building2 className="inline h-4 w-4 mr-1" aria-hidden="true" />
-              Investor Relations: <a href="mailto:ir@adytonresources.com" className="text-primary hover:text-primary/80">ir@adytonresources.com</a> | +61 7 3854 2389
+              Investor Relations:{" "}
+              <a href="mailto:ir@adytonresources.com" className="text-primary hover:text-primary/80">
+                ir@adytonresources.com
+              </a>{" "}
+              | +61 7 3854 2389
             </address>
           </div>
         </section>
