@@ -8,7 +8,7 @@ const LiveTicker = () => {
     // This check prevents React StrictMode from injecting the script twice
     if (containerRef.current && containerRef.current.children.length === 0) {
       const script = document.createElement("script");
-      script.src = "https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js";
+      script.src = "https://s3.tradingview.com/external-embedding/embed-widget-tickers.js";
       script.type = "text/javascript";
       script.async = true;
 
