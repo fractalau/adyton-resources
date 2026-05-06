@@ -41,7 +41,7 @@ const NewsSection = () => {
     <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
       <div className="container">
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-3xl md:text-4xl font-display font-bold" style={{ color: "hsl(var(--text-dark))" }}>
+          <h2 className="text-2xl md:text-3xl font-display font-bold" style={{ color: "hsl(var(--text-dark))" }}>
             Latest News &amp; Press Releases
           </h2>
           <Link

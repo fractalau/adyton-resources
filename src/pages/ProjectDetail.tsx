@@ -136,13 +136,13 @@ const ProjectDetail = () => {
 
           {/* Timeline */}
           <div className="mb-16">
-            <h2 className="text-2xl font-display font-bold mb-6" style={{ color: "hsl(var(--light-foreground))" }}>Timeline & Catalysts</h2>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mb-6" style={{ color: "hsl(var(--light-foreground))" }}>Timeline & Catalysts</h2>
             <TimelineComponent items={project.timeline} />
           </div>
 
           {/* Reports & Downloads */}
           <div className="mb-16">
-            <h2 className="text-2xl font-display font-bold mb-6" style={{ color: "hsl(var(--light-foreground))" }}>Results & Reports</h2>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mb-6" style={{ color: "hsl(var(--light-foreground))" }}>Results & Reports</h2>
             <div className="space-y-3">
               <DownloadTile title="NI 43-101 Technical Report" date="March 2024" description="Independent technical report on mineral resource estimate." />
               <DownloadTile title="Exploration Update Presentation" date="January 2025" description="Latest exploration results and upcoming program details." />
@@ -151,7 +151,7 @@ const ProjectDetail = () => {
 
           {/* Related News */}
           <div className="mb-16">
-            <h2 className="text-2xl font-display font-bold mb-6" style={{ color: "hsl(var(--light-foreground))" }}>Related News</h2>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mb-6" style={{ color: "hsl(var(--light-foreground))" }}>Related News</h2>
             <div className="grid sm:grid-cols-2 gap-5">
                <NewsCard title="Project Update Released" date="January 2025" excerpt="Latest work program details and results available through company disclosures." tags={[project.name.split(" ")[0]]} sourceUrl="https://adytonresources.com/press-releases/" />
                <NewsCard title="Exploration Program Summary" date="December 2024" excerpt="Summary of recent exploration activities across the project area." tags={[project.name.split(" ")[0]]} sourceUrl="https://adytonresources.com/press-releases/" />

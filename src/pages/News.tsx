@@ -111,7 +111,7 @@ const News = () => {
           style={{ background: "hsl(var(--off-white))" }}
         >
           <div className="container">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-8" style={{ color: "#3e6174" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mb-8" style={{ color: "#3e6174" }}>
               Press Releases
             </h2>
             {isLoading ? (
@@ -187,7 +187,7 @@ const News = () => {
         {/* News from adytonresources.com */}
         <section id="news-section" aria-label="News" className="py-14 md:py-18 bg-background">
           <div className="container">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-8" style={{ color: "#ffffff" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mb-8" style={{ color: "#ffffff" }}>
               News
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

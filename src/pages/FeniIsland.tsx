@@ -83,7 +83,7 @@ const FeniIsland = () => {
             <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
               TIER 1 GOLD-COPPER DISCOVERY
             </p>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
               Tier 1 Gold-Copper Discovery Potential
             </h2>
             <div
@@ -151,7 +151,7 @@ const FeniIsland = () => {
             <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
               NI 43-101 COMPLIANT RESOURCE
             </p>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6">
               1.46 Moz Au Foundational Resource
             </h2>
             <div className="overflow-x-auto rounded-lg border border-border mb-6">
@@ -194,7 +194,7 @@ const FeniIsland = () => {
             <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
               ACTIVE EXPLORATION — ONGOING RESULTS
             </p>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
               Confirming Scale and New Discoveries
             </h2>
             <p className="leading-relaxed mb-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
@@ -275,7 +275,7 @@ const FeniIsland = () => {
         <section className="py-16 md:py-20 bg-background">
           <div className="container max-w-4xl">
             <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">NOT YET IN THE MRE</p>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6">
               Copper Adds Material Upside to the Kabang Resource
             </h2>
             <div className="leading-relaxed space-y-4 mb-8 font-body text-foreground/70">
@@ -348,7 +348,7 @@ const FeniIsland = () => {
             <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
               DIRECT SHIP ORE OPPORTUNITY
             </p>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
               5 km Pit-to-Ship Distance
             </h2>
             <p className="leading-relaxed font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>

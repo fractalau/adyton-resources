@@ -88,7 +88,7 @@ const Contact = () => {
               {contactRoutes.map((r) => (
                 <div key={r.title} className="rounded-lg p-6" style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}>
                   <r.icon className="h-7 w-7 text-primary mb-3" aria-hidden="true" />
-                  <h2 className="font-display font-semibold mb-1" style={{ color: "hsl(var(--text-dark))" }}>{r.title}</h2>
+                  <h2 className="text-2xl md:text-3xl font-display font-semibold mb-1" style={{ color: "hsl(var(--text-dark))" }}>{r.title}</h2>
                   <p className="text-sm mb-4 leading-relaxed" style={{ color: "hsl(var(--light-muted-foreground))" }}>{r.description}</p>
                   <a href={`mailto:${r.email}`} className="text-sm text-primary hover:text-primary/80 font-medium font-body">
                     {r.email}

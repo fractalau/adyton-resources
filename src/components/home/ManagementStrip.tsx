@@ -25,7 +25,7 @@ const ManagementStrip = () => (
       <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 text-center font-body">
         PROVEN TRACK RECORD
       </p>
-      <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground text-center mb-10">
+      <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground text-center mb-10">
         Led by Experienced Mining Executives
       </h2>
       <div className="grid md:grid-cols-3 gap-6 mb-8">

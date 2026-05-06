@@ -120,7 +120,7 @@ const FergussonIsland = () => {
         <section className="py-16 md:py-20 bg-background">
           <div className="container max-w-4xl">
             <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">DEVELOPMENT PARTNER</p>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6">
               East Vision Investment Holdings (EVIH)
             </h2>
             <div className="leading-relaxed space-y-4 mb-6 font-body text-foreground/70">
@@ -156,7 +156,7 @@ const FergussonIsland = () => {
         <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
           <div className="container max-w-4xl">
             <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">WAPOLU GOLD PROJECT</p>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
               Near-Surface, High-Grade Gold Ready for Restart
             </h2>
             <p className="leading-relaxed mb-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
@@ -281,7 +281,7 @@ const FergussonIsland = () => {
         <section className="py-16 md:py-20 bg-background">
           <div className="container max-w-4xl">
             <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">GAMETA GOLD DEPOSIT</p>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6">
               513 Koz Au Resource Open in All Directions
             </h2>
             <div className="leading-relaxed space-y-4 mb-8 font-body text-foreground/70">
@@ -341,7 +341,7 @@ const FergussonIsland = () => {
         {/* Combined Resource */}
         <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
           <div className="container max-w-4xl">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
               Combined Fergusson Resource Summary
             </h2>
             <div className="overflow-x-auto rounded-lg border" style={{ borderColor: "hsl(var(--light-border))" }}>
@@ -402,7 +402,7 @@ const FergussonIsland = () => {
         <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
           <div className="container max-w-4xl">
             <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">PATH TO PRODUCTION</p>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-8" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mb-8" style={{ color: "hsl(var(--text-dark))" }}>
               Development Pathway
             </h2>
             <div className="grid grid-cols-2 gap-4">

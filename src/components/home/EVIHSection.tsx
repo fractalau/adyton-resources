@@ -10,7 +10,7 @@ const EVIHSection = () => (
       <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
         FULLY FUNDED PATH TO PRODUCTION
       </p>
-      <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
+      <h2 className="text-2xl md:text-3xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
         The EVIH Joint Venture
       </h2>
       <div className="leading-relaxed space-y-4 mb-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>

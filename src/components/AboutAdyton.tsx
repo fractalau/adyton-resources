@@ -1,7 +1,7 @@
 const AboutAdyton = () => (
   <section className="py-14 md:py-18" style={{ background: "#f0f0f0", borderTop: "1px solid hsl(var(--light-border))" }}>
     <div className="container max-w-3xl">
-      <h2 className="text-2xl font-display font-bold mb-4" style={{ color: "hsl(var(--text-dark))" }}>
+      <h2 className="text-2xl md:text-3xl font-display font-bold mb-4" style={{ color: "hsl(var(--text-dark))" }}>
         ABOUT ADYTON RESOURCES CORPORATION
       </h2>
       <p style={{ color: "hsl(var(--text-dark))", fontSize: "18px", lineHeight: 1.75 }}>
