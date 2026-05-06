@@ -280,13 +280,11 @@ const FergussonIsland = () => {
         {/* Gameta */}
         <section className="py-16 md:py-20 bg-background">
           <div className="container max-w-4xl">
-            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
-              GAMETA GOLD DEPOSIT
-            </p>
+            <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">GAMETA GOLD DEPOSIT</p>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
               513 Koz Au Resource Open in All Directions
             </h2>
-            <div className="text-sm leading-relaxed space-y-4 mb-8 font-body text-foreground/70">
+            <div className="leading-relaxed space-y-4 mb-8 font-body text-foreground/70">
               <p>
                 Gameta is located approximately 30 km from Wapolu on Fergusson Island, with potential to combine
                 resources and leverage shared infrastructure for a future dig-and-ship or barge-supported development
@@ -334,7 +332,7 @@ const FergussonIsland = () => {
                 </tbody>
               </table>
             </div>
-            <p className="text-sm italic font-body text-foreground/40">
+            <p className="italic font-body text-foreground/40">
               Mineral resources are not mineral reserves and have not demonstrated economic viability.
             </p>
           </div>
@@ -343,7 +341,7 @@ const FergussonIsland = () => {
         {/* Combined Resource */}
         <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
           <div className="container max-w-4xl">
-            <h2 className="text-2xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
               Combined Fergusson Resource Summary
             </h2>
             <div className="overflow-x-auto rounded-lg border" style={{ borderColor: "hsl(var(--light-border))" }}>
@@ -403,24 +401,22 @@ const FergussonIsland = () => {
         {/* Development Timeline */}
         <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
           <div className="container max-w-4xl">
-            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
-              PATH TO PRODUCTION
-            </p>
-            <h2 className="text-2xl font-display font-bold mb-8" style={{ color: "hsl(var(--text-dark))" }}>
+            <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">PATH TO PRODUCTION</p>
+            <h2 className="text-3xl md:text-4xl font-display font-bold mb-8" style={{ color: "hsl(var(--text-dark))" }}>
               Development Pathway
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 gap-4">
               {timeline.map((t, i) => (
                 <div
                   key={i}
                   className="relative p-4 rounded-lg border"
                   style={{ background: "hsl(var(--light-card))", borderColor: "hsl(var(--light-border))" }}
                 >
-                  <p className="text-sm font-mono font-bold text-primary mb-2">{t.period}</p>
-                  <h4 className="text-sm font-display font-semibold mb-1" style={{ color: "hsl(var(--text-dark))" }}>
+                  <p className="font-mono font-bold text-primary mb-2">{t.period}</p>
+                  <h4 className="text-lg font-display font-semibold mb-1" style={{ color: "hsl(var(--text-dark))" }}>
                     {t.title}
                   </h4>
-                  <p className="text-sm font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+                  <p className="font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
                     {t.desc}
                   </p>
                   {i < timeline.length - 1 && (
@@ -429,7 +425,7 @@ const FergussonIsland = () => {
                 </div>
               ))}
             </div>
-            <p className="text-sm italic font-body mt-4" style={{ color: "hsl(var(--light-muted-foreground) / 0.6)" }}>
+            <p className="italic font-body mt-4" style={{ color: "hsl(var(--light-muted-foreground) / 0.6)" }}>
               Timeline represents management targets based on current plans. Actual timing subject to permitting,
               regulatory approvals, and other factors outside Adyton's control.
             </p>
