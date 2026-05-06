@@ -386,10 +386,7 @@ const Investors = () => {
                   </p>
                 </div>
                 <Button variant="gold" size="lg" asChild>
-                  <a href="/Adyton-Investor-Deck.pdf" download>
-                    <Download className="h-4 w-4" />
-                    Download Deck
-                  </a>
+                  <a href="/Adyton-Investor-Deck.pdf">View Deck</a>
                 </Button>
               </div>
             )}
