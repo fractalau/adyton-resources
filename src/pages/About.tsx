@@ -187,9 +187,9 @@ const About = () => {
                     <img src={b.photo} alt={b.name} className="w-full h-full object-cover object-top" />
                   </div>
                   <div className="p-5">
-                    <h3 className="font-display font-semibold text-sm text-foreground">{b.name}</h3>
-                    <p className="text-sm text-primary mb-2 font-body">{b.role}</p>
-                    <p className="text-sm text-foreground/50 leading-relaxed font-body">{b.bio}</p>
+                    <h3 className="text-xl font-display font-semibold text-sm text-foreground">{b.name}</h3>
+                    <p className="text-primary mb-2 font-body">{b.role}</p>
+                    <p className="text-foreground/50 leading-relaxed font-body">{b.bio}</p>
                   </div>
                 </article>
               ))}
