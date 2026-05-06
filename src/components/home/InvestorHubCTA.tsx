@@ -5,10 +5,8 @@ import { Download, FileText, ExternalLink, Bell } from "lucide-react";
 const InvestorHubCTA = () => (
   <section className="teal-panel py-16 md:py-20">
     <div className="container text-center">
-      <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">
-        Investor Hub
-      </h2>
-      <p className="text-foreground/70 max-w-xl mx-auto mb-10 text-sm md:text-base font-body">
+      <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">Investor Hub</h2>
+      <p className="text-foreground/70 max-w-xl mx-auto mb-10 md:text-base font-body">
         Fast access to materials for diligence and research.
       </p>
       <div className="flex flex-wrap justify-center gap-3 mb-6">
