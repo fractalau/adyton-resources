@@ -18,7 +18,7 @@ const Footer = () => (
         </div>
 
         <div className="space-y-3">
-          <h4 className="text-sm font-display font-semibold text-foreground">Projects</h4>
+          <h4 className="font-display font-semibold text-foreground">Projects</h4>
           <div className="flex flex-col gap-2">
             <Link
               to="/projects/feni"
@@ -36,7 +36,7 @@ const Footer = () => (
         </div>
 
         <div className="space-y-3">
-          <h4 className="text-sm font-display font-semibold text-foreground">Investors</h4>
+          <h4 className="font-display font-semibold text-foreground">Investors</h4>
           <div className="flex flex-col gap-2">
             <Link to="/investors" className="text-sm text-foreground/60 hover:text-primary transition-colors font-body">
               Investor Hub
@@ -67,7 +67,7 @@ const Footer = () => (
         </div>
 
         <div className="space-y-3">
-          <h4 className="text-sm font-display font-semibold text-foreground">Company</h4>
+          <h4 className="font-display font-semibold text-foreground">Company</h4>
           <div className="flex flex-col gap-2">
             <Link to="/about" className="text-sm text-foreground/60 hover:text-primary transition-colors font-body">
               About Adyton
@@ -85,7 +85,7 @@ const Footer = () => (
               PNG & Community
             </Link>
           </div>
-          <h4 className="text-sm font-display font-semibold text-foreground pt-2">News</h4>
+          <h4 className="font-display font-semibold text-foreground pt-2">News</h4>
           <div className="flex flex-col gap-2">
             <Link to="/news" className="text-sm text-foreground/60 hover:text-primary transition-colors font-body">
               Latest Releases
@@ -94,7 +94,7 @@ const Footer = () => (
         </div>
 
         <div className="space-y-3">
-          <h4 className="text-sm font-display font-semibold text-foreground">Contact</h4>
+          <h4 className="font-display font-semibold text-foreground">Contact</h4>
           <address className="flex flex-col gap-2 text-sm text-foreground/60 font-body not-italic">
             <a href="mailto:info@adytonresources.com" className="hover:text-primary transition-colors">
               info@adytonresources.com
@@ -106,7 +106,7 @@ const Footer = () => (
               Brisbane QLD 4000 Australia
             </span>
           </address>
-          <h4 className="text-sm font-display font-semibold text-foreground pt-2">Follow Us</h4>
+          <h4 className="font-display font-semibold text-foreground pt-2">Follow Us</h4>
           <div className="flex items-center gap-3">
             <a
               href="https://www.linkedin.com/company/adyton-resources"
