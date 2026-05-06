@@ -78,7 +78,7 @@ const Header = () => {
             href="https://www.linkedin.com/company/adyton-resources"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/90 hover:text-white transition-colors"
+            className="transition-colors hover:opacity-80" style={{ color: "#1b4e6a" }}
             aria-label="LinkedIn"
           >
             <Linkedin className="h-4 w-4" />
@@ -87,7 +87,7 @@ const Header = () => {
             href="https://x.com/Adyton_TSXADY"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/90 hover:text-white transition-colors"
+            className="transition-colors hover:opacity-80" style={{ color: "#1b4e6a" }}
             aria-label="X"
           >
             <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
@@ -98,7 +98,7 @@ const Header = () => {
             href="https://www.youtube.com/@AdytonResources"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/90 hover:text-white transition-colors"
+            className="transition-colors hover:opacity-80" style={{ color: "#1b4e6a" }}
             aria-label="YouTube"
           >
             <Youtube className="h-4 w-4" />
@@ -107,7 +107,7 @@ const Header = () => {
             href="https://adytonresources.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/90 hover:text-white transition-colors"
+            className="transition-colors hover:opacity-80" style={{ color: "#1b4e6a" }}
             aria-label="Website"
           >
             <Globe className="h-4 w-4" />
