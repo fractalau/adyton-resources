@@ -38,7 +38,7 @@ const NavDropdown = ({ label, items, isActive }: DropdownProps) => {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className={`flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${
+        className={`flex items-center gap-1 px-3 py-2 transition-colors hover:text-primary ${
           isActive ? "text-primary" : "text-foreground/70"
         }`}
       >
@@ -52,7 +52,7 @@ const NavDropdown = ({ label, items, isActive }: DropdownProps) => {
               key={item.path}
               to={item.path}
               onClick={() => setOpen(false)}
-              className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-muted transition-colors"
+              className="block px-4 py-2.5 text-foreground/80 hover:text-primary hover:bg-muted transition-colors"
             >
               {item.label}
             </Link>
@@ -73,8 +73,8 @@ const Header = () => {
   return (
     <>
       <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background">
-        <div className="container flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 py-4">
+        <div className="container flex h-16 items-center justify-between">
+          <Link to="/" className="flex items-center gap-2">
             <img src={logo} alt="Adyton Resources" className="h-16 invert" />
           </Link>
 
@@ -139,17 +139,17 @@ const Header = () => {
               <Link
                 to="/"
                 onClick={() => setMobileOpen(false)}
-                className="px-3 py-2.5 font-medium text-foreground/70 hover:text-primary"
+                className="px-3 py-2.5 text-sm font-medium text-foreground/70 hover:text-primary"
               >
                 Home
               </Link>
-              <p className="px-3 pt-3 pb-1 font-semibold text-primary uppercase tracking-wider">Projects</p>
+              <p className="px-3 pt-3 pb-1 text-xs font-semibold text-primary uppercase tracking-wider">Projects</p>
               {projectsDropdown.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
                   onClick={() => setMobileOpen(false)}
-                  className="px-6 py-2 text-foreground/70 hover:text-primary"
+                  className="px-6 py-2 text-sm text-foreground/70 hover:text-primary"
                 >
                   {item.label}
                 </Link>
@@ -157,17 +157,17 @@ const Header = () => {
               <Link
                 to="/investors"
                 onClick={() => setMobileOpen(false)}
-                className="px-3 py-2.5 font-medium text-foreground/70 hover:text-primary"
+                className="px-3 py-2.5 text-sm font-medium text-foreground/70 hover:text-primary"
               >
                 Investors
               </Link>
-              <p className="px-3 pt-3 pb-1 font-semibold text-primary uppercase tracking-wider">Company</p>
+              <p className="px-3 pt-3 pb-1 text-xs font-semibold text-primary uppercase tracking-wider">Company</p>
               {companyDropdown.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
                   onClick={() => setMobileOpen(false)}
-                  className="px-6 py-2 text-foreground/70 hover:text-primary"
+                  className="px-6 py-2 text-sm text-foreground/70 hover:text-primary"
                 >
                   {item.label}
                 </Link>
@@ -175,14 +175,14 @@ const Header = () => {
               <Link
                 to="/news"
                 onClick={() => setMobileOpen(false)}
-                className="px-3 py-2.5 font-medium text-foreground/70 hover:text-primary"
+                className="px-3 py-2.5 text-sm font-medium text-foreground/70 hover:text-primary"
               >
                 News
               </Link>
               <Link
                 to="/contact"
                 onClick={() => setMobileOpen(false)}
-                className="px-3 py-2.5 font-medium text-foreground/70 hover:text-primary"
+                className="px-3 py-2.5 text-sm font-medium text-foreground/70 hover:text-primary"
               >
                 Contact
               </Link>
