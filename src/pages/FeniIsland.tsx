@@ -58,7 +58,7 @@ const FeniIsland = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80" />
           <div className="container relative z-10">
-            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
+            <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
               FLAGSHIP GROWTH ASSET
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
@@ -80,14 +80,14 @@ const FeniIsland = () => {
         {/* Geological Setting */}
         <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
           <div className="container max-w-4xl">
-            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
+            <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
               TIER 1 GOLD-COPPER DISCOVERY
             </p>
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
               Tier 1 Gold-Copper Discovery Potential
             </h2>
             <div
-              className="text-sm leading-relaxed space-y-4 mb-8 font-body"
+              className="leading-relaxed space-y-4 mb-8 font-body"
               style={{ color: "hsl(var(--light-muted-foreground))" }}
             >
               <p>
@@ -148,7 +148,7 @@ const FeniIsland = () => {
         {/* Kabang MRE */}
         <section className="py-16 md:py-20 bg-background">
           <div className="container max-w-4xl">
-            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
+            <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
               NI 43-101 COMPLIANT RESOURCE
             </p>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
@@ -174,12 +174,12 @@ const FeniIsland = () => {
                 </tbody>
               </table>
             </div>
-            <p className="text-sm italic text-foreground/40 mb-6 font-body">
+            <p className="italic text-foreground/40 mb-6 font-body">
               NI 43-101 Technical Report on the Feni Gold-Copper Property, New Ireland Province, Papua New Guinea, dated
               October 14, 2021. Qualified Person: Dr. Chris Bowden PhD, GCMEE, FAusIMM(CP), FSEG. Mineral resources are
               not mineral reserves and have not demonstrated economic viability.
             </p>
-            <p className="text-sm text-foreground/70 font-body leading-relaxed">
+            <p className="text-foreground/70 font-body leading-relaxed">
               The Kabang deposit represents a foundational resource with significant upside potential. Mineralisation
               remains open along strike and at depth. Multiple priority targets across Feni Island — including Dome,
               Saddle, Caldera, and Danmagal — have not yet been systematically drill-tested, and over 7 km² of proximal
@@ -191,16 +191,13 @@ const FeniIsland = () => {
         {/* Drill Program */}
         <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
           <div className="container max-w-4xl">
-            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
+            <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
               ACTIVE EXPLORATION — ONGOING RESULTS
             </p>
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
               Confirming Scale and New Discoveries
             </h2>
-            <p
-              className="text-sm leading-relaxed mb-8 font-body"
-              style={{ color: "hsl(var(--light-muted-foreground))" }}
-            >
+            <p className="leading-relaxed mb-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
               Adyton has completed 10,663 m of its ongoing drill program at Feni Island, successfully confirming
               high-grade extensions to the north and documenting resource continuity across the Kabang system. New
               gold-copper mineralised zones have been identified in the February 2026 program.
@@ -267,7 +264,7 @@ const FeniIsland = () => {
                 </tbody>
               </table>
             </div>
-            <p className="text-sm italic font-body" style={{ color: "hsl(var(--light-muted-foreground) / 0.6)" }}>
+            <p className="italic font-body" style={{ color: "hsl(var(--light-muted-foreground) / 0.6)" }}>
               All intercepts are downhole lengths. True widths not yet determined. Cu assays pending for some holes. See
               individual press releases on Newsfile for full details.
             </p>
@@ -277,13 +274,11 @@ const FeniIsland = () => {
         {/* Copper Upside */}
         <section className="py-16 md:py-20 bg-background">
           <div className="container max-w-4xl">
-            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
-              NOT YET IN THE MRE
-            </p>
+            <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">NOT YET IN THE MRE</p>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
               Copper Adds Material Upside to the Kabang Resource
             </h2>
-            <div className="text-sm leading-relaxed space-y-4 mb-8 font-body text-foreground/70">
+            <div className="leading-relaxed space-y-4 mb-8 font-body text-foreground/70">
               <p>
                 Copper mineralisation at Feni was confirmed through assaying of Adyton's ADK-series and FDD-series drill
                 holes. Copper is not included in the current 1.46 Moz Kabang MRE — most historical holes through
@@ -326,7 +321,7 @@ const FeniIsland = () => {
                 </tbody>
               </table>
             </div>
-            <p className="text-sm italic font-body text-foreground/40">
+            <p className="italic font-body text-foreground/40">
               Copper upside is exploration potential only and is not included in any current NI 43-101 Mineral Resource
               Estimate.
             </p>
@@ -339,7 +334,7 @@ const FeniIsland = () => {
             <h3 className="text-xl font-display font-bold mb-3" style={{ color: "hsl(var(--text-dark))" }}>
               Global Ore Discovery Collaboration
             </h3>
-            <p className="text-sm leading-relaxed font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+            <p className="leading-relaxed font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
               In December 2025, Adyton engaged world-class geological consulting group Global Ore Discovery to provide
               expert oversight and targeting strategies for the Feni exploration program, leveraging their deep
               expertise in epithermal and porphyry systems.
@@ -350,13 +345,13 @@ const FeniIsland = () => {
         {/* Logistics */}
         <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
           <div className="container max-w-4xl">
-            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
+            <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
               DIRECT SHIP ORE OPPORTUNITY
             </p>
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
               5 km Pit-to-Ship Distance
             </h2>
-            <p className="text-sm leading-relaxed font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+            <p className="leading-relaxed font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
               Feni Island's direct tidewater access means the pit-to-ship distance for any future operation is
               approximately 5 km — compared to 1,350 km for the Ok Tedi operation in PNG's highlands. Coastal access
               reduces logistical complexity, supports lower capital intensity, and simplifies permitting and
