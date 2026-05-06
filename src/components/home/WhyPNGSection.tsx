@@ -13,7 +13,7 @@ const WhyPNGSection = () => (
   <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
     <div className="container max-w-4xl">
       <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">TIER-ONE MINING ADDRESS</p>
-      <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
+      <h2 className="text-2xl md:text-3xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
         Papua New Guinea: <span className="block">World-Class Geological Endowment</span>
       </h2>
       <p className="leading-relaxed mb-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>

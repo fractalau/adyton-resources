@@ -379,7 +379,7 @@ const Investors = () => {
                   <p className="uppercase tracking-wider text-primary font-semibold mb-1 font-body">
                     LATEST INVESTOR DECK
                   </p>
-                  <h2 className="text-xl md:text-2xl font-display font-bold text-foreground mb-1">{featured.title}</h2>
+                  <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-1">{featured.title}</h2>
                   <p className="text-foreground/60 font-body">{featured.description}</p>
                   <p className="text-foreground/40 mt-1 font-body">
                     {featured.date} · {featured.fileType} · {featured.fileSize}
@@ -404,7 +404,7 @@ const Investors = () => {
         >
           <div className="container max-w-5xl">
             <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">DOCUMENT LIBRARY</p>
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-8" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mb-8" style={{ color: "hsl(var(--text-dark))" }}>
               Reports, Filings & Presentations
             </h2>
 

@@ -8,7 +8,7 @@ const TwoPillarSection = () => (
         A TWO-PILLAR STRATEGY
       </p>
       <h2
-        className="text-3xl md:text-4xl font-display font-bold text-center mb-3"
+        className="text-2xl md:text-3xl font-display font-bold text-center mb-3"
         style={{ color: "hsl(var(--text-dark))" }}
       >
         Two Island Assets. Two Value Drivers.

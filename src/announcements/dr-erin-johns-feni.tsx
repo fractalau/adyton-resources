@@ -48,7 +48,7 @@ const DrErinJohnsFeni = () => (
               Company's flagship <strong>Feni Gold-Copper Project</strong> in Papua New Guinea.
             </p>
 
-            <h2 className="text-xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
               Highlights
             </h2>
 
@@ -105,7 +105,7 @@ const DrErinJohnsFeni = () => (
               <footer className="mt-2 not-italic text-sm font-semibold">— Dr. Erin Johns</footer>
             </blockquote>
 
-            <h2 className="text-xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
               About Dr. Erin Johns
             </h2>
 
@@ -135,7 +135,7 @@ const DrErinJohnsFeni = () => (
               </li>
             </ul>
 
-            <h2 className="text-xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
               About the Feni Gold-Copper Project
             </h2>
 
@@ -147,7 +147,7 @@ const DrErinJohnsFeni = () => (
               targets regionally.
             </p>
 
-            <h2 className="text-xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
               About Adyton Resources Corporation
             </h2>
 

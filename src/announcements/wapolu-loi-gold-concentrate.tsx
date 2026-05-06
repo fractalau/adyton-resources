@@ -48,7 +48,7 @@ const WapoluLoiGoldConcentrate = () => (
               <strong>Brisbane, Australia – December 10, 2025 – Adyton Resources Corporation</strong> (TSX Venture: <strong>ADY</strong>) ("<strong>Adyton</strong>" or the "<strong>Company</strong>") is pleased to announce that it has received a Non-Binding LOI from Korean group Hyosung TNC Corporation on December 8, 2025 for the purchase of gold concentrate from its <strong>Wapolu Gold Project</strong> in Papua New Guinea.
             </p>
 
-            <h2 className="text-xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
               Highlights
             </h2>
 
@@ -72,7 +72,7 @@ const WapoluLoiGoldConcentrate = () => (
               <footer className="mt-2 not-italic text-sm font-semibold">— Gary Wang, Chief Executive Officer, EVIH</footer>
             </blockquote>
 
-            <h2 className="text-xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
               Project Update
             </h2>
 
@@ -80,7 +80,7 @@ const WapoluLoiGoldConcentrate = () => (
               Adyton, together with its joint venture (JV) partner EVIH, is advancing the Wapolu project with a targeted production restart in late 2026. Current work streams are focusing on completing all precursor inputs to the submission of the Mining Lease (ML) application and the Conservation and Environment Protection Authority (CEPA) permit.
             </p>
 
-            <h2 className="text-xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
               Background
             </h2>
 
@@ -96,7 +96,7 @@ const WapoluLoiGoldConcentrate = () => (
               The neighboring Gameta project is an advanced exploration asset being prepared to be taken into permitting and development, that lies approximately 30 km from Wapolu and has the benefit of being able to leverage some of the Wapolu infrastructure, such as the airstrip.
             </p>
 
-            <h2 className="text-xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
               Resource Estimate
             </h2>
 
@@ -108,7 +108,7 @@ const WapoluLoiGoldConcentrate = () => (
               See the technical report entitled "NI 43-101 Technical Report on the Fergusson Gold Property, Milne Bay Province, Papua New Guinea" dated October 14, 2022 and prepared for the Company in accordance with National Instrument 43-101. Mineral resources are not mineral reserves and have not demonstrated economic viability.
             </p>
 
-            <h2 className="text-xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
               About Adyton Resources Corporation
             </h2>
 

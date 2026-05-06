@@ -48,7 +48,7 @@ const FeniGlobalOreDiscovery = () => (
               <strong>Brisbane, Australia – December 17, 2025 – Adyton Resources Corporation</strong> (TSX Venture: <strong>ADY</strong>) ("Adyton" or the "Company") is pleased to announce the formal engagement of world-class geological consulting group, <strong>Global Ore Discovery ("Global Ore")</strong>. The Company has engaged Global Ore to <strong>collaboratively advance</strong> a high-priority integrated technical exploration program by providing expert oversight and targeting strategies. This strategic collaboration leverages Global Ore's deep epithermal and porphyry expertise with Adyton's enhanced in-house technical capacity, including <strong>Dr. Erin Johns as an Expert Consultant</strong>.
             </p>
 
-            <h2 className="text-xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
               Strategic Rationale and Initiative Highlights
             </h2>
 
@@ -70,7 +70,7 @@ const FeniGlobalOreDiscovery = () => (
               <footer className="mt-2 not-italic text-sm font-semibold">— Tim Crossley, Chief Executive Officer</footer>
             </blockquote>
 
-            <h2 className="text-xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
               Global Ore Discovery: Engagement Objectives
             </h2>
 
@@ -82,7 +82,7 @@ const FeniGlobalOreDiscovery = () => (
               Global Ore Discovery will deploy personnel on site, provide integrated targeting for optimal drill hole placement, as well as deliver strategic advice and insights to enable Adyton to zero in on the best targets faster and maximise the potential of Adyton's aggressive "whole of island" exploration strategy at its 100% controlled Feni Au-Cu project.
             </p>
 
-            <h2 className="text-xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
               Global Ore Discovery: Track Record
             </h2>
 
@@ -90,7 +90,7 @@ const FeniGlobalOreDiscovery = () => (
               Global Ore Discovery is a highly experienced geological consulting team with extensive knowledge of many of the world's premier porphyry and epithermal belts in the Americas, Australasia, and Central Asia, where Global Ore, and its principal consultants, have a track record of directly contributing to a number of high value gold, silver and copper discoveries, including Batu Hija PCD and Toka Tindung District, Indonesia, and brownfield expansion of the Wafi Golpu Resource in Papua New Guinea.
             </p>
 
-            <h2 className="text-xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
               Go-Forward Work Program and Next Steps
             </h2>
 
@@ -110,7 +110,7 @@ const FeniGlobalOreDiscovery = () => (
               Adyton is committed to providing regular updates as the work program is executed and stages are finalized and outcomes are achieved.
             </p>
 
-            <h2 className="text-xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mt-10 mb-4" style={{ color: "hsl(var(--text-dark))" }}>
               About the Feni Gold-Copper Project
             </h2>
 

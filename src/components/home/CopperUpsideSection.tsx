@@ -4,7 +4,7 @@ const CopperUpsideSection = () => (
       <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
         HIDDEN VALUE — NOT YET IN THE MRE
       </p>
-      <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
+      <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6">
         Significant Copper Upside at Feni
       </h2>
       <div className="leading-relaxed space-y-4 mb-8 font-body text-foreground/70">
