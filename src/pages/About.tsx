@@ -239,7 +239,7 @@ const About = () => {
                 <div key={m.year} className="flex gap-6">
                   <time className="text-lg font-mono font-bold text-primary shrink-0 w-16">{m.year}</time>
                   <div className="border-l-2 border-primary/20 pl-6">
-                    <p className="text-sm leading-relaxed" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+                    <p className="leading-relaxed" style={{ color: "hsl(var(--light-muted-foreground))" }}>
                       {m.event}
                     </p>
                   </div>
