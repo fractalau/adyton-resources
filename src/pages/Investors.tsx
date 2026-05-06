@@ -244,7 +244,7 @@ const downloads = [
     fileSize: "—",
     category: "Corporate Documents",
     featured: false,
-    href: "https://www.sedarplus.ca/csa-party/records/record.html?keyword=adyton&category=interim_financial_statements",
+    href: "/reports/ADY-FS-Dec-31-2024.pdf",
   },
   {
     title: "SEDAR+ Filings",
