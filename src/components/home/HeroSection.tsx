@@ -12,7 +12,7 @@ const HeroSection = () => (
     <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-background/10" />
     <div className="container relative z-10 py-20 md:py-28">
       <div className="max-w-2xl">
-        <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-4 font-body">
+        <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-4 font-body">
           PNG · GOLD + COPPER
         </p>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1] mb-6">

@@ -89,7 +89,7 @@ const News = () => {
             aria-hidden="true"
           />
           <div className="container relative z-10">
-            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
+            <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
               PRESS RELEASES
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4">
