@@ -18,8 +18,8 @@ const NewsCard = ({ title, date, excerpt, tags = [], sourceUrl }: NewsCardProps)
       ))}
     </div>
     <p className="text-sm mb-2 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>{date}</p>
-    <h3 className="font-display font-semibold text-sm mb-2 line-clamp-3" style={{ color: "hsl(var(--light-foreground))" }}>{title}</h3>
-    <p className="text-sm line-clamp-2 mb-4 flex-1 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>{excerpt}</p>
+    <h3 className="font-display font-semibold text-xl mb-2 line-clamp-3" style={{ color: "hsl(var(--light-foreground))" }}>{title}</h3>
+    <p className="line-clamp-2 mb-4 flex-1 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>{excerpt}</p>
     <Button variant="gold-outline" size="sm" asChild className="w-full">
       <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
         Read Full Release <ExternalLink className="h-3.5 w-3.5 ml-1" />
