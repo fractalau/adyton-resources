@@ -1,4 +1,4 @@
-import { FileText, Download, ExternalLink } from "lucide-react";
+import { FileText, ExternalLink } from "lucide-react";
 
 interface DownloadTileProps {
   title: string;
@@ -11,7 +11,7 @@ interface DownloadTileProps {
 
 const DownloadTile = ({ title, date, description, fileType = "PDF", fileSize = "2.4 MB", href }: DownloadTileProps) => {
   const isExternal = href?.startsWith("http");
-  const Icon = isExternal ? ExternalLink : Download;
+  const Icon = ExternalLink;
 
   const content = (
     <>
