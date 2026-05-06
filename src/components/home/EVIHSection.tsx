@@ -7,7 +7,7 @@ const stats = [
 const EVIHSection = () => (
   <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
     <div className="container max-w-4xl">
-      <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
+      <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
         FULLY FUNDED PATH TO PRODUCTION
       </p>
       <h2 className="text-3xl md:text-4xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>

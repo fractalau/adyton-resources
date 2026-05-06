@@ -79,7 +79,7 @@ const About = () => {
         <div className="absolute inset-0 bg-cover bg-center opacity-25" style={{ backgroundImage: `url(${projectHeaderBg})` }} aria-hidden="true" />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80" aria-hidden="true" />
         <div className="container relative z-10">
-          <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">COMPANY</p>
+          <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">COMPANY</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4">
             About Adyton Resources
           </h1>
@@ -92,7 +92,7 @@ const About = () => {
       {/* Company Pillars */}
       <section aria-label="Company approach" className="py-14 md:py-18" style={{ background: "hsl(var(--off-white))" }}>
         <div className="container">
-          <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">OUR APPROACH</p>
+          <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">OUR APPROACH</p>
           <h2 className="text-2xl md:text-3xl font-display font-bold mb-10" style={{ color: "hsl(var(--text-dark))" }}>
             Built for Discovery, Structured for Growth
           </h2>
@@ -111,7 +111,7 @@ const About = () => {
       {/* Management */}
       <section id="management" aria-label="Management team" className="teal-panel py-14 md:py-18">
         <div className="container">
-          <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">LEADERSHIP</p>
+          <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">LEADERSHIP</p>
           <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-2">
             Management Team
           </h2>
@@ -153,7 +153,7 @@ const About = () => {
       {/* Company History / Timeline */}
       <section id="community" aria-label="Company milestones" className="py-14 md:py-18" style={{ background: "hsl(var(--off-white))" }}>
         <div className="container max-w-3xl">
-          <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">COMPANY HISTORY</p>
+          <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">COMPANY HISTORY</p>
           <h2 className="text-2xl md:text-3xl font-display font-bold mb-8" style={{ color: "hsl(var(--text-dark))" }}>
             Key Milestones
           </h2>

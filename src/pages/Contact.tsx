@@ -71,7 +71,7 @@ const Contact = () => {
           <div className="absolute inset-0 bg-cover bg-center opacity-25" style={{ backgroundImage: `url(${projectHeaderBg})` }} aria-hidden="true" />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80" aria-hidden="true" />
           <div className="container relative z-10">
-            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">GET IN TOUCH</p>
+            <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">GET IN TOUCH</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4">
               Contact
             </h1>
@@ -102,7 +102,7 @@ const Contact = () => {
         {/* Offices */}
         <section aria-label="Office locations" className="teal-panel py-14 md:py-18">
           <div className="container">
-            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">OFFICES</p>
+            <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">OFFICES</p>
             <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-8">
               Our Locations
             </h2>
@@ -126,7 +126,7 @@ const Contact = () => {
         {/* Contact Form */}
         <section aria-label="Contact form" className="py-14 md:py-18" style={{ background: "hsl(var(--off-white))" }}>
           <div className="container max-w-2xl">
-            <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">SEND A MESSAGE</p>
+            <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">SEND A MESSAGE</p>
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-8" style={{ color: "hsl(var(--text-dark))" }}>
               General Inquiry
             </h2>

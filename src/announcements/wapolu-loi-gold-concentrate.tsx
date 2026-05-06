@@ -29,7 +29,7 @@ const WapoluLoiGoldConcentrate = () => (
       {/* Header */}
       <section className="py-16 md:py-20" style={{ background: "#10374c" }}>
         <div className="container max-w-3xl">
-          <p className="text-sm uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">ANNOUNCEMENT</p>
+          <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">ANNOUNCEMENT</p>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white leading-tight mb-4">
             {ARTICLE.title}
           </h1>
