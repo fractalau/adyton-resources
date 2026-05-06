@@ -135,7 +135,7 @@ const FeniIsland = () => {
             </tbody>
           </table>
         </div>
-        <p className="text-[10px] italic text-foreground/40 mb-6 font-body">
+        <p className="text-sm italic text-foreground/40 mb-6 font-body">
           NI 43-101 Technical Report on the Feni Gold-Copper Property, New Ireland Province, Papua New Guinea, dated October 14, 2021. Qualified Person: Dr. Chris Bowden PhD, GCMEE, FAusIMM(CP), FSEG. Mineral resources are not mineral reserves and have not demonstrated economic viability.
         </p>
         <p className="text-sm text-foreground/70 font-body leading-relaxed">
@@ -183,7 +183,7 @@ const FeniIsland = () => {
             </tbody>
           </table>
         </div>
-        <p className="text-[10px] italic font-body" style={{ color: "hsl(var(--light-muted-foreground) / 0.6)" }}>
+        <p className="text-sm italic font-body" style={{ color: "hsl(var(--light-muted-foreground) / 0.6)" }}>
           All intercepts are downhole lengths. True widths not yet determined. Cu assays pending for some holes. See individual press releases on Newsfile for full details.
         </p>
       </div>
@@ -231,7 +231,7 @@ const FeniIsland = () => {
             </tbody>
           </table>
         </div>
-        <p className="text-[10px] italic font-body text-foreground/40">
+        <p className="text-sm italic font-body text-foreground/40">
           Copper upside is exploration potential only and is not included in any current NI 43-101 Mineral Resource Estimate.
         </p>
       </div>

@@ -22,7 +22,7 @@ const CopperUpsideSection = () => (
         <p className="text-3xl md:text-4xl font-mono font-bold text-primary mb-2">Up to ~56%</p>
         <p className="text-sm text-foreground/60 font-body">higher AuEq grade where both Au and Cu have been assayed</p>
       </div>
-      <p className="text-[10px] mt-4 italic font-body text-foreground/40">
+      <p className="text-sm mt-4 italic font-body text-foreground/40">
         Copper upside represents exploration potential only and is not included in any current NI 43-101 Mineral Resource Estimate.
       </p>
     </div>

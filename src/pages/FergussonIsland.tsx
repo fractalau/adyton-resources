@@ -94,7 +94,7 @@ const FergussonIsland = () => {
           <p>EVIH's parent will provide a shareholder loan to fund a minimum 2 Mtpa Life of Mine project. Timeline to shovel-ready: 10–12 months from funding milestone.</p>
           <p>On December 10, 2025, Adyton received a non-binding Letter of Intent from Korean trading group Hyosung TNC Corporation for the purchase of gold concentrate from Wapolu — demonstrating strong market demand for project output.</p>
         </div>
-        <p className="text-[10px] italic font-body text-foreground/40">
+        <p className="text-sm italic font-body text-foreground/40">
           LOI is non-binding. No binding offtake agreement has been entered into. See December 10, 2025 press release for full details.
         </p>
       </div>
@@ -143,7 +143,7 @@ const FergussonIsland = () => {
             </tbody>
           </table>
         </div>
-        <p className="text-[10px] italic font-body mb-8" style={{ color: "hsl(var(--light-muted-foreground) / 0.6)" }}>
+        <p className="text-sm italic font-body mb-8" style={{ color: "hsl(var(--light-muted-foreground) / 0.6)" }}>
           Filed on SEDAR+ February 25, 2026. Mineral resources are not mineral reserves and have not demonstrated economic viability.
         </p>
 
@@ -172,7 +172,7 @@ const FergussonIsland = () => {
                   <td className="text-right px-3 py-1.5" style={{ color: "hsl(var(--light-muted-foreground))" }}>{r.from}</td>
                   <td className="text-right px-3 py-1.5" style={{ color: "hsl(var(--light-muted-foreground))" }}>{r.interval}</td>
                   <td className="text-right px-3 py-1.5 text-primary font-semibold">{r.au}</td>
-                  <td className="px-3 py-1.5 text-[10px]" style={{ color: "hsl(var(--light-muted-foreground))" }}>{r.notes}</td>
+                  <td className="px-3 py-1.5 text-sm" style={{ color: "hsl(var(--light-muted-foreground))" }}>{r.notes}</td>
                 </tr>
               ))}
             </tbody>
@@ -226,7 +226,7 @@ const FergussonIsland = () => {
             </tbody>
           </table>
         </div>
-        <p className="text-[10px] italic font-body text-foreground/40">Mineral resources are not mineral reserves and have not demonstrated economic viability.</p>
+        <p className="text-sm italic font-body text-foreground/40">Mineral resources are not mineral reserves and have not demonstrated economic viability.</p>
       </div>
     </section>
 
@@ -284,7 +284,7 @@ const FergussonIsland = () => {
             </div>
           ))}
         </div>
-        <p className="text-[10px] italic font-body mt-4" style={{ color: "hsl(var(--light-muted-foreground) / 0.6)" }}>
+        <p className="text-sm italic font-body mt-4" style={{ color: "hsl(var(--light-muted-foreground) / 0.6)" }}>
           Timeline represents management targets based on current plans. Actual timing subject to permitting, regulatory approvals, and other factors outside Adyton's control.
         </p>
       </div>
