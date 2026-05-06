@@ -266,7 +266,7 @@ const WhyPNG = () => {
             <div className="space-y-6">
               {pngFaqs.map((faq) => (
                 <div key={faq.question}>
-                  <h3 className="font-display font-semibold text-foreground mb-2">{faq.question}</h3>
+                  <h3 className="text-xl font-display font-semibold text-foreground mb-2">{faq.question}</h3>
                   <p className="text-foreground/60 font-body leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
