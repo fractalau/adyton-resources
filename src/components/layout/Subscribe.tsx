@@ -17,39 +17,36 @@ const Subscribe = () => (
           <h2 className="sr-only">Subscribe for News Updates</h2>
 
           <div className="flex flex-col flex-1">
-            <label htmlFor="mce-FNAME" className="font-semibold mb-1 text-white">
-              First Name
-            </label>
+            <label htmlFor="mce-FNAME" className="sr-only">First Name</label>
             <input
               type="text"
               name="FNAME"
               id="mce-FNAME"
-              className="p-1 border border-input rounded-md text-base bg-white text-[#1b4e6a]"
+              placeholder="First Name"
+              className="p-1 border border-input rounded-md text-base bg-white text-[#1b4e6a] placeholder:text-gray-600"
             />
           </div>
 
           <div className="flex flex-col flex-1">
-            <label htmlFor="mce-LNAME" className="font-semibold mb-1 text-white">
-              Last Name
-            </label>
+            <label htmlFor="mce-LNAME" className="sr-only">Last Name</label>
             <input
               type="text"
               name="LNAME"
               id="mce-LNAME"
-              className="p-1 border border-input rounded-md text-base bg-white text-[#1b4e6a]"
+              placeholder="Last Name"
+              className="p-1 border border-input rounded-md text-base bg-white text-[#1b4e6a] placeholder:text-gray-600"
             />
           </div>
 
           <div className="flex flex-col flex-1">
-            <label htmlFor="mce-EMAIL" className="font-semibold mb-1 text-white">
-              Email Address <span className="text-destructive">*</span>
-            </label>
+            <label htmlFor="mce-EMAIL" className="sr-only">Email Address</label>
             <input
               type="email"
               name="EMAIL"
               id="mce-EMAIL"
               required
-              className="p-1 border border-input rounded-md text-base bg-white text-[#1b4e6a]"
+              placeholder="Email Address *"
+              className="p-1 border border-input rounded-md text-base bg-white text-[#1b4e6a] placeholder:text-gray-600"
             />
           </div>
 
