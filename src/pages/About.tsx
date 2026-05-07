@@ -238,13 +238,18 @@ const About = () => {
                     "EVIH JV partnership secured — US$9.5M committed to advance Fergusson Island to shovel-ready status. Global Ore Discovery engaged for Feni targeting.",
                 },
                 {
-                  year: "2024",
-                  event: "NI 43-101 Technical Report completed for Gameta — 513 koz Au resource defined.",
+                  year: "",
+                  event: "Successful C$7.5 M financing.",
                 },
                 {
-                  year: "2026",
+                  year: "2025",
                   event:
-                    "Updated Wapolu MRE filed — combined Fergusson resource reaches 939 koz Au. Active drilling continues at Feni with new gold-copper discoveries.",
+                    "Successful C$20 million financing: The Company completed a non-brokered/brokered financing for gross proceeds of C$20 million, strengthening its balance sheet and providing sufficient capital to advance exploration activities predominantly focussed on the Feni project while the continued advancement of the Fergusson projects are funded through the EVIH JV earn in structure.",
+                },
+                {
+                  year: "",
+                  event:
+                    "Appointment of Michael Gray to the Board of Directors: The Company strengthened its Board with the appointment of Michael Gray, Co-Founder of Agentis Capital. Michael brings extensive experience in technical, corporate and capital markets experience. His expertise will play a key role in advancing the Company’s strategic growth and development objectives.",
                 },
               ].map((m) => (
                 <div key={m.year} className="flex gap-6">
