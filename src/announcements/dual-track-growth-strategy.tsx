@@ -1,4 +1,5 @@
 import Header from "@/components/layout/Header";
+import Subscribe from "@/components/layout/Subscribe";
 import Footer from "@/components/layout/Footer";
 import SEO from "@/components/SEO";
 import ArticleSchema from "@/components/schema/ArticleSchema";
@@ -36,6 +37,7 @@ const DualTrackGrowthStrategy = () => (
           <p className="text-sm text-white/60 font-body">{ARTICLE.date}</p>
         </div>
       </section>
+        <Subscribe />
 
       {/* Body */}
       <section className="py-14 md:py-18" style={{ background: "hsl(var(--off-white))" }}>

@@ -1,6 +1,7 @@
 import { Mail, Phone, Briefcase, Newspaper, MapPin, Building2, Loader2, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
+import Subscribe from "@/components/layout/Subscribe";
 import Footer from "@/components/layout/Footer";
 import { useSEO } from "@/hooks/useSEO";
 import { useState } from "react";
@@ -118,6 +119,7 @@ const Contact = () => {
             </p>
           </div>
         </section>
+        <Subscribe />
 
         {/* Contact Routes */}
         <section

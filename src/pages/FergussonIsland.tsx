@@ -1,4 +1,5 @@
 import Header from "@/components/layout/Header";
+import Subscribe from "@/components/layout/Subscribe";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Download, ExternalLink } from "lucide-react";
@@ -91,6 +92,7 @@ const FergussonIsland = () => {
             </div>
           </div>
         </section>
+        <Subscribe />
 
         {/* Overview */}
         <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>

@@ -2,6 +2,7 @@ import { CheckCircle, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
+import Subscribe from "@/components/layout/Subscribe";
 import Footer from "@/components/layout/Footer";
 import { useSEO } from "@/hooks/useSEO";
 import FAQSchema from "@/components/schema/FAQSchema";
@@ -126,6 +127,7 @@ const WhyPNG = () => {
             </div>
           </div>
         </section>
+        <Subscribe />
 
         {/* Map placeholder */}
         <section aria-label="Map of PNG" className="py-14 md:py-18" style={{ background: "hsl(var(--off-white))" }}>

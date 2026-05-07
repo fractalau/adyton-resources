@@ -2,6 +2,7 @@ import { TrendingUp, Search, Shield, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
+import Subscribe from "@/components/layout/Subscribe";
 import Footer from "@/components/layout/Footer";
 import MetricCard from "@/components/MetricCard";
 import TwoTrackCard from "@/components/TwoTrackCard";
@@ -81,6 +82,7 @@ const WhyAdyton = () => (
         </div>
       </div>
     </section>
+        <Subscribe />
     <Footer />
   </div>
 );

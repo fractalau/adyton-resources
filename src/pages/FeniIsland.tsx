@@ -1,4 +1,5 @@
 import Header from "@/components/layout/Header";
+import Subscribe from "@/components/layout/Subscribe";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Download, ArrowRight, ExternalLink } from "lucide-react";
@@ -76,6 +77,7 @@ const FeniIsland = () => {
             </div>
           </div>
         </section>
+        <Subscribe />
 
         {/* Geological Setting */}
         <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>

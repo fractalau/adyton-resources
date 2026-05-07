@@ -1,5 +1,6 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import Subscribe from "@/components/layout/Subscribe";
 import HeroSection from "@/components/home/HeroSection";
 import MetricsStrip from "@/components/home/MetricsStrip";
 import TwoPillarSection from "@/components/home/TwoPillarSection";
@@ -22,6 +23,7 @@ const Index = () => {
     <Header />
     <main>
       <HeroSection />
+      <Subscribe />
       <MetricsStrip />
       <TwoPillarSection />
       <EVIHSection />

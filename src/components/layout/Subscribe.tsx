@@ -1,31 +1,7 @@
 const Subscribe = () => (
   <section className="bg-gold py-12 md:py-16">
-    <div className="container grid md:grid-cols-2 gap-10">
-      <div className="text-left space-y-6 text-white">
-        <div className="font-body space-y-3">
-          <h3 className="text-xl md:text-2xl font-display font-bold">Contact us</h3>
-          <p className="font-semibold">Adyton Resources Corporation</p>
-          <address className="not-italic space-y-3">
-            <p>
-              Level 7, 300 Adelaide Street
-              <br />
-              Brisbane QLD 4000
-              <br />
-              Australia
-            </p>
-            <p>
-              PO Box 5807
-              <br />
-              Brisbane QLD 4000
-            </p>
-            <a href="mailto:info@adytonresources.com" className="underline hover:opacity-80">
-              info@adytonresources.com
-            </a>
-          </address>
-        </div>
-      </div>
-
-      <div id="mc_embed_signup" className="w-full">
+    <div className="container max-w-2xl">
+      <div id="mc_embed_signup" className="w-full text-white">
         <div>
           <h3 className="text-xl md:text-2xl font-display font-bold mb-3">Stay Informed</h3>
           <p className="font-body mb-3">

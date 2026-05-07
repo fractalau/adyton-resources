@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
+import Subscribe from "@/components/layout/Subscribe";
 import Footer from "@/components/layout/Footer";
 import { useSEO } from "@/hooks/useSEO";
 import articles from "@/data/articles.json";
@@ -10,6 +11,7 @@ const PressReleaseIndex = () => {
   return (
   <div className="min-h-screen bg-background">
     <Header />
+      <Subscribe />
     <main className="container py-16 max-w-3xl">
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-8">Press Releases</h1>
       <div className="space-y-4">

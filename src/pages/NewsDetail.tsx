@@ -3,6 +3,7 @@ import { ExternalLink, ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
+import Subscribe from "@/components/layout/Subscribe";
 import Footer from "@/components/layout/Footer";
 import TagChip from "@/components/TagChip";
 import { useSEO } from "@/hooks/useSEO";
@@ -49,6 +50,7 @@ const NewsDetail = () => {
         description={article.excerpt}
       />
       <Header />
+      <Subscribe />
       <main>
       <article className="py-16 md:py-20">
         <div className="container max-w-3xl">

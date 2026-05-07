@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
+import Subscribe from "@/components/layout/Subscribe";
 import Footer from "@/components/layout/Footer";
 import DownloadTile from "@/components/DownloadTile";
 import TagChip from "@/components/TagChip";
@@ -307,6 +308,7 @@ const Investors = () => {
             </p>
           </div>
         </section>
+        <Subscribe />
 
         {/* Capital Structure */}
         <section aria-label="Capital structure" className="teal-panel py-12 md:py-14">
