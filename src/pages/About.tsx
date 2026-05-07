@@ -5,12 +5,12 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { useSEO } from "@/hooks/useSEO";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
-import timCrossleyImg from "@/assets/team/tim-crossley.jpg";
+import timCrossleyImg from "@/assets/team/tim-crossley.png";
 import chrisBowdenImg from "@/assets/team/chris-bowden.jpg";
 import chiragPatelImg from "@/assets/team/chirag-patel.jpg";
 import sintonSpenceImg from "@/assets/team/sinton-spence.jpg";
-import davidIrvineImg from "@/assets/team/david-irvine.jpg";
-import michaelGrayImg from "@/assets/team/michael-gray.jpg";
+import davidIrvineImg from "@/assets/team/david-irvine.png";
+import michaelGrayImg from "@/assets/team/michael-gray.png";
 
 const leadership = [
   {
@@ -166,7 +166,7 @@ const About = () => {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {leadership.map((l) => (
                 <article key={l.role} className="rounded-lg overflow-hidden bg-card border border-border">
-                  <div className="aspect-square overflow-hidden bg-muted/30">
+                  <div className="aspect-[4/3] overflow-hidden bg-muted/30">
                     <img src={l.photo} alt={l.name} className="w-full h-full object-cover object-top" />
                   </div>
                   <div className="p-5">
@@ -179,11 +179,13 @@ const About = () => {
             </div>
 
             {/* Board */}
-            <h3 className="text-xl font-display font-bold text-foreground mt-14 mb-6">Board of Directors</h3>
+            <h3 className="text-xl md:text-2xl font-display font-bold text-foreground mt-14 mb-6">
+              Board of Directors
+            </h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {boardMembers.map((b) => (
                 <article key={b.role} className="rounded-lg overflow-hidden bg-card border border-border">
-                  <div className="aspect-square overflow-hidden bg-muted/30">
+                  <div className="aspect-[4/3] overflow-hidden bg-muted/30">
                     <img src={b.photo} alt={b.name} className="w-full h-full object-cover object-top" />
                   </div>
                   <div className="p-5">
