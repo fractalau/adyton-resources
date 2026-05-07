@@ -122,14 +122,6 @@ const Header = () => {
 
           {/* Desktop nav */}
           <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-1">
-            <Link
-              to="/"
-              className={`px-3 py-2 transition-colors hover:text-primary ${
-                location.pathname === "/" ? "text-primary" : "text-foreground/70"
-              }`}
-            >
-              Home
-            </Link>
             <NavDropdown label="Projects" items={projectsDropdown} isActive={isProjectsActive} />
             <Link
               to="/investors"
@@ -178,13 +170,6 @@ const Header = () => {
         {mobileOpen && (
           <div className="lg:hidden border-t border-border bg-background">
             <nav aria-label="Mobile navigation" className="container py-4 flex flex-col gap-1">
-              <Link
-                to="/"
-                onClick={() => setMobileOpen(false)}
-                className="px-3 py-2.5 text-sm font-medium text-foreground/70 hover:text-primary"
-              >
-                Home
-              </Link>
               <p className="px-3 pt-3 pb-1 text-sm font-semibold text-primary uppercase tracking-wider">Projects</p>
               {projectsDropdown.map((item) => (
                 <Link
