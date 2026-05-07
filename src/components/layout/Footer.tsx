@@ -11,7 +11,6 @@ const XIcon = ({ className }: { className?: string }) => (
 
 const Footer = () => (
   <>
-  <Subscribe />
   <footer className="border-t border-border bg-background">
     <div className="container py-12">
       <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
