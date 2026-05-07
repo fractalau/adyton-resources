@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Download, ChevronDown, Linkedin, Youtube, Globe } from "lucide-react";
+import { Menu, X, ExternalLink, ChevronDown, Linkedin, Youtube, Globe } from "lucide-react";
 import TickerStrip from "@/components/TickerStrip";
 
 import logo from "@/assets/logo.png";
@@ -153,9 +153,9 @@ const Header = () => {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center">
             <Button variant="gold" size="sm" asChild>
-              <a href="/Adyton-Investor-Deck.pdf" download>
-                <Download className="h-3.5 w-3.5" />
+              <a href="/Adyton-Investor-Deck.pdf" target="_blank" rel="noopener noreferrer">
                 Download Investor Deck
+                <ExternalLink className="h-3.5 w-3.5" />
               </a>
             </Button>
           </div>
@@ -215,9 +215,9 @@ const Header = () => {
               </Link>
               <div className="mt-3 pt-3 border-t border-border">
                 <Button variant="gold" size="sm" className="w-full" asChild>
-                  <a href="/Adyton-Investor-Deck.pdf" download>
-                    <Download className="h-3.5 w-3.5" />
+                  <a href="/Adyton-Investor-Deck.pdf" target="_blank" rel="noopener noreferrer">
                     Download Investor Deck
+                    <ExternalLink className="h-3.5 w-3.5" />
                   </a>
                 </Button>
               </div>
