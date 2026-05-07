@@ -23,7 +23,7 @@ const Subscribe = () => (
               name="FNAME"
               id="mce-FNAME"
               placeholder="First Name"
-              className="p-1 border border-input rounded-md text-base bg-white text-[#1b4e6a] placeholder:text-gray-600"
+              className="py-1 px-3 border border-input rounded-md text-base bg-white text-[#1b4e6a] placeholder:text-gray-600"
             />
           </div>
 
@@ -34,7 +34,7 @@ const Subscribe = () => (
               name="LNAME"
               id="mce-LNAME"
               placeholder="Last Name"
-              className="p-1 border border-input rounded-md text-base bg-white text-[#1b4e6a] placeholder:text-gray-600"
+              className="py-1 px-3 border border-input rounded-md text-base bg-white text-[#1b4e6a] placeholder:text-gray-600"
             />
           </div>
 
@@ -46,7 +46,7 @@ const Subscribe = () => (
               id="mce-EMAIL"
               required
               placeholder="Email Address *"
-              className="p-1 border border-input rounded-md text-base bg-white text-[#1b4e6a] placeholder:text-gray-600"
+              className="py-1 px-3 border border-input rounded-md text-base bg-white text-[#1b4e6a] placeholder:text-gray-600"
             />
           </div>
 
