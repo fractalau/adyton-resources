@@ -270,6 +270,18 @@ const About = () => {
                   event:
                     "Updated Mineral Resource Estimate at Wapolu: On January 13, 2026, the Company reported an updated NI 43 101 Mineral Resource Estimate (MRE) for its Wapolu gold project on Fergusson Island, Papua New Guinea (PNG). The updated MRE is comprised of 1.0 million tonnes grading 1.00 g/t Au for an indicated resource of 33 koz Au and 12.7 million tonnes grading 0.97 g/t Au for an inferred resource of 393 koz Au. The restart of the Wapolu gold project is an important pillar to Adytons strategy to achieve near term production and cash flow. The proposed initial Wapolu operation would be a shallow open pit ~300kt ROM operation with a simple crush, grind, float flow sheet to produce and market a gold rich concentrate.",
                 },
+                {
+                  year: "",
+                  event: "Submission of EL and ML permits for the restart of the Wapolu mine.",
+                },
+                {
+                  year: "",
+                  event: "Commencement of purchasing of long lead items for the Wapolu processing plant.",
+                },
+                {
+                  year: "",
+                  event: "10,000 M drilling milestone achieved at Feni.",
+                },
               ].map((m) => (
                 <div key={m.year} className="flex gap-6">
                   <time className="text-lg font-mono font-bold text-primary shrink-0 w-16">{m.year}</time>
