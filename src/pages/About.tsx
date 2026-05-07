@@ -229,6 +229,10 @@ const About = () => {
                     "NI 43-101 Technical Report completed for Fergusson Island projects — 715 koz Au resource defined.",
                 },
                 {
+                  year: "2022",
+                  event: "Metallurgical Testing completed for Gameta.",
+                },
+                {
                   year: "2024",
                   event: "NI 43-101 Technical Report completed for Gameta — 513 koz Au resource defined.",
                 },
@@ -243,7 +247,7 @@ const About = () => {
                     "Updated Wapolu MRE filed — combined Fergusson resource reaches 939 koz Au. Active drilling continues at Feni with new gold-copper discoveries.",
                 },
               ].map((m) => (
-                <div key={m.year} className="flex gap-6">
+                <div key={m.event} className="flex gap-6">
                   <time className="text-lg font-mono font-bold text-primary shrink-0 w-16">{m.year}</time>
                   <div className="border-l-2 border-primary/20 pl-6">
                     <p className="leading-relaxed" style={{ color: "hsl(var(--light-muted-foreground))" }}>
