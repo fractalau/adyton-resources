@@ -2,12 +2,6 @@ const Subscribe = () => (
   <section className="bg-gold py-12 md:py-16">
     <div className="container grid md:grid-cols-2 gap-10 items-center">
       <div className="text-left space-y-6 text-white">
-        <div>
-          <h3 className="text-2xl md:text-3xl font-display font-bold mb-3">Stay Informed</h3>
-          <p className="font-body">
-            Subscribe to receive Adyton Resources news releases and investor updates direct to your inbox.
-          </p>
-        </div>
         <div className="font-body space-y-3">
           <h3 className="text-xl md:text-2xl font-display font-bold">Contact us</h3>
           <p className="font-semibold">Adyton Resources Corporation</p>
@@ -32,6 +26,12 @@ const Subscribe = () => (
       </div>
 
       <div id="mc_embed_signup" className="w-full">
+        <div>
+          <h3 className="text-2xl md:text-3xl font-display font-bold mb-3">Stay Informed</h3>
+          <p className="font-body">
+            Subscribe to receive Adyton Resources news releases and investor updates direct to your inbox.
+          </p>
+        </div>
         <form
           action="https://adytonresources.us17.list-manage.com/subscribe/post?u=af02f6790cb18dbf0bf6159a6&id=61ec236b80&f_id=0059c2e1f0"
           method="post"
