@@ -28,9 +28,11 @@ const capitalStats = [
 ];
 
 const ownership = [
-  { holder: "Management & Directors", pct: "~12%", note: "Aligned interests" },
-  { holder: "Institutional Investors", pct: "~18%", note: "Including resource-focused funds" },
-  { holder: "Retail & Other", pct: "~70%", note: "Broad market participation" },
+  { holder: "Retail/HNW", pct: "41%", note: "Aligned interests" },
+  { holder: "Family Offices", pct: "17%", note: "Including resource-focused funds" },
+  { holder: "Strategic", pct: "16%", note: "Broad market participation" },
+  { holder: "Institutions", pct: "16%", note: "Broad market participation" },
+  { holder: "Insiders", pct: "10%", note: "Broad market participation" },
 ];
 
 const categories = ["All", "Presentations", "Technical Reports", "Corporate Documents", "Filings"];
@@ -317,6 +319,7 @@ const Investors = () => {
                   <s.icon className="h-5 w-5 text-primary" aria-hidden="true" />
                   <p className="text-2xl md:text-3xl font-mono font-bold text-foreground">{s.value}</p>
                   <p className="text-foreground/60 font-body">{s.label}</p>
+                  <p className="text-foreground/30 font-body italic">Source: {s.source}</p>
                 </div>
               ))}
             </div>
@@ -346,10 +349,10 @@ const Investors = () => {
                   style={{ background: "hsl(var(--light-card))", borderColor: "hsl(var(--light-border))" }}
                 >
                   <div className="flex-1">
-                    <p className="font-display font-semibold text-sm" style={{ color: "hsl(var(--text-dark))" }}>
+                    <p className="font-display font-semibold text-xl" style={{ color: "hsl(var(--text-dark))" }}>
                       {o.holder}
                     </p>
-                    <p className="text-sm" style={{ color: "hsl(var(--light-muted-foreground))" }}>
+                    <p className="text-sm hidden" style={{ color: "hsl(var(--light-muted-foreground))" }}>
                       {o.note}
                     </p>
                   </div>
