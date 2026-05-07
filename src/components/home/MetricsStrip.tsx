@@ -19,7 +19,7 @@ const MetricsStrip = () => (
           </div>
         ))}
       </div>
-      <p className="text-sm text-foreground/40 text-center mt-6 font-body italic">
+      <p className="text-foreground/40 text-center mt-6 font-body italic">
         Resource figures prepared in accordance with NI 43-101. Mineral resources are not mineral reserves and have not
         demonstrated economic viability.
       </p>
