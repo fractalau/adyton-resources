@@ -229,6 +229,10 @@ const About = () => {
                     "NI 43-101 Technical Report completed for Fergusson Island projects — 715 koz Au resource defined.",
                 },
                 {
+                  year: "2022",
+                  event: "Metallurgical Testing completed for Gameta.",
+                },
+                {
                   year: "2024",
                   event: "NI 43-101 Technical Report completed for Gameta — 513 koz Au resource defined.",
                 },
