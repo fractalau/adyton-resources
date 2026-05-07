@@ -1,6 +1,6 @@
 const Subscribe = () => (
   <section className="bg-gold py-12 md:py-16">
-    <div className="container max-w-2xl">
+    <div className="container">
       <div id="mc_embed_signup" className="w-full text-white">
         <div>
           <h3 className="text-xl md:text-2xl font-display font-bold mb-3">Stay Informed</h3>
@@ -15,11 +15,11 @@ const Subscribe = () => (
           name="mc-embedded-subscribe-form"
           target="_blank"
           noValidate
-          className="flex flex-col gap-4"
+          className="flex flex-col md:flex-row md:items-end gap-4"
         >
           <h2 className="sr-only">Subscribe for News Updates</h2>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col flex-1">
             <label htmlFor="mce-FNAME" className="font-semibold mb-1 text-white">
               First Name
             </label>
@@ -31,7 +31,7 @@ const Subscribe = () => (
             />
           </div>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col flex-1">
             <label htmlFor="mce-LNAME" className="font-semibold mb-1 text-white">
               Last Name
             </label>
@@ -43,7 +43,7 @@ const Subscribe = () => (
             />
           </div>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col flex-1">
             <label htmlFor="mce-EMAIL" className="font-semibold mb-1 text-white">
               Email Address <span className="text-destructive">*</span>
             </label>
@@ -60,13 +60,13 @@ const Subscribe = () => (
             <input type="text" name="b_af02f6790cb18dbf0bf6159a6_61ec236b80" tabIndex={-1} defaultValue="" />
           </div>
 
-          <div className="flex justify-end mt-2">
+          <div className="flex md:shrink-0">
             <input
               type="submit"
               value="Subscribe"
               name="subscribe"
               id="mc-embedded-subscribe"
-              className="cursor-pointer px-6 py-3 rounded-md text-base font-semibold text-white"
+              className="cursor-pointer px-6 py-2 rounded-md text-base font-semibold text-white w-full md:w-auto"
               style={{ backgroundColor: "#1b4e6a" }}
             />
           </div>
