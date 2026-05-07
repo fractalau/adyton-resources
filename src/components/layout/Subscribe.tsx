@@ -66,7 +66,7 @@ const Subscribe = () => (
               value="Subscribe"
               name="subscribe"
               id="mc-embedded-subscribe"
-              className="cursor-pointer p-1 rounded-md text-base font-semibold text-white w-full md:w-auto"
+              className="cursor-pointer py-1 px-3 rounded-md text-base font-semibold text-white w-full md:w-auto"
               style={{ backgroundColor: "#1b4e6a" }}
             />
           </div>
