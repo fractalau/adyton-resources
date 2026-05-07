@@ -5,7 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { useSEO } from "@/hooks/useSEO";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
-import timCrossleyImg from "@/assets/team/tim-crossley.png";
+import timCrossleyImg from "@/assets/team/tim-crossley.jpg";
 import chrisBowdenImg from "@/assets/team/chris-bowden.jpg";
 import chiragPatelImg from "@/assets/team/chirag-patel.jpg";
 import sintonSpenceImg from "@/assets/team/sinton-spence.jpg";
