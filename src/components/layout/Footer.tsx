@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Linkedin, Youtube, Globe } from "lucide-react";
 import logo from "@/assets/logo.png";
-import Subscribe from "./Subscribe";
+
 
 const XIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
@@ -11,7 +11,6 @@ const XIcon = ({ className }: { className?: string }) => (
 
 const Footer = () => (
   <>
-  <Subscribe />
   <footer className="border-t border-border bg-background">
     <div className="container py-12">
       <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
