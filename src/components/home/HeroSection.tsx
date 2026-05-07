@@ -30,10 +30,10 @@ const HeroSection = () => (
               <ExternalLink className="h-4 w-4" />
             </a>
           </Button>
-          <Button variant="gold-outline" size="lg" asChild>
+          <Button variant="gold" size="lg" asChild>
             <Link to="/projects/feni">Explore Our Feni Island Project</Link>
           </Button>
-          <Button variant="gold-outline" size="lg" asChild>
+          <Button variant="gold" size="lg" asChild>
             <Link to="/projects/ferguson">Explore Our Ferguson Island Project</Link>
           </Button>
         </div>
