@@ -65,8 +65,8 @@ const TwoPillarSection = () => (
             Indicated + Inferred Mineral Resource (Wapolu + Gameta, NI 43-101)
           </p>
           <p className="mb-6 font-body leading-relaxed" style={{ color: "hsl(var(--light-muted-foreground))" }}>
-            Wapolu and Gameta deposits. 100% funded by JV partner East Vision Investment Holdings (EVIH), committing up
-            to US$9.5M. Adyton retains 50% of free cash flow with zero capital outlay.
+            Wapolu and Gameta deposits are shallow, low capex, easy to access open pit projects 100% funded by JV partner East Vision Investment Holdings (EVIH), committing up to US$9.5M. 
+            Adyton retains 50% of free cash flow with zero capital outlay.
           </p>
           <Link
             to="/projects/fergusson"
