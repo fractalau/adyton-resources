@@ -145,7 +145,7 @@ const FergussonIsland = () => {
               <p>
                 On December 10, 2025, Adyton received a non-binding Letter of Intent from Korean trading group Hyosung
                 TNC Corporation for the purchase of gold concentrate from Wapolu — demonstrating strong market demand
-                for project output.
+                and materially improved payability terms for project concentrate output.
               </p>
             </div>
             <p className="italic font-body text-foreground/40">
