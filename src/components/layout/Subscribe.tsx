@@ -15,7 +15,7 @@ const Subscribe = () => (
           name="mc-embedded-subscribe-form"
           target="_blank"
           noValidate
-          className="flex flex-col gap-4"
+          className="flex flex-col md:flex-row md:items-end gap-4"
         >
           <h2 className="sr-only">Subscribe for News Updates</h2>
 
