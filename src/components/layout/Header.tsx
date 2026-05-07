@@ -154,7 +154,7 @@ const Header = () => {
           <div className="hidden lg:flex items-center">
             <Button variant="gold" size="sm" asChild>
               <a href="/Adyton-Investor-Deck.pdf" target="_blank" rel="noopener noreferrer">
-                Download Investor Deck
+                View investor Deck
                 <ExternalLink className="h-3.5 w-3.5" />
               </a>
             </Button>
@@ -216,7 +216,7 @@ const Header = () => {
               <div className="mt-3 pt-3 border-t border-border">
                 <Button variant="gold" size="sm" className="w-full" asChild>
                   <a href="/Adyton-Investor-Deck.pdf" target="_blank" rel="noopener noreferrer">
-                    Download Investor Deck
+                    View investor Deck
                     <ExternalLink className="h-3.5 w-3.5" />
                   </a>
                 </Button>
