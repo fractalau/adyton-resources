@@ -15,7 +15,7 @@ const Footer = () => (
     <div className="container py-12">
       <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
         <div className="col-span-2 md:col-span-1 space-y-4">
-          <img src={logo} alt="Adyton Resources" className="h-7 invert opacity-70" />
+          <img src={logo} alt="Adyton Resources" className="h-7" />
           <p className="text-sm text-foreground/50 font-body">TSXV: ADY | OTC: ADYRF | FSE: 701GR</p>
         </div>
 
