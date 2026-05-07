@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
+import Subscribe from "@/components/layout/Subscribe";
 import Footer from "@/components/layout/Footer";
 import ProjectTile from "@/components/ProjectTile";
 import TagChip from "@/components/TagChip";
@@ -47,6 +48,7 @@ const Projects = () => {
           </div>
         </div>
       </section>
+        <Subscribe />
       <Footer />
     </div>
   );

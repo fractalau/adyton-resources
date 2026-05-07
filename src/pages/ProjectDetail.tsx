@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { MapPin, ArrowRight, Download, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
+import Subscribe from "@/components/layout/Subscribe";
 import Footer from "@/components/layout/Footer";
 import MetricCard from "@/components/MetricCard";
 import TimelineComponent from "@/components/TimelineComponent";
@@ -175,6 +176,7 @@ const ProjectDetail = () => {
           </div>
         </div>
       </section>
+        <Subscribe />
       <Footer />
     </div>
   );

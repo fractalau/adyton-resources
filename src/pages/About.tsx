@@ -2,6 +2,7 @@ import { Shield, Leaf, Globe, Award, Target, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
+import Subscribe from "@/components/layout/Subscribe";
 import Footer from "@/components/layout/Footer";
 import { useSEO } from "@/hooks/useSEO";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
@@ -120,6 +121,7 @@ const About = () => {
             </p>
           </div>
         </section>
+        <Subscribe />
 
         {/* Company Pillars */}
         <section

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import Header from "@/components/layout/Header";
+import Subscribe from "@/components/layout/Subscribe";
 import Footer from "@/components/layout/Footer";
 import NewsCard from "@/components/NewsCard";
 import { useSEO } from "@/hooks/useSEO";
@@ -102,6 +103,7 @@ const News = () => {
             <p className="text-sm text-foreground/40 mt-2 font-mono">{newsItems.length} announcements</p>
           </div>
         </section>
+        <Subscribe />
 
         {/* Press Release Grid */}
         <section
