@@ -166,7 +166,7 @@ const About = () => {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {leadership.map((l) => (
                 <article key={l.role} className="rounded-lg overflow-hidden bg-card border border-border">
-                  <div className="aspect-[4/3] overflow-hidden bg-muted/30">
+                  <div className="aspect-square overflow-hidden bg-muted/30">
                     <img src={l.photo} alt={l.name} className="w-full h-full object-cover object-top" />
                   </div>
                   <div className="p-5">
@@ -183,7 +183,7 @@ const About = () => {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {boardMembers.map((b) => (
                 <article key={b.role} className="rounded-lg overflow-hidden bg-card border border-border">
-                  <div className="aspect-[4/3] overflow-hidden bg-muted/30">
+                  <div className="aspect-square overflow-hidden bg-muted/30">
                     <img src={b.photo} alt={b.name} className="w-full h-full object-cover object-top" />
                   </div>
                   <div className="p-5">
