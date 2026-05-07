@@ -1,6 +1,6 @@
 const Subscribe = () => (
   <section className="bg-gold py-12 md:py-16">
-    <div className="container max-w-2xl">
+    <div className="container">
       <div id="mc_embed_signup" className="w-full text-white">
         <div>
           <h3 className="text-xl md:text-2xl font-display font-bold mb-3">Stay Informed</h3>
