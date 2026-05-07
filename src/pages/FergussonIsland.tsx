@@ -54,7 +54,11 @@ const timeline = [
   { period: "2026", title: "Fergusson Permitting", desc: "Final regulatory approvals & community engagement" },
   { period: "2026 H2", title: "Construction & Ramp-Up", desc: "JV funding deployment & site development" },
   { period: "2027", title: "First Revenue", desc: "Concentrate shipment begins" },
-  { period: "Future", title: "Portfolio Growth (Gameta and Feni)", desc: "Reinvest cash flow into Feni exploration" },
+  {
+    period: "Future",
+    title: "Portfolio Growth (Gameta and Feni)",
+    desc: "Reinvest cash flow into development of Gameta and Feni exploration",
+  },
 ];
 
 const FergussonIsland = () => {
