@@ -1,6 +1,6 @@
 const Subscribe = () => (
   <section className="bg-gold py-12 md:py-16">
-    <div className="container grid md:grid-cols-2 gap-10 items-center">
+    <div className="container grid md:grid-cols-2 gap-10">
       <div className="text-left space-y-6 text-white">
         <div className="font-body space-y-3">
           <h3 className="text-xl md:text-2xl font-display font-bold">Contact us</h3>
