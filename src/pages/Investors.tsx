@@ -317,7 +317,6 @@ const Investors = () => {
                   <s.icon className="h-5 w-5 text-primary" aria-hidden="true" />
                   <p className="text-2xl md:text-3xl font-mono font-bold text-foreground">{s.value}</p>
                   <p className="text-foreground/60 font-body">{s.label}</p>
-                  <p className="text-foreground/30 font-body italic">Source: {s.source}</p>
                 </div>
               ))}
             </div>
