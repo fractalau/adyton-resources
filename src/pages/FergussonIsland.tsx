@@ -1,5 +1,4 @@
 import Header from "@/components/layout/Header";
-import Subscribe from "@/components/layout/Subscribe";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Download, ExternalLink } from "lucide-react";
@@ -55,7 +54,7 @@ const timeline = [
   { period: "2026", title: "Fergusson Permitting", desc: "Final regulatory approvals & community engagement" },
   { period: "2026 H2", title: "Construction & Ramp-Up", desc: "JV funding deployment & site development" },
   { period: "2027", title: "First Revenue", desc: "Concentrate shipment begins" },
-  { period: "Future", title: "Portfolio Growth (Feni)", desc: "Reinvest cash flow into Feni exploration" },
+  { period: "Future", title: "Portfolio Growth (Gameta and Feni)", desc: "Reinvest cash flow into Feni exploration" },
 ];
 
 const FergussonIsland = () => {
@@ -92,7 +91,6 @@ const FergussonIsland = () => {
             </div>
           </div>
         </section>
-        <Subscribe />
 
         {/* Overview */}
         <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
