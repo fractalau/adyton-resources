@@ -22,6 +22,7 @@ const Index = () => {
     <Header />
     <main>
       <HeroSection />
+      <Subscribe />
       <MetricsStrip />
       <TwoPillarSection />
       <EVIHSection />
