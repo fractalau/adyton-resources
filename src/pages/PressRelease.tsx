@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { ExternalLink, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
+import Subscribe from "@/components/layout/Subscribe";
 import Footer from "@/components/layout/Footer";
 import { useSEO } from "@/hooks/useSEO";
 import ArticleSchema from "@/components/schema/ArticleSchema";
@@ -23,6 +24,7 @@ const PressRelease = () => {
     return (
       <div className="min-h-screen" style={{ background: "hsl(var(--light-bg))" }}>
         <Header />
+      <Subscribe />
         <main className="py-20">
           <div className="container max-w-3xl text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4" style={{ color: "hsl(var(--light-foreground))" }}>
