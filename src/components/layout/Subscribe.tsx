@@ -27,7 +27,7 @@ const Subscribe = () => (
               type="text"
               name="FNAME"
               id="mce-FNAME"
-              className="px-3 py-2 border border-input rounded-md text-base bg-white text-[#1b4e6a]"
+              className="p-1 border border-input rounded-md text-base bg-white text-[#1b4e6a]"
             />
           </div>
 
@@ -39,7 +39,7 @@ const Subscribe = () => (
               type="text"
               name="LNAME"
               id="mce-LNAME"
-              className="px-3 py-2 border border-input rounded-md text-base bg-white text-[#1b4e6a]"
+              className="p-1 border border-input rounded-md text-base bg-white text-[#1b4e6a]"
             />
           </div>
 
@@ -52,7 +52,7 @@ const Subscribe = () => (
               name="EMAIL"
               id="mce-EMAIL"
               required
-              className="px-3 py-2 border border-input rounded-md text-base bg-white text-[#1b4e6a]"
+              className="p-1 border border-input rounded-md text-base bg-white text-[#1b4e6a]"
             />
           </div>
 
@@ -66,7 +66,7 @@ const Subscribe = () => (
               value="Subscribe"
               name="subscribe"
               id="mc-embedded-subscribe"
-              className="cursor-pointer px-6 py-2 rounded-md text-base font-semibold text-white w-full md:w-auto"
+              className="cursor-pointer p-1 rounded-md text-base font-semibold text-white w-full md:w-auto"
               style={{ backgroundColor: "#1b4e6a" }}
             />
           </div>
