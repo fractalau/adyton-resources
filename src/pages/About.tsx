@@ -58,7 +58,7 @@ const pillars = [
   {
     icon: Target,
     title: "Strategy",
-    desc: "Build a portfolio of high-quality gold-copper assets in PNG with clear pathways to production and cash flow.",
+    desc: "Build a portfolio of high-quality gold-copper assets in PNG with clear pathways to production, cash flow and resource growth.",
   },
   {
     icon: Shield,
