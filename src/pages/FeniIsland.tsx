@@ -21,6 +21,7 @@ const similarityData = [
   { header: "Structure", lihir: "NW-SE structural corridor", feni: "NW-SE structural corridor" },
   { header: "Setting", lihir: "Island-based", feni: "Island-based" },
   { header: "Operator", lihir: "Newmont (major operator)", feni: "Adyton (ASX/TSXV explorer)" },
+  { header: "Geothermal energy potential", lihir: "Yes", feni: "Yes" },
 ];
 
 const drillResults = [
