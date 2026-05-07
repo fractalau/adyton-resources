@@ -256,6 +256,11 @@ const About = () => {
                   event:
                     "Commencement of drilling at Feni: The Company successfully commenced its inaugural drill program at the Feni Gold-Copper Project, marking a significant milestone in advancing the asset beyond the Kabang resource footprint. The primary objective is to demonstrate that the scale and continuity and the structural controls of the Feni system support expansion of the resource that underpin feasible and economic mining scenarios.",
                 },
+                {
+                  year: "",
+                  event:
+                    "Successful 8,000 metre drilling program at Fergusson Island Projects: The Company through its JV partner EVIH completed approximately 8,000 metres of drilling across the Fergusson Island projects, including Wapolu and Gameta. The program was executed on time and within budget, targeting resource expansion and conversion, with results supporting continued confidence  to advance the projects into development.",
+                },
               ].map((m) => (
                 <div key={m.year} className="flex gap-6">
                   <time className="text-lg font-mono font-bold text-primary shrink-0 w-16">{m.year}</time>
