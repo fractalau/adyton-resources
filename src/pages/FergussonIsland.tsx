@@ -101,7 +101,9 @@ const FergussonIsland = () => {
             >
               <p>
                 The Fergusson Island Gold Project comprises two development-ready deposits — Wapolu and Gameta — located
-                at the western end of the Woodlark Basin in Milne Bay Province, Papua New Guinea.
+                at the western end of the Woodlark Basin a partially submerged extension to the world class Owen Stanley
+                Range discovery belt in Milne Bay Province, Papua New Guinea. Other notable discoveries in the region
+                include the Misima and Woodlark projects.
               </p>
               <p>
                 The project is 100% funded and operated by Adyton's joint venture partner, East Vision Investment
