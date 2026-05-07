@@ -251,6 +251,11 @@ const About = () => {
                   event:
                     "Appointment of Michael Gray to the Board of Directors: The Company strengthened its Board with the appointment of Michael Gray, Co-Founder of Agentis Capital. Michael brings extensive experience in technical, corporate and capital markets experience. His expertise will play a key role in advancing the Company’s strategic growth and development objectives.",
                 },
+                {
+                  year: "",
+                  event:
+                    "Commencement of drilling at Feni: The Company successfully commenced its inaugural drill program at the Feni Gold-Copper Project, marking a significant milestone in advancing the asset beyond the Kabang resource footprint. The primary objective is to demonstrate that the scale and continuity and the structural controls of the Feni system support expansion of the resource that underpin feasible and economic mining scenarios.",
+                },
               ].map((m) => (
                 <div key={m.year} className="flex gap-6">
                   <time className="text-lg font-mono font-bold text-primary shrink-0 w-16">{m.year}</time>
