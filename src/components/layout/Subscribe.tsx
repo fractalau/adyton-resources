@@ -27,7 +27,7 @@ const Subscribe = () => (
 
       <div id="mc_embed_signup" className="w-full">
         <div>
-          <h3 className="text-2xl md:text-3xl font-display font-bold mb-3">Stay Informed</h3>
+          <h3 className="text-xl md:text-2xl font-display font-bold">Stay Informed</h3>
           <p className="font-body">
             Subscribe to receive Adyton Resources news releases and investor updates direct to your inbox.
           </p>
