@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Download } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import heroBg from "@/assets/hero-mine-track.jpg";
 
 const HeroSection = () => (
@@ -27,9 +27,9 @@ const HeroSection = () => (
         </p>
         <div className="flex flex-wrap gap-3 mt-8">
           <Button variant="gold" size="lg" asChild>
-            <a href="/Adyton-Investor-Deck.pdf" download>
-              <Download className="h-4 w-4" />
-              Download Investor Deck
+            <a href="/Adyton-Investor-Deck.pdf" target="_blank" rel="noopener noreferrer">
+              View Investor Deck
+              <ExternalLink className="h-4 w-4" />
             </a>
           </Button>
           <Button variant="gold-outline" size="lg" asChild>
