@@ -20,7 +20,6 @@ const similarityData = [
   { header: "Structure", lihir: "NW-SE structural corridor", feni: "NW-SE structural corridor" },
   { header: "Setting", lihir: "Island-based", feni: "Island-based" },
   { header: "Operator", lihir: "Newmont (major operator)", feni: "Adyton (ASX/TSXV explorer)" },
-  { header: "Geothermal energy potential", lihir: "Yes", feni: "Yes" },
 ];
 
 const drillResults = [
@@ -98,7 +97,9 @@ const FeniIsland = () => {
               <p>
                 The project is hosted within a large alkalic-type epithermal-porphyry setting, supporting both
                 high-grade gold mineralisation and significant copper potential. Similar host rock geology, comparable
-                age (~0.5 Ma), and analogous mineralisation styles to neighbouring world-class deposits.
+                age (~0.5 Ma), and analogous mineralisation styles to neighbouring world-class deposits. Feni like Lihir
+                is geothermally active presenting an opportunity to generate 100% of its electricity as zero carbon
+                green energy.
               </p>
               <p>
                 Whole-of-island tenure enables systematic testing of multiple targets within the same mineral system,
