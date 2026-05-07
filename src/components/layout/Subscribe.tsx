@@ -1,5 +1,5 @@
 const Subscribe = () => (
-  <section className="bg-gold py-12 md:py-16">
+  <section className="bg-gold py-6">
     <div className="container">
       <div id="mc_embed_signup" className="w-full text-white">
         <div>
