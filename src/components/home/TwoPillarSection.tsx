@@ -30,12 +30,12 @@ const TwoPillarSection = () => (
           </span>
           <h3 className="text-3xl font-display font-bold text-foreground mb-1">Feni Island</h3>
           <p className="text-sm text-foreground/50 mb-4 font-body">New Ireland Province, PNG</p>
-          <p className="text-3xl font-mono font-bold text-primary mb-1">1.46 Moz Au</p>
+          <p className="text-3xl font-mono font-bold text-primary mb-1">120 Moz Lihir Discovery trend</p>
           <p className="text-sm text-foreground/50 mb-5 font-body">
             Inferred Mineral Resource (Kabang Deposit, NI 43-101, Oct 2021)
           </p>
           <p className="text-foreground/70 mb-6 font-body leading-relaxed">
-            Tier 1 gold-copper discovery potential with whole-of-island tenure across multiple epithermal and porphyry targets located in the middle of the Lihir Island chain that hosts &gt;120Moz Au of existing developed discoveries. 
+            Tier 1 gold-copper discovery potential with whole-of-island tenure across multiple epithermal and porphyry targets located in the middle of the Lihir Island chain that hosts >120Moz Au of existing developed discoveries. 
             Significant copper upside not yet captured in the current MRE.
           </p>
           <Link
