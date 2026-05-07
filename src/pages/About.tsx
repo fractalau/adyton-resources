@@ -224,6 +224,15 @@ const About = () => {
                     "NI 43-101 Technical Report completed for Feni Island — 1.46 Moz Au Inferred at the Kabang deposit.",
                 },
                 {
+                  year: "2021",
+                  event:
+                    "NI 43-101 Technical Report completed for Fergusson Island projects — 715 koz Au resource defined.",
+                },
+                {
+                  year: "2022",
+                  event: "Metallurgical Testing completed for Gameta.",
+                },
+                {
                   year: "2024",
                   event:
                     "EVIH JV partnership secured — US$9.5M committed to advance Fergusson Island to shovel-ready status. Global Ore Discovery engaged for Feni targeting.",
