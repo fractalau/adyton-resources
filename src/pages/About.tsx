@@ -261,6 +261,10 @@ const About = () => {
                   event:
                     "Successful 8,000 metre drilling program at Fergusson Island Projects: The Company through its JV partner EVIH completed approximately 8,000 metres of drilling across the Fergusson Island projects, including Wapolu and Gameta. The program was executed on time and within budget, targeting resource expansion and conversion, with results supporting continued confidence  to advance the projects into development.",
                 },
+                {
+                  year: "",
+                  event: "Completion of Metallurgical testing for Wapolu.",
+                },
               ].map((m) => (
                 <div key={m.year} className="flex gap-6">
                   <time className="text-lg font-mono font-bold text-primary shrink-0 w-16">{m.year}</time>
