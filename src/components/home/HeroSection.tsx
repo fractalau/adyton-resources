@@ -31,7 +31,10 @@ const HeroSection = () => (
             </a>
           </Button>
           <Button variant="gold-outline" size="lg" asChild>
-            <Link to="/projects/feni">Explore Our Projects</Link>
+            <Link to="/projects/feni">Explore Our Feni Island Project</Link>
+          </Button>
+          <Button variant="gold-outline" size="lg" asChild>
+            <Link to="/projects/ferguson">Explore Our Ferguson Island Project</Link>
           </Button>
         </div>
       </div>
