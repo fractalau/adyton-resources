@@ -21,10 +21,10 @@ import projectHeaderBg from "@/assets/project-header-bg.jpg";
 
 /* ─── Capital Structure ─── */
 const capitalStats = [
-  { icon: Hash, value: "~173M", label: "Shares Outstanding", source: "TSXV / MD&A" },
-  { icon: TrendingUp, value: "C$0.405", label: "Last Close (TSXV: ADY)", source: "Market data" },
-  { icon: Landmark, value: "~C$17M", label: "Cash & Equivalents", source: "Q3 2025 MD&A" },
-  { icon: PieChart, value: "~C$70M", label: "Market Cap (undiluted)", source: "Calculated" },
+  { icon: Hash, value: "311.0 M", label: "Shares on Issue" },
+  { icon: TrendingUp, value: "50.6 M", label: "Options/Warrants/RSU’s" },
+  { icon: Landmark, value: "361.6 M", label: "Fully Diluted" },
+  { icon: PieChart, value: "~C$16 M", label: "Cash at Bank" },
 ];
 
 const ownership = [
