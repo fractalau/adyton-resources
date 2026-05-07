@@ -10,6 +10,7 @@ import {
   Landmark,
   TrendingUp,
   Hash,
+  DollarSign,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
