@@ -138,8 +138,9 @@ const FergussonIsland = () => {
                 <li>Landowner and baseline environmental studies completed</li>
               </ul>
               <p>
-                EVIH's parent will provide a shareholder loan to fund a minimum 2 Mtpa Life of Mine project. Timeline to
-                shovel-ready: 10–12 months from funding milestone.
+                EVIH's parent will provide a shareholder bridging loan to fund the Gameta project to a target 2 Mtpa
+                Life of Mine project. Timeline to shovel-ready: 12–14 months from submission of ML application funding
+                milestone.
               </p>
               <p>
                 On December 10, 2025, Adyton received a non-binding Letter of Intent from Korean trading group Hyosung
