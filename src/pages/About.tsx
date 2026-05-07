@@ -224,7 +224,7 @@ const About = () => {
                     "NI 43-101 Technical Report completed for Feni Island — 1.46 Moz Au Inferred at the Kabang deposit.",
                 },
                 {
-                  year: "2021",
+                  year: "",
                   event:
                     "NI 43-101 Technical Report completed for Fergusson Island projects — 715 koz Au resource defined.",
                 },
