@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Download } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import heroBg from "@/assets/hero-mine-track.jpg";
 
 const HeroSection = () => (
