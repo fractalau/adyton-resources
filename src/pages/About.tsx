@@ -9,7 +9,7 @@ import timCrossleyImg from "@/assets/team/tim-crossley.jpg";
 import chrisBowdenImg from "@/assets/team/chris-bowden.jpg";
 import chiragPatelImg from "@/assets/team/chirag-patel.jpg";
 import sintonSpenceImg from "@/assets/team/sinton-spence.jpg";
-import davidIrvineImg from "@/assets/team/david-irvine.png";
+import davidIrvineImg from "@/assets/team/david-irvine.jpg";
 import michaelGrayImg from "@/assets/team/michael-gray.png";
 
 const leadership = [
