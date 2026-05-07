@@ -183,9 +183,9 @@ const FeniIsland = () => {
             </p>
             <p className="text-foreground/70 font-body leading-relaxed">
               The Kabang deposit represents a foundational resource with significant upside potential. Mineralisation
-              remains open along strike and at depth. Multiple priority targets across Feni Island — including Dome,
-              Saddle, Caldera, and Danmagal — have not yet been systematically drill-tested, and over 7 km² of proximal
-              and extensional geophysical targets have been identified.
+              remains open along strike and at depth. Multiple epithermal and porphyry priority targets across Feni
+              Island — including Dome, Saddle, Caldera, and Danmagal — have not yet been systematically drill-tested,
+              and over 7 km² of proximal and extensional geophysical targets have been identified.
             </p>
           </div>
         </section>
