@@ -331,9 +331,9 @@ const FeniIsland = () => {
         </section>
 
         {/* Global Ore Discovery */}
-        <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
+        <section className="pt-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
           <div className="container max-w-4xl">
-            <h3 className="text-xl font-display font-bold mb-3" style={{ color: "hsl(var(--text-dark))" }}>
+            <h3 className="text-2xl md:text-3xl font-display font-bold mb-3" style={{ color: "hsl(var(--text-dark))" }}>
               Global Ore Discovery Collaboration
             </h3>
             <p className="leading-relaxed font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
