@@ -97,6 +97,8 @@ const FergussonIsland = () => {
           </div>
         </section>
 
+        <Subscribe />
+
         {/* Overview */}
         <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
           <div className="container max-w-4xl">
