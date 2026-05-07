@@ -35,7 +35,7 @@ const TwoPillarSection = () => (
             Inferred Mineral Resource (Kabang Deposit, NI 43-101, Oct 2021)
           </p>
           <p className="text-foreground/70 mb-6 font-body leading-relaxed">
-            Tier 1 gold-copper discovery potential with whole-of-island tenure across multiple epithermal and porphyry targets located in the middle of the Lihir Island chain that hosts >120Moz Au of existing developed discoveries. 
+            Tier 1 gold-copper discovery potential with whole-of-island tenure across multiple epithermal and porphyry targets located in the middle of the Lihir Island chain that hosts &gt;120Moz Au of existing developed discoveries. 
             Significant copper upside not yet captured in the current MRE.
           </p>
           <Link
