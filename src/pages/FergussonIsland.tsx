@@ -342,7 +342,7 @@ const FergussonIsland = () => {
         </section>
 
         {/* Combined Resource */}
-        <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
+        <section className="pt-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
           <div className="container max-w-4xl">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
               Combined Fergusson Resource Summary
