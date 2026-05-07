@@ -23,7 +23,7 @@ import projectHeaderBg from "@/assets/project-header-bg.jpg";
 const capitalStats = [
   { icon: Hash, value: "311.0 M", label: "Shares on Issue" },
   { icon: TrendingUp, value: "50.6 M", label: "Options/Warrants/RSU" },
-  { icon: Dollar, value: "361.6 M", label: "Fully Diluted" },
+  { icon: PieChart, value: "361.6 M", label: "Fully Diluted" },
   { icon: Landmark, value: "~C$16 M", label: "Cash at Bank" },
 ];
 
@@ -319,7 +319,7 @@ const Investors = () => {
                   <s.icon className="h-5 w-5 text-primary" aria-hidden="true" />
                   <p className="text-2xl md:text-3xl font-mono font-bold text-foreground">{s.value}</p>
                   <p className="text-foreground/60 font-body">{s.label}</p>
-                  <p className="text-foreground/30 font-body italic hidden">Source: {s.source}</p>
+                  
                 </div>
               ))}
             </div>
