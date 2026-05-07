@@ -68,6 +68,7 @@ const PressRelease = () => {
         description={article.excerpt}
       />
       <Header />
+      <Subscribe />
       <main>
         <article className="py-16 md:py-20">
           <div className="container max-w-3xl">
