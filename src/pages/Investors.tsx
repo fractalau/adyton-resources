@@ -10,6 +10,7 @@ import {
   Landmark,
   TrendingUp,
   Hash,
+  DollarSign,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
@@ -23,7 +24,7 @@ import projectHeaderBg from "@/assets/project-header-bg.jpg";
 const capitalStats = [
   { icon: Hash, value: "311.0 M", label: "Shares on Issue" },
   { icon: TrendingUp, value: "50.6 M", label: "Options/Warrants/RSU" },
-  { icon: Dollar, value: "361.6 M", label: "Fully Diluted" },
+  { icon: DollarSign, value: "361.6 M", label: "Fully Diluted" },
   { icon: Landmark, value: "~C$16 M", label: "Cash at Bank" },
 ];
 
