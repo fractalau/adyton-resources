@@ -24,6 +24,7 @@ import DrErinJohnsFeni from "./announcements/dr-erin-johns-feni";
 import Adyton2025Momentum from "./announcements/adyton-2025-momentum";
 import WapoluLandOwnershipBaseline from "./announcements/wapolu-land-ownership-baseline";
 import FeniFDD005SignificantScale from "./announcements/feni-fdd005-significant-scale";
+import FeniFDD004FinalAssays from "./announcements/feni-fdd004-final-assays";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,7 @@ const App = () => (
           <Route path="/news/adyton-2025-momentum-execution-and-a-clear-path-forward" element={<Adyton2025Momentum />} />
           <Route path="/news/adyton-reports-completion-of-land-ownership-and-baseline-field-work-at-wapolu-joint-venture" element={<WapoluLandOwnershipBaseline />} />
           <Route path="/news/adyton-confirms-significant-scale-at-feni-gold-copper-project-fdd005-returns-158m-0-72g-t-au-eq-0-54g-t-au-0-14-cu-and-identifies-new-high-priority-drill-targets" element={<FeniFDD005SignificantScale />} />
+          <Route path="/news/adyton-reports-final-assays-from-fdd004-confirming-strong-mineralized-intercepts-of-115m-at-1-00g-t-gold-equivalent-0-92g-t-au-0-07-cu-within-a-broader-mineralized-zone-of-229m-at-0-79g-t-gold-equ" element={<FeniFDD004FinalAssays />} />
           <Route path="/news/:slug" element={<NewsDetail />} />
           <Route path="/pr" element={<PressReleaseIndex />} />
           <Route path="/pr/:slug" element={<PressRelease />} />
