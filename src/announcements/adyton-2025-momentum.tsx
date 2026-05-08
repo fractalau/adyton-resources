@@ -243,20 +243,6 @@ const Adyton2025Momentum = () => (
             </p>
           </article>
 
-          {/* Source link */}
-          <div className="mt-10 rounded-lg p-5" style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}>
-            <p className="text-sm mb-2" style={{ color: "hsl(var(--light-muted-foreground))" }}>
-              Originally published on adytonresources.com
-            </p>
-            <a
-              href={ARTICLE.sourceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-primary hover:underline font-medium"
-            >
-              View original source →
-            </a>
-          </div>
         </div>
       </section>
       <AboutAdyton />
