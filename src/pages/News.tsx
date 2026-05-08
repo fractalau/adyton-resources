@@ -250,6 +250,20 @@ const News = () => {
                 sourceUrl="/news/adyton-resources-announces-upsized-c20-million-financing-comprised-of-14-million-private-placement-of-units-and-concurrent-6-million-non-brokered-private-placement-of-units"
               />
               <NewsCard
+                title="Adyton Reports Multiple Significant Gold Intersections from its Feni Island Gold-Copper Project Drilling, Including 144m at 1.18g/t Au"
+                date="July 23, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-reports-multiple-significant-gold-intersections-from-its-feni-island-gold-copper-project-drilling"
+              />
+              <NewsCard
+                title="Adyton Reports Update On Feni Island Gold-Copper Project Drilling"
+                date="June 13, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-reports-update-on-feni-island-gold-copper-project-drilling"
+              />
+              <NewsCard
                 title="Adyton Reports ~200% Increase To Wapolu Updated Inferred Mineral Resources Estimate"
                 date="January 14, 2026"
                 excerpt=""
