@@ -229,6 +229,13 @@ const News = () => {
                 sourceUrl="/news/adyton-reports-final-assays-from-feni-drillholes-1-3-confirming-multiple-copper-mineralised-zones-complementing-previously-reported-gold-fdd003-upgraded-by-40-for-combined-125-9-gxm-au-eq"
               />
               <NewsCard
+                title="Adyton Resources Closes Oversubscribed C$20 Million Financing Comprised of $14 Million Brokered Private Placement of Units and Concurrent $6 Million Nonbrokered Private Placements"
+                date="August 14, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-resources-closes-oversubscribed-c20-million-financing-comprised-of-14-million-brokered-private-placement-of-units-and-concurrent-6-million-nonbrokered-private-placements"
+              />
+              <NewsCard
                 title="Adyton Reports ~200% Increase To Wapolu Updated Inferred Mineral Resources Estimate"
                 date="January 14, 2026"
                 excerpt=""
