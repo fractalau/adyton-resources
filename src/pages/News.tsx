@@ -236,6 +236,20 @@ const News = () => {
                 sourceUrl="/news/adyton-resources-closes-oversubscribed-c20-million-financing-comprised-of-14-million-brokered-private-placement-of-units-and-concurrent-6-million-nonbrokered-private-placements"
               />
               <NewsCard
+                title="Adyton Resources Strengthens Board and Grants Stock Options and RSUs"
+                date="July 28, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-resources-strengthens-board-and-grants-stock-options-and-rsus"
+              />
+              <NewsCard
+                title="Adyton Resources Announces Upsized C$20 Million Financing Comprised Of $14 Million Private Placement Of Units And Concurrent $6 Million Non-Brokered Private Placement Of Units"
+                date="July 24, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-resources-announces-upsized-c20-million-financing-comprised-of-14-million-private-placement-of-units-and-concurrent-6-million-non-brokered-private-placement-of-units"
+              />
+              <NewsCard
                 title="Adyton Reports ~200% Increase To Wapolu Updated Inferred Mineral Resources Estimate"
                 date="January 14, 2026"
                 excerpt=""
