@@ -27,6 +27,8 @@ import FeniFDD005SignificantScale from "./announcements/feni-fdd005-significant-
 import FeniFDD004FinalAssays from "./announcements/feni-fdd004-final-assays";
 import FeniDrillholes13CopperZones from "./announcements/feni-drillholes-1-3-copper-zones";
 import C20mFinancingClosing from "./announcements/c20m-financing-closing";
+import BoardStrengthensStockOptionsRsus from "./announcements/board-strengthens-stock-options-rsus";
+import UpsizedC20mFinancing from "./announcements/upsized-c20m-financing";
 
 const queryClient = new QueryClient();
 
@@ -54,6 +56,8 @@ const App = () => (
           <Route path="/news/adyton-reports-final-assays-from-fdd004-confirming-strong-mineralized-intercepts-of-115m-at-1-00g-t-gold-equivalent-0-92g-t-au-0-07-cu-within-a-broader-mineralized-zone-of-229m-at-0-79g-t-gold-equ" element={<FeniFDD004FinalAssays />} />
           <Route path="/news/adyton-reports-final-assays-from-feni-drillholes-1-3-confirming-multiple-copper-mineralised-zones-complementing-previously-reported-gold-fdd003-upgraded-by-40-for-combined-125-9-gxm-au-eq" element={<FeniDrillholes13CopperZones />} />
           <Route path="/news/adyton-resources-closes-oversubscribed-c20-million-financing-comprised-of-14-million-brokered-private-placement-of-units-and-concurrent-6-million-nonbrokered-private-placements" element={<C20mFinancingClosing />} />
+          <Route path="/news/adyton-resources-strengthens-board-and-grants-stock-options-and-rsus" element={<BoardStrengthensStockOptionsRsus />} />
+          <Route path="/news/adyton-resources-announces-upsized-c20-million-financing-comprised-of-14-million-private-placement-of-units-and-concurrent-6-million-non-brokered-private-placement-of-units" element={<UpsizedC20mFinancing />} />
           <Route path="/news/:slug" element={<NewsDetail />} />
           <Route path="/pr" element={<PressReleaseIndex />} />
           <Route path="/pr/:slug" element={<PressRelease />} />
