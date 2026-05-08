@@ -82,6 +82,8 @@ const Header = () => {
               <tv-ticker-tag symbol="OANDA:XCUUSD" hide-background="true"></tv-ticker-tag>
               {/* @ts-expect-error - TradingView custom element */}
               <tv-ticker-tag symbol="TSXV:ADY" hide-background="true"></tv-ticker-tag>
+              {/* @ts-expect-error - TradingView custom element */}
+              <tv-ticker-tag symbol="OTC:ADYRF" hide-background="true"></tv-ticker-tag>
             </div>
             <div className="col-span-2 gap-4 flex justify-end">
               <a
