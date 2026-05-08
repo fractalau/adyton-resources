@@ -215,6 +215,13 @@ const News = () => {
                 sourceUrl="/news/adyton-confirms-significant-scale-at-feni-gold-copper-project-fdd005-returns-158m-0-72g-t-au-eq-0-54g-t-au-0-14-cu-and-identifies-new-high-priority-drill-targets"
               />
               <NewsCard
+                title="Adyton Reports Final Assays from FDD004 Confirming Strong Mineralized Intercepts at Feni Island"
+                date="September 9, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-reports-final-assays-from-fdd004-confirming-strong-mineralized-intercepts-of-115m-at-1-00g-t-gold-equivalent-0-92g-t-au-0-07-cu-within-a-broader-mineralized-zone-of-229m-at-0-79g-t-gold-equ"
+              />
+              <NewsCard
                 title="Adyton Reports ~200% Increase To Wapolu Updated Inferred Mineral Resources Estimate"
                 date="January 14, 2026"
                 excerpt=""
