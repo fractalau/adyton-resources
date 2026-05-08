@@ -194,6 +194,13 @@ const News = () => {
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               <NewsCard
+                title="Adyton 2025: Momentum, Execution and a Clear Path Forward"
+                date="December 22, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-2025-momentum-execution-and-a-clear-path-forward"
+              />
+              <NewsCard
                 title="Adyton Reports ~200% Increase To Wapolu Updated Inferred Mineral Resources Estimate"
                 date="January 14, 2026"
                 excerpt=""
