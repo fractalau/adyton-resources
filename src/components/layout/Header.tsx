@@ -74,7 +74,7 @@ const Header = () => {
     <>
       <div className="w-full bg-gold py-3">
         <div className="container">
-          <div className="grid grid-cols-6">
+          <div className="grid grid-cols-6 items-center">
             <div className="col-span-4 flex items-center gap-6 justify-start">
               {/* @ts-expect-error - TradingView custom element */}
               <tv-ticker-tag symbol="OANDA:XAUUSD" hide-background="true"></tv-ticker-tag>
@@ -85,7 +85,7 @@ const Header = () => {
               {/* @ts-expect-error - TradingView custom element */}
               <tv-ticker-tag symbol="OTC:ADYRF" hide-background="true"></tv-ticker-tag>
             </div>
-            <div className="col-span-2 gap-4 flex justify-end">
+            <div className="col-span-2 gap-4 flex items-center justify-end">
               <a
                 href="https://www.linkedin.com/company/adyton-resources"
                 target="_blank"
