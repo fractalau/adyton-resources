@@ -201,6 +201,13 @@ const News = () => {
                 sourceUrl="/news/adyton-2025-momentum-execution-and-a-clear-path-forward"
               />
               <NewsCard
+                title="Adyton Reports Completion Of Land Ownership And Baseline Field Work At Wapolu Joint Venture"
+                date="November 19, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-reports-completion-of-land-ownership-and-baseline-field-work-at-wapolu-joint-venture"
+              />
+              <NewsCard
                 title="Adyton Reports ~200% Increase To Wapolu Updated Inferred Mineral Resources Estimate"
                 date="January 14, 2026"
                 excerpt=""
