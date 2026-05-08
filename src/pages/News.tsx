@@ -222,6 +222,13 @@ const News = () => {
                 sourceUrl="/news/adyton-reports-final-assays-from-fdd004-confirming-strong-mineralized-intercepts-of-115m-at-1-00g-t-gold-equivalent-0-92g-t-au-0-07-cu-within-a-broader-mineralized-zone-of-229m-at-0-79g-t-gold-equ"
               />
               <NewsCard
+                title="Adyton Reports Final Assays From Feni Drillholes 1-3 Confirming Multiple Copper Mineralised Zones; FDD003 Upgraded By 40% For Combined 125.9 Gxm (Au.eq)"
+                date="August 29, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-reports-final-assays-from-feni-drillholes-1-3-confirming-multiple-copper-mineralised-zones-complementing-previously-reported-gold-fdd003-upgraded-by-40-for-combined-125-9-gxm-au-eq"
+              />
+              <NewsCard
                 title="Adyton Reports ~200% Increase To Wapolu Updated Inferred Mineral Resources Estimate"
                 date="January 14, 2026"
                 excerpt=""
