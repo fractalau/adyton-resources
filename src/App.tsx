@@ -29,6 +29,8 @@ import FeniDrillholes13CopperZones from "./announcements/feni-drillholes-1-3-cop
 import C20mFinancingClosing from "./announcements/c20m-financing-closing";
 import BoardStrengthensStockOptionsRsus from "./announcements/board-strengthens-stock-options-rsus";
 import UpsizedC20mFinancing from "./announcements/upsized-c20m-financing";
+import FeniMultipleGoldIntersections from "./announcements/feni-multiple-gold-intersections";
+import FeniDrillingUpdateJune2025 from "./announcements/feni-drilling-update-june-2025";
 
 const queryClient = new QueryClient();
 
@@ -58,6 +60,8 @@ const App = () => (
           <Route path="/news/adyton-resources-closes-oversubscribed-c20-million-financing-comprised-of-14-million-brokered-private-placement-of-units-and-concurrent-6-million-nonbrokered-private-placements" element={<C20mFinancingClosing />} />
           <Route path="/news/adyton-resources-strengthens-board-and-grants-stock-options-and-rsus" element={<BoardStrengthensStockOptionsRsus />} />
           <Route path="/news/adyton-resources-announces-upsized-c20-million-financing-comprised-of-14-million-private-placement-of-units-and-concurrent-6-million-non-brokered-private-placement-of-units" element={<UpsizedC20mFinancing />} />
+          <Route path="/news/adyton-reports-multiple-significant-gold-intersections-from-its-feni-island-gold-copper-project-drilling" element={<FeniMultipleGoldIntersections />} />
+          <Route path="/news/adyton-reports-update-on-feni-island-gold-copper-project-drilling" element={<FeniDrillingUpdateJune2025 />} />
           <Route path="/news/:slug" element={<NewsDetail />} />
           <Route path="/pr" element={<PressReleaseIndex />} />
           <Route path="/pr/:slug" element={<PressRelease />} />
