@@ -21,6 +21,7 @@ import WapoluMineralResourcesEstimate from "./announcements/wapolu-updated-miner
 import FeniGlobalOreDiscovery from "./announcements/feni-global-ore-discovery";
 import WapoluLoiGoldConcentrate from "./announcements/wapolu-loi-gold-concentrate";
 import DrErinJohnsFeni from "./announcements/dr-erin-johns-feni";
+import Adyton2025Momentum from "./announcements/adyton-2025-momentum";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/news/adyton-expands-discovery-capability-at-feni-gold-copper-project-with-global-ore-discovery-consultants" element={<FeniGlobalOreDiscovery />} />
           <Route path="/news/adyton-resources-receives-non-binding-letter-of-intent-loi-for-the-purchase-of-gold-concentrate-from-its-wapolu-project" element={<WapoluLoiGoldConcentrate />} />
           <Route path="/news/adyton-resources-welcomes-lihir-deposit-expert-dr-erin-johns-to-the-team-to-drive-feni-gold-copper-project-development" element={<DrErinJohnsFeni />} />
+          <Route path="/news/adyton-2025-momentum-execution-and-a-clear-path-forward" element={<Adyton2025Momentum />} />
           <Route path="/news/:slug" element={<NewsDetail />} />
           <Route path="/pr" element={<PressReleaseIndex />} />
           <Route path="/pr/:slug" element={<PressRelease />} />
