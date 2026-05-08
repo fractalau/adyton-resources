@@ -74,9 +74,9 @@ const Header = () => {
     <>
       <div className="w-full bg-gold py-3">
         <div className="container">
-          <div class="grid grid-cols-6">
-            <div class="col-span-4 gap-4 flex justify-start">Hello</div>
-            <div class="col-span-2 gap-4 flex justify-end">
+          <div className="grid grid-cols-6">
+            <div className="col-span-4 gap-4 flex justify-start">Hello</div>
+            <div className="col-span-2 gap-4 flex justify-end">
               <a
                 href="https://www.linkedin.com/company/adyton-resources"
                 target="_blank"
