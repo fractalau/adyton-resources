@@ -31,6 +31,11 @@ import BoardStrengthensStockOptionsRsus from "./announcements/board-strengthens-
 import UpsizedC20mFinancing from "./announcements/upsized-c20m-financing";
 import FeniMultipleGoldIntersections from "./announcements/feni-multiple-gold-intersections";
 import FeniDrillingUpdateJune2025 from "./announcements/feni-drilling-update-june-2025";
+import Q12025FinancialsFiling from "./announcements/q1-2025-financials-filing";
+import ClarusSecuritiesMiningWatchList from "./announcements/clarus-securities-mining-watch-list";
+import WapoluFirstDrillIntercepts36gt from "./announcements/wapolu-first-drill-intercepts-36gt";
+import FeniFirstDrillSamplesDispatched from "./announcements/feni-first-drill-samples-dispatched";
+import FY2024FinancialsAndCorporateUpdate from "./announcements/fy2024-financials-and-corporate-update";
 
 const queryClient = new QueryClient();
 
@@ -62,6 +67,11 @@ const App = () => (
           <Route path="/news/adyton-resources-announces-upsized-c20-million-financing-comprised-of-14-million-private-placement-of-units-and-concurrent-6-million-non-brokered-private-placement-of-units" element={<UpsizedC20mFinancing />} />
           <Route path="/news/adyton-reports-multiple-significant-gold-intersections-from-its-feni-island-gold-copper-project-drilling" element={<FeniMultipleGoldIntersections />} />
           <Route path="/news/adyton-reports-update-on-feni-island-gold-copper-project-drilling" element={<FeniDrillingUpdateJune2025 />} />
+          <Route path="/news/adyton-resources-announces-filing-of-financial-statements-and-mda-for-the-three-months-ended-march-31-2025" element={<Q12025FinancialsFiling />} />
+          <Route path="/news/adyton-resources-featured-on-clarus-securities-mining-watch-list" element={<ClarusSecuritiesMiningWatchList />} />
+          <Route path="/news/adyton-reports-first-drill-intercepts-of-up-to-36-grams-per-tonne-gold-from-its-wapolu-drill-campaign" element={<WapoluFirstDrillIntercepts36gt />} />
+          <Route path="/news/adyton-announces-first-drill-samples-from-latest-campaign-at-its-feni-island-gold-project-with-high-copper-prospectivity-have-been-dispatched-for-analysis" element={<FeniFirstDrillSamplesDispatched />} />
+          <Route path="/news/adyton-resources-announces-filing-of-financial-statements-and-mda-for-the-period-ending-december-31-2024-and-provides-corporate-update" element={<FY2024FinancialsAndCorporateUpdate />} />
           <Route path="/news/:slug" element={<NewsDetail />} />
           <Route path="/pr" element={<PressReleaseIndex />} />
           <Route path="/pr/:slug" element={<PressRelease />} />
