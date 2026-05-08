@@ -264,6 +264,41 @@ const News = () => {
                 sourceUrl="/news/adyton-reports-update-on-feni-island-gold-copper-project-drilling"
               />
               <NewsCard
+                title="Adyton Resources Announces Filing of Financial Statements and MD&A for the Three Months Ended March 31, 2025"
+                date="May 30, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-resources-announces-filing-of-financial-statements-and-mda-for-the-three-months-ended-march-31-2025"
+              />
+              <NewsCard
+                title="Adyton Resources Featured on Clarus Securities' Mining Watch List"
+                date="May 21, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-resources-featured-on-clarus-securities-mining-watch-list"
+              />
+              <NewsCard
+                title="Adyton Reports First Drill Intercepts Of Up To 36 Grams Per Tonne Gold From Its Wapolu Drill Campaign"
+                date="May 7, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-reports-first-drill-intercepts-of-up-to-36-grams-per-tonne-gold-from-its-wapolu-drill-campaign"
+              />
+              <NewsCard
+                title="Adyton Announces First Drill Samples From Latest Campaign At Its Feni Island Gold Project (With High Copper Prospectivity) Have Been Dispatched For Analysis"
+                date="April 30, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-announces-first-drill-samples-from-latest-campaign-at-its-feni-island-gold-project-with-high-copper-prospectivity-have-been-dispatched-for-analysis"
+              />
+              <NewsCard
+                title="Adyton Resources Announces Filing Of Financial Statements And MD&A For The Period Ending December 31, 2024 And Provides Corporate Update"
+                date="April 24, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-resources-announces-filing-of-financial-statements-and-mda-for-the-period-ending-december-31-2024-and-provides-corporate-update"
+              />
+              <NewsCard
                 title="Adyton Reports ~200% Increase To Wapolu Updated Inferred Mineral Resources Estimate"
                 date="January 14, 2026"
                 excerpt=""
