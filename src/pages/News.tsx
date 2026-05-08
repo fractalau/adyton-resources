@@ -208,6 +208,13 @@ const News = () => {
                 sourceUrl="/news/adyton-reports-completion-of-land-ownership-and-baseline-field-work-at-wapolu-joint-venture"
               />
               <NewsCard
+                title="Adyton Confirms Significant Scale at Feni Gold-Copper Project: FDD005 Returns 158m @ 0.72g/t Au.Eq and Identifies New High-Priority Drill Targets"
+                date="October 15, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-confirms-significant-scale-at-feni-gold-copper-project-fdd005-returns-158m-0-72g-t-au-eq-0-54g-t-au-0-14-cu-and-identifies-new-high-priority-drill-targets"
+              />
+              <NewsCard
                 title="Adyton Reports ~200% Increase To Wapolu Updated Inferred Mineral Resources Estimate"
                 date="January 14, 2026"
                 excerpt=""
