@@ -38,6 +38,8 @@ import FeniFirstDrillSamplesDispatched from "./announcements/feni-first-drill-sa
 import FY2024FinancialsAndCorporateUpdate from "./announcements/fy2024-financials-and-corporate-update";
 import WapoluDrilling4000mGameta from "./announcements/wapolu-4000m-drilling-gameta-landowner-support";
 import FeniDrillingAdvances100Owned from "./announcements/feni-drilling-advances-100-owned";
+import PngStateTeamWapoluVisit from "./announcements/png-state-team-wapolu-visit";
+import FeniSignificantCopperMineralization from "./announcements/feni-significant-copper-mineralization";
 
 const queryClient = new QueryClient();
 
