@@ -42,6 +42,8 @@ import PngStateTeamWapoluVisit from "./announcements/png-state-team-wapolu-visit
 import FeniSignificantCopperMineralization from "./announcements/feni-significant-copper-mineralization";
 import WapoluDrillingProgressingToPlan from "./announcements/wapolu-drilling-progressing-to-plan";
 import FeniMultipleRigMobilization from "./announcements/feni-multiple-rig-mobilization";
+import FeniDroneSurveyCompleted from "./announcements/feni-drone-survey-completed";
+import WapoluDrillingCommencesFeasibility from "./announcements/wapolu-drilling-commences-feasibility";
 
 const queryClient = new QueryClient();
 
@@ -84,6 +86,8 @@ const App = () => (
           <Route path="/news/significant-copper-mineralization-in-addition-to-gold-on-feni-island" element={<FeniSignificantCopperMineralization />} />
           <Route path="/news/drilling-progressing-to-plan-at-fergusson-wapolu-project" element={<WapoluDrillingProgressingToPlan />} />
           <Route path="/news/multiple-rig-mobilization-underway-and-new-camp-completion" element={<FeniMultipleRigMobilization />} />
+          <Route path="/news/drone-survey-completed-at-feni-island-gold-copper-project" element={<FeniDroneSurveyCompleted />} />
+          <Route path="/news/drilling-commences-at-fergusson-island-wapolu-gold-project-for-feasibility-and-production-planning" element={<WapoluDrillingCommencesFeasibility />} />
           <Route path="/news/:slug" element={<NewsDetail />} />
           <Route path="/pr" element={<PressReleaseIndex />} />
           <Route path="/pr/:slug" element={<PressRelease />} />

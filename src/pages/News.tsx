@@ -375,6 +375,20 @@ const News = () => {
                 tags={[]}
                 sourceUrl="/news/multiple-rig-mobilization-underway-and-new-camp-completion"
               />
+              <NewsCard
+                title="Drone Survey Completed at Feni Island Gold-Copper Project"
+                date="January 14, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/drone-survey-completed-at-feni-island-gold-copper-project"
+              />
+              <NewsCard
+                title="Drilling Commences at Fergusson Island Wapolu Gold Project for Feasibility and Production Planning"
+                date="December 16, 2024"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/drilling-commences-at-fergusson-island-wapolu-gold-project-for-feasibility-and-production-planning"
+              />
             </div>
 
             <p className="text-center text-sm mt-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
