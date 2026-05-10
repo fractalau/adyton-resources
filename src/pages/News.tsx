@@ -347,6 +347,20 @@ const News = () => {
                 tags={[]}
                 sourceUrl="/news/adyton-resources-announces-drilling-advances-at-100-owned-feni-island-gold-copper-project"
               />
+              <NewsCard
+                title="PNG Government State Team Visits Fergusson Island Wapolu Project to Commence Operations Restart Permitting"
+                date="March 12, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/png-government-state-team-visits-fergusson-island-wapolu-project-to-commence-operations-restart-permitting"
+              />
+              <NewsCard
+                title="Significant Copper Mineralization in addition to Gold on Feni Island"
+                date="February 27, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/significant-copper-mineralization-in-addition-to-gold-on-feni-island"
+              />
             </div>
 
             <p className="text-center text-sm mt-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>

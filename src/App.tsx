@@ -78,6 +78,8 @@ const App = () => (
           <Route path="/news/adyton-resources-announces-filing-of-financial-statements-and-mda-for-the-period-ending-december-31-2024-and-provides-corporate-update" element={<FY2024FinancialsAndCorporateUpdate />} />
           <Route path="/news/adyton-resources-completes-over-4000m-drilling-at-wapolu-and-prepares-for-gameta-drilling-with-unanimous-landowner-support" element={<WapoluDrilling4000mGameta />} />
           <Route path="/news/adyton-resources-announces-drilling-advances-at-100-owned-feni-island-gold-copper-project" element={<FeniDrillingAdvances100Owned />} />
+          <Route path="/news/png-government-state-team-visits-fergusson-island-wapolu-project-to-commence-operations-restart-permitting" element={<PngStateTeamWapoluVisit />} />
+          <Route path="/news/significant-copper-mineralization-in-addition-to-gold-on-feni-island" element={<FeniSignificantCopperMineralization />} />
           <Route path="/news/:slug" element={<NewsDetail />} />
           <Route path="/pr" element={<PressReleaseIndex />} />
           <Route path="/pr/:slug" element={<PressRelease />} />
