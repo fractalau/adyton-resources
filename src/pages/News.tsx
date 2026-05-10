@@ -361,6 +361,20 @@ const News = () => {
                 tags={[]}
                 sourceUrl="/news/significant-copper-mineralization-in-addition-to-gold-on-feni-island"
               />
+              <NewsCard
+                title="Drilling Progressing to Plan at Fergusson Wapolu Project"
+                date="January 30, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/drilling-progressing-to-plan-at-fergusson-wapolu-project"
+              />
+              <NewsCard
+                title="Adyton Advances Feni Gold-Copper Project with Multiple Rig Mobilization Underway and New Camp Completion"
+                date="January 16, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/multiple-rig-mobilization-underway-and-new-camp-completion"
+              />
             </div>
 
             <p className="text-center text-sm mt-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
