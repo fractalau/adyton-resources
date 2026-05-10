@@ -44,6 +44,11 @@ import WapoluDrillingProgressingToPlan from "./announcements/wapolu-drilling-pro
 import FeniMultipleRigMobilization from "./announcements/feni-multiple-rig-mobilization";
 import FeniDroneSurveyCompleted from "./announcements/feni-drone-survey-completed";
 import WapoluDrillingCommencesFeasibility from "./announcements/wapolu-drilling-commences-feasibility";
+import FeniMobilizesDroneSurveyTeam from "./announcements/feni-mobilizes-drone-survey-team";
+import GametaFeniWardensHearings from "./announcements/gameta-feni-wardens-hearings";
+import ChrisBowdenCOO from "./announcements/chris-bowden-coo";
+import USD5MStrategicPrivatePlacementClosing from "./announcements/usd5m-strategic-private-placement-closing";
+import NonBrokeredPrivatePlacementAnnouncement from "./announcements/non-brokered-private-placement-announcement";
 
 const queryClient = new QueryClient();
 
@@ -88,6 +93,11 @@ const App = () => (
           <Route path="/news/multiple-rig-mobilization-underway-and-new-camp-completion" element={<FeniMultipleRigMobilization />} />
           <Route path="/news/drone-survey-completed-at-feni-island-gold-copper-project" element={<FeniDroneSurveyCompleted />} />
           <Route path="/news/drilling-commences-at-fergusson-island-wapolu-gold-project-for-feasibility-and-production-planning" element={<WapoluDrillingCommencesFeasibility />} />
+          <Route path="/news/adyton-mobilizes-drone-survey-team-to-feni-island" element={<FeniMobilizesDroneSurveyTeam />} />
+          <Route path="/news/adyton-successfully-completes-gameta-and-feni-wardens-hearings" element={<GametaFeniWardensHearings />} />
+          <Route path="/news/adyton-resources-welcomes-dr-chris-bowden-as-chief-operating-officer" element={<ChrisBowdenCOO />} />
+          <Route path="/news/adyton-resources-corporation-closes-premium-to-market-usd5-million-strategic-private-placement" element={<USD5MStrategicPrivatePlacementClosing />} />
+          <Route path="/news/adyton-resources-corporation-announces-non-brokered-private-placement" element={<NonBrokeredPrivatePlacementAnnouncement />} />
           <Route path="/news/:slug" element={<NewsDetail />} />
           <Route path="/pr" element={<PressReleaseIndex />} />
           <Route path="/pr/:slug" element={<PressRelease />} />
