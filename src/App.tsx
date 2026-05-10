@@ -49,6 +49,13 @@ import GametaFeniWardensHearings from "./announcements/gameta-feni-wardens-heari
 import ChrisBowdenCOO from "./announcements/chris-bowden-coo";
 import USD5MStrategicPrivatePlacementClosing from "./announcements/usd5m-strategic-private-placement-closing";
 import NonBrokeredPrivatePlacementAnnouncement from "./announcements/non-brokered-private-placement-announcement";
+import FeniFieldWorkFriedland from "./announcements/feni-field-work-friedland-geologist";
+import FeniHistoricalDataCuAu from "./announcements/feni-historical-data-cu-au-discovery-potential";
+import FeniResourceGrowthUntestedTargets from "./announcements/feni-resource-growth-untested-drill-targets";
+import IvanhoeMongoliaBoard from "./announcements/ivanhoe-mongolia-exploration-manager-board";
+import EvihFergussonFeasibilityBulkSample from "./announcements/evih-team-fergusson-feasibility-bulk-sample";
+import EvihUS95MInvestmentAgreement from "./announcements/evih-us95m-investment-development-agreement-fergusson";
+import FY2023FinancialsFiling from "./announcements/fy2023-financials-filing";
 
 const queryClient = new QueryClient();
 
@@ -98,6 +105,13 @@ const App = () => (
           <Route path="/news/adyton-resources-welcomes-dr-chris-bowden-as-chief-operating-officer" element={<ChrisBowdenCOO />} />
           <Route path="/news/adyton-resources-corporation-closes-premium-to-market-usd5-million-strategic-private-placement" element={<USD5MStrategicPrivatePlacementClosing />} />
           <Route path="/news/adyton-resources-corporation-announces-non-brokered-private-placement" element={<NonBrokeredPrivatePlacementAnnouncement />} />
+          <Route path="/news/adyton-commences-field-work-on-feni-island-led-by-former-friedland-senior-geologist" element={<FeniFieldWorkFriedland />} />
+          <Route path="/news/review-of-existing-and-historical-data-on-feni-island-reinforces-significant-cu-au-discovery-potential" element={<FeniHistoricalDataCuAu />} />
+          <Route path="/news/adyton-identifies-resource-growth-potential-with-new-untested-drill-targets-at-the-feni-island-project" element={<FeniResourceGrowthUntestedTargets />} />
+          <Route path="/news/former-exploration-manager-for-ivanhoe-mines-mongolia-to-strengthen-adyton-board" element={<IvanhoeMongoliaBoard />} />
+          <Route path="/news/evih-technical-and-executive-team-visit-fergusson-island-to-commence-feasibility-study-and-bulk-sample-planning" element={<EvihFergussonFeasibilityBulkSample />} />
+          <Route path="/news/adyton-and-east-vision-international-holdings-execute-us9-5m-investment-and-development-agreement-for-the-fergusson-island-gold-project" element={<EvihUS95MInvestmentAgreement />} />
+          <Route path="/news/adyton-resources-announces-filing-of-financial-statements-and-mda-for-the-three-and-twelve-months-ended-december-31-2023" element={<FY2023FinancialsFiling />} />
           <Route path="/news/:slug" element={<NewsDetail />} />
           <Route path="/pr" element={<PressReleaseIndex />} />
           <Route path="/pr/:slug" element={<PressRelease />} />
