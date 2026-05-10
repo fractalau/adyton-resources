@@ -56,6 +56,9 @@ import IvanhoeMongoliaBoard from "./announcements/ivanhoe-mongolia-exploration-m
 import EvihFergussonFeasibilityBulkSample from "./announcements/evih-team-fergusson-feasibility-bulk-sample";
 import EvihUS95MInvestmentAgreement from "./announcements/evih-us95m-investment-development-agreement-fergusson";
 import FY2023FinancialsFiling from "./announcements/fy2023-financials-filing";
+import FeniRecommenceWorkActivities from "./announcements/feni-recommence-work-activities";
+import NonBrokeredPrivatePlacementClosing from "./announcements/non-brokered-private-placement-closing";
+import NonBrokeredPrivatePlacementMarch2024 from "./announcements/non-brokered-private-placement-march-2024";
 
 const queryClient = new QueryClient();
 
@@ -112,6 +115,9 @@ const App = () => (
           <Route path="/news/evih-technical-and-executive-team-visit-fergusson-island-to-commence-feasibility-study-and-bulk-sample-planning" element={<EvihFergussonFeasibilityBulkSample />} />
           <Route path="/news/adyton-and-east-vision-international-holdings-execute-us9-5m-investment-and-development-agreement-for-the-fergusson-island-gold-project" element={<EvihUS95MInvestmentAgreement />} />
           <Route path="/news/adyton-resources-announces-filing-of-financial-statements-and-mda-for-the-three-and-twelve-months-ended-december-31-2023" element={<FY2023FinancialsFiling />} />
+          <Route path="/news/adyton-to-recommence-work-activities-on-feni-island-gold-copper-project" element={<FeniRecommenceWorkActivities />} />
+          <Route path="/news/adyton-resources-corporation-announces-closing-of-non-brokered-private-placement" element={<NonBrokeredPrivatePlacementClosing />} />
+          <Route path="/news/adyton-resources-corporation-announces-non-brokered-private-placement-1" element={<NonBrokeredPrivatePlacementMarch2024 />} />
           <Route path="/news/:slug" element={<NewsDetail />} />
           <Route path="/pr" element={<PressReleaseIndex />} />
           <Route path="/pr/:slug" element={<PressRelease />} />
