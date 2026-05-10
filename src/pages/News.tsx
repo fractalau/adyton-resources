@@ -431,6 +431,9 @@ const News = () => {
               <NewsCard title="EVIH Technical and Executive Team Visit Fergusson Island to Commence Feasibility Study and Bulk Sample Planning" date="May 29, 2024" excerpt="" tags={[]} sourceUrl="/news/evih-technical-and-executive-team-visit-fergusson-island-to-commence-feasibility-study-and-bulk-sample-planning" />
               <NewsCard title="Adyton and East Vision International Holdings Execute US$9.5M Investment and Development Agreement for the Fergusson Island Gold Project" date="May 13, 2024" excerpt="" tags={[]} sourceUrl="/news/adyton-and-east-vision-international-holdings-execute-us9-5m-investment-and-development-agreement-for-the-fergusson-island-gold-project" />
               <NewsCard title="Adyton Resources Announces Filing of Financial Statements and MD&A for the three and twelve months ended December 31, 2023" date="April 26, 2024" excerpt="" tags={[]} sourceUrl="/news/adyton-resources-announces-filing-of-financial-statements-and-mda-for-the-three-and-twelve-months-ended-december-31-2023" />
+              <NewsCard title="Adyton to Recommence Work Activities on Feni Island Gold/Copper Project" date="April 25, 2024" excerpt="" tags={[]} sourceUrl="/news/adyton-to-recommence-work-activities-on-feni-island-gold-copper-project" />
+              <NewsCard title="Adyton Resources Corporation Announces Closing of Non-Brokered Private Placement" date="April 19, 2024" excerpt="" tags={[]} sourceUrl="/news/adyton-resources-corporation-announces-closing-of-non-brokered-private-placement" />
+              <NewsCard title="Adyton Resources Corporation Announces Non-Brokered Private Placement" date="March 27, 2024" excerpt="" tags={[]} sourceUrl="/news/adyton-resources-corporation-announces-non-brokered-private-placement-1" />
             </div>
 
             <p className="text-center text-sm mt-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
