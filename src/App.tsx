@@ -36,6 +36,8 @@ import ClarusSecuritiesMiningWatchList from "./announcements/clarus-securities-m
 import WapoluFirstDrillIntercepts36gt from "./announcements/wapolu-first-drill-intercepts-36gt";
 import FeniFirstDrillSamplesDispatched from "./announcements/feni-first-drill-samples-dispatched";
 import FY2024FinancialsAndCorporateUpdate from "./announcements/fy2024-financials-and-corporate-update";
+import WapoluDrilling4000mGameta from "./announcements/wapolu-4000m-drilling-gameta-landowner-support";
+import FeniDrillingAdvances100Owned from "./announcements/feni-drilling-advances-100-owned";
 
 const queryClient = new QueryClient();
 
@@ -72,6 +74,8 @@ const App = () => (
           <Route path="/news/adyton-reports-first-drill-intercepts-of-up-to-36-grams-per-tonne-gold-from-its-wapolu-drill-campaign" element={<WapoluFirstDrillIntercepts36gt />} />
           <Route path="/news/adyton-announces-first-drill-samples-from-latest-campaign-at-its-feni-island-gold-project-with-high-copper-prospectivity-have-been-dispatched-for-analysis" element={<FeniFirstDrillSamplesDispatched />} />
           <Route path="/news/adyton-resources-announces-filing-of-financial-statements-and-mda-for-the-period-ending-december-31-2024-and-provides-corporate-update" element={<FY2024FinancialsAndCorporateUpdate />} />
+          <Route path="/news/adyton-resources-completes-over-4000m-drilling-at-wapolu-and-prepares-for-gameta-drilling-with-unanimous-landowner-support" element={<WapoluDrilling4000mGameta />} />
+          <Route path="/news/adyton-resources-announces-drilling-advances-at-100-owned-feni-island-gold-copper-project" element={<FeniDrillingAdvances100Owned />} />
           <Route path="/news/:slug" element={<NewsDetail />} />
           <Route path="/pr" element={<PressReleaseIndex />} />
           <Route path="/pr/:slug" element={<PressRelease />} />

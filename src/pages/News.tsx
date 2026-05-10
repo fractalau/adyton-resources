@@ -333,6 +333,20 @@ const News = () => {
                 tags={[]}
                 sourceUrl="/news/adyton-resources-outlines-dual-track-growth-strategy-in-crux-investor-interview"
               />
+              <NewsCard
+                title="Adyton Resources Completes Over 4,000m Drilling at Wapolu and Prepares for Gameta Drilling with Unanimous Landowner Support"
+                date="March 26, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-resources-completes-over-4000m-drilling-at-wapolu-and-prepares-for-gameta-drilling-with-unanimous-landowner-support"
+              />
+              <NewsCard
+                title="Adyton Resources Announces Drilling Advances at 100%-Owned Feni Island Gold-Copper Project"
+                date="March 20, 2025"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-resources-announces-drilling-advances-at-100-owned-feni-island-gold-copper-project"
+              />
             </div>
 
             <p className="text-center text-sm mt-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
