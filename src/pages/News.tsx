@@ -389,6 +389,41 @@ const News = () => {
                 tags={[]}
                 sourceUrl="/news/drilling-commences-at-fergusson-island-wapolu-gold-project-for-feasibility-and-production-planning"
               />
+              <NewsCard
+                title="Adyton Mobilizes Drone Survey Team To Feni Island"
+                date="October 30, 2024"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-mobilizes-drone-survey-team-to-feni-island"
+              />
+              <NewsCard
+                title="Adyton Successfully Completes Gameta and Feni Wardens Hearings"
+                date="October 24, 2024"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-successfully-completes-gameta-and-feni-wardens-hearings"
+              />
+              <NewsCard
+                title="Adyton Resources Welcomes Dr. Chris Bowden as Chief Operating Officer"
+                date="October 20, 2024"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-resources-welcomes-dr-chris-bowden-as-chief-operating-officer"
+              />
+              <NewsCard
+                title="Adyton Resources Corporation Closes Premium To Market USD$5 Million Strategic Private Placement"
+                date="October 7, 2024"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-resources-corporation-closes-premium-to-market-usd5-million-strategic-private-placement"
+              />
+              <NewsCard
+                title="Adyton Resources Corporation Announces Non-brokered Private Placement"
+                date="September 30, 2024"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-resources-corporation-announces-non-brokered-private-placement"
+              />
             </div>
 
             <p className="text-center text-sm mt-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
