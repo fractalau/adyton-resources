@@ -23,7 +23,7 @@ const HeroSection = () => {
       {HERO_IMAGES.map((src, i) => (
         <div
           key={src}
-          className={`absolute inset-[-5%] bg-cover bg-center lg:bg-[length:110%_auto] xl:bg-[length:100%_auto] bg-[center_40%] animate-hero-drift transition-opacity duration-[2000ms] ease-in-out ${
+          className={`absolute inset-0 bg-cover bg-center lg:bg-[length:110%_auto] xl:bg-[length:100%_auto] bg-[center_40%] transition-opacity duration-[2000ms] ease-in-out ${
             i === index ? "opacity-90" : "opacity-0"
           }`}
           style={{ backgroundImage: `url(${src})` }}
