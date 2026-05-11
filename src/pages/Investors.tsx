@@ -50,6 +50,16 @@ const downloads = [
     featured: false,
     href: "/presentations/Adyton_Resources_PDAC_2026.pdf",
   },
+  {
+    title: "Precious Metals Summit Zurich 2025",
+    date: "November 2025",
+    description: "Presentation at the Precious Metals Summit Zurich 2025.",
+    fileType: "PDF",
+    fileSize: "5.0 MB",
+    category: "Presentations",
+    featured: false,
+    href: "/presentations/Adyton_Precious_Metals_Summit_Zurich_2025.pdf",
+  },
 ];
 
 const Investors = () => {
