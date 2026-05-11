@@ -46,7 +46,7 @@ const offices = [
   {
     city: "Port Moresby",
     country: "Papua New Guinea",
-    address: "XX Floor, XX Building\nPort Moresby, NCD",
+    address: "C/O Sinton Spence Chartered Accountants\n2nd Floor, Brian Bell Plaza\nTurumu Street, Boroko\nMoresby North East, NCD\nPort Moresby, Papua New Guinea\nPO Box 6861",
     type: "PNG Operations",
   },
 ];
