@@ -81,6 +81,16 @@ const downloads = [
     href: "/presentations/Adyton_PDAC_2025_Conference_Presentation.pdf",
   },
   {
+    title: "World Class Gold-Copper Discovery",
+    date: "October 2024",
+    description: "Corporate presentation on Adyton's world-class gold-copper discovery.",
+    fileType: "PDF",
+    fileSize: "6.9 MB",
+    category: "Presentations",
+    featured: false,
+    href: "/presentations/Adyton_World_Class_Gold_Copper_October_2024.pdf",
+  },
+  {
     title: "Consolidated Financial Statements",
     date: "December 2025",
     description: "Audited consolidated financial statements for the period ending December 31, 2025.",
