@@ -91,6 +91,16 @@ const downloads = [
     href: "/presentations/Adyton_World_Class_Gold_Copper_October_2024.pdf",
   },
   {
+    title: "Québec Conference Presentation",
+    date: "June 2024",
+    description: "Presentation at the Québec Mines + Énergie conference.",
+    fileType: "PDF",
+    fileSize: "3.0 MB",
+    category: "Presentations",
+    featured: false,
+    href: "/presentations/Adyton_Quebec_Conference_Presentation_June_2024.pdf",
+  },
+  {
     title: "Consolidated Financial Statements",
     date: "December 2025",
     description: "Audited consolidated financial statements for the period ending December 31, 2025.",
