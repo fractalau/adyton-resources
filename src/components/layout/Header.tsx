@@ -232,7 +232,7 @@ const Header = () => {
               <div className="mt-3 pt-3 border-t border-border">
                 <Button variant="gold" size="sm" className="w-full" asChild>
                   <a href="/Adyton-Investor-Deck.pdf" target="_blank" rel="noopener noreferrer">
-                    View investor Deck
+                    View Investor Deck
                     <ExternalLink className="h-3.5 w-3.5" />
                   </a>
                 </Button>
