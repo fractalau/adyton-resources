@@ -52,10 +52,10 @@ const Footer = () => (
                 Capital Structure
               </Link>
               <Link
-                to="/investors"
+                to="/news"
                 className="text-sm text-foreground/60 hover:text-primary transition-colors font-body"
               >
-                Technical Reports
+                News & Announcements
               </Link>
               <a
                 href="https://www.sedarplus.ca"
