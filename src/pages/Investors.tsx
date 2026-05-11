@@ -81,14 +81,14 @@ const downloads = [
     href: "/presentations/Adyton_PDAC_2025_Conference_Presentation.pdf",
   },
   {
-    title: "Financial Statements – December 31, 2025",
+    title: "Consolidated Financial Statements",
     date: "December 2025",
-    description: "Audited financial statements for the period ending December 31, 2025.",
+    description: "Presentation at PDAC 2025 conference.",
     fileType: "PDF",
     fileSize: "1.0 MB",
     category: "Corporate Documents",
     featured: false,
-    href: "/documents/ADY_FS_Dec_31_2025.pdf",
+    href: "/presentations/Adyton_PDAC_2025_Conference_Presentation.pdf",
   },
 ];
 
