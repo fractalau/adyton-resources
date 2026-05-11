@@ -373,7 +373,7 @@ const FeniIsland = () => {
           <div className="container max-w-4xl flex flex-wrap gap-3">
             <Button variant="gold" size="lg">
               <a href="/reports/NI43-101_Feni_Oct2021.pdf" target="_blank" rel="noopener noreferrer">
-                NI 43-101 Technical Report — Feni Island (Oct 2021) <ExternalLink className="h-4 w-4" />
+                NI 43-101 Technical Report — Feni Island <ExternalLink className="h-4 w-4" />
               </a>
             </Button>
             <Button variant="gold-outline" size="lg" asChild>
