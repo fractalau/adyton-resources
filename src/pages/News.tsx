@@ -101,6 +101,20 @@ const News = () => {
   );
   const [page, setPage] = useState(1);
   const [announcementsPage, setAnnouncementsPage] = useState(1);
+  const [activeCategory, setActiveCategory] = useState<Category | "All">("All");
+
+  const categorizedAnnouncements = useMemo(
+    () => ANNOUNCEMENTS.map((a) => ({ ...a, category: categorize(a.title, a.sourceUrl) })),
+    [],
+  );
+
+  const filteredAnnouncements = useMemo(
+    () =>
+      activeCategory === "All"
+        ? categorizedAnnouncements
+        : categorizedAnnouncements.filter((a) => a.category === activeCategory),
+    [activeCategory, categorizedAnnouncements],
+  );
   const { data: newsItems = [], isLoading } = useQuery({
     queryKey: ["rss-news-all"],
     queryFn: fetchRss,
