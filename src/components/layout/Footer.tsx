@@ -153,7 +153,11 @@ const Footer = () => (
       <div className="mt-10 pt-6 border-t border-border">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-foreground/40 font-body">
-            © {new Date().getFullYear()} Adyton Resources Corp. | Privacy Policy | Disclaimer
+            © {new Date().getFullYear()} Adyton Resources Corp. |{" "}
+            <Link to="/privacy-policy" className="hover:text-primary transition-colors">
+              Privacy Policy
+            </Link>{" "}
+            | Disclaimer
           </p>
         </div>
       </div>
