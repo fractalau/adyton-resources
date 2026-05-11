@@ -11,9 +11,9 @@ const InvestorHubCTA = () => (
       </p>
       <div className="flex flex-wrap justify-center gap-3 mb-6">
         <Button variant="gold" size="lg" asChild>
-          <a href="/Adyton-Investor-Deck.pdf" download>
-            <Download className="h-4 w-4" />
-            Download Investor Deck
+          <a href="/Adyton-Investor-Deck.pdf" target="_blank" rel="noopener noreferrer">
+            View Investor Deck
+            <ExternalLink className="h-4 w-4" />
           </a>
         </Button>
         <Button variant="gold-outline" size="lg" asChild>
