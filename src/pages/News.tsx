@@ -8,7 +8,7 @@ type Category = "News" | "Feni Island" | "Fergusson Island";
 const categorize = (title: string, slug: string): Category => {
   const haystack = `${title} ${slug}`.toLowerCase();
   if (haystack.includes("fergusson") || haystack.includes("gameta") || haystack.includes("wapolu")) return "Fergusson Island";
-  if (haystack.includes("feni")) return "Feni Island";
+  if (haystack.includes("feni") || haystack.includes("lihir")) return "Feni Island";
   return "News";
 };
 
