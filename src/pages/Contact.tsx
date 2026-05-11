@@ -40,7 +40,7 @@ const offices = [
   {
     city: "Brisbane",
     country: "Australia",
-    address: "Level XX, XX Street\nBrisbane QLD 4000",
+    address: "Level 7, 300 Adelaide Street\nBrisbane QLD 4000\nPO Box 5807",
     type: "Registered Office",
   },
   {
