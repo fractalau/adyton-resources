@@ -5,8 +5,9 @@ import { ExternalLink } from "lucide-react";
 import hero1 from "@/assets/hero-01.jpg";
 import hero2 from "@/assets/hero-02.jpg";
 import hero3 from "@/assets/hero-03.jpg";
+import hero4 from "@/assets/hero-04.jpg";
 
-const HERO_IMAGES = [hero1, hero2, hero3];
+const HERO_IMAGES = [hero1, hero2, hero3, hero4];
 
 const HeroSection = () => {
   const [index, setIndex] = useState(0);
