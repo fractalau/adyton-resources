@@ -58,7 +58,7 @@ const downloads = [
     fileSize: "6.0 MB",
     category: "Presentations",
     featured: false,
-    href: "/presentations/ADY_Zurich_Nov2025.pdf",
+    href: "/presentations/Adyton_Precious_Metals_Summit_Zurich_2025.pdf",
   },
 ];
 
