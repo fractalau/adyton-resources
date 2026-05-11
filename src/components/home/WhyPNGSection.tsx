@@ -28,7 +28,7 @@ const WhyPNGSection = () => (
         ))}
       </ul>
       <Button variant="gold-outline" asChild>
-        <Link to="/about#community">
+        <Link to="/why-png">
           Learn more <ArrowRight className="h-4 w-4" />
         </Link>
       </Button>
