@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ExternalLink } from "lucide-react";
-import hero1 from "@/assets/hero-01.jpg";
-import hero2 from "@/assets/hero-02.jpg";
-import hero3 from "@/assets/hero-03.jpg";
-import hero4 from "@/assets/hero-04.jpg";
+import hero1 from "@/assets/hero-01.webp";
+import hero2 from "@/assets/hero-02.webp";
+import hero3 from "@/assets/hero-03.webp";
+import hero4 from "@/assets/hero-04.webp";
 
 const HERO_IMAGES = [hero1, hero2, hero3, hero4];
 
