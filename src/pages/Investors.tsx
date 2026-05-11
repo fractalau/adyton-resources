@@ -53,12 +53,12 @@ const downloads = [
   {
     title: "Precious Metals Summit Zurich 2025",
     date: "November 2025",
-    description: "Presentation at the Precious Metals Summit Zurich 2025.",
+    description: "Presentation at Precious Metals Summit, Zurich.",
     fileType: "PDF",
-    fileSize: "5.0 MB",
+    fileSize: "6.0 MB",
     category: "Presentations",
     featured: false,
-    href: "/presentations/Adyton_Precious_Metals_Summit_Zurich_2025.pdf",
+    href: "/presentations/ADY_Zurich_Nov2025.pdf",
   },
 ];
 
