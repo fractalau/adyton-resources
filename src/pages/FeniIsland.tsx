@@ -377,7 +377,7 @@ const FeniIsland = () => {
               </a>
             </Button>
             <Button variant="gold-outline" size="lg" asChild>
-              <a href="https://www.newsfilecorp.com/company/7416" target="_blank" rel="noopener noreferrer">
+              <a href="/news#press-release-section" rel="noopener noreferrer">
                 View All Feni Releases on Newsfile <ExternalLink className="h-4 w-4" />
               </a>
             </Button>
