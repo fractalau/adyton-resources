@@ -51,6 +51,16 @@ const downloads = [
     href: "/Adyton-Investor-Deck.pdf",
   },
   {
+    title: "PDAC 2026 Conference Presentation",
+    date: "March 2026",
+    description: "Presentation at PDAC 2026 conference.",
+    fileType: "PDF",
+    fileSize: "5.1 MB",
+    category: "Presentations",
+    featured: false,
+    href: "/presentations/Adyton_Resources_PDAC_2026.pdf",
+  },
+  {
     title: "Precious Metals Summit Zurich 2025",
     date: "November 2025",
     description: "Presentation at Precious Metals Summit, Zurich.",
