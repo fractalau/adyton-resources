@@ -42,7 +42,10 @@ const fetchAnnouncements = async () => {
 };
 
 const News = () => {
-  useSEO("News & Announcements", "Latest press releases and corporate announcements from Adyton Resources — exploration updates, drilling results, and regulatory filings.");
+  useSEO(
+    "News & Announcements",
+    "Latest press releases and corporate announcements from Adyton Resources — exploration updates, drilling results, and regulatory filings.",
+  );
   const [page, setPage] = useState(1);
   const [announcementsPage, setAnnouncementsPage] = useState(1);
   const { data: newsItems = [], isLoading } = useQuery({
@@ -90,9 +93,7 @@ const News = () => {
             aria-hidden="true"
           />
           <div className="container relative z-10">
-            <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
-              PRESS RELEASES
-            </p>
+            <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">PRESS RELEASES</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4">
               News & Announcements
             </h1>
@@ -100,7 +101,7 @@ const News = () => {
               Corporate news, exploration updates, and regulatory filings. All releases link directly to the
               authoritative source.
             </p>
-            <p className="text-sm text-foreground/40 mt-2 font-mono">{newsItems.length} press releases · 43 announcements</p>
+            <p className="text-sm text-foreground/40 mt-2 font-mono">{newsItems.length} announcements</p>
           </div>
         </section>
         <Subscribe />
@@ -190,7 +191,7 @@ const News = () => {
         <section id="news-section" aria-label="News" className="py-14 md:py-18 bg-background">
           <div className="container">
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-8" style={{ color: "#ffffff" }}>
-              News
+              News & Announcements
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               <NewsCard
@@ -424,16 +425,55 @@ const News = () => {
                 tags={[]}
                 sourceUrl="/news/adyton-resources-corporation-announces-non-brokered-private-placement"
               />
-              <NewsCard title="Adyton commences field work on Feni Island led by Former Friedland senior geologist" date="August 14, 2024" excerpt="" tags={[]} sourceUrl="/news/adyton-commences-field-work-on-feni-island-led-by-former-friedland-senior-geologist" />
-              <NewsCard title="Review of existing and historical data on Feni Island reinforces significant Cu-Au discovery potential" date="July 17, 2024" excerpt="" tags={[]} sourceUrl="/news/review-of-existing-and-historical-data-on-feni-island-reinforces-significant-cu-au-discovery-potential" />
-              <NewsCard title="Adyton identifies resource growth potential with new untested drill targets at the Feni Island Project" date="June 26, 2024" excerpt="" tags={[]} sourceUrl="/news/adyton-identifies-resource-growth-potential-with-new-untested-drill-targets-at-the-feni-island-project" />
-              <NewsCard title="Former Exploration Manager for Ivanhoe Mines Mongolia to Strengthen Adyton Board" date="June 12, 2024" excerpt="" tags={[]} sourceUrl="/news/former-exploration-manager-for-ivanhoe-mines-mongolia-to-strengthen-adyton-board" />
-              <NewsCard title="EVIH Technical and Executive Team Visit Fergusson Island to Commence Feasibility Study and Bulk Sample Planning" date="May 29, 2024" excerpt="" tags={[]} sourceUrl="/news/evih-technical-and-executive-team-visit-fergusson-island-to-commence-feasibility-study-and-bulk-sample-planning" />
-              <NewsCard title="Adyton and East Vision International Holdings Execute US$9.5M Investment and Development Agreement for the Fergusson Island Gold Project" date="May 13, 2024" excerpt="" tags={[]} sourceUrl="/news/adyton-and-east-vision-international-holdings-execute-us9-5m-investment-and-development-agreement-for-the-fergusson-island-gold-project" />
-              <NewsCard title="Adyton Resources Announces Filing of Financial Statements and MD&A for the three and twelve months ended December 31, 2023" date="April 26, 2024" excerpt="" tags={[]} sourceUrl="/news/adyton-resources-announces-filing-of-financial-statements-and-mda-for-the-three-and-twelve-months-ended-december-31-2023" />
-              <NewsCard title="Adyton to Recommence Work Activities on Feni Island Gold/Copper Project" date="April 25, 2024" excerpt="" tags={[]} sourceUrl="/news/adyton-to-recommence-work-activities-on-feni-island-gold-copper-project" />
-              <NewsCard title="Adyton Resources Corporation Announces Closing of Non-Brokered Private Placement" date="April 19, 2024" excerpt="" tags={[]} sourceUrl="/news/adyton-resources-corporation-announces-closing-of-non-brokered-private-placement" />
-              <NewsCard title="Adyton Resources Corporation Announces Non-Brokered Private Placement" date="March 27, 2024" excerpt="" tags={[]} sourceUrl="/news/adyton-resources-corporation-announces-non-brokered-private-placement-1" />
+              <NewsCard
+                title="Adyton commences field work on Feni Island led by Former Friedland senior geologist"
+                date="August 14, 2024"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-commences-field-work-on-feni-island-led-by-former-friedland-senior-geologist"
+              />
+              <NewsCard
+                title="Review of existing and historical data on Feni Island reinforces significant Cu-Au discovery potential"
+                date="July 17, 2024"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/review-of-existing-and-historical-data-on-feni-island-reinforces-significant-cu-au-discovery-potential"
+              />
+              <NewsCard
+                title="Adyton identifies resource growth potential with new untested drill targets at the Feni Island Project"
+                date="June 26, 2024"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-identifies-resource-growth-potential-with-new-untested-drill-targets-at-the-feni-island-project"
+              />
+              <NewsCard
+                title="Former Exploration Manager for Ivanhoe Mines Mongolia to Strengthen Adyton Board"
+                date="June 12, 2024"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/former-exploration-manager-for-ivanhoe-mines-mongolia-to-strengthen-adyton-board"
+              />
+              <NewsCard
+                title="EVIH Technical and Executive Team Visit Fergusson Island to Commence Feasibility Study and Bulk Sample Planning"
+                date="May 29, 2024"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/evih-technical-and-executive-team-visit-fergusson-island-to-commence-feasibility-study-and-bulk-sample-planning"
+              />
+              <NewsCard
+                title="Adyton and East Vision International Holdings Execute US$9.5M Investment and Development Agreement for the Fergusson Island Gold Project"
+                date="May 13, 2024"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-and-east-vision-international-holdings-execute-us9-5m-investment-and-development-agreement-for-the-fergusson-island-gold-project"
+              />
+              <NewsCard
+                title="Adyton Resources Announces Filing of Financial Statements and MD&A for the three and twelve months ended December 31, 2023"
+                date="April 26, 2024"
+                excerpt=""
+                tags={[]}
+                sourceUrl="/news/adyton-resources-announces-filing-of-financial-statements-and-mda-for-the-three-and-twelve-months-ended-december-31-2023"
+              />
             </div>
 
             <p className="text-center text-sm mt-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
