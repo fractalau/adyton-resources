@@ -16,6 +16,7 @@ import PressRelease from "./pages/PressRelease";
 import PressReleaseIndex from "./pages/PressReleaseIndex";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Disclaimer from "./pages/Disclaimer";
 import ScrollToTop from "./components/ScrollToTop";
 import DualTrackGrowthStrategy from "./announcements/dual-track-growth-strategy";
 import WapoluMineralResourcesEstimate from "./announcements/wapolu-updated-mineral-resources-estimate";
@@ -126,6 +127,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/why-png" element={<WhyPNG />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
