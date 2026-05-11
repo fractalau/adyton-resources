@@ -19,7 +19,7 @@ const PrivacyPolicy = () => (
           Last Updated: May 11, 2026
         </p>
 
-        <div className="font-body text-foreground/80 leading-relaxed space-y-5 [&_h2]:font-display [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-primary [&_h2]:mt-10 [&_h2]:mb-3 [&_p]:mb-4 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-2 [&_li]:marker:text-gold [&_strong]:text-foreground">
+        <div className="font-body text-neutral-900 leading-relaxed space-y-5 [&_h2]:font-display [&_h2]:text-2xl [&_h2]:font-semibold [&_h2]:text-primary [&_h2]:mt-10 [&_h2]:mb-3 [&_p]:mb-4 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-2 [&_li]:marker:text-gold [&_strong]:text-neutral-900">
           <p>
             Adyton Resources ("we," "our," or "us") is committed to protecting the
             privacy and security of your personal information. This Privacy Policy
