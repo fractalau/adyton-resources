@@ -26,7 +26,7 @@ const HeroSection = () => {
           key={src}
           className={`absolute inset-0 bg-cover bg-center lg:bg-[length:110%_auto] xl:bg-[length:100%_auto] bg-[center_40%] transition-all ease-in-out ${
             i === index
-              ? "opacity-90 scale-110 duration-[8000ms]"
+              ? "opacity-90 scale-110 duration-[16000ms]"
               : "opacity-0 scale-100 duration-[2000ms]"
           }`}
           style={{ backgroundImage: `url(${src})` }}
