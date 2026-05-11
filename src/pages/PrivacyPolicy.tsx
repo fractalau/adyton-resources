@@ -10,7 +10,7 @@ const PrivacyPolicy = () => (
       canonical="https://adytonresources.com/privacy-policy"
     />
     <Header />
-    <main className="bg-background">
+    <main className="bg-white">
       <article className="container max-w-3xl py-16 md:py-24">
         <h1 className="font-display text-4xl md:text-5xl font-bold text-primary mb-2">
           Privacy Policy
