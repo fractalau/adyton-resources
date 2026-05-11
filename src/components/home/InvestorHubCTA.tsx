@@ -17,9 +17,9 @@ const InvestorHubCTA = () => (
           </a>
         </Button>
         <Button variant="gold-outline" size="lg" asChild>
-          <Link to="/investors">
+          <Link to="/news#news-section">
             <FileText className="h-4 w-4" />
-            Technical Reports
+            News & Announcements
           </Link>
         </Button>
         <Button variant="gold-outline" size="lg" asChild>
