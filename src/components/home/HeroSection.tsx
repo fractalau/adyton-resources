@@ -56,7 +56,7 @@ const HeroSection = () => {
               <Link to="/projects/feni">Explore Our Feni Island Project</Link>
             </Button>
             <Button variant="gold" size="lg" asChild>
-              <Link to="/projects/ferguson">Explore Our Ferguson Island Project</Link>
+              <Link to="/projects/fergusson">Explore Our Fergusson Island Project</Link>
             </Button>
           </div>
         </div>
