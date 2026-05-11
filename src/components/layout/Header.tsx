@@ -138,41 +138,39 @@ const Header = () => {
             <img src={logo} alt="Adyton Resources" className="h-16" />
           </Link>
 
-          {/* Desktop nav */}
-          <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-1">
-            <NavDropdown label="Projects" items={projectsDropdown} isActive={isProjectsActive} />
-            <Link
-              to="/investors"
-              className={`px-3 py-2 transition-colors hover:text-primary ${
-                location.pathname === "/investors" ? "text-primary" : "text-foreground/70"
-              }`}
-            >
-              Investors
-            </Link>
-            <NavDropdown label="Company" items={companyDropdown} isActive={isCompanyActive} />
-            <Link
-              to="/news"
-              className={`px-3 py-2 transition-colors hover:text-primary ${
-                location.pathname === "/news" ? "text-primary" : "text-foreground/70"
-              }`}
-            >
-              News
-            </Link>
-            <Link
-              to="/contact"
-              className={`px-3 py-2 transition-colors hover:text-primary ${
-                location.pathname === "/contact" ? "text-primary" : "text-foreground/70"
-              }`}
-            >
-              Contact
-            </Link>
-          </nav>
-
-          {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center">
+          {/* Desktop nav + CTA */}
+          <div className="hidden lg:flex items-center gap-4 ml-auto">
+            <nav aria-label="Main navigation" className="flex items-center gap-1">
+              <NavDropdown label="Projects" items={projectsDropdown} isActive={isProjectsActive} />
+              <Link
+                to="/investors"
+                className={`px-3 py-2 transition-colors hover:text-primary ${
+                  location.pathname === "/investors" ? "text-primary" : "text-foreground/70"
+                }`}
+              >
+                Investors
+              </Link>
+              <NavDropdown label="Company" items={companyDropdown} isActive={isCompanyActive} />
+              <Link
+                to="/news"
+                className={`px-3 py-2 transition-colors hover:text-primary ${
+                  location.pathname === "/news" ? "text-primary" : "text-foreground/70"
+                }`}
+              >
+                News
+              </Link>
+              <Link
+                to="/contact"
+                className={`px-3 py-2 transition-colors hover:text-primary ${
+                  location.pathname === "/contact" ? "text-primary" : "text-foreground/70"
+                }`}
+              >
+                Contact
+              </Link>
+            </nav>
             <Button variant="gold" size="sm" asChild>
               <a href="/Adyton-Investor-Deck.pdf" target="_blank" rel="noopener noreferrer">
-                View investor Deck
+                View Investor Deck
                 <ExternalLink className="h-3.5 w-3.5" />
               </a>
             </Button>
