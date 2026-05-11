@@ -7,7 +7,7 @@ import hero2 from "@/assets/hero-02.webp";
 import hero3 from "@/assets/hero-03.webp";
 import hero4 from "@/assets/hero-04.webp";
 
-const HERO_IMAGES = [hero1, hero2, hero3, hero4];
+const HERO_IMAGES = [hero3, hero1, hero2, hero4];
 
 const HeroSection = () => {
   const [index, setIndex] = useState(0);
@@ -24,8 +24,10 @@ const HeroSection = () => {
       {HERO_IMAGES.map((src, i) => (
         <div
           key={src}
-          className={`absolute inset-0 bg-cover bg-center lg:bg-[length:110%_auto] xl:bg-[length:100%_auto] bg-[center_40%] transition-opacity duration-[2000ms] ease-in-out ${
-            i === index ? "opacity-90" : "opacity-0"
+          className={`absolute inset-0 bg-cover bg-center lg:bg-[length:110%_auto] xl:bg-[length:100%_auto] bg-[center_40%] transition-all ease-in-out ${
+            i === index
+              ? "opacity-90 scale-110 duration-[8000ms]"
+              : "opacity-0 scale-100 duration-[2000ms]"
           }`}
           style={{ backgroundImage: `url(${src})` }}
           aria-hidden={i !== index}
