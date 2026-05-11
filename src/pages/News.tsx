@@ -270,7 +270,7 @@ const News = () => {
                 />
               ))}
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div key={activeCategory} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 animate-fade-in">
               {filteredAnnouncements.map((a) => (
                 <NewsCard
                   key={a.sourceUrl}
