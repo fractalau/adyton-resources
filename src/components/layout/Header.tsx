@@ -72,7 +72,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="w-full bg-gold py-3">
+      <div className="w-full bg-gold py-3 hidden md:block">
         <div className="container">
           <div className="grid grid-cols-6 items-center">
             <div className="col-span-4 flex items-center gap-6 justify-start">
