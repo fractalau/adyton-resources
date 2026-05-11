@@ -371,9 +371,11 @@ const FeniIsland = () => {
           style={{ background: "hsl(var(--off-white))", borderTop: "1px solid hsl(var(--light-border))" }}
         >
           <div className="container max-w-4xl flex flex-wrap gap-3">
-            <Button variant="gold" size="lg">
-              <Download className="h-4 w-4" />
-              NI 43-101 Technical Report — Feni Island (Oct 2021)
+            <Button variant="gold" size="lg" asChild>
+              <a href="/reports/NI43-101_Feni_Oct2021.pdf" target="_blank" rel="noopener noreferrer">
+                <Download className="h-4 w-4" />
+                NI 43-101 Technical Report — Feni Island (Oct 2021)
+              </a>
             </Button>
             <Button variant="gold-outline" size="lg" asChild>
               <a href="https://www.newsfilecorp.com/company/7416" target="_blank" rel="noopener noreferrer">
