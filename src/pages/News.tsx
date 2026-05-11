@@ -168,7 +168,7 @@ const News = () => {
               Corporate news, exploration updates, and regulatory filings. All releases link directly to the
               authoritative source.
             </p>
-            <p className="text-sm text-foreground/40 mt-2 font-mono">{newsItems.length} announcements</p>
+            <p className="text-sm text-foreground/40 mt-2 font-mono">{newsItems.length} press releases · {ANNOUNCEMENTS.length} announcements</p>
           </div>
         </section>
         <Subscribe />
