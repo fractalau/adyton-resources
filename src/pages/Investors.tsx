@@ -60,6 +60,16 @@ const downloads = [
     featured: false,
     href: "/presentations/Adyton_Precious_Metals_Summit_Zurich_2025.pdf",
   },
+  {
+    title: "Precious Metals Summit Beaver Creek 2025",
+    date: "September 2025",
+    description: "Presentation at Precious Metals Summit, Beaver Creek.",
+    fileType: "PDF",
+    fileSize: "6.5 MB",
+    category: "Presentations",
+    featured: false,
+    href: "/presentations/ADY_BeaverCreek_Sep2025.pdf",
+  },
 ];
 
 const Investors = () => {
