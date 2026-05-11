@@ -171,7 +171,7 @@ const Investors = () => {
         <Subscribe />
 
         {/* Capital Structure */}
-        <section aria-label="Capital structure" className="teal-panel py-12 md:py-14">
+        <section id="capital-structure-section" aria-label="Capital structure" className="teal-panel py-12 md:py-14">
           <div className="container">
             <p className="uppercase tracking-[0.3em] text-center text-primary font-semibold mb-6 font-body">
               CAPITAL STRUCTURE
