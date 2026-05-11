@@ -102,6 +102,7 @@ const News = () => {
   const [page, setPage] = useState(1);
   const [announcementsPage, setAnnouncementsPage] = useState(1);
   const [activeCategory, setActiveCategory] = useState<Category | "All">("All");
+  const [showAllAnnouncements, setShowAllAnnouncements] = useState(false);
 
   const categorizedAnnouncements = useMemo(
     () => ANNOUNCEMENTS.map((a) => ({ ...a, category: categorize(a.title, a.sourceUrl) })),
