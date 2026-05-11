@@ -49,10 +49,7 @@ const ManagementStrip = () => (
         <span className="font-mono font-semibold text-foreground">70+ Years Combined Experience</span>
         <span className="text-foreground/30">|</span>
         <span>PNG Specialised Focus</span>
-        <Link
-          to="/about#management"
-          className="inline-flex items-center gap-1 text-primary font-semibold hover:text-primary/80"
-        >
+        <Link to="/about" className="inline-flex items-center gap-1 text-primary font-semibold hover:text-primary/80">
           Meet the Full Team <ArrowRight className="h-3.5 w-3.5" />
         </Link>
       </div>
