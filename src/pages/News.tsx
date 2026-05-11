@@ -267,22 +267,41 @@ const News = () => {
                   key={cat}
                   label={cat}
                   active={activeCategory === cat}
-                  onClick={() => setActiveCategory(cat)}
+                  onClick={() => {
+                    setActiveCategory(cat);
+                    setShowAllAnnouncements(false);
+                  }}
                 />
               ))}
             </div>
-            <div key={activeCategory} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 animate-fade-in">
-              {filteredAnnouncements.map((a) => (
-                <NewsCard
-                  key={a.sourceUrl}
-                  title={a.title}
-                  date={a.date}
-                  excerpt=""
-                  tags={[a.category]}
-                  sourceUrl={a.sourceUrl}
-                />
-              ))}
-            </div>
+            {(() => {
+              const isAll = activeCategory === "All";
+              const visible = isAll && !showAllAnnouncements ? filteredAnnouncements.slice(0, 12) : filteredAnnouncements;
+              const canShowMore = isAll && !showAllAnnouncements && filteredAnnouncements.length > 12;
+              return (
+                <>
+                  <div key={`${activeCategory}-${showAllAnnouncements}`} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 animate-fade-in">
+                    {visible.map((a) => (
+                      <NewsCard
+                        key={a.sourceUrl}
+                        title={a.title}
+                        date={a.date}
+                        excerpt=""
+                        tags={[a.category]}
+                        sourceUrl={a.sourceUrl}
+                      />
+                    ))}
+                  </div>
+                  {canShowMore && (
+                    <div className="flex justify-center mt-10">
+                      <Button variant="gold" onClick={() => setShowAllAnnouncements(true)}>
+                        View All
+                      </Button>
+                    </div>
+                  )}
+                </>
+              );
+            })()}
 
             <p className="text-center text-sm mt-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
               News sourced from{" "}
