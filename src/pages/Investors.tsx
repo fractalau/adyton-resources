@@ -65,10 +65,10 @@ const downloads = [
     date: "September 2025",
     description: "Presentation at Precious Metals Summit, Beaver Creek.",
     fileType: "PDF",
-    fileSize: "6.5 MB",
+    fileSize: "6.4 MB",
     category: "Presentations",
     featured: false,
-    href: "/presentations/ADY_BeaverCreek_Sep2025.pdf",
+    href: "/presentations/Adyton_Precious_Metals_Summit_Beaver_Creek_2025.pdf",
   },
 ];
 
