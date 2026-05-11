@@ -52,7 +52,7 @@ const Footer = () => (
                 Capital Structure
               </Link>
               <Link
-                to="/news"
+                to="/news#news-section"
                 className="text-sm text-foreground/60 hover:text-primary transition-colors font-body"
               >
                 News & Announcements
