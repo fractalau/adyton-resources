@@ -90,6 +90,16 @@ const downloads = [
     featured: false,
     href: "/documents/ADY_FS_Dec_31_2025.pdf",
   },
+  {
+    title: "Management's Discussion and Analysis",
+    date: "December 2025",
+    description: "Management's Discussion and Analysis for the period ending December 31, 2025.",
+    fileType: "PDF",
+    fileSize: "5.0 MB",
+    category: "Corporate Documents",
+    featured: false,
+    href: "/documents/ADY_MDA_Dec_31_2025.pdf",
+  },
 ];
 
 const Investors = () => {
