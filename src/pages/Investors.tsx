@@ -70,6 +70,16 @@ const downloads = [
     featured: false,
     href: "/presentations/Adyton_Precious_Metals_Summit_Beaver_Creek_2025.pdf",
   },
+  {
+    title: "PDAC 2025 Conference Presentation",
+    date: "March 2025",
+    description: "Presentation at PDAC 2025 conference.",
+    fileType: "PDF",
+    fileSize: "4.0 MB",
+    category: "Presentations",
+    featured: false,
+    href: "/presentations/Adyton_PDAC_2025_Conference_Presentation.pdf",
+  },
 ];
 
 const Investors = () => {
