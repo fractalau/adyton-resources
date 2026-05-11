@@ -445,17 +445,14 @@ const FergussonIsland = () => {
           style={{ background: "hsl(var(--off-white))", borderTop: "1px solid hsl(var(--light-border))" }}
         >
           <div className="container max-w-4xl flex flex-wrap gap-3">
-            <Button variant="gold" size="lg">
-              <Download className="h-4 w-4" />
-              NI 43-101 — Fergusson Gold Property (Oct 2021)
-            </Button>
-            <Button variant="gold-outline" size="lg">
-              <Download className="h-4 w-4" />
-              NI 43-101 — Wapolu Gold Project (Jan 2026)
+            <Button variant="gold" size="lg" asChild>
+              <a href="/reports/NI43-101_Fergusson_Oct2021.pdf " target="_blank">
+                NI 43-101 Technical Report — Fergusson Island (Oct 2021) <ExternalLink className="h-4 w-4" />
+              </a>
             </Button>
             <Button variant="gold-outline" size="lg" asChild>
-              <a href="https://www.newsfilecorp.com/company/7416" target="_blank" rel="noopener noreferrer">
-                All Fergusson Releases <ExternalLink className="h-4 w-4" />
+              <a href="/news#press-release-section">
+                View All Fergusson Releases <ExternalLink className="h-4 w-4" />
               </a>
             </Button>
           </div>
