@@ -347,9 +347,7 @@ const FergussonIsland = () => {
             </p>
 
             {/* Drill intercepts */}
-            <h3 className="text-lg font-display font-bold mb-4 text-foreground">
-              Selected 2025 Drill Intercepts
-            </h3>
+            <h3 className="text-lg font-display font-bold mb-4 text-foreground">Selected 2025 Drill Intercepts</h3>
             <div className="overflow-x-auto rounded-lg border border-border mb-4">
               <table className="w-full text-sm font-mono">
                 <thead className="bg-card">
@@ -363,7 +361,7 @@ const FergussonIsland = () => {
                 </thead>
                 <tbody>
                   {[
-                    { hole: "GMDH01", from: 0, int: 9, au: "1.08" },
+                    { hole: "GMDH001", from: 0, int: 9, au: "1.08" },
                     { hole: "GMDH002", from: 0, int: 6, au: "1.22" },
                     { hole: "GMDH004", from: 0, int: 6, au: "1.15" },
                     { hole: "GMDH005", from: 49, int: 13, au: "1.88" },
