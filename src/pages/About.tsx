@@ -318,32 +318,6 @@ const About = () => {
             </Button>
           </div>
         </section>
-
-        <section
-          aria-label="Newsroom"
-          className="py-14 md:py-18"
-          style={{ background: "hsl(var(--off-white))" }}
-        >
-          <div className="container">
-            <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">NEWSROOM</p>
-            <h2
-              className="text-2xl md:text-3xl font-display font-bold mb-8"
-              style={{ color: "hsl(var(--text-dark))" }}
-            >
-              Latest Announcements
-            </h2>
-            <div
-              className="rounded-lg overflow-hidden"
-              style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}
-            >
-              <iframe
-                title="Adyton Newsroom"
-                src="https://newsroom.newsfilecorp.com/lists/7416/1885?noBack=1"
-                style={{ height: "800px", width: "100%", border: 0, display: "block" }}
-              />
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
