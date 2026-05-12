@@ -28,7 +28,7 @@ const islands: Island[] = [
     name: "Fergusson Island",
     province: "Milne Bay Province",
     left: 64.5,
-    top: 83,
+    top: 81.3,
     to: "/projects/fergusson",
     blurb: "Near-term cash flow — Wapolu & Gameta deposits.",
   },
@@ -100,7 +100,7 @@ const PNGInteractiveMap = () => {
                 style={{
                   width: 28,
                   height: 28,
-                  background: "#C9A84C",
+                  background: "hsl(var(--primary))",
                   opacity: 0.35,
                 }}
                 aria-hidden="true"
@@ -111,7 +111,7 @@ const PNGInteractiveMap = () => {
                 style={{
                   width: isHover ? 36 : 28,
                   height: isHover ? 36 : 28,
-                  background: "rgba(201, 168, 76, 0.25)",
+                  background: "hsl(var(--primary) / 0.25)",
                 }}
                 aria-hidden="true"
               />
@@ -121,8 +121,8 @@ const PNGInteractiveMap = () => {
                 style={{
                   width: isHover ? 16 : 12,
                   height: isHover ? 16 : 12,
-                  background: "#C9A84C",
-                  border: "2px solid hsl(var(--primary))",
+                  background: "hsl(var(--primary))",
+                  border: "2px solid #ffffff",
                   boxShadow: "0 2px 6px rgba(0,0,0,0.25)",
                 }}
                 aria-hidden="true"
