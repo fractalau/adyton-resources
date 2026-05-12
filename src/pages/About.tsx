@@ -1,4 +1,4 @@
-import { Shield, Leaf, Globe, Award, Target, Users } from "lucide-react";
+import { Shield, Leaf, Globe, Award, Target, Users, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
