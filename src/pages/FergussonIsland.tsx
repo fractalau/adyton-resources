@@ -362,16 +362,29 @@ const FergussonIsland = () => {
                 <tbody>
                   {[
                     { hole: "GMDH001", from: 0, int: 9, au: "1.08" },
+                    { hole: "Inc.", from: 5, int: 1, au: "4.6" },
                     { hole: "GMDH002", from: 0, int: 6, au: "1.22" },
+                    { hole: "Inc.", from: 0, int: 2, au: "2.34" },
                     { hole: "GMDH004", from: 0, int: 6, au: "1.15" },
+                    { hole: "Inc.", from: 2, int: 3, au: "1.66" },
                     { hole: "GMDH005", from: 49, int: 13, au: "1.88" },
+                    { hole: "GMDH005", from: 94, int: 14, au: "1.05" },
+                    { hole: "Inc.", from: 94, int: 1, au: "4.21" },
+                    { hole: "Inc.", from: 96, int: 2, au: "1.37" },
                     { hole: "GMDH008", from: 98, int: 13, au: "3.84" },
+                    { hole: "Inc.", from: 99, int: 5, au: "8.65" },
+                    { hole: "Inc.", from: 100, int: 2, au: "14.37" },
                     { hole: "GMDH009", from: 86, int: 6, au: "2.28" },
+                    { hole: "GMDH009", from: 146, int: 12, au: "28.56" },
+                    { hole: "Inc.", from: 150, int: 3, au: "105" },
                     { hole: "GMDH010", from: 114, int: 6, au: "2.69" },
                     { hole: "GMDH013", from: 105, int: 13, au: "1.37" },
+                    { hole: "Inc.", from: 105, int: 8, au: "1.8" },
                     { hole: "GMDH021", from: 51, int: 16, au: "2.07" },
+                    { hole: "Inc.", from: 55, int: 5, au: "3.63" },
                     { hole: "GMDH028", from: 80, int: 2, au: "4.33" },
                     { hole: "GMDH033", from: 9, int: 2, au: "3.59" },
+                    { hole: "Inc.", from: 9, int: 1, au: "5.17" },
                   ].map((r) => (
                     <tr key={r.hole} className="border-t border-border">
                       <td className="px-3 py-1.5 text-foreground">{r.hole}</td>
