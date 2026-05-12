@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import pngMap from "@/assets/png-map.png";
 
 type Island = {
   id: string;
   name: string;
   province: string;
-  cx: number;
-  cy: number;
+  // Position as percentage of image (left, top)
+  left: number;
+  top: number;
   to: string;
   blurb: string;
 };
@@ -16,8 +18,8 @@ const islands: Island[] = [
     id: "feni",
     name: "Feni Island",
     province: "New Ireland Province",
-    cx: 770,
-    cy: 215,
+    left: 82,
+    top: 28,
     to: "/projects/feni",
     blurb: "Tier 1 gold-copper discovery target on the Lihir trend.",
   },
@@ -25,19 +27,12 @@ const islands: Island[] = [
     id: "fergusson",
     name: "Fergusson Island",
     province: "Milne Bay Province",
-    cx: 745,
-    cy: 470,
+    left: 60,
+    top: 78,
     to: "/projects/fergusson",
     blurb: "Near-term cash flow — Wapolu & Gameta deposits.",
   },
 ];
-
-// Stylised PNG mainland + island outlines (decorative, not to scale)
-const PNG_PATH =
-  "M120,300 C150,250 220,225 300,235 C360,243 410,265 470,260 C540,255 595,235 650,250 C705,265 735,295 760,330 C780,360 775,395 745,415 C705,440 645,440 600,425 C555,410 515,420 470,435 C415,455 360,470 305,460 C250,450 205,425 170,400 C140,378 115,345 120,300 Z";
-
-const NEW_BRITAIN_PATH =
-  "M620,360 C680,355 740,365 770,385 C790,400 780,420 745,425 C695,430 645,420 615,400 C595,388 595,370 620,360 Z";
 
 const PNGInteractiveMap = () => {
   const navigate = useNavigate();
@@ -48,132 +43,115 @@ const PNGInteractiveMap = () => {
       className="rounded-lg overflow-hidden relative"
       style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}
     >
-      <svg
-        viewBox="0 0 900 600"
-        className="w-full h-auto block"
-        role="img"
-        aria-label="Interactive map of Papua New Guinea showing Adyton's Feni Island and Fergusson Island projects"
-      >
-        {/* Sea */}
-        <rect width="900" height="600" fill="hsl(var(--off-white))" />
-
-        {/* Subtle grid */}
-        <g opacity="0.08" stroke="hsl(var(--primary))" strokeWidth="0.5">
-          {Array.from({ length: 12 }).map((_, i) => (
-            <line key={`v${i}`} x1={i * 75} y1="0" x2={i * 75} y2="600" />
-          ))}
-          {Array.from({ length: 8 }).map((_, i) => (
-            <line key={`h${i}`} x1="0" y1={i * 75} x2="900" y2={i * 75} />
-          ))}
-        </g>
-
-        {/* PNG Mainland */}
-        <path
-          d={PNG_PATH}
-          fill="hsl(var(--primary) / 0.18)"
-          stroke="hsl(var(--primary))"
-          strokeWidth="1.5"
-        />
-        {/* New Britain */}
-        <path
-          d={NEW_BRITAIN_PATH}
-          fill="hsl(var(--primary) / 0.18)"
-          stroke="hsl(var(--primary))"
-          strokeWidth="1.5"
+      <div className="relative w-full" style={{ aspectRatio: "640 / 480" }}>
+        {/* Base map image */}
+        <img
+          src={pngMap}
+          alt="Map of Papua New Guinea showing Adyton's Feni Island and Fergusson Island projects"
+          className="absolute inset-0 w-full h-full object-contain select-none"
+          style={{
+            filter: "brightness(0) saturate(100%) invert(24%) sepia(28%) saturate(1100%) hue-rotate(160deg) brightness(92%) contrast(88%)",
+            opacity: 0.85,
+          }}
+          draggable={false}
         />
 
         {/* Country label */}
-        <text
-          x="380"
-          y="350"
-          fontFamily="Playfair Display, serif"
-          fontSize="22"
-          fontWeight="600"
-          fill="hsl(var(--primary))"
-          opacity="0.55"
+        <div
+          className="absolute pointer-events-none font-display font-semibold tracking-[0.25em] uppercase text-xs md:text-sm"
+          style={{ left: "4%", bottom: "6%", color: "hsl(var(--primary))", opacity: 0.55 }}
         >
-          PAPUA NEW GUINEA
-        </text>
+          Papua New Guinea
+        </div>
 
         {/* Lihir reference (non-interactive) */}
-        <g opacity="0.55">
-          <circle cx="730" cy="245" r="4" fill="hsl(var(--primary))" />
-          <text
-            x="740"
-            y="240"
-            fontFamily="DM Sans, sans-serif"
-            fontSize="11"
-            fill="hsl(var(--primary))"
+        <div
+          className="absolute pointer-events-none flex items-center gap-1.5"
+          style={{ left: "76%", top: "22%", opacity: 0.6 }}
+        >
+          <span
+            className="block w-1.5 h-1.5 rounded-full"
+            style={{ background: "hsl(var(--primary))" }}
+          />
+          <span
+            className="text-[10px] md:text-[11px] font-body"
+            style={{ color: "hsl(var(--primary))" }}
           >
             Lihir (Newmont)
-          </text>
-        </g>
+          </span>
+        </div>
 
         {/* Interactive island markers */}
         {islands.map((isle) => {
           const isHover = hovered?.id === isle.id;
           return (
-            <g
+            <button
               key={isle.id}
-              role="button"
-              tabIndex={0}
+              type="button"
               aria-label={`${isle.name}, ${isle.province}. View project page.`}
               onClick={() => navigate(isle.to)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  navigate(isle.to);
-                }
-              }}
               onMouseEnter={() => setHovered(isle)}
               onMouseLeave={() => setHovered(null)}
               onFocus={() => setHovered(isle)}
               onBlur={() => setHovered(null)}
-              style={{ cursor: "pointer" }}
-              className="focus:outline-none"
+              className="absolute -translate-x-1/2 -translate-y-1/2 group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-full"
+              style={{ left: `${isle.left}%`, top: `${isle.top}%` }}
             >
               {/* Pulse ring */}
-              <circle
-                cx={isle.cx}
-                cy={isle.cy}
-                r={isHover ? 26 : 20}
-                fill="hsl(var(--gold, 42 56% 54%))"
-                opacity="0.18"
-                style={{ transition: "all 200ms ease" }}
+              <span
+                className="absolute inset-0 m-auto rounded-full animate-ping"
+                style={{
+                  width: 28,
+                  height: 28,
+                  background: "#C9A84C",
+                  opacity: 0.35,
+                }}
+                aria-hidden="true"
               />
-              <circle
-                cx={isle.cx}
-                cy={isle.cy}
-                r={isHover ? 14 : 10}
-                fill="#C9A84C"
-                stroke="hsl(var(--primary))"
-                strokeWidth="2"
-                style={{ transition: "all 200ms ease" }}
+              {/* Halo */}
+              <span
+                className="block rounded-full transition-all duration-200"
+                style={{
+                  width: isHover ? 36 : 28,
+                  height: isHover ? 36 : 28,
+                  background: "rgba(201, 168, 76, 0.25)",
+                }}
+                aria-hidden="true"
               />
-              <text
-                x={isle.cx + 18}
-                y={isle.cy + 4}
-                fontFamily="DM Sans, sans-serif"
-                fontSize="14"
-                fontWeight="700"
-                fill="hsl(var(--primary))"
+              {/* Dot */}
+              <span
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full transition-all duration-200"
+                style={{
+                  width: isHover ? 16 : 12,
+                  height: isHover ? 16 : 12,
+                  background: "#C9A84C",
+                  border: "2px solid hsl(var(--primary))",
+                  boxShadow: "0 2px 6px rgba(0,0,0,0.25)",
+                }}
+                aria-hidden="true"
+              />
+              {/* Label */}
+              <span
+                className="absolute left-full top-1/2 -translate-y-1/2 ml-2 whitespace-nowrap text-left"
+                aria-hidden="true"
               >
-                {isle.name}
-              </text>
-              <text
-                x={isle.cx + 18}
-                y={isle.cy + 20}
-                fontFamily="DM Sans, sans-serif"
-                fontSize="11"
-                fill="hsl(var(--primary))"
-                opacity="0.7"
-              >
-                {isle.province}
-              </text>
-            </g>
+                <span
+                  className="block font-body font-bold text-xs md:text-sm leading-tight"
+                  style={{ color: "hsl(var(--primary))" }}
+                >
+                  {isle.name}
+                </span>
+                <span
+                  className="block font-body text-[10px] md:text-[11px] leading-tight"
+                  style={{ color: "hsl(var(--primary))", opacity: 0.7 }}
+                >
+                  {isle.province}
+                </span>
+              </span>
+            </button>
           );
         })}
-      </svg>
+      </div>
 
       {/* Tooltip / details panel */}
       <div
