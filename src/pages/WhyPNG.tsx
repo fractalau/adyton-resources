@@ -137,7 +137,7 @@ const WhyPNG = () => {
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
               Adyton's Footprint in PNG
             </h2>
-            <PNGInteractiveMap>
+            <PNGInteractiveMap />
           </div>
         </section>
 
