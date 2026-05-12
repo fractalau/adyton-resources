@@ -61,23 +61,6 @@ const PNGInteractiveMap = () => {
           Papua New Guinea
         </div>
 
-        {/* Lihir reference (non-interactive) */}
-        <div
-          className="absolute pointer-events-none flex items-center gap-1.5"
-          style={{ left: "76%", top: "22%", opacity: 0.6 }}
-        >
-          <span
-            className="block w-1.5 h-1.5 rounded-full"
-            style={{ background: "hsl(var(--primary))" }}
-          />
-          <span
-            className="text-[10px] md:text-[11px] font-body"
-            style={{ color: "hsl(var(--primary))" }}
-          >
-            Lihir (Newmont)
-          </span>
-        </div>
-
         {/* Interactive island markers */}
         {islands.map((isle) => {
           const isHover = hovered?.id === isle.id;
