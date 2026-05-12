@@ -342,9 +342,28 @@ const FergussonIsland = () => {
                 </tbody>
               </table>
             </div>
-            <p className="italic font-body text-foreground/40">
+            <p className="italic font-body text-foreground/40 mb-8">
               Mineral resources are not mineral reserves and have not demonstrated economic viability.
             </p>
+
+            {/* Drill intercepts */}
+            <h3 className="text-lg font-display font-bold mb-4 text-foreground">
+              Selected 2025 Drill Intercepts
+            </h3>
+            <div className="overflow-x-auto rounded-lg border border-border mb-4">
+              <table className="w-full text-sm font-mono">
+                <thead className="bg-card">
+                  <tr>
+                    <th className="text-left px-3 py-2 text-foreground">Hole</th>
+                    <th className="text-right px-3 py-2 text-foreground">From(m)</th>
+                    <th className="text-right px-3 py-2 text-foreground">Int(m)</th>
+                    <th className="text-right px-3 py-2 text-foreground">Au(g/t)</th>
+                    <th className="text-left px-3 py-2 text-foreground">Notes</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
           </div>
         </section>
 
