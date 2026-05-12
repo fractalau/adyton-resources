@@ -27,7 +27,7 @@ const islands: Island[] = [
     id: "fergusson",
     name: "Fergusson Island",
     province: "Milne Bay Province",
-    left: 60,
+    left: 64.5,
     top: 83,
     to: "/projects/fergusson",
     blurb: "Near-term cash flow — Wapolu & Gameta deposits.",
