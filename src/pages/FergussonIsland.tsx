@@ -367,6 +367,11 @@ const FergussonIsland = () => {
                     { hole: "GMDH002", from: 0, int: 6, au: "1.22" },
                     { hole: "GMDH004", from: 0, int: 6, au: "1.15" },
                     { hole: "GMDH005", from: 49, int: 13, au: "1.88" },
+                    { hole: "GMDH008", from: 98, int: 13, au: "3.84" },
+                    { hole: "GMDH009", from: 86, int: 6, au: "2.28" },
+                    { hole: "GMDH010", from: 114, int: 6, au: "2.69" },
+                    { hole: "GMDH013", from: 105, int: 13, au: "1.37" },
+                    { hole: "GMDH021", from: 51, int: 16, au: "2.07" },
                   ].map((r) => (
                     <tr key={r.hole} className="border-t border-border">
                       <td className="px-3 py-1.5 text-foreground">{r.hole}</td>
