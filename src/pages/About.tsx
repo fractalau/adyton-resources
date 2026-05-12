@@ -302,13 +302,19 @@ const About = () => {
         <section aria-label="Explore projects" className="bg-background py-10 border-t border-border">
           <div className="container max-w-4xl flex flex-wrap justify-center gap-3">
             <Button variant="gold-outline" size="lg" asChild>
-              <Link to="/projects/feni">Explore Feni Island</Link>
+              <Link to="/projects/feni">
+                Explore Feni Island <ArrowRight className="h-4 w-4" />
+              </Link>
             </Button>
             <Button variant="gold-outline" size="lg" asChild>
-              <Link to="/projects/fergusson">Explore Fergusson Island</Link>
+              <Link to="/projects/fergusson">
+                Explore Fergusson Island <ArrowRight className="h-4 w-4" />
+              </Link>
             </Button>
             <Button variant="gold-outline" size="lg" asChild>
-              <Link to="/investors">Investor Hub</Link>
+              <Link to="/investors">
+                Investor Hub <ArrowRight className="h-4 w-4" />
+              </Link>
             </Button>
           </div>
         </section>
