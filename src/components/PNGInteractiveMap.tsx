@@ -128,34 +128,41 @@ const PNGInteractiveMap = () => {
                   {isle.province}
                 </span>
               </span>
+
+              {/* Hover tooltip — opens above the marker */}
+              {isHover && (
+                <div
+                  role="tooltip"
+                  className="absolute left-1/2 -translate-x-1/2 bottom-full mb-3 w-64 rounded-md p-3 text-left shadow-lg pointer-events-none z-10"
+                  style={{
+                    background: "hsl(var(--background) / 0.97)",
+                    border: "1px solid hsl(var(--light-border))",
+                    color: "hsl(var(--foreground))",
+                  }}
+                >
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-primary font-semibold font-body mb-1">
+                    {isle.province}
+                  </p>
+                  <h3 className="font-display font-bold text-base text-foreground mb-1 leading-tight">
+                    {isle.name}
+                  </h3>
+                  <p className="text-xs text-foreground/70 font-body mb-1.5 leading-snug">{isle.blurb}</p>
+                  <p className="text-[11px] text-primary font-body font-semibold">Click to explore →</p>
+                  {/* Caret */}
+                  <span
+                    className="absolute left-1/2 -translate-x-1/2 top-full block h-2 w-2 rotate-45 -mt-1"
+                    style={{
+                      background: "hsl(var(--background) / 0.97)",
+                      borderRight: "1px solid hsl(var(--light-border))",
+                      borderBottom: "1px solid hsl(var(--light-border))",
+                    }}
+                    aria-hidden="true"
+                  />
+                </div>
+              )}
             </button>
           );
         })}
-      </div>
-
-      {/* Tooltip / details panel */}
-      <div
-        className="absolute left-4 bottom-4 right-4 md:right-auto md:max-w-sm rounded-md p-4 backdrop-blur-sm"
-        style={{
-          background: "hsl(var(--background) / 0.92)",
-          border: "1px solid hsl(var(--light-border))",
-          color: "hsl(var(--foreground))",
-        }}
-      >
-        {hovered ? (
-          <>
-            <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold font-body mb-1">
-              {hovered.province}
-            </p>
-            <h3 className="font-display font-bold text-lg text-foreground mb-1">{hovered.name}</h3>
-            <p className="text-sm text-foreground/70 font-body mb-2">{hovered.blurb}</p>
-            <p className="text-xs text-primary font-body font-semibold">Click to explore →</p>
-          </>
-        ) : (
-          <p className="text-sm font-body text-foreground/70">
-            Hover or tap a <span className="font-semibold text-primary">gold marker</span> to view Adyton's project islands.
-          </p>
-        )}
       </div>
     </div>
   );
