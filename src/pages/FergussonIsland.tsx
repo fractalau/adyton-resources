@@ -362,13 +362,20 @@ const FergussonIsland = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="border-t border-border">
-                    <td className="px-3 py-1.5 text-foreground">GMDH01</td>
-                    <td className="text-right px-3 py-1.5 text-foreground/70">0</td>
-                    <td className="text-right px-3 py-1.5 text-foreground/70">9</td>
-                    <td className="text-right px-3 py-1.5 text-primary font-semibold">1.08</td>
-                    <td className="px-3 py-1.5 text-sm text-foreground/70"></td>
-                  </tr>
+                  {[
+                    { hole: "GMDH01", from: 0, int: 9, au: "1.08" },
+                    { hole: "GMDH002", from: 0, int: 6, au: "1.22" },
+                    { hole: "GMDH004", from: 0, int: 6, au: "1.15" },
+                    { hole: "GMDH005", from: 49, int: 13, au: "1.88" },
+                  ].map((r) => (
+                    <tr key={r.hole} className="border-t border-border">
+                      <td className="px-3 py-1.5 text-foreground">{r.hole}</td>
+                      <td className="text-right px-3 py-1.5 text-foreground/70">{r.from}</td>
+                      <td className="text-right px-3 py-1.5 text-foreground/70">{r.int}</td>
+                      <td className="text-right px-3 py-1.5 text-primary font-semibold">{r.au}</td>
+                      <td className="px-3 py-1.5 text-sm text-foreground/70"></td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
