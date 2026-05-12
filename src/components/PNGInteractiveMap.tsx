@@ -28,7 +28,7 @@ const islands: Island[] = [
     name: "Fergusson Island",
     province: "Milne Bay Province",
     left: 64.5,
-    top: 81.3,
+    top: 80.5,
     to: "/projects/fergusson",
     blurb: "Near-term cash flow — Wapolu & Gameta deposits.",
   },
@@ -49,7 +49,7 @@ const PNGInteractiveMap = () => {
           aria-label="Map of Papua New Guinea showing Adyton's Feni Island and Fergusson Island projects"
           role="img"
           className="absolute inset-0 w-full h-full [&_svg]:w-full [&_svg]:h-full [&_path]:fill-current"
-          style={{ color: "hsl(var(--primary))", opacity: 0.85 }}
+          style={{ color: "#3a3a3a", opacity: 0.9 }}
           dangerouslySetInnerHTML={{ __html: pngMapSvg }}
         />
 
