@@ -318,6 +318,16 @@ const About = () => {
             </Button>
           </div>
         </section>
+
+        <section aria-label="Newsroom" className="bg-background py-10 border-t border-border">
+          <div className="container">
+            <iframe
+              title="Adyton Newsroom"
+              src="https://newsroom.newsfilecorp.com/lists/7416/1885?noBack=1"
+              style={{ height: "800px", width: "100%" }}
+            />
+          </div>
+        </section>
       </main>
 
       <Footer />
