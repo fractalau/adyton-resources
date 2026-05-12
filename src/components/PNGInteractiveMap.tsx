@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import pngMap from "@/assets/png-map.png";
+import pngMapSvg from "@/assets/png-map.svg?raw";
 
 type Island = {
   id: string;
@@ -28,7 +28,7 @@ const islands: Island[] = [
     name: "Fergusson Island",
     province: "Milne Bay Province",
     left: 60,
-    top: 78,
+    top: 83,
     to: "/projects/fergusson",
     blurb: "Near-term cash flow — Wapolu & Gameta deposits.",
   },
@@ -43,17 +43,14 @@ const PNGInteractiveMap = () => {
       className="rounded-lg overflow-hidden relative"
       style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}
     >
-      <div className="relative w-full" style={{ aspectRatio: "640 / 480" }}>
-        {/* Base map image */}
-        <img
-          src={pngMap}
-          alt="Map of Papua New Guinea showing Adyton's Feni Island and Fergusson Island projects"
-          className="absolute inset-0 w-full h-full object-contain select-none"
-          style={{
-            filter: "brightness(0) saturate(100%) invert(24%) sepia(28%) saturate(1100%) hue-rotate(160deg) brightness(92%) contrast(88%)",
-            opacity: 0.85,
-          }}
-          draggable={false}
+      <div className="relative w-full" style={{ aspectRatio: "624 / 438" }}>
+        {/* Base map (inline SVG, tinted via currentColor) */}
+        <div
+          aria-label="Map of Papua New Guinea showing Adyton's Feni Island and Fergusson Island projects"
+          role="img"
+          className="absolute inset-0 w-full h-full [&_svg]:w-full [&_svg]:h-full [&_path]:fill-current"
+          style={{ color: "hsl(var(--primary))", opacity: 0.85 }}
+          dangerouslySetInnerHTML={{ __html: pngMapSvg }}
         />
 
         {/* Country label */}
