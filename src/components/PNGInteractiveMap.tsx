@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import pngMap from "@/assets/png-map.png";
+import pngMapSvg from "@/assets/png-map.svg?raw";
 
 type Island = {
   id: string;
