@@ -1,4 +1,5 @@
-import { CheckCircle, MapPin, ArrowRight } from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
+import PNGInteractiveMap from "@/components/PNGInteractiveMap";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
@@ -129,20 +130,14 @@ const WhyPNG = () => {
         </section>
         <Subscribe />
 
-        {/* Map placeholder */}
+        {/* Interactive Map */}
         <section aria-label="Map of PNG" className="py-14 md:py-18" style={{ background: "hsl(var(--off-white))" }}>
           <div className="container">
-            <div
-              className="rounded-lg aspect-[21/9] flex items-center justify-center"
-              style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}
-            >
-              <div className="text-center">
-                <MapPin className="h-12 w-12 text-primary/30 mx-auto mb-2" aria-hidden="true" />
-                <p className="text-sm font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
-                  Interactive map — placeholder
-                </p>
-              </div>
-            </div>
+            <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">PROJECT LOCATIONS</p>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
+              Adyton's Footprint in PNG
+            </h2>
+            <PNGInteractiveMap>
           </div>
         </section>
 
