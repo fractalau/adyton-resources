@@ -361,7 +361,15 @@ const FergussonIsland = () => {
                     <th className="text-left px-3 py-2 text-foreground">Notes</th>
                   </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                  <tr className="border-t border-border">
+                    <td className="px-3 py-1.5 text-foreground">GMDH01</td>
+                    <td className="text-right px-3 py-1.5 text-foreground/70">0</td>
+                    <td className="text-right px-3 py-1.5 text-foreground/70">9</td>
+                    <td className="text-right px-3 py-1.5 text-primary font-semibold">1.08</td>
+                    <td className="px-3 py-1.5 text-sm text-foreground/70"></td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>
