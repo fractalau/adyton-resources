@@ -131,7 +131,11 @@ const WhyPNG = () => {
         <Subscribe />
 
         {/* Interactive Map */}
-        <section aria-label="Map of PNG" className="py-14 md:py-18" style={{ background: "hsl(var(--off-white))" }}>
+        <section
+          aria-label="Map of PNG"
+          className="py-14 md:py-18 hidden"
+          style={{ background: "hsl(var(--off-white))" }}
+        >
           <div className="container">
             <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">PROJECT LOCATIONS</p>
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
