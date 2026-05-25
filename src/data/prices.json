@@ -16,8 +16,8 @@
     },
     {
       "label": "TSXV: ADY",
-      "value": "C$0.350",
-      "change": "+0.0%",
+      "value": "C$0.360",
+      "change": "+2.9%",
       "up": true
     },
     {
@@ -33,6 +33,6 @@
       "up": true
     }
   ],
-  "fetchedAt": "2026-05-25T16:39:53.505Z",
+  "fetchedAt": "2026-05-25T20:26:37.411Z",
   "date": "May 25, 2026"
 }
