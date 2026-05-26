@@ -348,7 +348,7 @@ const FeniIsland = () => {
         </section>
 
         {/* Logistics */}
-        <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
+        <section className="py-16 md:py-20 border-t border-border" style={{ background: "hsl(var(--off-white))" }}>
           <div className="container max-w-4xl">
             <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
               DIRECT SHIP ORE OPPORTUNITY
