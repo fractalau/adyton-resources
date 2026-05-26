@@ -102,6 +102,12 @@ const FergussonIsland = () => {
         {/* Overview */}
         <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
           <div className="container max-w-4xl">
+            <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
+              FERGUSSON ISLAND GOLD PROJECT
+            </p>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
+              Zero capital outlay. 50% free cash flow.
+            </h2>
             <div
               className="leading-relaxed space-y-4 font-body"
               style={{ color: "hsl(var(--light-muted-foreground))" }}
