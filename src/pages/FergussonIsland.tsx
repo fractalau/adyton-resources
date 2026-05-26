@@ -467,7 +467,7 @@ const FergussonIsland = () => {
         </section>
 
         {/* Development Timeline */}
-        <section className="py-16 md:py-20" style={{ background: "hsl(var(--off-white))" }}>
+        <section className="py-16 md:py-20 border-t" style={{ background: "hsl(var(--off-white))", borderTopColor: "#d6d2cd" }}>
           <div className="container max-w-4xl">
             <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">PATH TO PRODUCTION</p>
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-8" style={{ color: "hsl(var(--text-dark))" }}>
