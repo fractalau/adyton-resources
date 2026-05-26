@@ -9,16 +9,16 @@
     },
     {
       "label": "Copper",
-      "value": "$6.38",
-      "change": "-0.1%",
-      "up": false,
+      "value": "$6.40",
+      "change": "+0.3%",
+      "up": true,
       "icon": "🟠"
     },
     {
       "label": "TSXV: ADY",
-      "value": "C$0.360",
-      "change": "+2.9%",
-      "up": true
+      "value": "C$0.345",
+      "change": "-1.4%",
+      "up": false
     },
     {
       "label": "OTC: ADYRF",
@@ -33,6 +33,6 @@
       "up": true
     }
   ],
-  "fetchedAt": "2026-05-26T12:50:25.653Z",
+  "fetchedAt": "2026-05-26T17:03:26.194Z",
   "date": "May 26, 2026"
 }
