@@ -1,7 +1,10 @@
-import { Mail, Phone, Briefcase, Newspaper, MapPin, Building2 } from "lucide-react";
+import { useState } from "react";
+import { Mail, Phone, Briefcase, Newspaper, MapPin, Building2, Loader2, CheckCircle } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Subscribe from "@/components/layout/Subscribe";
 import Footer from "@/components/layout/Footer";
+import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
 import { useSEO } from "@/hooks/useSEO";
 
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
