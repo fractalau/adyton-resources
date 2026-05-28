@@ -57,6 +57,40 @@ const Contact = () => {
     "Get in touch with Adyton Resources — investor relations, media inquiries, corporate partnerships, and general contact for PNG gold-copper projects.",
   );
 
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const encode = (data: Record<string, string>) =>
+    Object.keys(data)
+      .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...formData }),
+      });
+      if (!response.ok) throw new Error("Submission failed");
+      setIsSuccess(true);
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err) {
+      toast({
+        title: "Submission failed",
+        description: "Please try again or email ir@adytonresources.com directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+
 
   return (
     <div className="min-h-screen bg-background">
