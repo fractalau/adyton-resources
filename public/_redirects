@@ -5,15 +5,12 @@
 # ----------------------------------------------
 # CORE PAGE REDIRECTS
 # ----------------------------------------------
-/projects-overview/                     /projects-overview              200
+
 /about-us/                              /about                          301
 /leadership/                            /about                          301
 /corporate-directory/                   /about                          301
 /feni-gold-project/                     /projects/feni                  301
 /fergusson-island-gold-projects/        /projects/fergusson             301
-/investors/                             /investors                      200
-/contact/                               /contact                        200
-/why-png/                               /why-png                        200
 /terms-of-use-privacy-policy/           /contact                        301
 
 # ----------------------------------------------
@@ -23,8 +20,6 @@
 /press-releases/                        /news                           301
 /news-releases/                         /news                           301
 /pressreleases/                         /news                           301
-/news/                                  /news                           200
-/news                                   /news                           200
 /news/all/                              /news                           301
 /news/default.aspx                      /news                           301
 /news/news.aspx                         /news                           301
