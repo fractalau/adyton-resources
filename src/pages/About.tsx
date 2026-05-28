@@ -299,7 +299,7 @@ const About = () => {
         </section>
 
         {/* CTA */}
-        <section aria-label="Explore projects" className="bg-background py-10 border-t border-border">
+        <section aria-label="Explore projects" className="teal-panel py-14 md:py-16 border-t border-gold/30">
           <div className="container max-w-4xl flex flex-wrap justify-center gap-3">
             <Button variant="gold-outline" size="lg" asChild>
               <Link to="/projects/feni">
