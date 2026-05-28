@@ -151,6 +151,100 @@ const Contact = () => {
           </div>
         </section>
 
+        {/* Contact Form */}
+        <section aria-label="Contact form" className="py-14 md:py-18" style={{ background: "hsl(var(--off-white))" }}>
+          <div className="container max-w-2xl">
+            <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">SEND A MESSAGE</p>
+            <h2 className="text-2xl md:text-3xl font-display font-bold mb-8" style={{ color: "hsl(var(--text-dark))" }}>
+              Get in Touch
+            </h2>
+            {isSuccess ? (
+              <div
+                className="rounded-lg p-8 text-center"
+                style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}
+              >
+                <CheckCircle className="h-12 w-12 text-primary mx-auto mb-4" aria-hidden="true" />
+                <h3 className="text-xl font-display font-semibold mb-2" style={{ color: "hsl(var(--text-dark))" }}>
+                  Message Sent
+                </h3>
+                <p style={{ color: "hsl(var(--light-muted-foreground))" }}>
+                  Thank you for reaching out. We'll be in touch shortly.
+                </p>
+              </div>
+            ) : (
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
+                className="rounded-lg p-6 space-y-4"
+                style={{ background: "hsl(var(--light-card))", border: "1px solid hsl(var(--light-border))" }}
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <p hidden>
+                  <label>
+                    Don't fill this out: <input name="bot-field" />
+                  </label>
+                </p>
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium mb-1 font-body" style={{ color: "hsl(var(--text-dark))" }}>
+                    Name
+                  </label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="w-full px-3 py-2 rounded-md border border-input bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium mb-1 font-body" style={{ color: "hsl(var(--text-dark))" }}>
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="w-full px-3 py-2 rounded-md border border-input bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium mb-1 font-body" style={{ color: "hsl(var(--text-dark))" }}>
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows={5}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    className="w-full px-3 py-2 rounded-md border border-input bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary"
+                  />
+                </div>
+                <Button type="submit" disabled={isSubmitting} className="w-full">
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Sending...
+                    </>
+                  ) : (
+                    "Send Message"
+                  )}
+                </Button>
+              </form>
+            )}
+          </div>
+        </section>
+
+
+
         {/* Offices */}
         <section aria-label="Office locations" className="teal-panel py-14 md:py-18">
           <div className="container">
