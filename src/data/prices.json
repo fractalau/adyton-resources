@@ -2,22 +2,22 @@
   "tickers": [
     {
       "label": "Gold",
-      "value": "$4,541.80",
-      "change": "+2.1%",
+      "value": "$4,530.10",
+      "change": "+1.9%",
       "up": true,
       "icon": "🟡"
     },
     {
       "label": "Copper",
-      "value": "$6.43",
-      "change": "+2.0%",
+      "value": "$6.42",
+      "change": "+1.8%",
       "up": true,
       "icon": "🟠"
     },
     {
       "label": "TSXV: ADY",
-      "value": "C$0.335",
-      "change": "-2.9%",
+      "value": "C$0.340",
+      "change": "-1.4%",
       "up": false
     },
     {
@@ -33,6 +33,6 @@
       "up": true
     }
   ],
-  "fetchedAt": "2026-05-28T17:10:08.569Z",
+  "fetchedAt": "2026-05-28T20:43:48.924Z",
   "date": "May 28, 2026"
 }
