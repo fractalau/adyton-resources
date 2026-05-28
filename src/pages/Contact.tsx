@@ -49,48 +49,11 @@ const offices = [
 ];
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
-  const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-
   useSEO(
     "Contact Adyton Resources",
     "Get in touch with Adyton Resources — investor relations, media inquiries, corporate partnerships, and general contact for PNG gold-copper projects.",
   );
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) {
-      toast.error("Please fill in all required fields.");
-      return;
-    }
-    setSubmitting(true);
-    try {
-      const res = await fetch("https://formspree.io/f/xbdqdwoz", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        }),
-      });
-
-      if (!res.ok) throw new Error("Network response was not ok");
-
-      setSubmitted(true);
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch (err) {
-      console.error("Contact form error:", err);
-      toast.error("Something went wrong. Please try again.");
-    } finally {
-      setSubmitting(false);
-    }
-  };
 
   return (
     <div className="min-h-screen bg-background">
