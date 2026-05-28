@@ -5,6 +5,9 @@
  */
 import * as fs from "fs";
 import * as path from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const SITE_URL = "https://adytonresources.com";
 const TODAY = new Date().toISOString().split("T")[0];
