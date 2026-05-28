@@ -1,1 +1,139 @@
-/* /index.html 200
+# ==============================================
+# Adyton Resources — Netlify Redirects
+# ==============================================
+
+# ----------------------------------------------
+# CORE PAGE REDIRECTS
+# ----------------------------------------------
+/projects-overview/                     /projects-overview              200
+/about-us/                              /about                          301
+/leadership/                            /about                          301
+/corporate-directory/                   /about                          301
+/feni-gold-project/                     /projects/feni                  301
+/fergusson-island-gold-projects/        /projects/fergusson             301
+/investors/                             /investors                      200
+/contact/                               /contact                        200
+/why-png/                               /why-png                        200
+/terms-of-use-privacy-policy/           /contact                        301
+
+# ----------------------------------------------
+# NEWS & ANNOUNCEMENTS
+# ----------------------------------------------
+/announcements/                         /news                           301
+/press-releases/                        /news                           301
+/news-releases/                         /news                           301
+/pressreleases/                         /news                           301
+/news/                                  /news                           200
+/news                                   /news                           200
+/news/all/                              /news                           301
+/news/default.aspx                      /news                           301
+/news/news.aspx                         /news                           301
+/news-releases/default.aspx             /news                           301
+/news-and-media/                        /news                           301
+/news-and-media/news-releases/          /news                           301
+/investors/news/                        /news                           301
+/investors/news-releases/               /news                           301
+/investor-relations/news-releases/      /news                           301
+
+# ----------------------------------------------
+# INDIVIDUAL NEWS RELEASE SLUGS
+# ----------------------------------------------
+/adyton-reports-200-increase-to-wapolu-updated-inferred-mineral-resources-estimate/                                                                                                                     /news   301
+/adyton-resources-outlines-dual-track-growth-strategy-in-crux-investor-interview/                                                                                                                       /news   301
+/multiple-rig-mobilization-underway-and-new-camp-completion/                                                                                                                                            /news   301
+/adyton-and-east-vision-international-holdings-execute-us9-5m-investment-and-development-agreement-for-the-fergusson-island-gold-project/                                                               /news   301
+/adyton-resources-announces-drilling-advances-at-100-owned-feni-island-gold-copper-project/                                                                                                             /news   301
+/adyton-reports-completion-of-land-ownership-and-baseline-field-work-at-wapolu-joint-venture/                                                                                                           /news   301
+/adyton-expands-discovery-capability-at-feni-gold-copper-project-with-global-ore-discovery-consultants/                                                                                                 /news   301
+/png-government-state-team-visits-fergusson-island-wapolu-project-to-commence-operations-restart-permitting/                                                                                            /news   301
+/significant-copper-mineralization-in-addition-to-gold-on-feni-island/                                                                                                                                  /news   301
+/adyton-reports-update-on-feni-island-gold-copper-project-drilling/                                                                                                                                     /news   301
+/adyton-resources-welcomes-dr-chris-bowden-as-chief-operating-officer/                                                                                                                                  /news   301
+/adyton-announces-first-drill-samples-from-latest-campaign-at-its-feni-island-gold-project-with-high-copper-prospectivity-have-been-dispatched-for-analysis/                                            /news   301
+/adyton-resources-completes-over-4000m-drilling-at-wapolu-and-prepares-for-gameta-drilling-with-unanimous-landowner-support/                                                                            /news   301
+/adyton-resources-corporation-announces-closing-of-non-brokered-private-placement/                                                                                                                      /news   301
+/adyton-resources-corporation-announces-non-brokered-private-placement/                                                                                                                                 /news   301
+/adyton-reports-first-drill-intercepts-of-up-to-36-grams-per-tonne-gold-from-its-wapolu-drill-campaign/                                                                                                 /news   301
+/adyton-resources-receives-non-binding-letter-of-intent-loi-for-the-purchase-of-gold-concentrate-from-its-wapolu-project/                                                                               /news   301
+/adyton-2025-momentum-execution-and-a-clear-path-forward/                                                                                                                                               /news   301
+/adyton-resources-corporation-closes-premium-to-market-usd5-million-strategic-private-placement/                                                                                                        /news   301
+/adyton-resources-strengthens-board-and-grants-stock-options-and-rsus/                                                                                                                                  /news   301
+/drilling-progressing-to-plan-at-fergusson-wapolu-project/                                                                                                                                              /news   301
+/drone-survey-completed-at-feni-island-gold-copper-project/                                                                                                                                             /news   301
+/adyton-commences-field-work-on-feni-island-led-by-former-friedland-senior-geologist/                                                                                                                   /news   301
+/adyton-resources-announces-filing-of-financial-statements-and-mda-for-the-three-and-twelve-months-ended-december-31-2023/                                                                              /news   301
+/adyton-resources-announces-upsized-c20-million-financing-comprised-of-14-million-private-placement-of-units-and-concurrent-6-million-non-brokered-private-placement-of-units/                          /news   301
+/adyton-resources-closes-oversubscribed-c20-million-financing-comprised-of-14-million-brokered-private-placement-of-units-and-concurrent-6-million-nonbrokered-private-placements/                      /news   301
+/drilling-commences-at-fergusson-island-wapolu-gold-project-for-feasibility-and-production-planning/                                                                                                    /news   301
+/adyton-reports-multiple-significant-gold-intersections-from-its-feni-island-gold-copper-project-drilling/                                                                                              /news   301
+/adyton-resources-announces-filing-of-financial-statements-and-mda-for-the-three-months-ended-march-31-2025/                                                                                            /news   301
+/former-exploration-manager-for-ivanhoe-mines-mongolia-to-strengthen-adyton-board/                                                                                                                      /news   301
+/adyton-identifies-resource-growth-potential-with-new-untested-drill-targets-at-the-feni-island-project/                                                                                                /news   301
+/adyton-reports-final-assays-from-feni-drillholes-1-3-confirming-multiple-copper-mineralised-zones-complementing-previously-reported-gold-fdd003-upgraded-by-40-for-combined-125-9-gxm-au-eq/           /news   301
+/adyton-to-recommence-work-activities-on-feni-island-gold-copper-project/                                                                                                                               /news   301
+/adyton-confirms-significant-scale-at-feni-gold-copper-project-fdd005-returns-158m-0-72g-t-au-eq-0-54g-t-au-0-14-cu-and-identifies-new-high-priority-drill-targets/                                     /news   301
+/adyton-reports-final-assays-from-fdd004-confirming-strong-mineralized-intercepts-of-115m-at-1-00g-t-gold-equivalent-0-92g-t-au-0-07-cu-within-a-broader-mineralized-zone-of-229m-at-0-79g-t-gold-equ/  /news   301
+/adyton-resources-announces-filing-of-financial-statements-and-mda-for-the-period-ending-december-31-2024-and-provides-corporate-update/                                                                /news   301
+/adyton-resources-welcomes-lihir-deposit-expert-dr-erin-johns-to-the-team-to-drive-feni-gold-copper-project-development/                                                                                /news   301
+/adyton-resources-featured-on-clarus-securities-mining-watch-list/                                                                                                                                      /news   301
+/adyton-successfully-completes-gameta-and-feni-wardens-hearings/                                                                                                                                        /news   301
+/review-of-existing-and-historical-data-on-feni-island-reinforces-significant-cu-au-discovery-potential/                                                                                                /news   301
+/adyton-mobilizes-drone-survey-team-to-feni-island/                                                                                                                                                     /news   301
+/evih-technical-and-executive-team-visit-fergusson-island-to-commence-feasibility-study-and-bulk-sample-planning/                                                                                       /news   301
+
+# ----------------------------------------------
+# INVESTOR DOCUMENTS & REPORTS
+# ----------------------------------------------
+/presentations/                         /investors                      301
+/technical-reports/                     /investors                      301
+/financial-reports/                     /investors                      301
+/broker-research/                       /investors                      301
+/reports/                               /investors                      301
+/43-101/                                /investors                      301
+/ni-43-101/                             /investors                      301
+/technical-documents/                   /investors                      301
+/investors/regulatory-news-alerts/      /investors                      301
+
+# ----------------------------------------------
+# LEGACY CMS PATTERNS (WORDPRESS / ASPX)
+# ----------------------------------------------
+/category/announcements/                /news                           301
+/category/announcements/page/*          /news                           301
+/category/press/                        /news                           301
+/category/press-releases/               /news                           301
+/category/news/                         /news                           301
+/category/news-releases/                /news                           301
+/author/adytonres02/                    /news                           301
+/author/adytonres02/page/*              /news                           301
+/wp/*                                   /                               301
+/en/news/*                              /news                           301
+/en/news-releases/                      /news                           301
+/en/investors/news/*                    /investors                      301
+/projects-overview/documents/           /investors                      301
+/projects-overview/technical-documents/ /investors                      301
+
+# ----------------------------------------------
+# PDF ASSETS
+# ----------------------------------------------
+/wp-content/uploads/2021/10/131021_Adyton-announces-resources-upgrade_Final_Final.pdf  /investors  301
+
+# ----------------------------------------------
+# JUNK / NOISE — SEND TO HOMEPAGE
+# ----------------------------------------------
+/portfolio-options/                     /                               301
+/et_pb_layout/*                         /                               301
+/assets                                 /                               301
+/mines                                  /                               301
+/operations                             /                               301
+/operations-and-projects                /                               301
+/our-business                           /                               301
+/our-mines                              /                               301
+/our-operations                         /                               301
+/our-projects                           /                               301
+/properties                             /                               301
+/home/leadership/                       /about                          301
+
+# ----------------------------------------------
+# SPA FALLBACK (must be last)
+# ----------------------------------------------
+/*                                      /index.html                     200
