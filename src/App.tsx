@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import FeniIsland from "./pages/FeniIsland";
 import FergussonIsland from "./pages/FergussonIsland";
+import ProjectsOverview from "./pages/ProjectsOverview";
 import Investors from "./pages/Investors";
 import News from "./pages/News";
 import NewsDetail from "./pages/NewsDetail";
@@ -73,6 +74,8 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/projects-overview" element={<ProjectsOverview />} />
+          <Route path="/projects-overview/" element={<ProjectsOverview />} />
           <Route path="/projects/feni" element={<FeniIsland />} />
           <Route path="/projects/fergusson" element={<FergussonIsland />} />
           <Route path="/investors" element={<Investors />} />

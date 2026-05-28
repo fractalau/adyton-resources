@@ -1,10 +1,9 @@
-import { CheckCircle, ArrowRight } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import PNGInteractiveMap from "@/components/PNGInteractiveMap";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import Subscribe from "@/components/layout/Subscribe";
 import Footer from "@/components/layout/Footer";
+import ExploreCTA from "@/components/ExploreCTA";
 import { useSEO } from "@/hooks/useSEO";
 import FAQSchema from "@/components/schema/FAQSchema";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
@@ -275,26 +274,7 @@ const WhyPNG = () => {
           </div>
         </section>
 
-        {/* CTA */}
-        <section aria-label="Explore more" className="bg-background py-10 border-t border-border">
-          <div className="container max-w-4xl flex flex-wrap justify-center gap-3">
-            <Button variant="gold-outline" size="lg" asChild>
-              <Link to="/projects/feni">
-                Explore Feni Island <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
-            <Button variant="gold-outline" size="lg" asChild>
-              <Link to="/projects/fergusson">
-                Explore Fergusson Island <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
-            <Button variant="gold-outline" size="lg" asChild>
-              <Link to="/about">
-                About the Team <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-        </section>
+        <ExploreCTA />
       </main>
 
       <Footer />

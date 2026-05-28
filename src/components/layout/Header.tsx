@@ -7,6 +7,7 @@ import { Menu, X, ExternalLink, ChevronDown, Linkedin, Youtube, Globe } from "lu
 import logo from "@/assets/logo.png";
 
 const projectsDropdown = [
+  { label: "Projects Overview", path: "/projects-overview/" },
   { label: "Feni Island", path: "/projects/feni" },
   { label: "Fergusson Island", path: "/projects/fergusson" },
 ];
