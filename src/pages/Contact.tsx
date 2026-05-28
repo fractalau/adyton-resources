@@ -198,7 +198,7 @@ const Contact = () => {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-3 py-2 rounded-md bg-transparent text-foreground font-body border border-[#d6d2cd] hover:border-[#1b4e6a] focus:border-[#1b4e6a] focus:outline-none"
+                    className="w-full px-3 py-2 rounded-md bg-transparent text-[#333333] font-body border border-[#d6d2cd] hover:border-[#1b4e6a] focus:border-[#1b4e6a] focus:outline-none"
                   />
                 </div>
                 <div>
@@ -212,7 +212,7 @@ const Contact = () => {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-3 py-2 rounded-md bg-transparent text-foreground font-body border border-[#d6d2cd] hover:border-[#1b4e6a] focus:border-[#1b4e6a] focus:outline-none"
+                    className="w-full px-3 py-2 rounded-md bg-transparent text-[#333333] font-body border border-[#d6d2cd] hover:border-[#1b4e6a] focus:border-[#1b4e6a] focus:outline-none"
                   />
                 </div>
                 <div>
@@ -226,7 +226,7 @@ const Contact = () => {
                     rows={5}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-3 py-2 rounded-md bg-transparent text-foreground font-body border border-[#d6d2cd] hover:border-[#1b4e6a] focus:border-[#1b4e6a] focus:outline-none"
+                    className="w-full px-3 py-2 rounded-md bg-transparent text-[#333333] font-body border border-[#d6d2cd] hover:border-[#1b4e6a] focus:border-[#1b4e6a] focus:outline-none"
                   />
                 </div>
                 <Button type="submit" disabled={isSubmitting} className="w-full">
