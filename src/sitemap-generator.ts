@@ -1,7 +1,7 @@
 /**
  * Sitemap generator script.
  * Run: npx tsx src/sitemap-generator.ts
- * Generates public/sitemap.xml from the route definitions.
+ * Generates public/sitemap.xml from the route definitions in src/App.tsx.
  */
 import * as fs from "fs";
 import * as path from "path";
@@ -15,7 +15,7 @@ interface SitemapEntry {
   priority: number;
 }
 
-const routes: SitemapEntry[] = [
+const staticRoutes: SitemapEntry[] = [
   { path: "/", changefreq: "weekly", priority: 1.0 },
   { path: "/projects/feni", changefreq: "monthly", priority: 0.8 },
   { path: "/projects/fergusson", changefreq: "monthly", priority: 0.8 },
@@ -24,13 +24,28 @@ const routes: SitemapEntry[] = [
   { path: "/about", changefreq: "monthly", priority: 0.8 },
   { path: "/why-png", changefreq: "monthly", priority: 0.6 },
   { path: "/contact", changefreq: "monthly", priority: 0.6 },
+  { path: "/privacy-policy", changefreq: "yearly", priority: 0.3 },
+  { path: "/disclaimer", changefreq: "yearly", priority: 0.3 },
 ];
+
+// Extract news article routes from App.tsx so the sitemap stays in sync.
+function getNewsRoutes(): SitemapEntry[] {
+  const appPath = path.resolve(__dirname, "App.tsx");
+  const src = fs.readFileSync(appPath, "utf-8");
+  const matches = Array.from(src.matchAll(/path="(\/news\/[^"]+)"/g));
+  return matches
+    .map((m) => m[1])
+    .filter((p) => !p.includes(":")) // skip dynamic /news/:slug fallback
+    .map((p) => ({ path: p, changefreq: "monthly", priority: 0.6 }));
+}
+
+const routes: SitemapEntry[] = [...staticRoutes, ...getNewsRoutes()];
 
 function generateSitemap(): string {
   const urls = routes
     .map(
       (r) => `  <url>
-    <loc>${SITE_URL}${r.path === "/" ? "/" : r.path}</loc>
+    <loc>${SITE_URL}${r.path}</loc>
     <lastmod>${TODAY}</lastmod>
     <changefreq>${r.changefreq}</changefreq>
     <priority>${r.priority.toFixed(1)}</priority>
@@ -47,4 +62,4 @@ ${urls}
 
 const outputPath = path.resolve(__dirname, "../public/sitemap.xml");
 fs.writeFileSync(outputPath, generateSitemap(), "utf-8");
-console.log(`Sitemap generated at ${outputPath}`);
+console.log(`Sitemap generated at ${outputPath} (${routes.length} entries)`);
