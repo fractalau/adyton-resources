@@ -284,7 +284,7 @@ const Investors = () => {
         </section>
 
         {/* Quick Links */}
-        <section aria-label="External resources" className="bg-background py-10 border-t border-border">
+        <section aria-label="External resources" className="teal-panel py-14 md:py-16 border-t border-gold/30">
           <div className="container max-w-4xl flex flex-wrap justify-center gap-3">
             <Button variant="gold-outline" size="lg" asChild>
               <a href="https://www.sedarplus.ca" target="_blank" rel="noopener noreferrer">
