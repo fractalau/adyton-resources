@@ -298,7 +298,7 @@ const Investors = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               {filtered.map((d) => (
-                <DownloadTile key={d.title} {...d} />
+                <DownloadTile key={d.href ?? d.title} {...d} />
               ))}
             </div>
           </div>
