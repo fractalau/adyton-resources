@@ -140,6 +140,16 @@ const downloads = [
     featured: false,
     href: "/documents/ADY_MDA_Dec_31_2025.pdf",
   },
+  {
+    title: "Management's Discussion and Analysis",
+    date: "March 2026",
+    description: "Management's Discussion and Analysis for the three months ended March 31, 2026.",
+    fileType: "PDF",
+    fileSize: "0.9 MB",
+    category: "Corporate Documents",
+    featured: false,
+    href: "/documents/ADY_MDA_Mar_31_2026.pdf",
+  },
 
 ];
 
