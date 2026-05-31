@@ -116,17 +116,7 @@ const downloads = [
     description: "Announcement of filing of financial statements and MD&A for the three months ending March 31, 2026.",
     fileType: "PDF",
     fileSize: "0.6 MB",
-    category: "Corporate Documents",
-    featured: false,
-    href: "/documents/ADY_Q1_2026_Financials_Filing_Announcement.pdf",
-  },
-  {
-    title: "Filing of Financial Statements and MD&A for Q1 2026",
-    date: "May 2026",
-    description: "Announcement of filing of financial statements and MD&A for the three months ending March 31, 2026.",
-    fileType: "PDF",
-    fileSize: "0.6 MB",
-    category: "Filings",
+    category: ["Corporate Documents", "Filings"],
     featured: false,
     href: "/documents/ADY_Q1_2026_Financials_Filing_Announcement.pdf",
   },
@@ -149,7 +139,7 @@ const Investors = () => {
   const filtered =
     activeCategory === "All"
       ? downloads.filter((d) => !d.featured)
-      : downloads.filter((d) => d.category === activeCategory && !d.featured);
+      : downloads.filter((d) => !d.featured && (Array.isArray(d.category) ? d.category.includes(activeCategory) : d.category === activeCategory));
 
   useSEO(
     "Investor Hub",
