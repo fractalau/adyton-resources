@@ -139,7 +139,7 @@ const Investors = () => {
   const filtered =
     activeCategory === "All"
       ? downloads.filter((d) => !d.featured)
-      : downloads.filter((d) => d.category === activeCategory && !d.featured);
+      : downloads.filter((d) => !d.featured && (Array.isArray(d.category) ? d.category.includes(activeCategory) : d.category === activeCategory));
 
   useSEO(
     "Investor Hub",
