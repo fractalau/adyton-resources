@@ -111,6 +111,16 @@ const downloads = [
     href: "/documents/ADY_FS_Dec_31_2025.pdf",
   },
   {
+    title: "Consolidated Financial Statements",
+    date: "March 2026",
+    description: "Consolidated financial statements for the three months ended March 31, 2026.",
+    fileType: "PDF",
+    fileSize: "0.6 MB",
+    category: "Corporate Documents",
+    featured: false,
+    href: "/documents/ADY_FS_Mar_31_2026.pdf",
+  },
+  {
     title: "Filing of Financial Statements and MD&A for Q1 2026",
     date: "May 2026",
     description: "Announcement of filing of financial statements and MD&A for the three months ending March 31, 2026.",
