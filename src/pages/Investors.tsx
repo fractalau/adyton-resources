@@ -111,6 +111,26 @@ const downloads = [
     href: "/documents/ADY_FS_Dec_31_2025.pdf",
   },
   {
+    title: "Filing of Financial Statements and MD&A for Q1 2026",
+    date: "May 2026",
+    description: "Announcement of filing of financial statements and MD&A for the three months ending March 31, 2026.",
+    fileType: "PDF",
+    fileSize: "0.6 MB",
+    category: "Corporate Documents",
+    featured: false,
+    href: "/documents/ADY_Q1_2026_Financials_Filing_Announcement.pdf",
+  },
+  {
+    title: "Filing of Financial Statements and MD&A for Q1 2026",
+    date: "May 2026",
+    description: "Announcement of filing of financial statements and MD&A for the three months ending March 31, 2026.",
+    fileType: "PDF",
+    fileSize: "0.6 MB",
+    category: "Filings",
+    featured: false,
+    href: "/documents/ADY_Q1_2026_Financials_Filing_Announcement.pdf",
+  },
+  {
     title: "Management's Discussion and Analysis",
     date: "December 2025",
     description: "Management's Discussion and Analysis for the period ending December 31, 2025.",
@@ -120,6 +140,7 @@ const downloads = [
     featured: false,
     href: "/documents/ADY_MDA_Dec_31_2025.pdf",
   },
+
 ];
 
 const Investors = () => {
