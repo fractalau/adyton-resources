@@ -18,6 +18,7 @@ import PressReleaseIndex from "./pages/PressReleaseIndex";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Disclaimer from "./pages/Disclaimer";
+import ComingSoon from "./pages/ComingSoon";
 import ScrollToTop from "./components/ScrollToTop";
 import DualTrackGrowthStrategy from "./announcements/dual-track-growth-strategy";
 import WapoluMineralResourcesEstimate from "./announcements/wapolu-updated-mineral-resources-estimate";
