@@ -9,9 +9,9 @@ import { useSEO } from "@/hooks/useSEO";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
 
 const keyStats = [
-  { value: "100+ Moz", label: "Historical gold production" },
+  { value: "60-70+ Moz", label: "Historical gold production" },
+  { value: "100+ Moz", label: "Potential gold production" },
   { value: "5+", label: "Major miners operating" },
-  { value: "Tidewater", label: "Island-based logistics" },
   { value: "Under-explored", label: "vs. peer jurisdictions" },
 ];
 
@@ -89,15 +89,10 @@ const ProjectsOverview = () => {
         <TwoPillarSection />
 
         {/* Why PNG */}
-        <section
-          aria-label="Why Papua New Guinea"
-          className="py-14 md:py-18 bg-background"
-        >
+        <section aria-label="Why Papua New Guinea" className="py-14 md:py-18 bg-background">
           <div className="container">
             <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">JURISDICTION</p>
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-3">
-              Why Papua New Guinea?
-            </h2>
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-3">Why Papua New Guinea?</h2>
             <p className="text-foreground/70 max-w-2xl mb-8 font-body">
               A world-class mineral province with proven geology, established mining operations, and substantial
               discovery runway.
