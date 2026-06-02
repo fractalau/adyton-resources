@@ -518,6 +518,11 @@ const FergussonIsland = () => {
                 NI 43-101 Technical Report — Fergusson Island (Oct 2021) <ExternalLink className="h-4 w-4" />
               </a>
             </Button>
+            <Button variant="gold" size="lg" asChild>
+              <a href="/reports/NI43-101_Wapolu_Jan2026.pdf" target="_blank" rel="noopener noreferrer">
+                NI 43-101 Technical Report — Wapolu (Jan 2026) <ExternalLink className="h-4 w-4" />
+              </a>
+            </Button>
             <Button variant="gold-outline" size="lg" asChild>
               <a href="/news#press-release-section">
                 View All Fergusson Releases <ExternalLink className="h-4 w-4" />
