@@ -132,7 +132,7 @@ const App = () => (
           <Route path="/why-png" element={<WhyPNG />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
-          <Route path="/coming-soon" element={<ComingSoon />} />
+          
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
