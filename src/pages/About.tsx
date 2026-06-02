@@ -84,7 +84,7 @@ const pillars = [
   {
     icon: Users,
     title: "Aligned Interests",
-    desc: "~12% management and director ownership ensures alignment between leadership and shareholders.",
+    desc: "~10% management and director ownership ensures alignment between leadership and shareholders.",
   },
 ];
 
