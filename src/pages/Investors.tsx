@@ -150,7 +150,6 @@ const downloads = [
     featured: false,
     href: "/documents/ADY_MDA_Mar_31_2026.pdf",
   },
-
 ];
 
 const Investors = () => {
@@ -159,7 +158,11 @@ const Investors = () => {
   const filtered =
     activeCategory === "All"
       ? downloads.filter((d) => !d.featured)
-      : downloads.filter((d) => !d.featured && (Array.isArray(d.category) ? d.category.includes(activeCategory) : d.category === activeCategory));
+      : downloads.filter(
+          (d) =>
+            !d.featured &&
+            (Array.isArray(d.category) ? d.category.includes(activeCategory) : d.category === activeCategory),
+        );
 
   useSEO(
     "Investor Hub",
@@ -207,7 +210,7 @@ const Investors = () => {
             <p className="uppercase tracking-[0.3em] text-center text-primary font-semibold mb-6 font-body">
               CAPITAL STRUCTURE
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-3 md:grid-cols-3 gap-8">
               {capitalStats.map((s) => (
                 <div key={s.label} className="text-center flex flex-col items-center gap-2">
                   <s.icon className="h-5 w-5 text-primary" aria-hidden="true" />
