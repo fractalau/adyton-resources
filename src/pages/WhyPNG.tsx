@@ -20,7 +20,7 @@ const facts = [
     heading: "Geological Prospectivity",
     points: [
       "Papua New Guinea sits on the Pacific Ring of Fire, hosting world-class gold and copper deposits.",
-      "The PNG mineral province has produced over 100 million ounces of gold historically.",
+      "The PNG mineral province has produced over 60-70 million ounces of gold historically.",
       "Multiple deposit types present: porphyry, epithermal, and orogenic gold systems.",
     ],
   },
