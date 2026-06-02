@@ -150,8 +150,7 @@ const downloads = [
     href: "/documents/ADY_MDA_Mar_31_2026.pdf",
   },
   {
-    title: "NI 43-101 Technical Report on the Feni Gold-Copper Property, New
-Ireland Province, Papua New Guinea",
+    title: "NI 43-101 Technical Report on the Feni Gold-Copper Property, New Ireland Province, Papua New Guinea",
     date: "November 2021",
     description: "Management's Discussion and Analysis for the three months ended March 31, 2026.",
     fileType: "PDF",
