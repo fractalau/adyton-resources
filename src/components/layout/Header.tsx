@@ -77,7 +77,7 @@ const Header = () => {
       <div className="w-full bg-gold py-3 hidden md:block">
         <div className="container">
           <div className="grid grid-cols-6 items-center">
-            <div className="col-span-4 flex items-center justify-start min-w-0">
+            <div className="col-span-4 flex items-center justify-start min-w-0 overflow-hidden">
               <PriceTicker />
             </div>
             <div className="col-span-2 gap-4 flex items-center justify-end">
