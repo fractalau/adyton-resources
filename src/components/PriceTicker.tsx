@@ -41,7 +41,7 @@ const PriceTicker = () => {
   if (quotes.length === 0) return null;
 
   return (
-    <div className="flex-1 flex items-center justify-start gap-8">
+    <div className="flex-1 flex items-center justify-start gap-4">
       {quotes.map((q) => (
         <div
           key={q.symbol}
