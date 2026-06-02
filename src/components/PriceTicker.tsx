@@ -24,7 +24,7 @@ const PriceTicker = () => {
 
   useEffect(() => {
     let cancelled = false;
-    const load = async () => {
+    (async () => {
       try {
         const { data, error } = await supabase.functions.invoke("fetch-ticker-prices");
         if (error || cancelled) return;
@@ -32,12 +32,9 @@ const PriceTicker = () => {
       } catch {
         /* silent */
       }
-    };
-    load();
-    const id = setInterval(load, 5 * 60 * 1000);
+    })();
     return () => {
       cancelled = true;
-      clearInterval(id);
     };
   }, []);
 
