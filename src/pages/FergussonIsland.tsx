@@ -127,6 +127,13 @@ const FergussonIsland = () => {
                 Island-based logistics provide a development advantage: low-cost barge access, short distances between
                 deposits, and supportive landholders.
               </p>
+              <p
+                className="text-sm mt-4 italic font-body"
+                style={{ color: "hsl(var(--light-muted-foreground) / 0.6)" }}
+              >
+                Subject to EVIH completing earn-in conditions. See ASX/TSXV disclosures for full terms, and any right
+                the state may have for participating interest in mining projects.
+              </p>
             </div>
           </div>
         </section>
@@ -467,7 +474,10 @@ const FergussonIsland = () => {
         </section>
 
         {/* Development Timeline */}
-        <section className="py-16 md:py-20 border-t" style={{ background: "hsl(var(--off-white))", borderTopColor: "#d6d2cd" }}>
+        <section
+          className="py-16 md:py-20 border-t"
+          style={{ background: "hsl(var(--off-white))", borderTopColor: "#d6d2cd" }}
+        >
           <div className="container max-w-4xl">
             <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">PATH TO PRODUCTION</p>
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-8" style={{ color: "hsl(var(--text-dark))" }}>
