@@ -95,7 +95,7 @@ const FeniIsland = () => {
             >
               <p>
                 Feni Island sits within the +120 Moz gold-prolific geological arc of the Pacific Ring of Fire — the same
-                trend as Simberi (St Barbara) and Panguna (formerly Rio Tinto).
+                trend as Lihir (Newmont), Simberi (St Barbara) and Panguna (formerly Rio Tinto).
               </p>
               <p>
                 The project is hosted within a large alkalic-type epithermal-porphyry setting, supporting both
@@ -348,7 +348,10 @@ const FeniIsland = () => {
         </section>
 
         {/* Logistics */}
-        <section className="py-16 md:py-20 border-t" style={{ background: "hsl(var(--off-white))", borderTopColor: "#d6d2cd" }}>
+        <section
+          className="py-16 md:py-20 border-t"
+          style={{ background: "hsl(var(--off-white))", borderTopColor: "#d6d2cd" }}
+        >
           <div className="container max-w-4xl">
             <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
               DIRECT SHIP ORE OPPORTUNITY
