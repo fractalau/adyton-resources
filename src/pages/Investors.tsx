@@ -26,7 +26,6 @@ const capitalStats = [
   { icon: Hash, value: "315.0 M", label: "Shares on Issue" },
   { icon: TrendingUp, value: "46.9 M", label: "Options/Warrants/RSU" },
   { icon: Hash, value: "361.9 M", label: "Fully Diluted" },
-  { icon: Landmark, value: "$15 M", label: "Cash at Bank" },
 ];
 
 const ownership = [
