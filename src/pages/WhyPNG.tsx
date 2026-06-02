@@ -9,7 +9,7 @@ import FAQSchema from "@/components/schema/FAQSchema";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
 
 const keyStats = [
-  { value: "100+ Moz", label: "Historical gold production" },
+  { value: "60-70 Moz", label: "Historical gold production" },
   { value: "5+", label: "Major miners operating" },
   { value: "Tidewater", label: "Island-based logistics" },
   { value: "Under-explored", label: "vs. peer jurisdictions" },
