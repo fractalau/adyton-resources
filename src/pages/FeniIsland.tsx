@@ -355,7 +355,7 @@ const FeniIsland = () => {
         >
           <div className="container max-w-4xl">
             <p className="uppercase tracking-[0.3em] text-primary font-semibold mb-3 font-body">
-              DIRECT SHIP ORE OPPORTUNITY
+              DIRECT SHIP CONCENTRATE OPPORTUNITY
             </p>
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-6" style={{ color: "hsl(var(--text-dark))" }}>
               5 km Pit-to-Ship Distance
