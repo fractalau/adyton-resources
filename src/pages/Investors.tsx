@@ -149,6 +149,16 @@ const downloads = [
     featured: false,
     href: "/documents/ADY_MDA_Mar_31_2026.pdf",
   },
+  {
+    title: "NI 43-101 TECHNICAL REPORT ON THE FENI GOLD-COPPER PROPERTY, NEW IRELAND PROVINCE, PAPUA NEW GUINEA",
+    date: "November 2021",
+    description: "Management's Discussion and Analysis for the three months ended March 31, 2026.",
+    fileType: "PDF",
+    fileSize: "9 MB",
+    category: "Technical Reports",
+    featured: false,
+    href: "/reports/NI43-101_Feni_Oct2021.pdf",
+  },
 ];
 
 const Investors = () => {
