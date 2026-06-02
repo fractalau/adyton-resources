@@ -21,7 +21,6 @@ const facts = [
     points: [
       "Papua New Guinea sits on the Pacific Ring of Fire, hosting world-class gold and copper deposits.",
       "The PNG mineral province has produced over 60-70 million ounces of gold historically.",
-      "The Mineral Resources Authority estimates PNG still holds roughly 100 million ounces of unmined gold.",
       "Multiple deposit types present: porphyry, epithermal, and orogenic gold systems.",
     ],
   },
