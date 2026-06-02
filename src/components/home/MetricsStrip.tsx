@@ -2,7 +2,6 @@ import { Gem, Landmark, BarChart3, Handshake, Flag } from "lucide-react";
 
 const metrics = [
   { icon: Gem, stat: "2.4Moz Au", label: "Total Resources (NI 43-101)" },
-  { icon: BarChart3, stat: "C$45.42", label: "EV per Resource Ounce" },
   { icon: Handshake, stat: "US$9.5M", label: "Committed by JV Partner EVIH" },
   { icon: Flag, stat: "3", label: "Active Projects, PNG" },
 ];
@@ -10,7 +9,7 @@ const metrics = [
 const MetricsStrip = () => (
   <section className="border-b border-border py-10 md:py-12" style={{ background: "hsl(201 65% 18%)" }}>
     <div className="container">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-3 md:grid-cols-3 gap-8">
         {metrics.map((m) => (
           <div key={m.label} className="text-center flex flex-col items-center gap-2">
             <m.icon className="h-6 w-6 text-primary" />
