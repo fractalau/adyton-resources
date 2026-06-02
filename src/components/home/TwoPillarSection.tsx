@@ -29,14 +29,17 @@ const TwoPillarSection = () => (
             Flagship Growth Asset
           </span>
           <h3 className="text-3xl font-display font-bold text-foreground mb-1">Feni Island</h3>
-          <p className="text-sm text-foreground/50 mb-4 font-body">New Ireland Province, PNG</p>
-          <p className="text-3xl font-mono font-bold text-primary mb-1">120 Moz Lihir Discovery trend</p>
+          <p className="text-sm text-foreground/50 mb-4 font-body">
+            120 Moz Lihir Discovery trend - New Ireland Province, PNG
+          </p>
+          <p className="text-3xl font-mono font-bold text-primary mb-1">1.46 Moz Au</p>
           <p className="text-sm text-foreground/50 mb-5 font-body">
             Inferred Mineral Resource (Kabang Deposit, NI 43-101, Oct 2021)
           </p>
           <p className="text-foreground/70 mb-6 font-body leading-relaxed">
-            Tier 1 gold-copper discovery potential with whole-of-island tenure across multiple epithermal and porphyry targets located in the middle of the Lihir Island chain that hosts &gt;120Moz Au of existing developed discoveries. 
-            Significant copper upside not yet captured in the current MRE.
+            Tier 1 gold-copper discovery potential with whole-of-island tenure across multiple epithermal and porphyry
+            targets located in the middle of the Lihir Island chain that hosts &gt;120Moz Au of existing developed
+            discoveries. Significant copper upside not yet captured in the current MRE.
           </p>
           <Link
             to="/projects/feni"
@@ -65,8 +68,9 @@ const TwoPillarSection = () => (
             Indicated + Inferred Mineral Resource (Wapolu + Gameta, NI 43-101)
           </p>
           <p className="mb-6 font-body leading-relaxed" style={{ color: "hsl(var(--light-muted-foreground))" }}>
-            Wapolu and Gameta deposits are shallow, low capex, easy to access open pit projects 100% funded by JV partner East Vision Investment Holdings (EVIH), committing up to US$9.5M. 
-            Adyton retains 50% of free cash flow with zero capital outlay.
+            Wapolu and Gameta deposits are shallow, low capex, easy to access open pit projects 100% funded by JV
+            partner East Vision Investment Holdings (EVIH), committing up to US$9.5M. Adyton retains 50% of free cash
+            flow with zero capital outlay.
           </p>
           <Link
             to="/projects/fergusson"
