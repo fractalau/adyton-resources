@@ -48,7 +48,7 @@ const PriceTicker = () => {
           className="flex items-baseline gap-2 font-mono text-sm whitespace-nowrap"
           style={{ color: "#1b4e6a" }}
         >
-          <span className="font-semibold tracking-wide">{q.label}</span>
+          <span className="font-semibold tracking-wide text-slate-50 bg-slate-700 px-[5px] py-[2.5px] rounded-none">{q.label}</span>
           <span className="tabular-nums">
             {q.currency === "USD" ? "$" : ""}
             {formatPrice(q)}
