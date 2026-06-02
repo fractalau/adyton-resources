@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ExternalLink, ChevronDown, Linkedin, Youtube, Globe } from "lucide-react";
+import PriceTicker from "@/components/PriceTicker";
 
 
 import logo from "@/assets/logo.png";
@@ -76,17 +77,8 @@ const Header = () => {
       <div className="w-full bg-gold py-3 hidden md:block">
         <div className="container">
           <div className="grid grid-cols-6 items-center">
-            <div className="col-span-4 flex items-center gap-6 justify-start">
-              {/* @ts-expect-error - TradingView custom element */}
-              <tv-ticker-tag symbol="OANDA:XAUUSD" hide-background="true"></tv-ticker-tag>
-              {/* @ts-expect-error - TradingView custom element */}
-              <tv-ticker-tag symbol="OANDA:XCUUSD" hide-background="true"></tv-ticker-tag>
-              {/* @ts-expect-error - TradingView custom element */}
-              <tv-ticker-tag symbol="TSXV:ADY" hide-background="true"></tv-ticker-tag>
-              {/* @ts-expect-error - TradingView custom element */}
-              <tv-ticker-tag symbol="OTC:ADYRF" hide-background="true"></tv-ticker-tag>
-              {/* @ts-expect-error - TradingView custom element */}
-              <tv-ticker-tag symbol="OTC:OTCM" hide-background="true"></tv-ticker-tag>
+            <div className="col-span-4 flex items-center justify-start min-w-0">
+              <PriceTicker />
             </div>
             <div className="col-span-2 gap-4 flex items-center justify-end">
               <a
