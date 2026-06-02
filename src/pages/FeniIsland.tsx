@@ -205,7 +205,7 @@ const FeniIsland = () => {
             <p className="leading-relaxed mb-8 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
               Adyton has completed 10,663 m of its ongoing drill program at Feni Island, successfully confirming
               high-grade extensions to the north and documenting resource continuity across the Kabang system. New
-              gold-copper mineralised zones have been identified in the February 2026 program, refer significant
+              gold-copper mineralised zones have been identified in the February 2026 program. Refer significant
               intercepts in the below table.
             </p>
 
