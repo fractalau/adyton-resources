@@ -169,6 +169,16 @@ const downloads = [
     featured: false,
     href: "/reports/NI43-101_Fergusson_Oct2021.pdf",
   },
+  {
+    title: "NI 43-101 Technical Report on Wapolu Gold Project",
+    date: "January 2026",
+    description: "",
+    fileType: "PDF",
+    fileSize: "4.0 MB",
+    category: "Technical Reports",
+    featured: false,
+    href: "/reports/NI43-101_Wapolu_Jan2026.pdf",
+  },
 ];
 
 const Investors = () => {
