@@ -28,7 +28,7 @@ const facts = [
   {
     heading: "Established Mining Jurisdiction",
     points: [
-      "Major miners including Newmont, Barrick, Harmony Gold, and K92 operate successfully in PNG.",
+      "Major miners including Newmont, Barrick, Harmony Gold, and K92 Mining operate successfully in PNG.",
       "Modernized Mining Act provides clear framework for exploration and development.",
       "Government of PNG actively supports responsible resource development as a pillar of national economic strategy.",
     ],
@@ -72,7 +72,7 @@ const pngFaqs = [
   {
     question: "Why is Papua New Guinea attractive for gold exploration?",
     answer:
-      "PNG sits on the Pacific Ring of Fire and has produced over 100 million ounces of gold historically. Major miners like Newmont, Barrick, and Harmony Gold operate successfully in the country, yet it remains significantly under-explored compared to peer jurisdictions like Australia and Canada.",
+      "PNG sits on the Pacific Ring of Fire and has produced over 60-70 million ounces of gold historically. Major miners like Newmont, Barrick, Harmony Gold, and K92 Mining operate successfully in the country, yet it remains significantly under-explored compared to peer jurisdictions like Australia and Canada.",
   },
   {
     question: "What mining companies operate in PNG?",
