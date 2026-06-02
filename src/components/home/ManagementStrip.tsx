@@ -5,7 +5,7 @@ const team = [
   {
     name: "Timothy Crossley",
     role: "Managing Director",
-    bio: "Former Deputy CEO, ASX-listed Gloucester Coal. Former President & COO, BHP Billiton West Australian Iron Ore.",
+    bio: "Extensive experience as a director and mining executive, including Deputy CEO of ASX-listed Gloucester Coal, and President & COO at BHP Billiton's West Australian Iron Ore business. Currently Non-Executive Director at Pacific Lime and Cement Limited (ASX). Former President of the Northern Territory Minerals Council.",
   },
   {
     name: "Dr. Chris Bowden",
