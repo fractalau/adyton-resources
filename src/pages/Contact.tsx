@@ -26,13 +26,13 @@ const contactRoutes = [
     icon: Phone,
     title: "Strategic Partners",
     description: "Joint venture, technical partnerships, and corporate development discussions.",
-    email: "corporate@adytonresources.com",
+    email: "ir@adytonresources.com",
   },
   {
     icon: Newspaper,
     title: "Media",
     description: "Press inquiries, interview requests, and media accreditation.",
-    email: "media@adytonresources.com",
+    email: "ir@adytonresources.com",
   },
 ];
 
@@ -46,7 +46,8 @@ const offices = [
   {
     city: "Port Moresby",
     country: "Papua New Guinea",
-    address: "C/O Sinton Spence Chartered Accountants\n2nd Floor, Brian Bell Plaza\nTurumu Street, Boroko\nMoresby North East, NCD\nPort Moresby, Papua New Guinea\nPO Box 6861",
+    address:
+      "C/O Sinton Spence Chartered Accountants\n2nd Floor, Brian Bell Plaza\nTurumu Street, Boroko\nMoresby North East, NCD\nPort Moresby, Papua New Guinea\nPO Box 6861",
     type: "PNG Operations",
   },
 ];
@@ -89,8 +90,6 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
-
-
 
   return (
     <div className="min-h-screen bg-background">
@@ -188,7 +187,11 @@ const Contact = () => {
                   </label>
                 </p>
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-1 font-body" style={{ color: "hsl(var(--text-dark))" }}>
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium mb-1 font-body"
+                    style={{ color: "hsl(var(--text-dark))" }}
+                  >
                     Name
                   </label>
                   <input
@@ -202,7 +205,11 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-1 font-body" style={{ color: "hsl(var(--text-dark))" }}>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium mb-1 font-body"
+                    style={{ color: "hsl(var(--text-dark))" }}
+                  >
                     Email
                   </label>
                   <input
@@ -216,7 +223,11 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-1 font-body" style={{ color: "hsl(var(--text-dark))" }}>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium mb-1 font-body"
+                    style={{ color: "hsl(var(--text-dark))" }}
+                  >
                     Message
                   </label>
                   <textarea
@@ -242,8 +253,6 @@ const Contact = () => {
             )}
           </div>
         </section>
-
-
 
         {/* Offices */}
         <section aria-label="Office locations" className="teal-panel py-14 md:py-18">
