@@ -116,7 +116,7 @@ const About = () => {
               About Adyton Resources
             </h1>
             <p className="text-lg text-foreground/70 max-w-2xl font-body">
-              PNG's #1 junior gold and copper exploration company building high-quality assets in Papua New Guinea,
+              PNG's leading gold and copper junior exploration company building high-quality assets in Papua New Guinea,
               positioned for near-term cash flow and long-term growth.
             </p>
           </div>
