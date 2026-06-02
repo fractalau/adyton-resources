@@ -82,7 +82,7 @@ const pngFaqs = [
   {
     question: "Is PNG a safe jurisdiction for mining investment?",
     answer:
-      "PNG has a long history of successful mining operations and a modernised Mining Act. The government actively supports responsible resource development. While infrastructure challenges exist, island-based projects like those held by Adyton benefit from tidewater access and simplified logistics.",
+      "PNG has a long history of successful mining operations and a modernised Mining Act. The government actively supports responsible resource development. While infrastructure challenges exist, island-based projects like those held by Adyton benefit from easy water access and simplified logistics.",
   },
 ];
 
