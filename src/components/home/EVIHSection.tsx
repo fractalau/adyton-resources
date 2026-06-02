@@ -49,7 +49,8 @@ const EVIHSection = () => (
         ))}
       </div>
       <p className="text-sm mt-4 italic font-body" style={{ color: "hsl(var(--light-muted-foreground) / 0.6)" }}>
-        Subject to EVIH completing earn-in conditions. See ASX/TSXV disclosures for full terms.
+        Subject to EVIH completing earn-in conditions. See ASX/TSXV disclosures for full terms, and any right the state
+        may have for participating interest in mining projects.
       </p>
     </div>
   </section>
