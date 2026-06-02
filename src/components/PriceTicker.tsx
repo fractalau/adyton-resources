@@ -43,27 +43,22 @@ const PriceTicker = () => {
 
   if (quotes.length === 0) return null;
 
-  // Duplicate for seamless marquee loop
-  const items = [...quotes, ...quotes];
-
   return (
-    <div className="overflow-hidden flex-1">
-      <div className="flex gap-10 animate-[ticker-scroll_40s_linear_infinite] whitespace-nowrap">
-        {items.map((q, i) => (
-          <div
-            key={`${q.symbol}-${i}`}
-            className="flex items-baseline gap-2 font-mono text-sm"
-            style={{ color: "#1b4e6a" }}
-          >
-            <span className="font-semibold tracking-wide">{q.label}</span>
-            <span className="tabular-nums">
-              {q.currency === "USD" ? "$" : ""}
-              {formatPrice(q)}
-              {q.unit ? <span className="opacity-70 ml-0.5">{q.unit}</span> : null}
-            </span>
-          </div>
-        ))}
-      </div>
+    <div className="flex-1 flex items-center justify-start gap-8">
+      {quotes.map((q) => (
+        <div
+          key={q.symbol}
+          className="flex items-baseline gap-2 font-mono text-sm whitespace-nowrap"
+          style={{ color: "#1b4e6a" }}
+        >
+          <span className="font-semibold tracking-wide">{q.label}</span>
+          <span className="tabular-nums">
+            {q.currency === "USD" ? "$" : ""}
+            {formatPrice(q)}
+            {q.unit ? <span className="opacity-70 ml-0.5">{q.unit}</span> : null}
+          </span>
+        </div>
+      ))}
     </div>
   );
 };
