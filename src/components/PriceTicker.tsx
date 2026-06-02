@@ -49,7 +49,7 @@ const PriceTicker = () => {
           style={{ color: "#1b4e6a" }}
         >
           <span className="font-semibold tracking-wide text-slate-50 bg-slate-700 px-[5px] py-[2.5px] rounded-none">{q.label}</span>
-          <span className="tabular-nums">
+          <span className="tabular-nums bg-slate-50 text-slate-800 px-[5px] py-[2.5px]">
             {q.currency === "USD" ? "$" : ""}
             {formatPrice(q)}
             {q.unit ? <span className="opacity-70 ml-0.5">{q.unit}</span> : null}
