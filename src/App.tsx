@@ -74,8 +74,7 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<ComingSoon />} />
-          <Route path="/home" element={<Index />} />
+          <Route path="/" element={<Index />} />
           <Route path="/projects-overview" element={<ProjectsOverview />} />
           <Route path="/projects-overview/" element={<ProjectsOverview />} />
           <Route path="/projects/feni" element={<FeniIsland />} />
