@@ -10,12 +10,12 @@ const team = [
   {
     name: "Dr. Chris Bowden",
     role: "COO & Chief Geologist",
-    bio: "~30 years global exploration experience. PhD Economic Geology. FAusIMM(CP), FSEG. Instrumental in discovering and commercialising mineral assets across multiple jurisdictions.",
+    bio: "Geologist with almost 30 years global experience discovering and commercialising mineral assets. PhD in Economic Geology, postgraduate finance and economics qualifications. FAusIMM(CP) and FSEG. Unique blend of technical and commercial experience across the mining life cycle.",
   },
   {
     name: "Chirag Patel",
     role: "CFO & Company Secretary",
-    bio: "Chartered Professional Accountant (CPA). Former PwC. Specialised in mining sector financial, tax, and statutory reporting.",
+    bio: "Chartered Professional Accountant (CPA) with extensive experience in financial management, tax reporting, and corporate strategy for public and multinational firms, including multiple years specialising in the mining sector. Previous roles with PwC and Starcore International Mines.",
   },
 ];
 
