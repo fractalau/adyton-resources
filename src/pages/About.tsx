@@ -18,7 +18,7 @@ const leadership = [
     name: "Tim Crossley",
     role: "Managing Director",
     photo: timCrossleyImg,
-    bio: "Extensive experience as a director and mining executive, including Deputy CEO of ASX-listed Gloucester Coal, and President & COO at BHP Billiton's West Australian Iron Ore business. Currently Executive Director at Mayur Resources (ASX). Former President of the Northern Territory Minerals Council.",
+    bio: "Extensive experience as a director and mining executive, including Deputy CEO of ASX-listed Gloucester Coal, and President & COO at BHP Billiton's West Australian Iron Ore business. Currently Non-Executive Director at Pacific Lime and Cement Limited (ASX). Former President of the Northern Territory Minerals Council.",
   },
   {
     name: "Dr Chris Bowden",
