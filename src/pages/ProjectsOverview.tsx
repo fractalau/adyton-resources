@@ -27,7 +27,7 @@ const facts = [
   {
     heading: "Established Mining Jurisdiction",
     points: [
-      "Major miners including Newmont, Barrick, and Harmony Gold operate successfully in PNG.",
+      "Major miners including Newmont, Barrick, Harmony Gold, and K92 operate successfully in PNG.",
       "Modernized Mining Act provides clear framework for exploration and development.",
       "Government of PNG actively supports responsible resource development as a pillar of national economic strategy.",
     ],
