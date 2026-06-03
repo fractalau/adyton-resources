@@ -3,8 +3,8 @@ import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors';
 const SYMBOLS = [
   { symbol: 'GC=F', label: 'Gold', name: 'Gold Futures', currency: 'USD', unit: '/oz' },
   { symbol: 'HG=F', label: 'Copper', name: 'Copper Futures', currency: 'USD', unit: '/oz', convertPerLbToPerOz: true },
-  { symbol: 'ADY.V', label: 'TSXV: ADY', name: 'Adyton (TSX-V)' },
-  { symbol: 'ADYRF', label: 'OTCQB: ADYRF', name: 'Adyton (OTCQB)' },
+  { symbol: 'ADY.V', label: 'TSXV:ADY', name: 'Adyton (TSX-V)' },
+  { symbol: 'ADYRF', label: 'OTCQB:ADYRF', name: 'Adyton (OTCQB)' },
 ];
 
 const CACHE_TTL_MS = 5 * 60 * 1000;
