@@ -45,7 +45,7 @@ const PriceTicker = () => {
       {quotes.map((q) => (
         <div
           key={q.symbol}
-          className="flex items-baseline font-mono whitespace-nowrap text-xs border border-slate-800 border-solid rounded-xl gap-0"
+          className="flex items-baseline font-mono whitespace-nowrap text-xs border border-slate-800 border-solid rounded-xl gap-0 overflow-hidden"
           style={{ color: "#1b4e6a" }}
         >
           <span className="font-semibold tracking-wide text-slate-50 bg-slate-700 px-[5px] py-[2.5px] rounded-none text-xs">{q.label}</span>
