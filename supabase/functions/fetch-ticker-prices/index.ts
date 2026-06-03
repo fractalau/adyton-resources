@@ -3,7 +3,7 @@ import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors';
 const SYMBOLS = [
   { symbol: 'GC=F', label: 'Gold', name: 'Gold Futures', currency: 'USD', unit: '/oz' },
   { symbol: 'HG=F', label: 'Copper', name: 'Copper Futures', currency: 'USD', unit: '/oz', convertPerLbToPerOz: true },
-  { symbol: 'ADY.V', label: 'TSXV:ADY', name: 'Adyton (TSX-V)' },
+  { symbol: 'ADY.V', label: 'TSXV:ADY', name: 'Adyton (TSX-V)', keepNativeCurrency: true },
   { symbol: 'ADYRF', label: 'OTCQB:ADYRF', name: 'Adyton (OTCQB)' },
 ];
 
@@ -71,6 +71,7 @@ Deno.serve(async (req) => {
     );
 
     const converted = results.map((r) => {
+      if ((r as { keepNativeCurrency?: boolean }).keepNativeCurrency) return r;
       const rate = fxCache.get(r.currency);
       if (r.price != null && rate && r.currency !== 'USD') {
         return { ...r, price: r.price * rate, currency: 'USD' };
