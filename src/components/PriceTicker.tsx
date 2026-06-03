@@ -50,7 +50,7 @@ const PriceTicker = () => {
         >
           <span className="font-semibold tracking-wide text-slate-50 bg-slate-700 px-[5px] py-[2.5px] rounded-none text-xs">{q.label}</span>
           <span className="tabular-nums bg-slate-50 text-slate-800 px-[5px] py-[2.5px] text-xs">
-            {q.currency === "USD" ? "$" : ""}
+            {q.currency === "USD" || q.currency === "CAD" ? "$" : ""}
             {formatPrice(q)}
             {q.unit ? <span className="tabular-nums bg-slate-50 text-slate-800 opacity-70 ml-0.5">{q.unit}</span> : null}
           </span>
