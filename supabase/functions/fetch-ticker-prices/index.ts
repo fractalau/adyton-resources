@@ -50,7 +50,30 @@ Deno.serve(async (req) => {
       }),
     );
 
-    const payload = { quotes: results, updatedAt: new Date().toISOString() };
+    // Convert all non-USD quotes to USD using live FX rates from Yahoo (e.g. CAD -> USD via CADUSD=X)
+    const fxCache = new Map<string, number>();
+    fxCache.set('USD', 1);
+    const needed = Array.from(new Set(results.map((r) => r.currency).filter((c) => c && c !== 'USD')));
+    await Promise.all(
+      needed.map(async (cur) => {
+        try {
+          const fx = await fetchYahoo(`${cur}USD=X`);
+          if (fx.price) fxCache.set(cur as string, fx.price);
+        } catch (_e) {
+          /* leave unset; quote stays in original currency */
+        }
+      }),
+    );
+
+    const converted = results.map((r) => {
+      const rate = fxCache.get(r.currency);
+      if (r.price != null && rate && r.currency !== 'USD') {
+        return { ...r, price: r.price * rate, currency: 'USD' };
+      }
+      return r;
+    });
+
+    const payload = { quotes: converted, updatedAt: new Date().toISOString() };
     cache = { data: payload, expires: Date.now() + CACHE_TTL_MS };
 
     return new Response(JSON.stringify(payload), {
