@@ -43,7 +43,12 @@ Deno.serve(async (req) => {
       SYMBOLS.map(async (s) => {
         try {
           const q = await fetchYahoo(s.symbol);
-          return { ...s, price: q.price, currency: s.currency ?? q.currency ?? 'USD' };
+          let price = q.price;
+          // Convert USD/lb to USD/oz (avoirdupois: 1 lb = 16 oz)
+          if (price != null && (s as { convertPerLbToPerOz?: boolean }).convertPerLbToPerOz) {
+            price = price / 16;
+          }
+          return { ...s, price, currency: s.currency ?? q.currency ?? 'USD' };
         } catch (_e) {
           return { ...s, price: null, currency: s.currency ?? 'USD' };
         }
