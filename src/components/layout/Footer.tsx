@@ -178,8 +178,8 @@ const Footer = () => (
           <p>
             DISCLAIMER: Mineral resources are not mineral reserves and have not demonstrated economic viability. This
             website contains forward-looking statements, and market values for gold, copper, and Adyton Resources are
-            updated daily at 6:00 AM AEST. Actual results may differ materially from those anticipated. Readers are
-            cautioned not to place undue reliance on forward-looking information.
+            sourced from Yahoo! Finance and updated daily at 6:00 AM AEST. Actual results may differ materially from
+            those anticipated. Readers are cautioned not to place undue reliance on forward-looking information.
           </p>
           <p className="mt-3">
             NI 43-101 Technical Reports: Feni Island Project (Oct 14, 2021); Fergusson Gold Property (Oct 14, 2021);
