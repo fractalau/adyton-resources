@@ -2,7 +2,7 @@ import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors';
 
 const SYMBOLS = [
   { symbol: 'GC=F', label: 'Gold', name: 'Gold Futures', currency: 'USD', unit: '/oz' },
-  { symbol: 'HG=F', label: 'Copper', name: 'Copper Futures', currency: 'USD', unit: '/lb' },
+  { symbol: 'HG=F', label: 'Copper', name: 'Copper Futures', currency: 'USD', unit: '/oz', convertPerLbToPerOz: true },
   { symbol: 'ADY.V', label: 'TSXV: ADY', name: 'Adyton (TSX-V)' },
   { symbol: 'ADYRF', label: 'OTCQB: ADYRF', name: 'Adyton (OTCQB)' },
 ];
@@ -43,7 +43,12 @@ Deno.serve(async (req) => {
       SYMBOLS.map(async (s) => {
         try {
           const q = await fetchYahoo(s.symbol);
-          return { ...s, price: q.price, currency: s.currency ?? q.currency ?? 'USD' };
+          let price = q.price;
+          // Convert USD/lb to USD/oz (avoirdupois: 1 lb = 16 oz)
+          if (price != null && (s as { convertPerLbToPerOz?: boolean }).convertPerLbToPerOz) {
+            price = price / 16;
+          }
+          return { ...s, price, currency: s.currency ?? q.currency ?? 'USD' };
         } catch (_e) {
           return { ...s, price: null, currency: s.currency ?? 'USD' };
         }
