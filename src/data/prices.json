@@ -2,8 +2,8 @@
   "tickers": [
     {
       "label": "Gold",
-      "value": "$4,422.00",
-      "change": "+0.5%",
+      "value": "$4,449.70",
+      "change": "+1.1%",
       "up": true,
       "icon": "🟡"
     },
@@ -33,6 +33,6 @@
       "up": true
     }
   ],
-  "fetchedAt": "2026-08-10T16:39:04.982Z",
+  "fetchedAt": "2026-08-10T20:28:00.320Z",
   "date": "Aug 10, 2026"
 }
