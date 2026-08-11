@@ -323,7 +323,7 @@ const Investors = () => {
                   </p>
                 </div>
                 <Button variant="gold" size="lg" asChild>
-                  <a href="/Adyton-Investor-Deck.pdf">View Deck</a>
+                  <a href={featured.href} target="_blank" rel="noopener noreferrer">View Deck</a>
                 </Button>
               </div>
             )}
