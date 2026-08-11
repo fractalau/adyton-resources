@@ -40,6 +40,16 @@ const categories = ["All", "Presentations", "Technical Reports", "Corporate Docu
 
 const downloads = [
   {
+    title: "Corporate Investor Presentation",
+    date: "August 2026",
+    description: "Latest investor deck, updated for the Gameta MRE.",
+    fileType: "PDF",
+    fileSize: "3.6 MB",
+    category: "Presentations",
+    featured: true,
+    href: "/presentations/Adyton_Investor_Deck_Aug2026.pdf",
+  },
+  {
     title: "PDAC 2026 Conference Presentation",
     date: "March 2026",
     description: "Presentation at PDAC 2026 conference.",
@@ -313,7 +323,7 @@ const Investors = () => {
                   </p>
                 </div>
                 <Button variant="gold" size="lg" asChild>
-                  <a href="/Adyton-Investor-Deck.pdf">View Deck</a>
+                  <a href={featured.href} target="_blank" rel="noopener noreferrer">View Deck</a>
                 </Button>
               </div>
             )}
