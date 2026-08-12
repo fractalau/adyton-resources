@@ -24,30 +24,30 @@ const wapoluResults = [
 const combinedResource = [
   {
     project: "Gameta",
-    indGrade: "1.33",
-    indTonnes: "4.0",
-    indKoz: "173",
-    infGrade: "1.01",
-    infTonnes: "10.5",
-    infKoz: "340",
+    indGrade: "1.41",
+    indTonnes: "8.94",
+    indKoz: "404",
+    infGrade: "0.99",
+    infTonnes: "6.52",
+    infKoz: "207",
   },
   {
     project: "Wapolu",
-    indGrade: "1.00",
-    indTonnes: "1.0",
-    indKoz: "33",
-    infGrade: "0.97",
-    infTonnes: "12.7",
-    infKoz: "393",
+    indGrade: "0.92",
+    indTonnes: "1.25",
+    indKoz: "37",
+    infGrade: "0.89",
+    infTonnes: "14.72",
+    infKoz: "419",
   },
   {
     project: "TOTAL",
-    indGrade: "1.28",
-    indTonnes: "5.0",
-    indKoz: "206",
-    infGrade: "0.99",
-    infTonnes: "23.2",
-    infKoz: "733",
+    indGrade: "1.35",
+    indTonnes: "10.19",
+    indKoz: "441",
+    infGrade: "0.92",
+    infTonnes: "21.24",
+    infKoz: "626",
   },
 ];
 
@@ -211,25 +211,26 @@ const FergussonIsland = () => {
                     <td className="px-4 py-2" style={{ color: "hsl(var(--light-muted-foreground))" }}>
                       Indicated
                     </td>
-                    <td className="text-right px-4 py-2 font-mono text-primary">1.0</td>
-                    <td className="text-right px-4 py-2 font-mono text-primary">1.00</td>
-                    <td className="text-right px-4 py-2 font-mono text-primary font-bold">33</td>
+                    <td className="text-right px-4 py-2 font-mono text-primary">1.25</td>
+                    <td className="text-right px-4 py-2 font-mono text-primary">0.92</td>
+                    <td className="text-right px-4 py-2 font-mono text-primary font-bold">37</td>
                   </tr>
                   <tr className="border-t" style={{ borderColor: "hsl(var(--light-border))" }}>
                     <td className="px-4 py-2" style={{ color: "hsl(var(--light-muted-foreground))" }}>
                       Inferred
                     </td>
-                    <td className="text-right px-4 py-2 font-mono text-primary">12.7</td>
-                    <td className="text-right px-4 py-2 font-mono text-primary">0.97</td>
-                    <td className="text-right px-4 py-2 font-mono text-primary font-bold">393</td>
+                    <td className="text-right px-4 py-2 font-mono text-primary">14.72</td>
+                    <td className="text-right px-4 py-2 font-mono text-primary">0.89</td>
+                    <td className="text-right px-4 py-2 font-mono text-primary font-bold">419</td>
                   </tr>
                   <tr className="border-t-2 border-primary/30">
                     <td className="px-4 py-2 font-semibold" style={{ color: "hsl(var(--text-dark))" }}>
                       TOTAL
                     </td>
-                    <td className="text-right px-4 py-2 font-mono text-primary font-bold">13.7</td>
-                    <td className="text-right px-4 py-2 font-mono text-primary font-bold">0.97</td>
-                    <td className="text-right px-4 py-2 font-mono text-primary font-bold">426</td>
+                    <td className="text-right px-4 py-2 font-mono text-primary font-bold">15.97</td>
+                    <td className="text-right px-4 py-2 font-mono text-primary font-bold">0.89</td>
+                    <td className="text-right px-4 py-2 font-mono text-primary font-bold">456</td>
+
                   </tr>
                 </tbody>
               </table>
@@ -336,22 +337,23 @@ const FergussonIsland = () => {
                 <tbody>
                   <tr className="border-t border-border">
                     <td className="px-4 py-2 text-foreground/80">Indicated</td>
-                    <td className="text-right px-4 py-2 font-mono text-primary">4.0</td>
-                    <td className="text-right px-4 py-2 font-mono text-primary">1.33</td>
-                    <td className="text-right px-4 py-2 font-mono text-primary font-bold">173</td>
+                    <td className="text-right px-4 py-2 font-mono text-primary">8.94</td>
+                    <td className="text-right px-4 py-2 font-mono text-primary">1.41</td>
+                    <td className="text-right px-4 py-2 font-mono text-primary font-bold">404</td>
                   </tr>
                   <tr className="border-t border-border">
                     <td className="px-4 py-2 text-foreground/80">Inferred</td>
-                    <td className="text-right px-4 py-2 font-mono text-primary">10.5</td>
-                    <td className="text-right px-4 py-2 font-mono text-primary">1.01</td>
-                    <td className="text-right px-4 py-2 font-mono text-primary font-bold">340</td>
+                    <td className="text-right px-4 py-2 font-mono text-primary">6.52</td>
+                    <td className="text-right px-4 py-2 font-mono text-primary">0.99</td>
+                    <td className="text-right px-4 py-2 font-mono text-primary font-bold">207</td>
                   </tr>
                   <tr className="border-t-2 border-primary/30">
                     <td className="px-4 py-2 font-semibold text-foreground">TOTAL</td>
-                    <td className="text-right px-4 py-2 font-mono text-primary font-bold">14.5</td>
-                    <td className="text-right px-4 py-2 font-mono text-primary font-bold">1.05</td>
-                    <td className="text-right px-4 py-2 font-mono text-primary font-bold">513</td>
+                    <td className="text-right px-4 py-2 font-mono text-primary font-bold">15.46</td>
+                    <td className="text-right px-4 py-2 font-mono text-primary font-bold">1.23</td>
+                    <td className="text-right px-4 py-2 font-mono text-primary font-bold">611</td>
                   </tr>
+
                 </tbody>
               </table>
             </div>
