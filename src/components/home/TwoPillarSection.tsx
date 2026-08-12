@@ -63,7 +63,7 @@ const TwoPillarSection = () => (
           <p className="text-sm mb-4 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
             Owen Stanley Complex. Milne Bay Province, PNG
           </p>
-          <p className="text-3xl font-mono font-bold text-primary mb-1">939 Koz Au</p>
+          <p className="text-3xl font-mono font-bold text-primary mb-1">1.06 Moz Au</p>
           <p className="text-sm mb-5 font-body" style={{ color: "hsl(var(--light-muted-foreground))" }}>
             Indicated + Inferred Mineral Resource (Wapolu + Gameta, NI 43-101)
           </p>

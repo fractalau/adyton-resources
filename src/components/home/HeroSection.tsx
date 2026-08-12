@@ -42,7 +42,7 @@ const HeroSection = () => {
           </h1>
           <p className="text-lg md:text-xl text-foreground/80 leading-relaxed mb-3 max-w-xl font-body">
             High-quality gold-copper assets in Papua New Guinea.{" "}
-            <span className="font-mono font-semibold text-primary">2.4 Moz Au</span> across two island-based projects on
+            <span className="font-mono font-semibold text-primary">2.5 Moz Au</span> across two island-based projects on
             the Pacific Ring of Fire.
           </p>
           <div className="flex flex-wrap gap-3 mt-8">
