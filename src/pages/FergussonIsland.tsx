@@ -7,7 +7,7 @@ import { useSEO } from "@/hooks/useSEO";
 import projectHeaderBg from "@/assets/project-header-bg.jpg";
 
 const stats = [
-  { value: "939 Koz Au", label: "Indicated + Inferred" },
+  { value: "1.06 Moz Au", label: "Indicated + Inferred" },
   { value: "50/50 JV", label: "with EVIH" },
   { value: "US$9.5M", label: "EVIH committed" },
   { value: "Milne Bay", label: "Province, PNG" },
@@ -65,7 +65,7 @@ const timeline = [
 const FergussonIsland = () => {
   useSEO(
     "Fergusson Island Gold Project",
-    "Fergusson Island holds 939 koz Au across Wapolu and Gameta deposits. 50/50 JV with EVIH committing US$9.5M. Near-term path to production in PNG.",
+    "Fergusson Island holds 1.06 Moz Au across Wapolu and Gameta deposits. 50/50 JV with EVIH committing US$9.5M. Near-term path to production in PNG.",
   );
 
   return (

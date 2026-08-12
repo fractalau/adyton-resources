@@ -1,7 +1,7 @@
 import { Gem, Landmark, BarChart3, Handshake, Flag } from "lucide-react";
 
 const metrics = [
-  { icon: Gem, stat: "2.4Moz Au", label: "Total Resources (NI 43-101)" },
+  { icon: Gem, stat: "2.5Moz Au", label: "Total Resources (NI 43-101)" },
   { icon: Handshake, stat: "US$9.5M", label: "Committed by JV Partner EVIH" },
   { icon: Flag, stat: "3", label: "Active Projects, PNG" },
 ];

@@ -15,7 +15,7 @@ import { useSEO } from "@/hooks/useSEO";
 const Index = () => {
   useSEO(
     "Gold & Copper Exploration in Papua New Guinea",
-    "Adyton Resources (TSXV: ADY) holds 2.4 Moz Au across two PNG island projects. Near-term cash flow via Fergusson Island JV, discovery growth at Feni."
+    "Adyton Resources (TSXV: ADY) holds 2.5 Moz Au across two PNG island projects. Near-term cash flow via Fergusson Island JV, discovery growth at Feni."
   );
 
   return (
