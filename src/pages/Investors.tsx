@@ -23,9 +23,9 @@ import projectHeaderBg from "@/assets/project-header-bg.jpg";
 
 /* ─── Capital Structure ─── */
 const capitalStats = [
-  { icon: Hash, value: "315.0 M", label: "Shares on Issue" },
-  { icon: TrendingUp, value: "46.9 M", label: "Options/Warrants/RSU" },
-  { icon: Hash, value: "361.9 M", label: "Fully Diluted" },
+  { icon: Hash, value: "316.8 M", label: "Shares on Issue" },
+  { icon: TrendingUp, value: "49.5 M", label: "Options/Warrants/RSU" },
+  { icon: Hash, value: "366.3 M", label: "Fully Diluted" },
 ];
 
 const ownership = [
