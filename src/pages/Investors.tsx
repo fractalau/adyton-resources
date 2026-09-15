@@ -189,6 +189,16 @@ const downloads = [
     featured: false,
     href: "/reports/NI43-101_Wapolu_Jan2026.pdf",
   },
+  {
+    title: "NI 43-101 Technical Report on the Gameta Gold Project, Fergusson Island, Papua New Guinea",
+    date: "August 2026",
+    description: "",
+    fileType: "PDF",
+    fileSize: "4.1 MB",
+    category: "Technical Reports",
+    featured: false,
+    href: "/reports/NI43-101_Gameta_Aug2026.pdf",
+  },
 ];
 
 const Investors = () => {
