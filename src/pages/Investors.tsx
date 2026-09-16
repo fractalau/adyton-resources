@@ -41,12 +41,22 @@ const categories = ["All", "Presentations", "Technical Reports", "Corporate Docu
 const downloads = [
   {
     title: "Corporate Investor Presentation",
+    date: "September 2026",
+    description: "Latest investor deck.",
+    fileType: "PDF",
+    fileSize: "5.3 MB",
+    category: "Presentations",
+    featured: true,
+    href: "/presentations/Adyton_Investor_Deck_Sep2026.pdf",
+  },
+  {
+    title: "Corporate Investor Presentation",
     date: "August 2026",
-    description: "Latest investor deck, updated for the Gameta MRE.",
+    description: "Investor deck, updated for the Gameta MRE.",
     fileType: "PDF",
     fileSize: "3.6 MB",
     category: "Presentations",
-    featured: true,
+    featured: false,
     href: "/presentations/Adyton_Investor_Deck_Aug2026.pdf",
   },
   {
