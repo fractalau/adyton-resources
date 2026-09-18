@@ -177,7 +177,8 @@ const PrivacyPolicy = () => (
             <br />
             Phone: +61 7 3854 2389
             <br />
-            Address: PO Box 5807, Brisbane QLD 4000, Australia
+            Address: Level 3, 100 Creek Street, Brisbane QLD 4000, Australia (PO Box 10582, Brisbane Adelaide Street
+            QLD 4000)
           </address>
         </div>
       </article>

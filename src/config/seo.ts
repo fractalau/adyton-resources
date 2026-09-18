@@ -12,7 +12,7 @@ export const seoConfig = {
     phone: "+61 7 3854 2389",
     email: "info@adytonresources.com",
     address: {
-      streetAddress: "Level 7, 300 Adelaide Street",
+      streetAddress: "Level 3, 100 Creek Street",
       addressLocality: "Brisbane",
       addressRegion: "QLD",
       postalCode: "4000",
