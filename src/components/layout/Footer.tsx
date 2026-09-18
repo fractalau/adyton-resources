@@ -108,9 +108,14 @@ const Footer = () => (
               </a>
               <span>+61 7 3854 2389</span>
               <span>
-                PO Box 5807
+                Level 3, 100 Creek Street
                 <br />
                 Brisbane QLD 4000 Australia
+              </span>
+              <span>
+                PO Box 10582
+                <br />
+                Brisbane Adelaide Street QLD 4000
               </span>
             </address>
             <h4 className="font-display font-semibold text-foreground pt-2">Follow Us</h4>
