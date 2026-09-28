@@ -2,8 +2,8 @@
   "tickers": [
     {
       "label": "Gold",
-      "value": "$4,187.10",
-      "change": "-3.1%",
+      "value": "$4,167.10",
+      "change": "-3.6%",
       "up": false,
       "icon": "🟡"
     },
@@ -16,15 +16,15 @@
     },
     {
       "label": "TSXV: ADY",
-      "value": "C$0.375",
-      "change": "+5.6%",
+      "value": "C$0.380",
+      "change": "+1.3%",
       "up": true
     },
     {
       "label": "OTC: ADYRF",
       "value": "$0.26",
-      "change": "-0.2%",
-      "up": false
+      "change": "+0.0%",
+      "up": true
     },
     {
       "label": "FSE: 701GR",
@@ -33,6 +33,6 @@
       "up": true
     }
   ],
-  "fetchedAt": "2026-09-28T10:12:42.207Z",
+  "fetchedAt": "2026-09-28T18:48:18.653Z",
   "date": "Sep 28, 2026"
 }
