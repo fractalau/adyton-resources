@@ -2,15 +2,15 @@
   "tickers": [
     {
       "label": "Gold",
-      "value": "$4,170.50",
-      "change": "+0.2%",
+      "value": "$4,171.90",
+      "change": "+0.4%",
       "up": true,
       "icon": "🟡"
     },
     {
       "label": "Copper",
-      "value": "$6.65",
-      "change": "+1.5%",
+      "value": "$6.66",
+      "change": "+0.3%",
       "up": true,
       "icon": "🟠"
     },
@@ -33,6 +33,6 @@
       "up": true
     }
   ],
-  "fetchedAt": "2026-10-05T19:53:27.520Z",
-  "date": "Oct 5, 2026"
+  "fetchedAt": "2026-10-06T00:59:56.531Z",
+  "date": "Oct 6, 2026"
 }
