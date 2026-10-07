@@ -2,8 +2,8 @@
   "tickers": [
     {
       "label": "Gold",
-      "value": "$4,142.60",
-      "change": "-1.1%",
+      "value": "$4,138.20",
+      "change": "-1.2%",
       "up": false,
       "icon": "🟡"
     },
@@ -22,8 +22,8 @@
     },
     {
       "label": "OTC: ADYRF",
-      "value": "$0.31",
-      "change": "-4.4%",
+      "value": "$0.30",
+      "change": "-2.0%",
       "up": false
     },
     {
@@ -33,6 +33,6 @@
       "up": true
     }
   ],
-  "fetchedAt": "2026-10-07T10:37:07.019Z",
+  "fetchedAt": "2026-10-07T18:00:19.327Z",
   "date": "Oct 7, 2026"
 }
