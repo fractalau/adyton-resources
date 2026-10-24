@@ -11,7 +11,10 @@ export default defineConfig({
     include: ["src/**/*.{test,spec}.{ts,tsx}"],
   },
   resolve: {
-    alias: { "@": path.resolve(__dirname, "./src") },
-    // Edge functions use Deno's npm specifier; tests use the same installed parser.
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+      // Edge functions use Deno's npm specifier; tests use the same installed parser.
+      "npm:fast-xml-parser@5.3.0": "fast-xml-parser",
+    },
   },
 });
