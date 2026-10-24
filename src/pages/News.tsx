@@ -312,7 +312,7 @@ const News = () => {
         : categorizedAnnouncements.filter((a) => a.category === activeCategory),
     [activeCategory, categorizedAnnouncements],
   );
-  const { data: newsItems = [], isLoading } = useQuery({
+  const { data: newsItems = [], isLoading, isError, refetch } = useQuery({
     queryKey: ["rss-news-all"],
     queryFn: fetchRss,
     staleTime: 1000 * 60 * 15,
@@ -386,6 +386,11 @@ const News = () => {
             {isLoading ? (
               <div className="flex justify-center py-12">
                 <Loader2 className="h-6 w-6 animate-spin text-primary" />
+              </div>
+            ) : isError || newsItems.length === 0 ? (
+              <div className="py-8 text-center text-primary">
+                <p className="mb-4">Press releases are temporarily unavailable. Please try again or visit TMX Newsfile below.</p>
+                <Button variant="gold-outline" onClick={() => refetch()}>Try Again</Button>
               </div>
             ) : (
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
