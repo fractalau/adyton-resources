@@ -29,7 +29,7 @@ const formatDate = (dateStr: string) => {
 };
 
 const NewsSection = () => {
-  const { data: items = [], isLoading } = useQuery({
+  const { data: items = [], isLoading, isError, refetch } = useQuery({
     queryKey: ["rss-news"],
     queryFn: fetchRss,
     staleTime: 1000 * 60 * 15,
@@ -55,6 +55,11 @@ const NewsSection = () => {
         {isLoading ? (
           <div className="flex justify-center py-12">
             <Loader2 className="h-6 w-6 animate-spin text-primary" />
+          </div>
+        ) : isError || items.length === 0 ? (
+          <div className="py-8 text-center text-primary">
+            <p className="mb-4">Press releases are temporarily unavailable.</p>
+            <Button variant="gold-outline" onClick={() => refetch()}>Try Again</Button>
           </div>
         ) : (
           <div className="grid sm:grid-cols-3 gap-5">
