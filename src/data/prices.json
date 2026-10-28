@@ -9,8 +9,8 @@
     },
     {
       "label": "Copper",
-      "value": "$6.66",
-      "change": "+2.3%",
+      "value": "$6.64",
+      "change": "+2.1%",
       "up": true,
       "icon": "🟠"
     },
@@ -33,6 +33,6 @@
       "up": true
     }
   ],
-  "fetchedAt": "2026-10-27T23:16:12.715Z",
-  "date": "Oct 27, 2026"
+  "fetchedAt": "2026-10-28T02:41:07.522Z",
+  "date": "Oct 28, 2026"
 }
