@@ -2,29 +2,29 @@
   "tickers": [
     {
       "label": "Gold",
-      "value": "$3,950.90",
-      "change": "-1.2%",
+      "value": "$3,882.80",
+      "change": "-2.9%",
       "up": false,
       "icon": "🟡"
     },
     {
       "label": "Copper",
-      "value": "$6.21",
-      "change": "-1.1%",
+      "value": "$6.19",
+      "change": "-1.4%",
       "up": false,
       "icon": "🟠"
     },
     {
       "label": "TSXV: ADY",
-      "value": "C$0.340",
-      "change": "-1.4%",
-      "up": false
+      "value": "C$0.365",
+      "change": "+7.4%",
+      "up": true
     },
     {
       "label": "OTC: ADYRF",
       "value": "$0.24",
-      "change": "-4.0%",
-      "up": false
+      "change": "+1.0%",
+      "up": true
     },
     {
       "label": "FSE: 701GR",
@@ -33,6 +33,6 @@
       "up": true
     }
   ],
-  "fetchedAt": "2026-11-12T11:55:48.806Z",
+  "fetchedAt": "2026-11-12T19:16:01.619Z",
   "date": "Nov 12, 2026"
 }
